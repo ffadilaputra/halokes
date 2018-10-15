@@ -16,3 +16,6 @@
 
     <!-- Custom Fonts -->
     <link href="<?= base_url('assets/sb-admin/') ?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Datatable -->
+    <link href="<?= base_url('assets/sb-admin/') ?>css/dataTables.bootstrap.min.css" rel="stylesheet">

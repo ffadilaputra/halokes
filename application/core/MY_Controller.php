@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: aka
- * Date: 07/03/18
- * Time: 2:18
- */
 
 use Philo\Blade\Blade;
 use Illuminate\Filesystem\Filesystem;

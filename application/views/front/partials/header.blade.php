@@ -10,7 +10,7 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
             <i class="fa fa-bars"></i>
           </button>
-          <a class="navbar-brand" href="index.html">browny</a>
+          <a class="navbar-brand" href="#beranda">Sekolahan</a>
         </div>
         <!--/.navbar-header-->
         <!-- End Header Navigation -->
@@ -23,13 +23,13 @@
               <a href="#beranda">Beranda</a>
             </li>
             <li class="smooth-menu">
-              <a href="#about">Profil</a>
+              <a href="#profil">Profil</a>
             </li>
             <li class="smooth-menu">
-              <a href="#experience">Info</a>
+              <a href="#info">Info</a>
             </li>
-            <li class="smooth-menu">
-            <a href="sample.html">PPDB</a>
+            <li>
+            <a href="{{ base_url('ppdb/santri') }}" target="_blank">PPDB</a>
             </li>
           </ul>
           <!--/.nav -->

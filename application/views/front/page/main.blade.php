@@ -26,9 +26,9 @@
   <!--/.welcome-hero-->
   <!--welcome-hero end -->
   <!--about start -->
-  <section id="about" class="about">
+  <section id="profil" class="about">
     <div class="section-heading text-center">
-      <h2>about me</h2>
+      <h2>Profil</h2>
     </div>
     <div class="container">
       <div class="about-content">
@@ -123,7 +123,7 @@
   <!--about end -->
 
   <!--education start -->
-  <section id="education" class="education">
+  <section id="info" class="education">
     <div class="section-heading text-center">
       <h2>education</h2>
     </div>
@@ -699,24 +699,6 @@
                   <li>
                     <a href="#">
                       <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <!--/li-->
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-dribbble"></i>
-                    </a>
-                  </li>
-                  <!--/li-->
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <!--/li-->
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-linkedin"></i>
                     </a>
                   </li>
                   <!--/li-->
