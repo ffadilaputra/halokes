@@ -14,8 +14,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $this->view('admin.pages.santri.index',$data);
     }
 
+    public function showById($id){
+      return SantriModel::find($id);
+    }
+
     public function show($id){
-      $data['santri'] = SantriModel::find($id);
+      $data['santri'] = $this->showById($id);
       $this->view('admin.pages.santri.show',$data);
     }
 
