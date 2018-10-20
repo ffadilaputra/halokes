@@ -122,7 +122,7 @@ nav.navbar.bootsnav {
     color: #d92cf9;
     font-size: 20px;
     font-weight: 600;
-    padding: 33px 0px 57px;
+    padding: 33px 0px 57px 25px;
     text-transform: uppercase;
 }
 /*.navbar-brand*/

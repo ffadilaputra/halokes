@@ -10,7 +10,7 @@
     rel="stylesheet">
 
   <!-- title of site -->
-  <title>Front Pages</title>
+  <title>Ma'had Darun Najah</title>
 
   <!-- For favicon png -->
 <link rel="shortcut icon" type="image/icon" href="{{ base_url('assets/browny') }}/assets/logo/favicon.png" />
@@ -36,6 +36,10 @@
 
   <!--style.css-->
   <link rel="stylesheet" href="{{ base_url('assets/browny') }}/assets/css/style.css">
+
+  
+  <!--custom.css-->
+  <link rel="stylesheet" href="{{ base_url('assets/browny') }}/assets/css/custom.css">
 
   <!--responsive.css-->
   <link rel="stylesheet" href="{{ base_url('assets/browny') }}/assets/css/responsive.css">

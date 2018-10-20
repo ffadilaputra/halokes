@@ -2,7 +2,7 @@
   <div class="container">
     <div class="hm-footer-copyright text-center">
       <p>
-        &copy; copyright yourname. design and developed by
+        &copy; copyright 2018 Ma'had Darun Najah. design and developed by
         <a href="https://www.themesine.com/">themesine</a>
       </p>
       <!--/p-->
