@@ -4,6 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   class Verify extends MY_Controller {
 
+  public function index(){
+    redirect('admin/santri');
+  }
+
    public function show($id){
       $this->load->model('SantriModel');
       $data['santri'] = SantriModel::find($id);
