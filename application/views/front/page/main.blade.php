@@ -122,60 +122,6 @@
   <!--/.profil-->
   <!--profil end -->
 
-  <!--lembaga start -->
-  <section id="lembaga" class="clients">
-    <div class="section-heading text-center">
-      <h2>Lembaga</h2>
-    </div>
-    <div class="clients-area">
-      <div class="container">
-        <div class="owl-carousel owl-theme" id="client">
-          <div class="item">
-            <a href="#">
-            <span class="nama-lembaga">| MTs</span>
-            </a>
-          </div>
-          <!--/.item-->
-          <div class="item">
-            <a href="#">
-            <span class="nama-lembaga">| MA</span>
-            </a>
-          </div>
-          <!--/.item-->
-          <div class="item">
-            <a href="#">
-            <span class="nama-lembaga">TPQ</span>
-            </a>
-          </div>
-          <!--/.item-->
-          <div class="item">
-            <a href="#">
-            <span class="nama-lembaga">Madin</span>
-            </a>
-          </div>
-          <!--/.item-->
-          <div class="item">
-            <a href="#">
-            <span class="nama-lembaga">Pesantren</span>
-            </a>
-          </div>
-          <!--/.item-->
-          <div class="item">
-            <a href="#">
-            <span class="nama-lembaga">Sosial</span>
-            </a>
-          </div>
-          <!--/.item-->
-        </div>
-        <!--/.owl-carousel-->
-      </div>
-      <!--/.container-->
-    </div>
-    <!--/.lembaga-area-->
-
-  </section>
-  <!--/.lembaga-->
-
   <!--info start -->
   <section id="info" class="education">
     <div class="section-heading text-center">
