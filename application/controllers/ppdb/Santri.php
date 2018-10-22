@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           ]);
 
           SantriModel::create($this->input->post());
-          var_dump($_POST);
+          //var_dump($_POST);
           //redirect('ppdb/Santri');
       }
   }

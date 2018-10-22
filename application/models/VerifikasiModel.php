@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 
 class VerifikasiModel extends Eloquent {
 
-  protected $table      = 'id';
+  protected $table      = 'verifikasi';
   protected $primaryKey = 'id';
   protected $fillable   = ['id_santri','status'];
   public $timestamps = true;
