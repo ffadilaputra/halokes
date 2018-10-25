@@ -36,15 +36,11 @@
           <div class="col-sm-6">
             <div class="single-about-txt">
               <h3>
-                I am a Professional UI/UX Designer and Web developer. Consectetur an adipisi elita, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.
+              PONDOK PESANTREN SALAFIYAH PPAI DARUN NAJAH
               </h3>
               <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspi unde
-                omnis iste natus error sit voluptatem accusantium doloremque lauda ntium, totam rem aperiam, eaque ipsa quae
-                ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam vo luptatem
-                quia voluptas sit aspernatur aut odit aut fugit,
+                Pondok pesantren PPAI Darun Najah merupakan lembaga sosial publik yang berada di bawah naungan Yayasan Ma’had Darun Najah as-Salafiy, yang didirikan dengan tujuan utama untuk menjaga moral umat dan mencetak kader-kader dakwah Islam di kalangan masyarakat. Didirikan oleh KH. Achmad Muchtar Ghozali, pesantren ini telah berdiri sejak tahun 1967. Hingga kini pesantren ini masih diasuh dibawah bimbingan beliau langsung dan sebagai Ketua Dewan Pembina Yayasan Ma’had Darun Najah as-Salafy Pondok Pesantren Salafiyah PPAI Darun Najah.
+              <a href="#">Baca Selengkapnya ...</a>
               </p>
               <div class="row">
                 <div class="col-sm-4">
