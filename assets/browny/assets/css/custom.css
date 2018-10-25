@@ -22,7 +22,7 @@
 	color: #262626;
 	background-color: #999;
 }
- 
+
 @media (max-width: 767px) {
 	.dropdown-menu.multi-column {
 		min-width: 240px !important;
@@ -58,4 +58,7 @@
 
 .format-text li{
 	padding: 0 0 15px;
+}
+.pad-top h3{
+	padding-top: 15px;
 }

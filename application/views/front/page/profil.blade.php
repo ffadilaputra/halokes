@@ -95,13 +95,27 @@
 <!--/.profil-->
 <!--profil end -->
 
-<section id="visimisi" class="about">
+<section id="visimisi" class="education">
   <div class="section-heading text-center">
-    <h2>PONDOK PESANTREN SALAFIYAH PPAI DARUN NAJAH</h2>
+    <h2>VISI DAN MISI PESANTREN</h2>
   </div>
   <div class="container">
     <div class="row">
-
+      <div class="format-text col-sm-6 text-center pad-top">
+      <h3>Visi</h3>
+      <p><b><i>
+        Menjadi Lembaga Pendidikan Islam Berhaluan Ahlus Sunnah Wal Jamaah Yang Unggul dalam Rangka Mencetak Kader Dakwah Yang Berakhlakul Karimah, Berpengetahuan,Terampil dan Bermanfaat.
+      </i></b></p>
+      </div>
+      <div class="format-text col-sm-6 pad-top">
+      <h3 class="text-center">Misi</h3>
+      <ol>
+          <li>Menyelenggarakan pendidikan diniyah berbasis pada akhlakul karimah dan ajaran salafuna as-sholihun (kitab kuning) secara aplikatif.</li>
+          <li>Menyelenggarakan pendidikan formal berbasis pesantren salafiyah yang profesional.</li>
+          <li>Menyelenggarakan pendidikan layanan berbasis ketrampilan life skill.</li>
+          <li>Menyelenggarakan kegiatan sosial yang bermanfaat bagi masyarakat.</li>
+      </ol>
+      </div>
     </div>
   </div>
 </section>
