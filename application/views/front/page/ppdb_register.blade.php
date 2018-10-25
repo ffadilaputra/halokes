@@ -113,7 +113,8 @@
                               @endif
                         </div>
                       <div class="single-contact-btn">
-                          <input type="submit" class="contact-btn">
+                          <input type="submit" class="contact-btn" style="background-color:#b636ff">
+                          <!-- <a class="contact-btn" href="#" role="button">submit</a> -->
                       </div>
                     </div>
                     <?= form_close() ?>
