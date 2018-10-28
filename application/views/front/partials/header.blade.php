@@ -3,14 +3,14 @@
     <!-- Start Navigation -->
     <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
 
-      <div class="container">
+      <div class="container-fluid">
 
         <!-- Start Header Navigation -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
             <i class="fa fa-bars"></i>
           </button>
-          <a class="navbar-brand" href="#beranda">Sekolahan</a>
+          <a class="navbar-brand" href="#beranda">Yayasan Ma'had Darun Najah</a>
         </div>
         <!--/.navbar-header-->
         <!-- End Header Navigation -->
@@ -26,10 +26,20 @@
               <a href="#profil">Profil</a>
             </li>
             <li class="smooth-menu">
-              <a href="#info">Info</a>
+              <a href="#lembaga">Lembaga</a>
+            </li>
+            <li class="smooth-menu">
+              <a href="#info">Informasi</a>
+            </li>
+            <li class="smooth-menu">
+              <a href="#mauidhoh">Mauidhoh</a>
+            </li>
+            <li class="smooth-menu">
+            <!-- video dari IG -->
+              <a href="#galeri">Galeri</a> 
             </li>
             <li>
-            <a href="{{ base_url('ppdb/santri') }}" target="_blank">PPDB</a>
+            <a href="{{ base_url('ppdb/santri') }}" target="_blank">Pendaftaran</a>
             </li>
           </ul>
           <!--/.nav -->

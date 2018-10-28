@@ -13,6 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $this->load->model('SantriModel');
 
         $this->validate($this->input->post(), [
+          'id_santri' => 'required|string',
           'nis' => 'required|string',
           'nama_lengkap' => 'required|string',
           'panggilan' => 'required|string',
