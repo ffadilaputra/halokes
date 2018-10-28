@@ -18,6 +18,13 @@
                 <?= form_open('ppdb/santri/store') ?>
                 <div class="col-md-8">
                   <div class="single-about-add-info">
+                        <h3>ID</h3>
+                        <input name="id_santri" type="text" class="form-control">
+                        @if($errors->has('id_santri'))
+                          <small class="text-danger">{{ $errors->first('id_santri') }}</small>
+                        @endif
+                  </div>
+                  <div class="single-about-add-info">
                     <h3>NIS</h3>
                     <input name="nis" type="text" class="form-control">
                     @if($errors->has('nis'))
