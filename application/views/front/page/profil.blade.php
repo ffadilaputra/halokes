@@ -2,7 +2,7 @@
 
 @section('content')
 <!--welcome-hero start -->
-<section id="cover" class="cover-hero">
+<section id="cover" class="cover-hero bg-e0f0ff">
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
@@ -121,5 +121,69 @@
 </section>
 <!--/.visimisi-->
 <!--visimisi end -->
+
+<!--lembaga start -->
+<section class="experience">
+  <div class="section-heading text-center">
+    <h2>Lembaga Pendidikan</h2>
+  </div>
+  <div class="container">
+    <div class="experience-content col-lg-12">
+
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel panel-fix-height">
+          <div class="panel-heading panel-heading-plus text-center">
+            <h3 class="panel-title">Ma’hadiyah</h3>
+          </div>
+          <div class="panel-body">
+            <ol class="panel-body">
+              <li>Taman Pendidikan Al-Quran</li>
+              <li>Madrasah I’dadiyah Diniyah</li>
+              <li>Madrasah Tsanawiyah Diniyah</li>
+              <li>Madrasah Aliyah Diniyah</li>
+              <li>Pengajian kitab kuning (sorogan dan bandongan)</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- end panel -->
+
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel panel-fix-height">
+          <div class="panel-heading panel-heading-plus text-center">
+            <h3 class="panel-title">Madrosiyah</h3>
+          </div>
+          <div class="panel-body">
+            <ol class="panel-body">
+              <li>Madrasah Tsanawiyah Darun Najah</li>
+              <li>Madrasah Aliyah Darun Najah </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- end panel -->
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel panel-fix-height">
+          <div class="panel-heading panel-heading-plus text-center">
+            <h3 class="panel-title">Ijtima’iyah</h3>
+          </div>
+          <div class="panel-body">
+            <ol class="panel-body">
+              <li>Jama’ah Pengajian dan Dzikir Rutin masyarakat</li>
+              <li>Koperasi Pondok Pesantren Darun Najah</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- end panel -->
+
+    </div>
+    <!--.lembaga-content-->
+  </div>
+
+</section>
+<!--/.lembaga-->
+<!--lembaga end -->
 
 @endsection

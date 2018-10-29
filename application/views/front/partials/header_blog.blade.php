@@ -19,11 +19,8 @@
         <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
           <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
             <li class=" smooth-menu active"></li>
-            <li class=" smooth-menu">
-              <a href="{{ base_url() }}">Beranda</a>
-            </li>
             <li class="smooth-menu">
-              <a href="{{ base_url('Profil/Profil') }}">Profil</a>
+              <a href="{{ base_url('blog/profil') }}" target="_blank">Profil</a>
             </li>
             <li class="nav-item dropdown smooth-menu">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,14 +58,14 @@
               </ul>
             </li>
             <li class="smooth-menu">
-              <a href="#info">Informasi</a>
+              <a href="#">Informasi</a>
             </li>
             <li class="smooth-menu">
-              <a href="#mauidhoh">Mauidhoh</a>
+              <a href="#">Mauidhoh</a>
             </li>
             <li class="smooth-menu">
             <!-- video dari IG -->
-              <a href="#galeri">Galeri</a>
+              <a href="#">Galeri</a>
             </li>
             <li>
             <a href="{{ base_url('ppdb/santri') }}" target="_blank">Pendaftaran</a>
