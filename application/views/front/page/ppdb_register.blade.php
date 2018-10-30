@@ -47,7 +47,7 @@
                         </div>
 
                         <!-- nik -->
-                        <div class="single-about-add-info">
+                        <div class="single-about-addcd-info">
                            <h3>NIK</h3>
                            <input name="nik" type="text" class="form-control">
                            @if($errors->has('nik'))
