@@ -6,6 +6,7 @@
       <h2>Profil</h2>
    </div>
    <div class="container">
+      <?= form_open('ppdb/santri/store') ?>
       <!-- <div class="row"> -->
       <div class="col-md-offset-1 col-md-5  col-sm-12">
          <div class="single-contact-box">
@@ -15,10 +16,16 @@
                      Daftar
                   </h3>
                   <div class="row">
-                     <?= form_open('ppdb/santri/store') ?>
                      <div class="col-sm-12">
                         <div class="form-group">
                           <!-- nis -->
+                          <div class="single-about-add-info">
+                              <h3>Kode</h3>
+                              <input name="id_santri" type="text" class="form-control">
+                              @if($errors->has('id_santri'))
+                              <small class="text-danger">{{ $errors->first('id_santri') }}</small>
+                              @endif
+                           </div>
                            <div class="single-about-add-info">
                               <h3>NIS</h3>
                               <input name="nis" type="text" class="form-control">
@@ -56,7 +63,7 @@
                         </div>
 
                         <!-- row start -->
-                        <div class="row"> 
+                        <div class="row">
                           <!-- tempat lahir -->
                           <div class="col-sm-6 col-xs-12">
                             <div class="single-about-add-info">
@@ -83,76 +90,7 @@
                           <!--/.col-->
                         </div>
                         <!--/.row end-->
-
-                        <!-- alamat -->
-                        <!-- <div class="single-about-add-info">
-                           <h3>Alamat</h3>
-                           <textarea name="alamat" type="text" class="form-control"></textarea>
-                           @if($errors->has('alamat'))
-                           <small class="text-danger">{{ $errors->first('alamat') }}</small>
-                           @endif
-                        </div> -->
-
-                        <!-- kelurahan -->
-                        <!-- <div class="single-about-add-info">
-                           <h3>Kelurahan</h3>
-                           <input name="kelurahan" type="text" class="form-control">
-                           @if($errors->has('kelurahan'))
-                           <small class="text-danger">{{ $errors->first('kelurahan') }}</small>
-                           @endif
-                        </div> -->
-
-                        <!-- kecamatan -->
-                        <!-- <div class="single-about-add-info">
-                           <h3>Kecamatan</h3>
-                           <input name="kecamatan" type="text" class="form-control">
-                           @if($errors->has('kecamatan'))
-                           <small class="text-danger">{{ $errors->first('kecamatan') }}</small>
-                           @endif
-                        </div> -->
-
-                        <!-- kota -->
-                        <!-- <div class="single-about-add-info">
-                           <h3>Kota</h3>
-                           <input name="kota" type="text" class="form-control">
-                           @if($errors->has('kota'))
-                           <small class="text-danger">{{ $errors->first('kota') }}</small>
-                           @endif
-                        </div> -->
-
-                        <!-- provinsi -->
-                        <!-- <div class="single-about-add-info">
-                           <h3>Provinsi</h3>
-                           <input name="provinsi" type="text" class="form-control">
-                           @if($errors->has('provinsi'))
-                           <small class="text-danger">{{ $errors->first('provinsi') }}</small>
-                           @endif
-                        </div> -->
-
-                        <!-- kodepos -->
-                        <!-- <div class="single-about-add-info">
-                           <h3>Kodepos</h3>
-                           <input name="kode_pos" type="text" class="form-control" maxlength="5">
-                           @if($errors->has('kode_pos'))
-                           <small class="text-danger">{{ $errors->first('kode_pos') }}</small>
-                           @endif
-                        </div> -->
-
-                        <!-- telepon -->
-                        <!-- <div class="single-about-add-info">
-                           <h3>Telepon</h3>
-                           <input name="telepon" type="text" class="form-control">
-                           @if($errors->has('telepon'))
-                           <small class="text-danger">{{ $errors->first('telepon') }}</small>
-                           @endif
-                        </div> -->
-
-                        <!-- button -->
-                        <!-- <div class="single-contact-btn">
-                           <input type="submit" class="contact-btn" style="background-color:#b636ff">
-                        </div> -->
                      </div>
-                     <?= form_close() ?>
                   </div>
                </div>
             </div>
@@ -169,9 +107,8 @@
                      Daftar
                   </h3>
                   <div class="row">
-                     <?= form_open('ppdb/santri/store') ?>
                      <div class="col-sm-12">
-                        
+
                         <!-- alamat -->
                         <div class="single-about-add-info">
                            <h3>Alamat</h3>
@@ -182,7 +119,7 @@
                         </div>
 
                         <!-- row start -->
-                        <div class="row"> 
+                        <div class="row">
                           <!-- kelurahan -->
                           <div class="col-sm-6 col-xs-12">
                             <div class="single-about-add-info">
@@ -211,7 +148,7 @@
                         <!--/.row end-->
 
                         <!-- row start -->
-                        <div class="row"> 
+                        <div class="row">
                           <!-- kota -->
                           <div class="col-sm-6 col-xs-12">
                             <div class="single-about-add-info">
@@ -239,42 +176,6 @@
                         </div>
                         <!--/.row end-->
 
-                        <!-- kelurahan -->
-                        <!-- <div class="single-about-add-info">
-                           <h3>Kelurahan</h3>
-                           <input name="kelurahan" type="text" class="form-control">
-                           @if($errors->has('kelurahan'))
-                           <small class="text-danger">{{ $errors->first('kelurahan') }}</small>
-                           @endif
-                        </div> -->
-
-                        <!-- kecamatan -->
-                        <!-- <div class="single-about-add-info">
-                           <h3>Kecamatan</h3>
-                           <input name="kecamatan" type="text" class="form-control">
-                           @if($errors->has('kecamatan'))
-                           <small class="text-danger">{{ $errors->first('kecamatan') }}</small>
-                           @endif
-                        </div> -->
-
-                        <!-- kota -->
-                        <!-- <div class="single-about-add-info">
-                           <h3>Kota</h3>
-                           <input name="kota" type="text" class="form-control">
-                           @if($errors->has('kota'))
-                           <small class="text-danger">{{ $errors->first('kota') }}</small>
-                           @endif
-                        </div> -->
-
-                        <!-- provinsi -->
-                        <!-- <div class="single-about-add-info">
-                           <h3>Provinsi</h3>
-                           <input name="provinsi" type="text" class="form-control">
-                           @if($errors->has('provinsi'))
-                           <small class="text-danger">{{ $errors->first('provinsi') }}</small>
-                           @endif
-                        </div> -->
-
                         <!-- kodepos -->
                         <div class="single-about-add-info">
                            <h3>Kodepos</h3>
@@ -297,15 +198,14 @@
                            <!-- <a class="contact-btn" href="#" role="button">submit</a> -->
                         </div>
                      </div>
-                     <?= form_close() ?>
+
                   </div>
                </div>
             </div>
          </div>
       </div>
       <!-- </div> -->
-
-      
+      <?= form_close() ?>
    </div>
 </section>
 <!--/.about-->
