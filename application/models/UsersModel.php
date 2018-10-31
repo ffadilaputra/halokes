@@ -7,7 +7,7 @@ class UsersModel extends Eloquent {
 
   protected $table      = 'users';
   protected $primaryKey = 'id_users';
-  protected $fillable   = ['email','password'];
+  protected $fillable   = ['id_users','nama_lengkap','tempat_lahir','tgl_lahir','telepon','email','password','id_level','id_alamat'];
   public $timestamps = true;
 
 }
