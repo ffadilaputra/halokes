@@ -101,13 +101,10 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#santri"><i class="fa fa-fw fa-user"></i>Santri <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="santri" class="collapse">
                     <li>
-                        <a href="{{ base_url('admin/santri') }}">Semua</a>
+                        <a href="{{ base_url('admin/santri/all') }}">Semua</a>
                     </li>
                     <li>
-                        <a href="{{ base_url('admin/santri') }}">Terverifikasi</a>
-                    </li>
-                    <li>
-                        <a href="{{ base_url('admin/santri') }}">Belum Terverifikasi</a>
+                        <a href="{{ base_url('admin/santri/verifed') }}">Terverifikasi</a>
                     </li>
                 </ul>
             </li>

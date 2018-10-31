@@ -38,7 +38,7 @@ class Login extends MY_Controller {
             $validation->errors()->add('password', 'the password is invalid');
             $this->session->set_flashdata('errors', $validation->errors());
             $this->session->set_flashdata('old', $this->input->post());
-            redirect(base_url('Login'));
+            redirect('Login');
         }
     }
 
