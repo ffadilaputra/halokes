@@ -1,10 +1,10 @@
-@extends('front.no_header')
+@extends('front.template')
 @section('content')
 <!--about start -->
 <section id="profil" class="about" style="background-color:#f9fbfd">
-   <div class="section-heading text-center">
+   <!-- <div class="section-heading text-center">
       <h2>Profil</h2>
-   </div>
+   </div> -->
    <div class="container">
       <?= form_open('ppdb/santri/store') ?>
       <!-- <div class="row"> -->

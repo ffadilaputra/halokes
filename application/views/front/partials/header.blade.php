@@ -20,7 +20,7 @@
           <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
             <li class=" smooth-menu active"></li>
             <li class=" smooth-menu">
-              <a href="#beranda">Beranda</a>
+              <a href="{{ base_url('main') }}">Beranda</a>
             </li>
             <li class="smooth-menu">
               <a href="#profil">Profil</a>
