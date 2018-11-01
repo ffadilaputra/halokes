@@ -60,6 +60,6 @@
     </script>
 
     <!-- Main JS-->
-    <script src="js/main.js"></script>
+    <script src="{{ base_url('assets/CoolAdmin') }}/js/main.js"></script>
 
 </body>
