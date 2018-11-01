@@ -13,6 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function index(){
         $data['list'] = UsersModel::all();
         $this->view('admin.pages.user.index',$data);
+
     }
 
     public function create(){
@@ -40,8 +41,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     public function show($id){
       $data['user'] = UsersModel::find($id);
-      var_dump($data['user']);
-      //$this->view('admin.pages.user.show',$data);
+      $this->view('admin.pages.user.show',$data);
+    }
+
+    public function edit($id){
+      $data['user'] = UsersModel::find($id);
+      $this->view('admin.pages.user.edit',$data);
     }
 
     public function update($id){

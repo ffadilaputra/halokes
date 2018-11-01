@@ -42,7 +42,8 @@
                     <td>{{ $data->tempat_lahir }}</td>
                     <td>{{ $data->telepon }}</td>
                     <td>
-                      <a class="btn btn-default" href="{{ base_url('user/show/').$data->id_users }}"><i class="fa fa-eye"></i></a>
+                      <a class="btn btn-default" href="{{ base_url('admin/user/show/').$data->id_users }}"><i class="fa fa-eye"></i></a>
+                      <a class="btn btn-default" href="{{ base_url('admin/user/edit/').$data->id_users }}"><i class="fa fa-pencil"></i></a>
                     </td>
                   </tr>
                   @endforeach
