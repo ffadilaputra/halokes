@@ -5,7 +5,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   class Dashboard extends MY_Controller {
 
     public function index(){
-      $this->view('admin.pages.dashboard');
+      $this->autenthicateAdmin();
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+      $this->view('admin.pages.dashboard',$data);
     }
 
 }

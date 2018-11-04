@@ -11,6 +11,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     public function index(){
+        $this->autenthicateAdmin();
+        $data['admin'] = $this->session->userdata('admin_logged_in');
         $data['santri'] = SantriModel::all();
         $this->view('admin.pages.santri.index',$data);
     }
