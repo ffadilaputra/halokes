@@ -2,7 +2,11 @@
 
 @section('content')
     <?= form_open('admin/level/store'); ?>
-        <input type="text" name="level">
-        <input type="submit">
+        <div class="form-group">
+            <label>Level</label>
+            <input class="form-control" style="width:50%" type="text" name="level">
+        </div>
+        
+        <input type="submit" class="btn btn-success">
     <?= form_close() ?>
 @stop
