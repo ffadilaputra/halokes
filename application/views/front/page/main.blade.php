@@ -131,15 +131,15 @@
         </div>
         <!--/.item-->
         <div class="item col-lg-2 col-sm-12">
-            <span class="nama-lembaga">
-              <button type="button" data-toggle="modal" data-target=".modal-ma">MA</button>
-            </span>
+          <span class="nama-lembaga">
+            <button type="button" data-toggle="modal" data-target=".modal-ma">MA</button>
+          </span>
         </div>
         <!--/.item-->
         <div class="item col-lg-2 col-sm-12">
-            <span class="nama-lembaga">
-              <button type="button" data-toggle="modal" data-target=".modal-tpq">TPQ-MQ</button>
-            </span>
+          <span class="nama-lembaga">
+            <button type="button" data-toggle="modal" data-target=".modal-tpq">TPQ-MQ</button>
+          </span>
         </div>
         <!--/.item-->
         <div class="item col-lg-2 col-sm-12">
@@ -155,9 +155,9 @@
         </div>
         <!--/.item-->
         <div class="item col-lg-2 col-sm-12">
-            <span class="nama-lembaga">
-              <button type="button" data-toggle="modal" data-target=".modal-koppontren">Koppontren</button>
-            </span>
+          <span class="nama-lembaga">
+            <button type="button" data-toggle="modal" data-target=".modal-koppontren">Koppontren</button>
+          </span>
         </div>
         <!--/.item-->
       </div>
@@ -176,280 +176,267 @@
     <h2>Informasi</h2>
   </div>
   <div class="container">
-    <div class="education-horizontal-timeline">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="single-horizontal-timeline">
-            <div class="experience-time">
-              <h2>2008 - 2010</h2>
-              <h3>master
-                <span>of </span> computer science</h3>
-              </div>
-              <!--/.experience-time-->
-              <div class="timeline-horizontal-border">
-                <i class="fa fa-circle" aria-hidden="true"></i>
-                <span class="single-timeline-horizontal"></span>
-              </div>
-              <div class="timeline">
-                <div class="timeline-content">
-                  <h4 class="title">
-                    university of north carolina
-                  </h4>
-                  <h5>north carolina, USA</h5>
-                  <p class="description">
-                    Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana
-                    inna tecat cupidatat non proident.
-                  </p>
-                </div>
-                <!--/.timeline-content-->
-              </div>
-              <!--/.timeline-->
-            </div>
+    <div class="experience-content col-lg-12">
+
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel">
+          <div class="panel-heading panel-heading-plus">
+            <h3 class="panel-title">Panel title</h3>
           </div>
-          <div class="col-sm-4">
-            <div class="single-horizontal-timeline">
-              <div class="experience-time">
-                <h2>2004 - 2008</h2>
-                <h3>bachelor
-                  <span>of </span> computer science</h3>
-                </div>
-                <!--/.experience-time-->
-                <div class="timeline-horizontal-border">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <span class="single-timeline-horizontal"></span>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-content">
-                    <h4 class="title">
-                      university of north carolina
-                    </h4>
-                    <h5>north carolina, USA</h5>
-                    <p class="description">
-                      Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana
-                      inna tecat cupidatat non proident.
-                    </p>
-                  </div>
-                  <!--/.timeline-content-->
-                </div>
-                <!--/.timeline-->
-              </div>
-            </div>
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+      <!-- end panel -->
+
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel">
+          <div class="panel-heading panel-heading-plus">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+
+      <!-- end panel -->
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel">
+          <div class="panel-heading panel-heading-plus">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+      <!-- end panel -->
+
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel">
+          <div class="panel-heading panel-heading-plus">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+      <!-- end panel -->
+
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel">
+          <div class="panel-heading panel-heading-plus">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+
+      <!-- end panel -->
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel">
+          <div class="panel-heading panel-heading-plus">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+      <!-- end panel -->
+
+    </div>
+    <!--.mauidhoh-content-->
+  </div>
+
+</section>
+<!--/.info-->
+<!--info end -->
+
+<!--mauidhoh start -->
+<section id="mauidhoh" class="experience">
+  <div class="section-heading text-center">
+    <h2>Mauidhoh</h2>
+  </div>
+  <div class="container">
+    <div class="experience-content col-lg-12">
+
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel">
+          <div class="panel-heading panel-heading-plus">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+      <!-- end panel -->
+
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel">
+          <div class="panel-heading panel-heading-plus">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+
+      <!-- end panel -->
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel">
+          <div class="panel-heading panel-heading-plus">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+      <!-- end panel -->
+
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel">
+          <div class="panel-heading panel-heading-plus">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+      <!-- end panel -->
+
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel">
+          <div class="panel-heading panel-heading-plus">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+
+      <!-- end panel -->
+      <div class="mau-panel col-lg-4 col-sm-12">
+        <div class="panel">
+          <div class="panel-heading panel-heading-plus">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+      <!-- end panel -->
+
+    </div>
+    <!--.mauidhoh-content-->
+  </div>
+
+</section>
+<!--/.mauidhoh-->
+<!--mauidhoh end -->
+
+<!--galeri start -->
+<section id="galeri" class="portfolio">
+  <div class="portfolio-details">
+    <div class="section-heading text-center">
+      <h2>Galeri</h2>
+    </div>
+    <div class="container">
+      <div class="portfolio-content">
+        <div class="isotope">
+          <div class="row">
+
             <div class="col-sm-4">
-              <div class="single-horizontal-timeline">
-                <div class="experience-time">
-                  <h2>2004 - 2008</h2>
-                  <h3>bachelor
-                    <span>of </span> creative design</h3>
-                  </div>
-                  <!--/.experience-time-->
-                  <div class="timeline-horizontal-border">
-                    <i class="fa fa-circle" aria-hidden="true"></i>
-                    <span class="single-timeline-horizontal spacial-horizontal-line
-                    "></span>
-                  </div>
-                  <div class="timeline">
-                    <div class="timeline-content">
-                      <h4 class="title">
-                        university of bolton
-                      </h4>
-                      <h5>bolton, united kingdome</h5>
-                      <p class="description">
-                        Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana
-                        inna tecat cupidatat non proident.
-                      </p>
-                    </div>
-                    <!--/.timeline-content-->
-                  </div>
-                  <!--/.timeline-->
+              <div class="item">
+                <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p1.jpg" alt="portfolio image" />
+                <div class="isotope-overlay">
+                  <a href="#">
+                    ui/ux design
+                  </a>
                 </div>
+                <!-- /.isotope-overlay -->
               </div>
+              <!-- /.item -->
+              <div class="item">
+                <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p2.jpg" alt="portfolio image" />
+                <div class="isotope-overlay">
+                  <a href="#">
+                    ui/ux design
+                  </a>
+                </div>
+                <!-- /.isotope-overlay -->
+              </div>
+              <!-- /.item -->
             </div>
+            <!-- /.col -->
+
+            <div class="col-sm-4">
+              <div class="item">
+                <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p3.jpg" alt="portfolio image" />
+                <div class="isotope-overlay">
+                  <a href="#">
+                    web design
+                  </a>
+                </div>
+                <!-- /.isotope-overlay -->
+              </div>
+              <!-- /.item -->
+            </div>
+            <!-- /.col -->
+
+            <div class="col-sm-4">
+              <div class="item">
+                <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p4.jpg" alt="portfolio image" />
+                <div class="isotope-overlay">
+                  <a href="#">
+                    web development
+                  </a>
+                </div>
+                <!-- /.isotope-overlay -->
+              </div>
+              <!-- /.item -->
+              <div class="item">
+                <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p5.jpg" alt="portfolio image" />
+                <div class="isotope-overlay">
+                  <a href="#">
+                    web development
+                  </a>
+                </div>
+                <!-- /.isotope-overlay -->
+              </div>
+              <!-- /.item -->
+            </div>
+            <!-- /.col -->
           </div>
+          <!-- /.row -->
         </div>
+        <!--/.isotope-->
+      </div>
+      <!--/.gallery-content-->
+    </div>
+    <!--/.container-->
+  </div>
+  <!--/.portfolio-details-->
 
-      </section>
-      <!--/.info-->
-      <!--info end -->
+</section>
+<!--/.portfolio-->
+<!--portfolio end -->
 
-      <!--mauidhoh start -->
-      <section id="mauidhoh" class="experience">
-        <div class="section-heading text-center">
-          <h2>Mauidhoh</h2>
-        </div>
-        <div class="container">
-          <div class="experience-content col-lg-12">
-
-            <div class="mau-panel col-lg-4 col-sm-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Panel title</h3>
-                </div>
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <!-- end panel -->
-
-            <div class="mau-panel col-lg-4 col-sm-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Panel title</h3>
-                </div>
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-
-            <!-- end panel -->
-            <div class="mau-panel col-lg-4 col-sm-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Panel title</h3>
-                </div>
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <!-- end panel -->
-
-            <div class="mau-panel col-lg-4 col-sm-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Panel title</h3>
-                </div>
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <!-- end panel -->
-
-            <div class="mau-panel col-lg-4 col-sm-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Panel title</h3>
-                </div>
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-
-            <!-- end panel -->
-            <div class="mau-panel col-lg-4 col-sm-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Panel title</h3>
-                </div>
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <!-- end panel -->
-
-          </div>
-          <!--.mauidhoh-content-->
-        </div>
-
-      </section>
-      <!--/.mauidhoh-->
-      <!--mauidhoh end -->
-
-      <!--galeri start -->
-      <section id="galeri" class="portfolio">
-        <div class="portfolio-details">
-          <div class="section-heading text-center">
-            <h2>Galeri</h2>
-          </div>
-          <div class="container">
-            <div class="portfolio-content">
-              <div class="isotope">
-                <div class="row">
-
-                  <div class="col-sm-4">
-                    <div class="item">
-                      <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p1.jpg" alt="portfolio image" />
-                      <div class="isotope-overlay">
-                        <a href="#">
-                          ui/ux design
-                        </a>
-                      </div>
-                      <!-- /.isotope-overlay -->
-                    </div>
-                    <!-- /.item -->
-                    <div class="item">
-                      <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p2.jpg" alt="portfolio image" />
-                      <div class="isotope-overlay">
-                        <a href="#">
-                          ui/ux design
-                        </a>
-                      </div>
-                      <!-- /.isotope-overlay -->
-                    </div>
-                    <!-- /.item -->
-                  </div>
-                  <!-- /.col -->
-
-                  <div class="col-sm-4">
-                    <div class="item">
-                      <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p3.jpg" alt="portfolio image" />
-                      <div class="isotope-overlay">
-                        <a href="#">
-                          web design
-                        </a>
-                      </div>
-                      <!-- /.isotope-overlay -->
-                    </div>
-                    <!-- /.item -->
-                  </div>
-                  <!-- /.col -->
-
-                  <div class="col-sm-4">
-                    <div class="item">
-                      <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p4.jpg" alt="portfolio image" />
-                      <div class="isotope-overlay">
-                        <a href="#">
-                          web development
-                        </a>
-                      </div>
-                      <!-- /.isotope-overlay -->
-                    </div>
-                    <!-- /.item -->
-                    <div class="item">
-                      <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p5.jpg" alt="portfolio image" />
-                      <div class="isotope-overlay">
-                        <a href="#">
-                          web development
-                        </a>
-                      </div>
-                      <!-- /.isotope-overlay -->
-                    </div>
-                    <!-- /.item -->
-                  </div>
-                  <!-- /.col -->
-                </div>
-                <!-- /.row -->
-              </div>
-              <!--/.isotope-->
-            </div>
-            <!--/.gallery-content-->
-          </div>
-          <!--/.container-->
-        </div>
-        <!--/.portfolio-details-->
-
-      </section>
-      <!--/.portfolio-->
-      <!--portfolio end -->
-
-    </section>
-    <!--/.clients-->
-    <!--clients end -->
+</section>
+<!--/.clients-->
+<!--clients end -->
 
 
-    @include('front.partials.modal')
-    @endsection
+@include('front.partials.modal')
+@endsection
