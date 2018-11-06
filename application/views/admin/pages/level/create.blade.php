@@ -4,7 +4,7 @@
     <?= form_open('admin/level/store'); ?>
         <div class="form-group">
             <label>Level</label>
-            <input class="form-control" style="width:50%" type="text" name="level">
+            <input class="form-control" type="text" name="level">
         </div>
         
         <input type="submit" class="btn btn-success">

@@ -5,7 +5,7 @@
 
         <div class="form-group">
             <label>Level</label>
-            <input class="form-control" style="width:50%" type="text" name="level" value="{{ $edit->level }}">
+            <input class="form-control"  type="text" name="level" value="{{ $edit->level }}">
         </div>
         
         <input type="submit" class="btn btn-success">
