@@ -28,6 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       ]);
       PendidikanModel::create($this->input->post());
       var_dump($_POST);
+      redirect('admin/pendidikan');
     }
 
     public function edit($id){
