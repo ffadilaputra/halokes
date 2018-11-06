@@ -1,0 +1,1 @@
+<h1>{{ $user->nama_lengkap }}</h1>

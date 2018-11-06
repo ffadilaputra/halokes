@@ -25,25 +25,25 @@
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>NIS</th>
+                    <th>Email</th>
                     <th>Nama Lengkap</th>
-                    <th>NIK</th>
-                    <th>Tanggal lahir</th>
+                    <th>Tempat Lahir</th>
+                    <th>Telepon</th>
                     <th>Opsi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php $n = 1 ?>
-                  @foreach($santri as $data)
+                  @foreach($list as $data)
                   <tr>
                     <td>{{ $n++ }}</td>
-                    <td>{{ $data->nis }}</td>
+                    <td>{{ $data->email }}</td>
                     <td>{{ $data->nama_lengkap }}</td>
-                    <td>{{ $data->nik }}</td>
-                    <td>{{ $data->tgl_lahir }}</td>
+                    <td>{{ $data->tempat_lahir }}</td>
+                    <td>{{ $data->telepon }}</td>
                     <td>
-                      <a class="btn btn-default" href="{{ base_url('admin/santri/show/').$data->id_santri }}"><i class="fa fa-eye"></i></a>
-                      <a class="btn btn-warning" href="{{ base_url('admin/verify/show/').$data->id_santri }}"><i class="fa fa-eye"></i></a>
+                      <a class="btn btn-default" href="{{ base_url('admin/user/show/').$data->id_users }}"><i class="fa fa-eye"></i></a>
+                      <a class="btn btn-default" href="{{ base_url('admin/user/edit/').$data->id_users }}"><i class="fa fa-pencil"></i></a>
                     </td>
                   </tr>
                   @endforeach

@@ -120,4 +120,12 @@ class MY_Controller extends CI_Controller {
 
         return $uploaded_filename;
     }
+
+    public function autenthicateAdmin(){
+        if($this->session->userdata('admin_logged_in')){
+            }else if(is_null($this->session->userdata('admin_logged_in'))){
+                redirect(base_url('admin/login'));
+            }
+    }
+
 }
