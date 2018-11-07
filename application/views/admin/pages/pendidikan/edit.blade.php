@@ -1,8 +1,8 @@
 @extends('admin.template')
 
 @section('content')
-    <?= form_open('admin/pendidikan/update/'.$edit->id_level); ?>
-        <input type="text" name="level" value="{{ $edit->level }}">
+    <?= form_open('admin/pendidikan/update/'.$edit->id_pen_terakhir); ?>
+        <input type="text" name="pendidikan_terakhir" value="{{ $edit->pendidikan_terakhir }}">
         <input type="submit">
     <?= form_close() ?>
 @stop

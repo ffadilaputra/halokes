@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       ]);
       LevelModel::create($this->input->post());
       var_dump($_POST);
+      redirect('admin/level');
     }
 
     public function edit($id){
@@ -36,6 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         'level' => 'required',
       ]);
       LevelModel::find($id)->update($this->input->post());
+      redirect('admin/level');
     }
 
     public function delete($id){

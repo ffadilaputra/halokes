@@ -111,11 +111,22 @@
             <li>
                 <a href="javascript:;" data-toggle="collapse" data-target="#pengumuman"><i class="fa fa-fw fa-user"></i>Berita <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="pengumuman" class="collapse">
+                        <li><a href="{{ base_url('admin/berita/create') }}">Buat Berita</a></li>
                         <li><a href="{{ base_url('admin/berita') }}">Semua</a></li>
                     </ul>
                 </a>
             </li>
+            <li>
+                    <a href="javascript:;" data-toggle="collapse" data-target="#master"><i class="fa fa-fw fa-user"></i>Master <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="master" class="collapse">
+                            <li><a href="{{ base_url('admin/level') }}">Level</a></li>
+                            <li><a href="{{ base_url('admin/pendidikan') }}">Pendidikan</a></li>
+                            <li><a href="{{ base_url('admin/provesi') }}">Provesi</a></li>
+                        </ul>
+                    </a>
+                </li>
         </ul>
     </div>
+
     <!-- /.navbar-collapse -->
 </nav>

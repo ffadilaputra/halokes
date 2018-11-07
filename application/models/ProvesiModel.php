@@ -8,7 +8,7 @@ class ProvesiModel extends Eloquent {
   protected $table      = 'provesi';
   protected $primaryKey = 'id_provesi';
   protected $fillable   = ['provesi'];
-  public $timestamps = false;
+  public $timestamps = true;
 
 }
 ?>
