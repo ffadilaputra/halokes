@@ -10,6 +10,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
    public function show($id){
       $this->load->model('SantriModel');
+
+      $this->autenthicateAdmin();
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+
       $data['santri'] = SantriModel::find($id);
       $this->view('admin.pages.santri.verification',$data);
    }

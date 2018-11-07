@@ -11,6 +11,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     public function index(){
         $data['list'] = LevelModel::all();
+        $this->autenthicateAdmin();
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+
         $this->view('admin.pages.level.index',$data);
     }
 
@@ -29,6 +32,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     public function edit($id){
       $data['edit'] = LevelModel::find($id);
+      $this->autenthicateAdmin();
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+
       $this->view('admin.pages.level.edit',$data);
     }
 
