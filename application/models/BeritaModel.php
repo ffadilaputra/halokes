@@ -10,5 +10,9 @@ class BeritaModel extends Eloquent {
   protected $fillable   = ['title','id_news_category','description','posted_by'];
   public $timestamps = true;
 
+  public function detailNews(){
+    return $this->belongsTo('');
+  }
+
 }
 ?>
