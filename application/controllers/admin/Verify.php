@@ -5,7 +5,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   class Verify extends MY_Controller {
 
   public function index(){
-    redirect('admin/santri');
+        $this->autenthicateAdmin();
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        $this->view('admin.santri.verifed',$data);
+   // redirect('admin/santri');
   }
 
    public function show($id){
