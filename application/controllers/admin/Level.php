@@ -18,7 +18,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     public function create(){
-      $this->view('admin.pages.level.create');
+      $this->autenthicateAdmin();
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+
+      $this->view('admin.pages.level.create',$data);
     }
 
     public function store(){
@@ -26,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         'level' => 'required',
       ]);
       LevelModel::create($this->input->post());
-      var_dump($_POST);
+
       redirect('admin/level');
     }
 

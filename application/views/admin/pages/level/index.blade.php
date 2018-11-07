@@ -2,12 +2,12 @@
 @section('content')
 <div class="col-lg-12">
 
-   <a href="{{ base_url('admin/level/create') }}" type="button" target="_blank">   
-    <input type="button" value="CREATE" class="btn btn-info">
-   </a>
+    <div class="form-group">
+        <a href="{{ base_url('admin/level/create') }}" class="btn btn-info" type="button" target="_blank">
+            CREATE
+        </a>
+    </div>
 
-
-   <br><br>
    <ol class="breadcrumb">
       <li class="active">
          <i class="fa fa-dashboard"></i>&nbsp;&nbsp; Level
