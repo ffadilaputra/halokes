@@ -4,8 +4,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     class Berita extends MY_Controller{
 
-        public function create(){
+        public function __construct(){
+            parent::__construct();
+            $this->load->model('KategoriBeritaModel');
+            $this->load->model('BeritaModel');
+        }
 
+        public function index(){
+            $this->autenthicateAdmin();
+            $data['admin'] = $this->session->userdata('admin_logged_in');
+            $data['post'] = BeritaModel::all();
+
+            $this->view('admin.pages.berita.index',$data);
+        }
+
+        public function create(){
+            $this->autenthicateAdmin();
+            $data['admin'] = $this->session->userdata('admin_logged_in');
+            $data['category'] = KategoriBeritaModel::all();
+
+            $this->view('admin.pages.berita.create',$data);
+        }
+
+        public function store(){
+            $this->autenthicateAdmin();
+            $data['admin'] = $this->session->userdata('admin_logged_in');
+            $this->validate($this->input->post(),[
+                'title' => 'required',
+                'description' => 'required',
+              ]);
+            $_POST['posted_by'] = $data['admin']->id_users;
+            BeritaModel::create($this->input->post());
+            var_dump($_POST);
+            //redirect('admin');
         }
 
     }

@@ -5,10 +5,10 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 
 class BeritaModel extends Eloquent {
 
-  protected $table      = 'level';
-  protected $primaryKey = 'id_level';
-  protected $fillable   = ['level'];
-  public $timestamps = false;
+  protected $table      = 'news';
+  protected $primaryKey = 'id_news';
+  protected $fillable   = ['title','id_news_category','description','posted_by'];
+  public $timestamps = true;
 
 }
 ?>
