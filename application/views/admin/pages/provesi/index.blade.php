@@ -5,18 +5,18 @@
   <div class="row">
       <div class="col-lg-12">
         <h1 class="page-header">
-          Dashboard
+          Master Profesi
         </h1>
         <ol class="breadcrumb">
           <li class="active">
-            <i class="fa fa-dashboard"></i>Dashboard
+            <i class="fa fa-dashboard"></i>Master Profesi
           </li>
         </ol>
       </div>
     </div>
     <div class="col-lg-12">
         <div class="form-group">
-            <a href="{{ base_url('admin/provesi/create') }}" class="btn btn-primary">Tambah Provesi</a>
+            <a href="{{ base_url('admin/provesi/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Profesi</a>
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -40,8 +40,8 @@
                     <td>{{ $n++ }}</td>
                     <td>{{ $data->provesi }}</td>
                     <td>
-                        <a class="btn btn-default" href="{{ base_url('admin/provesi/edit/').$data->id_provesi }}"><i class="fa fa-pencil"></i></a>
-                        <a class="btn btn-default" href="{{ base_url('admin/provesi/delete/').$data->id_provesi }}"><i class="fa fa-trash"></i></a>
+                        <a class="btn btn-primary" href="{{ base_url('admin/provesi/edit/').$data->id_provesi }}"><i class="fa fa-pencil"></i></a>
+                        <a class="btn btn-danger" href="{{ base_url('admin/provesi/delete/').$data->id_provesi }}"><i class="fa fa-trash"></i></a>
                       </td>
                   </tr>
                   @endforeach

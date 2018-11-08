@@ -4,7 +4,7 @@
 
     <div class="form-group">
         <a href="{{ base_url('admin/level/create') }}" class="btn btn-info" type="button" target="_blank">
-            CREATE
+        <i class="fa fa-plus" aria-hidden="true">&nbsp;&nbsp;</i>CREATE
         </a>
     </div>
 
@@ -29,8 +29,8 @@
          <td>{{ $no++ }}</td>
          <td>{{ $data->level }}</td>
          <td>
-            <a class="btn btn-default" href="{{ base_url('admin/level/edit/').$data->id_level }}"><i class="fa fa-pencil"></i></a>
-            <a class="btn btn-default" href="{{ base_url('admin/level/delete/').$data->id_level }}"><i class="fa fa-trash"></i></a>
+            <a class="btn btn-primary" href="{{ base_url('admin/level/edit/').$data->id_level }}"><i class="fa fa-pencil"></i></a>
+            <a class="btn btn-danger" href="{{ base_url('admin/level/delete/').$data->id_level }}"><i class="fa fa-trash"></i></a>
          </td>
       </tr>
       @endforeach
