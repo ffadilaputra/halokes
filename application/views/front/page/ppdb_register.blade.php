@@ -179,13 +179,18 @@
                            @endif
                         </div>
 
+                        
+
                         <!-- telepon -->
                         <div class="single-about-add-info">
                            <h3>Telepon</h3>
-                           <input name="telepon" type="text" class="form-control">
-                           @if($errors->has('telepon'))
-                           <small class="text-danger">{{ $errors->first('telepon') }}</small>
-                           @endif
+                           <div class="form-group input-group">
+                                <span class="input-group-addon" value="0">+62</span>
+                                <input type="number" name="telepon" class="form-control">
+                                @if($errors->has('telepon'))
+                                <small class="text-danger">{{ $errors->first('telepon') }}</small>
+                                @endif
+                           </div>
                         </div>
                         <div class="single-contact-btn">
                            <input type="submit" class="contact-btn" style="background-color:#b636ff">
