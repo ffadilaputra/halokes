@@ -41,15 +41,14 @@
                   @foreach($santri as $item)
                   <tr>
                     <td>{{ $n++ }}</td>
-                    <td>{{ $item->getAllSantri->nis }}</td>
-                    <td>{{ $item->getAllSantri->nama_lengkap }} </td>
-                    <td>{{ $item->getAllSantri->kecamatan }}</td>
-                    <td>{{ $item->getAllSantri->kota }}</td>
-                    <td>{{ $item->getAllSantri->provinsi }}</td>
-                    <td>{{ $item->getAllSantri->telepon }}</td>
-                    <td>{{ $item->getAllSantri->kode_pos }}</td>
-                    <td>{{ $item->status }}</td>
-
+                    <td>{{ $item->nis }}</td>
+                    <td>{{ $item->nama_lengkap }} </td>
+                    <td>{{ $item->kecamatan }}</td>
+                    <td>{{ $item->kota }}</td>
+                    <td>{{ $item->provinsi }}</td>
+                    <td>{{ $item->telepon }}</td>
+                    <td>{{ $item->kode_pos }}</td>
+                    <td>{{ $item->getVerification->status }}</td>
                     <td>
                         <a class="btn btn-info" href="{{ base_url('admin/santri/show/').$item->id_santri }}"><i class="fa fa-eye"></i>&nbsp;Detail</a>
                         <a class="btn btn-success" href="{{ base_url('admin/verify/show/').$item->id_santri }}"><i class="fa fa-check-square-o" aria-hidden="true"></i> Verify</a>
