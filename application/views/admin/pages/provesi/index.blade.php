@@ -7,16 +7,12 @@
         <h1 class="page-header">
           Master Profesi
         </h1>
-        <ol class="breadcrumb">
-          <li class="active">
-            <i class="fa fa-dashboard"></i>Master Profesi
-          </li>
-        </ol>
       </div>
     </div>
     <div class="col-lg-12">
         <div class="form-group">
             <a href="{{ base_url('admin/provesi/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Profesi</a>
+            <br>
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
