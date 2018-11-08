@@ -20,7 +20,7 @@
               <i class="fa fa-money fa-fw"></i> Verifikasi Siswa</h3>
           </div>
           <div class="panel-body">
-          
+
             <?= form_open('admin/verify/submit') ?>
             <div class="form-group">
               <label for="">Id Santri</label>
