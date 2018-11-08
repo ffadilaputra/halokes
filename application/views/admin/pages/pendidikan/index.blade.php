@@ -1,7 +1,15 @@
 @extends('admin.template')
 
 @section('content')
-<a href="{{ base_url('admin/pendidikan/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Riwayat Pendidikan</a>
+<div class="col-lg-12">
+        <h1 class="page-header">
+          Master Pendidikan
+        </h1>
+        <a href="{{ base_url('admin/pendidikan/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Riwayat Pendidikan</a>
+        <br><br>
+</div>
+
+
   <table class="table">
     <thead>
       <tr>

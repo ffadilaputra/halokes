@@ -1,19 +1,13 @@
 @extends('admin.template')
 @section('content')
 <div class="col-lg-12">
-
-    <div class="form-group">
-        <a href="{{ base_url('admin/level/create') }}" class="btn btn-info" type="button" target="_blank">
-        <i class="fa fa-plus" aria-hidden="true">&nbsp;&nbsp;</i>CREATE
-        </a>
-    </div>
-
-   <ol class="breadcrumb">
-      <li class="active">
-         <i class="fa fa-dashboard"></i>&nbsp;&nbsp; Level
-      </li>
-   </ol>
+        <h1 class="page-header">
+          Master Level
+        </h1>
+        <a href="{{ base_url('admin/level/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Create</a>
+        <br><br>
 </div>
+
 <table class="table">
    <thead>
       <tr>
