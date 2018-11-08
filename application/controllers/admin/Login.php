@@ -9,7 +9,8 @@ class Login extends MY_Controller {
       }
 
     public function index(){
-       $this->view('admin.pages.auth.login');
+    //    $this->view('admin.pages.auth.login');
+        $this->view('front.page.login');
     }
 
     public function loginProcess() {

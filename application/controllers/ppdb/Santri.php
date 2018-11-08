@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           'kota' => 'required|string',
           'provinsi' => 'required|string',
           'kode_pos' => 'required|string',
-          'telepon' => 'required|string',
+          'telepon' => 'required',
           ]);
 
           $id_santri = 'STR' . random_string('alnum', 5) . date('my');
