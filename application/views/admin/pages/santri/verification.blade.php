@@ -20,11 +20,9 @@
               <i class="fa fa-money fa-fw"></i> Verifikasi Siswa</h3>
           </div>
           <div class="panel-body">
-
             <?= form_open('admin/verify/submit') ?>
             <div class="form-group">
-              <label for="">Id Santri</label>
-              <input class="form-control" name="id_santri" value="{{ $santri->id_santri }}" disabled>
+              <input type="hidden" class="form-control" name="id_santri" value="{{ $santri->id_santri }}">
             </div>
             <div class="form-group">
               <label for="">Nama Lengkap</label>
