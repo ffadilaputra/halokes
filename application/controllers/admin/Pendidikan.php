@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         'pendidikan_terakhir' => 'required',
       ]);
       PendidikanModel::create($this->input->post());
-      var_dump($_POST);
+      // var_dump($_POST);
       redirect('admin/pendidikan');
     }
 

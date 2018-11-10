@@ -26,6 +26,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->view('admin.pages.berita.create',$data);
         }
 
+        public function show($id){
+            $data['admin'] = $this->session->userdata('admin_logged_in');
+            $data['post'] = BeritaModel::find($id);
+            $this->view('admin.pages.berita.show',$data);
+        }
+
         public function store(){
             $this->autenthicateAdmin();
             $data['admin'] = $this->session->userdata('admin_logged_in');
@@ -37,6 +43,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             BeritaModel::create($this->input->post());
             var_dump($_POST);
             //redirect('admin');
+        }
+
+        public function edit($id){
+            $this->autenthicateAdmin();
+            $data['admin'] = $this->session->userdata('admin_logged_in');
+            $data['edit'] = BeritaModel::find($id);
+            $data['category'] = KategoriBeritaModel::all();
+            $this->view('admin.pages.berita.edit',$data);
+        }
+      
+          public function update($id){
+            $this->validate($this->input->post(),[
+              'news' => 'required',
+            ]);
+            BeritaModel::find($id)->update($this->input->post());
+            redirect('admin/berita');
+        }
+      
+          public function delete($id){
+            BeritaModel::destroy($id);
+            redirect('admin/berita');
         }
 
     }

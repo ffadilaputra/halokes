@@ -16,18 +16,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $this->view('admin.pages.provesi.index',$data);
     }
 
+    public function create(){
+      $this->autenthicateAdmin();
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+      $this->view('admin.pages.provesi.create',$data);
+    }
+
     public function store(){
       $this->validate($this->input->post(),[
         'provesi' => 'required',
       ]);
       ProvesiModel::create($this->input->post());
+      // var_dump($_POST);
       redirect('admin/provesi');
-    }
-
-    public function create(){
-      $this->autenthicateAdmin();
-      $data['admin'] = $this->session->userdata('admin_logged_in');
-      $this->view('admin.pages.provesi.create',$data);
     }
 
     public function edit($id){
@@ -39,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     public function update($id){
       $this->validate($this->input->post(),[
-        'provesi' => 'required'
+        'provesi' => 'required',
       ]);
       ProvesiModel::find($id)->update($this->input->post());
       redirect('admin/provesi');

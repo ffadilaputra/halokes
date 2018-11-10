@@ -11,5 +11,9 @@ class SantriModel extends Eloquent {
   public $incrementing = false;
   public $timestamps = true;
 
+  public function getVerification(){
+    return $this->belongsTo('VerifikasiModel','id_santri','id_santri');
+  }
+
 }
 ?>

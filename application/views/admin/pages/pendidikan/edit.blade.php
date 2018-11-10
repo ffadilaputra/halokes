@@ -1,8 +1,31 @@
 @extends('admin.template')
-
 @section('content')
-    <?= form_open('admin/pendidikan/update/'.$edit->id_pen_terakhir); ?>
-        <input type="text" name="pendidikan_terakhir" value="{{ $edit->pendidikan_terakhir }}">
-        <input type="submit">
-    <?= form_close() ?>
+<div class="row">
+   <div class="col-lg-12">
+      <h1 class="page-header">
+         Master Pendidikan
+      </h1>
+      <ol class="breadcrumb">
+         <li class="active">
+            <i class="fa fa-check-square-o" aria-hidden="true"></i> Master Pendidikan
+         </li>
+      </ol>
+   </div>
+</div>
+<div class="col-lg-4">
+   <?= form_open('admin/pendidikan/update/'.$edit->id_pen_terakhir); ?>    
+   <div class="form-group">
+      <label>Pendidikan Terakhir</label>
+      <input class="form-control"  type="text" name="pendidikan_terakhir" value="{{ $edit->pendidikan_terakhir }}">
+   </div>
+   <input type="submit" class="btn btn-success" style="float:right">
+   <?= form_close() ?>
+</div>
+@stop
+{{-- INI HARUS ADA DISEMUA LAYOUT SUPAYA BIAR BISA DI KLIK DROPDOWNNYA --}}
+@section('scripts')
+<!-- jQuery -->
+<script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
 @stop
