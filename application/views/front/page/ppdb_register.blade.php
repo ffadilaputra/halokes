@@ -1,6 +1,7 @@
 @extends('front.template')
 @section('content')
 <!--contact start -->
+<?= form_open('ppdb/santri/store') ?>
 <section id="contact" class="contact">
   <br><br><br><br>
     <div class="section-heading text-center">
@@ -8,13 +9,10 @@
     </div>
     <div class="container">
       <div class="contact-content">
-      
         <div class="row">
-          <?= form_open('ppdb/santri/store') ?>
           <div class="col-md-offset-1 col-md-5 col-sm-6">
             <div class="single-contact-box">
               <div class="contact-form">
-                
                   <!-- nis -->
                   <div class="row">
                     <div class="col-sm-12">
@@ -30,7 +28,6 @@
                     <!--/.col-->
                   </div>
                   <!--/.row-->
-
                   <!-- nama lengkap -->
                   <div class="row">
                     <div class="col-sm-12">
@@ -62,7 +59,6 @@
                     <!--/.col-->
                   </div>
                   <!--/.row-->
-
                   <!-- nik -->
                   <div class="row">
                     <div class="col-sm-12">
@@ -95,7 +91,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Tanggal Lahir</label>
-                        <input type="date" class="form-control"  name="tgl_lahir">
+                        <input type="date" class="form-control" name="tgl_lahir">
                         @if($errors->has('tgl_lahir'))
                         <small class="text-danger">{{ $errors->first('tgl_lahir') }}</small>
                         @endif
@@ -113,7 +109,7 @@
                         <label for="">Telepon</label>
                         <div class="form-group input-group">
                               <span class="input-group-addon" value="0">+62</span>
-                              <input type="number" name="telepon" class="form-control">
+                              <input type="number" name="telepon" class="form-control" maxlength="10">
                               @if($errors->has('telepon'))
                               <small class="text-danger">{{ $errors->first('telepon') }}</small>
                               @endif
@@ -131,7 +127,6 @@
             <!--/.single-contact-box-->
           </div>
           <!--/.col-->
-
           <div class="col-md-offset-1 col-md-5 col-sm-6">
             <div class="single-contact-box">
               <div class="contact-form">
@@ -140,14 +135,13 @@
                     <div class="col-sm-12">
                       <label for="">Alamat</label>
                       <div class="form-group">
-                        <textarea class="form-control" rows="3" id="comment" placeholder="Message"></textarea>
+                        <textarea name="alamat" class="form-control" rows="3" id="comment" placeholder="Message"></textarea>
                       </div>
                       <!--/.form-group-->
                     </div>
                     <!--/.col-->
                   </div>
                   <!--/.row-->
-               
                   <!-- kecamatan dan kelurahan -->
                   <div class="row">
                     <div class="col-sm-6 col-xs-12">
@@ -174,7 +168,6 @@
                     <!--/.col-->
                   </div>
                   <!--/.row-->
-
                   <!-- kota dan provinsi -->
                   <div class="row">
                     <div class="col-sm-6 col-xs-12">
@@ -201,29 +194,24 @@
                     <!--/.col-->
                   </div>
                   <!--/.row-->
-
                   <!-- telp -->
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">Kodepos</label>
-                        <input type="number" name="kode_pos" class="form-control">
+                        <input type="number" name="kode_pos" class="form-control" maxlength="5">
                         @if($errors->has('kode_pos'))
-                        <small class="text-danger">{{ $errors->first('kode_pos') }}</small>
+                          <small class="text-danger">{{ $errors->first('kode_pos') }}</small>
                         @endif
-                      
                       </div>
                       <!--/.form-group-->
                     </div>
                     <!--/.col-->
                   </div>
                   <!--/.row-->
-
                   <div class="row">
                     <div class="col-sm-12">
-                      <div class="single-contact-btn">
-                        <button type="submit" class="contact-btn">Submit</button>
-                      </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
                       <!--/.single-single-contact-btn-->
                     </div>
                     <!--/.col-->
@@ -235,17 +223,14 @@
             <!--/.single-contact-box-->
           </div>
           <!--/.col-->
-          <?= form_close() ?>
-          
         </div>
         <!--/.row-->
-      
       </div>
       <!--/.contact-content-->
     </div>
     <!--/.container-->
-    
   </section>
+  <?= form_close() ?>
   <!--/.contact-->
   <!--contact end -->
 @endsection

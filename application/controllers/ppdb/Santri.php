@@ -9,23 +9,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       }
 
       public function store(){
-
         $this->load->model('SantriModel');
-
         $this->validate($this->input->post(), [
-
           'nis' => 'required|string',
           'nama_lengkap' => 'required|string',
           'panggilan' => 'required|string',
           'nik' => 'required|string',
           'tempat_lahir' => 'required|string',
-          'tgl_lahir' => 'required|date',
+          'tgl_lahir' => 'required',
           'alamat' => 'required|string',
           'kelurahan' => 'required|string',
           'kecamatan' => 'required|string',
           'kota' => 'required|string',
           'provinsi' => 'required|string',
-          'kode_pos' => 'required|string',
+          'kode_pos' => 'required',
           'telepon' => 'required',
           ]);
 
