@@ -52,15 +52,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $data['category'] = KategoriBeritaModel::all();
             $this->view('admin.pages.berita.edit',$data);
         }
-      
+
           public function update($id){
             $this->validate($this->input->post(),[
-              'news' => 'required',
+              'title' => 'required',
+              'description' => 'required'
             ]);
             BeritaModel::find($id)->update($this->input->post());
             redirect('admin/berita');
         }
-      
+
           public function delete($id){
             BeritaModel::destroy($id);
             redirect('admin/berita');

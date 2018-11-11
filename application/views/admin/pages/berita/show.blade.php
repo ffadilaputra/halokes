@@ -9,8 +9,8 @@
 </div>
 <div class="panel panel-default">
    <div class="panel-heading">
-      <h1>{{ $post->title }}</h1>
-      <h1>{{ $post->description }}</h1>
+       <center><h1>{{ $post->title }}</h1></center>
+       <center>{!! $post->description !!}</center>
    </div>
 </div>
 @stop
