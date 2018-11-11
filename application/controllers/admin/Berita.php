@@ -4,12 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     class Berita extends MY_Controller{
 
-        public function __construct(){
-            parent::__construct();
-            $this->load->model('KategoriBeritaModel');
-            $this->load->model('BeritaModel');
-        }
-
         public function index(){
             $this->autenthicateAdmin();
             $data['admin'] = $this->session->userdata('admin_logged_in');

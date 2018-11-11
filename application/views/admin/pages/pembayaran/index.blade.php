@@ -3,20 +3,23 @@
 <div class="row">
    <div class="col-lg-12">
       <h1 class="page-header">
-         Verifikasi Santri
+         Pembayaran Santri
       </h1>
       <ol class="breadcrumb">
          <li class="active">
-            <i class="fa fa-check-square-o" aria-hidden="true"></i> Verifikasi Santri
+            <i class="fa fa-book" aria-hidden="true"></i> Pembayaran Santri
          </li>
       </ol>
    </div>
 </div>
 <div class="col-lg-12">
+    <div class="form-group">
+        <a class="btn btn-info" href="{{ base_url('admin/pembayaran/create') }}"><i class="fa fa-plus"></i>&nbsp;Pembayaran</a>
+    </div>
    <div class="panel panel-default">
       <div class="panel-heading">
          <h3 class="panel-title">
-            <i class="fa fa-book" aria-hidden="true"></i> Data Santri
+            <i class="fa fa-book" aria-hidden="true"></i> Data Pembayaran
          </h3>
       </div>
       <div class="panel-body">
@@ -25,40 +28,24 @@
                <thead>
                   <tr>
                      <th>No</th>
-                     <th>NIS</th>
+                     <th>ID Santri</th>
                      <th>Nama Lengkap</th>
-                     <th>NIK</th>
-                     <th>Tanggal lahir</th>
+                     <th>Telepon</th>
                      <th>Opsi</th>
                   </tr>
                </thead>
                <tbody>
                   <?php $n = 1 ?>
-                  @foreach($santri as $data)
-                  <tr>
-                    <td>{{ $n++ }}</td>
-                    <td>{{ $data->nis }}</td>
-                    <td>{{ $data->nama_lengkap }}</td>
-                    <td>{{ $data->nik }}</td>
-                    <td>{{ date("d/m/Y",strtotime($data->tgl_lahir)) }}</td>
-                    <td>
-                      <a class="btn btn-default" href="{{ base_url('admin/santri/show/').$data->id_santri }}"><i class="fa fa-eye"></i></a>
-                      <a class="btn btn-warning" href="{{ base_url('admin/verify/show/').$data->id_santri }}"><i class="fa fa-check"></i></a>
-                    </td>
-                  </tr>
-                  @endforeach
+
                </tbody>
             </table>
          </div>
-         <div class="text-right">
-            <a href="#">View All Transactions
-            <i class="fa fa-arrow-circle-right"></i>
-            </a>
-         </div>
+
       </div>
    </div>
 </div>
 @stop
+
 
 {{-- INI HARUS ADA DISEMUA LAYOUT SUPAYA BIAR BISA DI KLIK DROPDOWNNYA --}}
 @section('scripts')

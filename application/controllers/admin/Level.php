@@ -4,11 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   class Level extends MY_Controller {
 
-    public function __construct(){
-      parent::__construct();
-      $this->load->model('LevelModel');
-    }
-
     public function index(){
         $data['list'] = LevelModel::all();
         $this->autenthicateAdmin();
@@ -29,7 +24,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         'level' => 'required',
       ]);
       LevelModel::create($this->input->post());
-
       redirect('admin/level');
     }
 
@@ -37,7 +31,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $data['edit'] = LevelModel::find($id);
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
-
       $this->view('admin.pages.level.edit',$data);
     }
 
