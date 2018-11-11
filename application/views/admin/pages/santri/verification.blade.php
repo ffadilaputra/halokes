@@ -22,7 +22,8 @@
           <div class="panel-body">
             <?= form_open('admin/verify/submit') ?>
             <div class="form-group">
-              <input type="hidden" class="form-control" name="id_santri" value="{{ $santri->id_santri }}">
+              <label for="">Id Santri</label>
+              <input type="hidden" name="id_santri" value="{{ $santri->id_santri }}">
             </div>
             <div class="form-group">
               <label for="">Nama Lengkap</label>

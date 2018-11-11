@@ -16,7 +16,7 @@
    <div class="panel panel-default">
       <div class="panel-heading">
          <h3 class="panel-title">
-            <i class="fa fa-money fa-fw"></i>Transactions Panel
+            <i class="fa fa-file fa-fw"></i>Berita Panel
          </h3>
       </div>
       <div class="panel-body">
@@ -25,8 +25,8 @@
                <thead>
                   <tr>
                      <th style="width:5%">No.</th>
-                     <th style="width:25%">title</th>
-                     <th style="width:60%">Description</th>
+                     <th style="width:25%">Judul</th>
+                     <th style="width:60%">Isi</th>
                      <th style="width:20%">Opsi</th>
                   </tr>
                </thead>
@@ -36,7 +36,7 @@
                   <tr>
                      <td>{{ $n++ }}</td>
                      <td>{{ $data->title }}</td>
-                     <td>{{ $data->description }}</td>
+                     <td>{!! $data->description !!}</td>
                      <td>
                         <a class="btn btn-success" href="{{ base_url('admin/berita/show/').$data->id_news }}"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-primary" href="{{ base_url('admin/berita/edit/').$data->id_news }}"><i class="fa fa-pencil"></i></a>

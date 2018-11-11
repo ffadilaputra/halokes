@@ -1,212 +1,236 @@
 @extends('front.template')
 @section('content')
-<!--about start -->
-<section id="profil" class="about" style="background-color:#f9fbfd">
-   <!-- <div class="section-heading text-center">
-      <h2>Profil</h2>
-   </div> -->
-   <div class="container">
-      <?= form_open('ppdb/santri/store') ?>
-      <!-- <div class="row"> -->
-      <div class="col-md-offset-1 col-md-5  col-sm-12">
-         <div class="single-contact-box">
-            <div class="contact-form">
-               <div class="single-about-txt">
-                  <h3>
-                     Daftar
-                  </h3>
+<!--contact start -->
+<?= form_open('ppdb/santri/store') ?>
+<section id="contact" class="contact">
+  <br><br><br><br>
+    <div class="section-heading text-center">
+      <h2>FORMULIR PENDAFTARAN SANTRI BARU</h2>
+    </div>
+    <div class="container">
+      <div class="contact-content">
+        <div class="row">
+          <div class="col-md-offset-1 col-md-5 col-sm-6">
+            <div class="single-contact-box">
+              <div class="contact-form">
+                  <!-- nis -->
                   <div class="row">
-                     <div class="col-sm-12">
-                        <div class="form-group">
-                          <!-- nis -->
-
-                           <div class="single-about-add-info">
-                              <h3>NIS</h3>
-                              <input name="nis" type="text" class="form-control">
-                              @if($errors->has('nis'))
-                              <small class="text-danger">{{ $errors->first('nis') }}</small>
-                              @endif
-                           </div>
-                        </div>
-
-                        <!-- nama lengkap -->
-                        <div class="single-about-add-info">
-                           <h3>Nama Lengkap</h3>
-                           <input name="nama_lengkap" type="text" class="form-control">
-                           @if($errors->has('nama_lengkap'))
-                           <small class="text-danger">{{ $errors->first('nama_lengkap') }}</small>
-                           @endif
-                        </div>
-
-                        <!-- panggilan -->
-                        <div class="single-about-add-info">
-                           <h3>Panggilan</h3>
-                           <input name="panggilan" type="text" class="form-control">
-                           @if($errors->has('panggilan'))
-                           <small class="text-danger">{{ $errors->first('panggilan') }}</small>
-                           @endif
-                        </div>
-
-                        <!-- nik -->
-                        <div class="single-about-addcd-info">
-                           <h3>NIK</h3>
-                           <input name="nik" type="text" class="form-control">
-                           @if($errors->has('nik'))
-                           <small class="text-danger">{{ $errors->first('nik') }}</small>
-                           @endif
-                        </div>
-
-                        <!-- row start -->
-                        <div class="row">
-                          <!-- tempat lahir -->
-                          <div class="col-sm-6 col-xs-12">
-                            <div class="single-about-add-info">
-                              <h3>Tempat Lahir</h3>
-                              <input name="tempat_lahir" type="text" class="form-control">
-                              @if($errors->has('tempat_lahir'))
-                              <small class="text-danger">{{ $errors->first('tempat_lahir') }}</small>
-                              @endif
-                          </div>
-                            <!--/.form-group-->
-                          </div>
-                          <!--/.col-->
-                          <!-- tanggal lahir -->
-                          <div class="col-sm-6 col-xs-12">
-                            <div class="single-about-add-info">
-                              <h3>Tangal Lahir</h3>
-                              <input name="tgl_lahir" type="date" class="form-control">
-                              @if($errors->has('tgl_lahir'))
-                              <small class="text-danger">{{ $errors->first('tgl_lahir') }}</small>
-                              @endif
-                            </div>
-                            <!--/.form-group-->
-                          </div>
-                          <!--/.col-->
-                        </div>
-                        <!--/.row end-->
-                     </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label for="">NIS</label>
+                        <input type="number" class="form-control" name="nis">
+                        @if($errors->has('nis'))
+                        <small class="text-danger">{{ $errors->first('nis') }}</small>
+                        @endif
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
                   </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- </div> -->
-
-      <!-- <div class="row"> -->
-      <div class="col-md-offset-1 col-md-5  col-sm-12">
-         <div class="single-contact-box">
-            <div class="contact-form">
-               <div class="single-about-txt">
-                  <h3>
-                     Daftar
-                  </h3>
+                  <!--/.row-->
+                  <!-- nama lengkap -->
                   <div class="row">
-                     <div class="col-sm-12">
-
-                        <!-- alamat -->
-                        <div class="single-about-add-info">
-                           <h3>Alamat</h3>
-                           <textarea name="alamat" type="text" class="form-control"></textarea>
-                           @if($errors->has('alamat'))
-                           <small class="text-danger">{{ $errors->first('alamat') }}</small>
-                           @endif
-                        </div>
-
-                        <!-- row start -->
-                        <div class="row">
-                          <!-- kelurahan -->
-                          <div class="col-sm-6 col-xs-12">
-                            <div class="single-about-add-info">
-                              <h3>Kelurahan</h3>
-                              <input name="kelurahan" type="text" class="form-control">
-                              @if($errors->has('kelurahan'))
-                              <small class="text-danger">{{ $errors->first('kelurahan') }}</small>
-                              @endif
-                            </div>
-                            <!--/.form-group-->
-                          </div>
-                          <!--/.col-->
-                          <!-- kecamatan -->
-                          <div class="col-sm-6 col-xs-12">
-                            <div class="single-about-add-info">
-                              <h3>Kecamatan</h3>
-                              <input name="kecamatan" type="text" class="form-control">
-                              @if($errors->has('kecamatan'))
-                              <small class="text-danger">{{ $errors->first('kecamatan') }}</small>
-                              @endif
-                            </div>
-                            <!--/.form-group-->
-                            </div>
-                          <!--/.col-->
-                        </div>
-                        <!--/.row end-->
-
-                        <!-- row start -->
-                        <div class="row">
-                          <!-- kota -->
-                          <div class="col-sm-6 col-xs-12">
-                            <div class="single-about-add-info">
-                              <h3>Kota</h3>
-                              <input name="kota" type="text" class="form-control">
-                              @if($errors->has('kota'))
-                              <small class="text-danger">{{ $errors->first('kota') }}</small>
-                              @endif
-                            </div>
-                            <!--/.form-group-->
-                          </div>
-                          <!--/.col-->
-                          <!-- provinsi -->
-                          <div class="col-sm-6 col-xs-12">
-                            <div class="single-about-add-info">
-                              <h3>Provinsi</h3>
-                              <input name="provinsi" type="text" class="form-control">
-                              @if($errors->has('provinsi'))
-                              <small class="text-danger">{{ $errors->first('provinsi') }}</small>
-                              @endif
-                            </div>
-                            <!--/.form-group-->
-                            </div>
-                          <!--/.col-->
-                        </div>
-                        <!--/.row end-->
-
-                        <!-- kodepos -->
-                        <div class="single-about-add-info">
-                           <h3>Kodepos</h3>
-                           <input name="kode_pos" type="text" class="form-control" maxlength="5">
-                           @if($errors->has('kode_pos'))
-                           <small class="text-danger">{{ $errors->first('kode_pos') }}</small>
-                           @endif
-                        </div>
-
-                        
-
-                        <!-- telepon -->
-                        <div class="single-about-add-info">
-                           <h3>Telepon</h3>
-                           <div class="form-group input-group">
-                                <span class="input-group-addon" value="0">+62</span>
-                                <input type="number" name="telepon" class="form-control">
-                                @if($errors->has('telepon'))
-                                <small class="text-danger">{{ $errors->first('telepon') }}</small>
-                                @endif
-                           </div>
-                        </div>
-                        <div class="single-contact-btn">
-                           <input type="submit" class="contact-btn" style="background-color:#b636ff">
-                           <!-- <a class="contact-btn" href="#" role="button">submit</a> -->
-                        </div>
-                     </div>
-
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label for="">Nama Lengkap</label>
+                        <input type="text" class="form-control" name="nama_lengkap">
+                        @if($errors->has('nama_lengkap'))
+                        <small class="text-danger">{{ $errors->first('nama_lengkap') }}</small>
+                        @endif
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
                   </div>
-               </div>
+                  <!--/.row-->
+
+                  <!-- panggilan -->
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label for="">Nama Panggilan</label>
+                        <input type="text" class="form-control" name="panggilan">
+                        @if($errors->has('panggilan'))
+                        <small class="text-danger">{{ $errors->first('panggilan') }}</small>
+                        @endif
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+                  <!-- nik -->
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label for="">NIK</label>
+                        <input type="number" class="form-control" name="nik">
+                        @if($errors->has('nik'))
+                        <small class="text-danger">{{ $errors->first('nik') }}</small>
+                        @endif
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+
+                  <!-- ttl -->
+                  <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                      <div class="form-group">
+                        <label for="">Tempat Lahir</label>
+                        <input type="text" class="form-control" name="tempat_lahir">
+                        @if($errors->has('tempat_lahir'))
+                        <small class="text-danger">{{ $errors->first('tempat_lahir') }}</small>
+                        @endif
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
+                    <div class="col-sm-6 col-xs-12">
+                      <div class="form-group">
+                        <label for="">Tanggal Lahir</label>
+                        <input type="date" class="form-control" name="tgl_lahir">
+                        @if($errors->has('tgl_lahir'))
+                        <small class="text-danger">{{ $errors->first('tgl_lahir') }}</small>
+                        @endif
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+
+                  <!-- telp -->
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label for="">Telepon</label>
+                        <div class="form-group input-group">
+                              <span class="input-group-addon" value="0">+62</span>
+                              <input type="number" name="telepon" class="form-control" maxlength="10">
+                              @if($errors->has('telepon'))
+                              <small class="text-danger">{{ $errors->first('telepon') }}</small>
+                              @endif
+                        </div>
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+
+              </div>
+              <!--/.contact-form-->
             </div>
-         </div>
+            <!--/.single-contact-box-->
+          </div>
+          <!--/.col-->
+          <div class="col-md-offset-1 col-md-5 col-sm-6">
+            <div class="single-contact-box">
+              <div class="contact-form">
+                  <!-- alamat -->
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <label for="">Alamat</label>
+                      <div class="form-group">
+                        <textarea name="alamat" class="form-control" rows="3" id="comment" placeholder="Message"></textarea>
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+                  <!-- kecamatan dan kelurahan -->
+                  <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                      <div class="form-group">
+                        <label for="">Kelurahan</label>
+                        <input type="text" class="form-control" name="kelurahan">
+                        @if($errors->has('kelurahan'))
+                        <small class="text-danger">{{ $errors->first('kelurahan') }}</small>
+                        @endif
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
+                    <div class="col-sm-6 col-xs-12">
+                      <div class="form-group">
+                        <label for="">Kecamatan</label>
+                        <input type="text" class="form-control"  name="kecamatan">
+                        @if($errors->has('kecamatan'))
+                        <small class="text-danger">{{ $errors->first('kecamatan') }}</small>
+                        @endif
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+                  <!-- kota dan provinsi -->
+                  <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                      <div class="form-group">
+                        <label for="">Kota</label>
+                        <input type="text" class="form-control" name="kota">
+                        @if($errors->has('kota'))
+                        <small class="text-danger">{{ $errors->first('kota') }}</small>
+                        @endif
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
+                    <div class="col-sm-6 col-xs-12">
+                      <div class="form-group">
+                        <label for="">Provinsi</label>
+                        <input type="text" class="form-control"  name="provinsi">
+                        @if($errors->has('provinsi'))
+                        <small class="text-danger">{{ $errors->first('provinsi') }}</small>
+                        @endif
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+                  <!-- telp -->
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label for="">Kodepos</label>
+                        <input type="number" name="kode_pos" class="form-control" maxlength="5">
+                        @if($errors->has('kode_pos'))
+                          <small class="text-danger">{{ $errors->first('kode_pos') }}</small>
+                        @endif
+                      </div>
+                      <!--/.form-group-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+                  <div class="row">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                      <!--/.single-single-contact-btn-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+              </div>
+              <!--/.contact-form-->
+            </div>
+            <!--/.single-contact-box-->
+          </div>
+          <!--/.col-->
+        </div>
+        <!--/.row-->
       </div>
-      <!-- </div> -->
-      <?= form_close() ?>
-   </div>
-</section>
-<!--/.about-->
-<!--about end -->
+      <!--/.contact-content-->
+    </div>
+    <!--/.container-->
+  </section>
+  <?= form_close() ?>
+  <!--/.contact-->
+  <!--contact end -->
 @endsection

@@ -36,15 +36,15 @@
                   <?php $n = 1 ?>
                   @foreach($santri as $data)
                   <tr>
-                     <td>{{ $n++ }}</td>
-                     <td>{{ $data->nis }}</td>
-                     <td>{{ $data->nama_lengkap }}</td>
-                     <td>{{ $data->nik }}</td>
-                     <td>{{ $data->tgl_lahir }}</td>
-                     <td>
-                        <a class="btn btn-info" href="{{ base_url('admin/santri/show/').$data->id_santri }}"><i class="fa fa-eye"></i></a>
-                        <a class="btn btn-primary" href="{{ base_url('admin/verify/show/').$data->id_santri }}"><i class="fa fa-check-square-o" aria-hidden="true"></i> Verify</a>
-                     </td>
+                    <td>{{ $n++ }}</td>
+                    <td>{{ $data->nis }}</td>
+                    <td>{{ $data->nama_lengkap }}</td>
+                    <td>{{ $data->nik }}</td>
+                    <td>{{ date("d/m/Y",strtotime($data->tgl_lahir)) }}</td>
+                    <td>
+                      <a class="btn btn-default" href="{{ base_url('admin/santri/show/').$data->id_santri }}"><i class="fa fa-eye"></i></a>
+                      <a class="btn btn-warning" href="{{ base_url('admin/verify/show/').$data->id_santri }}"><i class="fa fa-eye"></i></a>
+                    </td>
                   </tr>
                   @endforeach
                </tbody>
