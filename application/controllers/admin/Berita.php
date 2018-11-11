@@ -41,8 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               ]);
             $_POST['posted_by'] = $data['admin']->id_users;
             BeritaModel::create($this->input->post());
-            var_dump($_POST);
-            //redirect('admin');
+            redirect('admin/berita');
         }
 
         public function edit($id){

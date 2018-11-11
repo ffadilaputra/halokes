@@ -25,13 +25,8 @@
                <thead>
                   <tr>
                     <th>No</th>
-                    <td>NIS</td>
+                    <td>ID Santri</td>
                     <td>Nama Lengkap</td>
-                    <td>Kecamatan</td>
-                    <td>Kota</td>
-                    <td>Profinsi</td>
-                    <td>Telepon</td>
-                    <td>Kodepos</td>
                     <td>Status</td>
                     <td>Opsi</td>
                   </tr>
@@ -41,21 +36,11 @@
                   @foreach($santri as $item)
                   <tr>
                     <td>{{ $n++ }}</td>
-                    <td>{{ $item->nis }}</td>
-                    <td>{{ $item->nama_lengkap }} </td>
-                    <td>{{ $item->kecamatan }}</td>
-                    <td>{{ $item->kota }}</td>
-                    <td>{{ $item->provinsi }}</td>
-                    <td>{{ $item->telepon }}</td>
-                    <td>{{ $item->kode_pos }}</td>
-                      @if(isset($item->getVerification->status))
-                        <td>{{ $item->getVerification->status }}</td>
-                        @else
-                        <td>Belum</td>
-                      @endif
+                    <td>{{ $item->id_santri }}</td>
+                    <td>{{ $item->getDetails->nama_lengkap }}</td>
+                    <td><span class="badge badge-success badge-pill">{{ $item->status }}</span></td>
                     <td>
                         <a class="btn btn-info" href="{{ base_url('admin/santri/show/').$item->id_santri }}"><i class="fa fa-eye"></i>&nbsp;Detail</a>
-                        <a class="btn btn-success" href="{{ base_url('admin/verify/show/').$item->id_santri }}"><i class="fa fa-check-square-o" aria-hidden="true"></i> Verify</a>
                     </td>
                   </tr>
                   @endforeach

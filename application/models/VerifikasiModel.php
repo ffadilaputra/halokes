@@ -10,7 +10,7 @@ class VerifikasiModel extends Eloquent {
   protected $fillable   = ['id_santri','status'];
   public $timestamps = true;
 
-  public function getAllSantri(){
+  public function getDetails(){
     return $this->belongsTo('SantriModel','id_santri','id_santri');
   }
 

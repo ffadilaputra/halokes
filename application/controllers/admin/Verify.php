@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         'status' => 'required',
       ]);
       VerifikasiModel::create($this->input->post());
-      var_dump($this->input->post());
-
+      //var_dump($this->input->post());
+      redirect('verify');
    }
 
 }

@@ -24,7 +24,7 @@
             <?= form_open('admin/verify/submit') ?>
             <div class="form-group">
               <label for="">Id Santri</label>
-              <input class="form-control" name="id_santri" value="{{ $santri->id_santri }}" disabled>
+              <input type="hidden" name="id_santri" value="{{ $santri->id_santri }}">
             </div>
             <div class="form-group">
               <label for="">Nama Lengkap</label>

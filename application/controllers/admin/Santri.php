@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function all(){
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
-      $data['santri'] = SantriModel::all();
+      $data['santri'] = SantriModel::get();
       $this->view('admin.pages.santri.verifed',$data);
     }
 
@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
       $data['santri'] = VerifikasiModel::get()->where('status','terima');
-      $this->view('admin.pages.santri.verifed',$data);
+      $this->view('admin.pages.santri.verifed_santri',$data);
     }
 
 }
