@@ -4,11 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   class Provesi extends MY_Controller {
 
-    public function __construct(){
-      parent::__construct();
-      $this->load->model('ProvesiModel');
-    }
-
     public function index(){
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');

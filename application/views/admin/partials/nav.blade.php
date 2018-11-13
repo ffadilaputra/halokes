@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Admin</a>
+        <a class="navbar-brand" href="{{ base_url('admin') }}">Laman Admin</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
@@ -92,8 +92,16 @@
                     <li>
                         <a href="{{ base_url('admin/santri') }}">Verifikasi Santri</a>
                     </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#pembayaran"><i class="fa fa-fw fa-user"></i>Pembayaran <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="pembayaran" class="collapse">
                     <li>
-                        <a href="#">Pembayaran</a>
+                        <a href="{{ base_url('admin/pembayaran') }}">Semua</a>
+                    </li>
+                    <li>
+                        <a href="{{ base_url('admin/pembayaran/lunas') }}">Lunas</a>
                     </li>
                 </ul>
             </li>
@@ -109,15 +117,16 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#pengumuman"><i class="fa fa-fw fa-user"></i>Berita <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#pengumuman"><i class="fa fa-fw fa-book"></i>Berita <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="pengumuman" class="collapse">
                         <li><a href="{{ base_url('admin/berita/create') }}">Buat Berita</a></li>
+                        <li><a href="{{ base_url('admin/kategoriberita')}}">Kategori Berita</a></li>
                         <li><a href="{{ base_url('admin/berita') }}">Semua</a></li>
                     </ul>
                 </a>
             </li>
             <li>
-                    <a href="javascript:;" data-toggle="collapse" data-target="#master"><i class="fa fa-fw fa-user"></i>Master <i class="fa fa-fw fa-caret-down"></i></a>
+                    <a href="javascript:;" data-toggle="collapse" data-target="#master"><i class="fa fa-fw fa-archive"></i>Master <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="master" class="collapse">
                             <li><a href="{{ base_url('admin/level') }}">Level</a></li>
                             <li><a href="{{ base_url('admin/pendidikan') }}">Pendidikan</a></li>

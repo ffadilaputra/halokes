@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $this->autenthicateAdmin();
         $data['admin'] = $this->session->userdata('admin_logged_in');
         $this->view('admin.santri.verifed',$data);
-   // redirect('admin/santri');
+        // redirect('admin/santri');
   }
 
    public function show($id){
@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         'status' => 'required',
       ]);
       VerifikasiModel::create($this->input->post());
-      var_dump($this->input->post());
-
+      //var_dump($this->input->post());
+      redirect('verify');
    }
 
 }

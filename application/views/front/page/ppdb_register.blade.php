@@ -18,7 +18,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">NIS</label>
-                        <input type="text" class="form-control" name="nis">
+                        <input type="number" class="form-control" name="nis">
                         @if($errors->has('nis'))
                         <small class="text-danger">{{ $errors->first('nis') }}</small>
                         @endif
@@ -64,7 +64,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">NIK</label>
-                        <input type="text" class="form-control" name="nik">
+                        <input type="number" class="form-control" name="nik">
                         @if($errors->has('nik'))
                         <small class="text-danger">{{ $errors->first('nik') }}</small>
                         @endif

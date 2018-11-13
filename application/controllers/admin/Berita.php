@@ -4,12 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     class Berita extends MY_Controller{
 
-        public function __construct(){
-            parent::__construct();
-            $this->load->model('KategoriBeritaModel');
-            $this->load->model('BeritaModel');
-        }
-
         public function index(){
             $this->autenthicateAdmin();
             $data['admin'] = $this->session->userdata('admin_logged_in');
@@ -41,7 +35,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               ]);
             $_POST['posted_by'] = $data['admin']->id_users;
             BeritaModel::create($this->input->post());
-            // var_dump($_POST);
             redirect('admin/berita');
         }
 
@@ -52,15 +45,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $data['category'] = KategoriBeritaModel::all();
             $this->view('admin.pages.berita.edit',$data);
         }
-      
+
           public function update($id){
             $this->validate($this->input->post(),[
-              'news' => 'required',
+              'title' => 'required',
+              'description' => 'required'
             ]);
             BeritaModel::find($id)->update($this->input->post());
             redirect('admin/berita');
         }
-      
+
           public function delete($id){
             BeritaModel::destroy($id);
             redirect('admin/berita');
