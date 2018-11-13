@@ -12,6 +12,12 @@
       <div class="panel-heading">
         <h1>{{ $santri->nis }}</h1>
         <h1>{{ $santri->nama_lengkap }}</h1>
+        <h1>{{ $santri->kecamatan }}</h1>
+        <h1>{{ $santri->kota }}</h1>
+        <h1>{{ $santri->provinsi }}</h1>
+        <h1>{{ $santri->telepon }}</h1>
+        <h1>{{ $santri->kode_pos }}</h1>
+        <h1>{{ $santri->getVerification->status }}</h1>
       </div>
 </div>
 
