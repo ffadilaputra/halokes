@@ -28,15 +28,31 @@
                <thead>
                   <tr>
                      <th>No</th>
-                     <th>ID Santri</th>
-                     <th>Nama Lengkap</th>
-                     <th>Telepon</th>
+                     <th>Nama Santri</th>
+                     <th>Kode Pembayaran</th>
+                     <th>Status Pembayaran</th>
+                     <th>Tanggal Bayar</th>
+                     <th>No Telepon</th>
                      <th>Opsi</th>
                   </tr>
                </thead>
                <tbody>
                   <?php $n = 1 ?>
-
+                  @foreach ($santri as $item)
+                  <tr>
+                     <th>{{ $n++ }}</th>
+                     <th>{{ $item->pembayaranSantri->nama_lengkap }}</th>
+                     <th>{{ $item->kode_pembayaran }}</th>
+                     <th>{{ $item->status_pembayaran }}</th>
+                     <th>{{ $item->created_at }}</th>
+                     <th>{{ $item->pembayaranSantri->telepon }}</th>
+                     <th>
+                        <a href="{{ base_url('admin/pembayaran/show/').$item->id }}" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+                        <a href="{{ base_url('admin/pembayaran/edit/').$item->id }}" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
+                        <a href="{{ base_url('admin/pembayaran/delete/'.$item->id)}}" class="btn btn-success btn-sm"><i class="fa fa-trash-o"></i></a>
+                     </th>
+                  </tr>
+                  @endforeach
                </tbody>
             </table>
          </div>
