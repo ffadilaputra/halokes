@@ -1,4 +1,4 @@
-@extends('front.template')
+@extends('front.no_header')
 @section('content')
 <!--contact start -->
 <?= form_open('ppdb/santri/store') ?>
