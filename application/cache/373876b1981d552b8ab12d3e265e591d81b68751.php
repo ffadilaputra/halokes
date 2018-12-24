@@ -141,6 +141,21 @@
                     <!--/.col-->
                   </div>
                   <!--/.row-->
+                  <div class="row">
+                      <div class="col-sm-12">
+                        <label for="">Jenjang Pendidikan</label>
+                        <div class="form-group">
+                            <select name="jenjang" id="" class="form-control">
+                              <option value="">-- Pilih --</option>
+                              <option value="mi">Madrasah Ibtidaiyah</option>
+                              <option value="mts">Madrasah Tsanawiyah</option>
+                              <option value="ma">Madrasah Aliyah</option>
+                            </select>
+                        </div>
+                        <!--/.form-group-->
+                      </div>
+                      <!--/.col-->
+                    </div>
                   <!-- kecamatan dan kelurahan -->
                   <div class="row">
                     <div class="col-sm-6 col-xs-12">
@@ -210,7 +225,7 @@
                   <!--/.row-->
                   <div class="row">
                     <div class="col-sm-12">
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="submit" class="btn btn-block btn-success">Submit</button>
                       <!--/.single-single-contact-btn-->
                     </div>
                     <!--/.col-->

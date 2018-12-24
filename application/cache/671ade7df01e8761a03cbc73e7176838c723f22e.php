@@ -49,6 +49,18 @@
                       <label>Kota</label>
                       <h2> <?php echo e($santri->kota); ?></h2>
                   </div>
+                  <div class="form-group">
+                        <label>Jenjang Pendidikan</label>
+                        <?php if(is_null($santri->jenjang)): ?>
+                        <h2> Belum memilih jenjang</h2>
+                        <?php elseif($santri->jenjang == 'mi'): ?>
+                        <h2>Madarasah Ibtidaiyah</h2>
+                        <?php elseif($santri->jenjang == 'mts'): ?>
+                        <h2>Madarasah Tsanawiyah</h2>
+                        <?php elseif($santri->jenjang == 'ma'): ?>
+                        <h2>Madarasah Aliyah</h2>
+                        <?php endif; ?>
+                  </div>
               </div>
               <div class="col-md-6">
                   <div class="form-group">
