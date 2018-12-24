@@ -1,29 +1,45 @@
 @extends('admin.template')
-
 @section('content')
-<a href="{{ base_url('admin/kategoriberita/create') }}" class="btn btn-primary">Tambah Kategori berita</a>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Kategori Berita</th>
-        <th>Option</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php $no=1; ?>
-      @foreach($list as $data)
-      <tr>
-        <td>{{ $no++ }}</td>
-        <td>{{ $data->category_name }}</td>
-        <td>
-          <a class="btn btn-default" href="{{ base_url('admin/kategoriberita/edit/').$data->id_news_category }}"><i class="fa fa-pencil"></i></a>
-          <a class="btn btn-default" href="{{ base_url('admin/kategoriberita/delete/').$data->id_news_category }}"><i class="fa fa-trash"></i></a>
-        </td>
-      </tr>
-      @endforeach
-    </tbody>
-  </table>
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">
+      Data Berita
+    </h1>
+    <ol class="breadcrumb">
+      <li class="active">
+        <i class="fa fa-dashboard"></i>Dashboard
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-12">
+    <div class="form-group">
+        <a href="{{ base_url('admin/kategoriberita/create') }}" class="btn btn-primary">Tambah Kategori berita</a>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Kategori Berita</th>
+          <th>Option</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php $no=1; ?> @foreach($list as $data)
+        <tr>
+          <td>{{ $no++ }}</td>
+          <td>{{ $data->category_name }}</td>
+          <td>
+            <a class="btn btn-default" href="{{ base_url('admin/kategoriberita/edit/').$data->id_news_category }}"><i class="fa fa-pencil"></i></a>
+            <a class="btn btn-default" href="{{ base_url('admin/kategoriberita/delete/').$data->id_news_category }}"><i class="fa fa-trash"></i></a>
+          </td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
 @stop
 
 <!-- jQuery -->

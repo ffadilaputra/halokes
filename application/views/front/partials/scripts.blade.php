@@ -39,7 +39,7 @@
 	    type: 'GET',
 	    data: {access_token: token, count: num_photos},
 	    success: function(data){
-        console.log(data);
+        //console.log(data);
         for( x in data.data ){
           $('#data').append('<div class="col-sm-4"> <div class="item"> <img src="'+data.data[x].images.low_resolution.url+'"></div></div>');
 		}
