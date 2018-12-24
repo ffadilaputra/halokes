@@ -4,7 +4,7 @@
 <!--info start -->
 <section id="info" class="education">
   <div class="section-heading text-center">
-    <h2 class="head-section">Informasi</h2>
+    <h2 class="head-section">Mauidhoh</h2>
   </div>
   <div class="container">
     <div class="experience-content col-lg-12">

@@ -16,27 +16,23 @@
         <!-- End Header Navigation -->
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse menu-ui-design">
-          <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-            <li class=" smooth-menu active"></li>
-            <li class="smooth-menu">
-              <a href="{{ base_url('blog/profil') }}">Profil</a>
-            </li>
-            <li class="smooth-menu">
-              <a href="{{ base_url('blog/informasi') }}">Informasi</a>
-            </li>
-            <li class="smooth-menu">
-              <a href="{{ base_url('blog/mauidhoh') }}">Mauidhoh</a>
-            </li>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="{{ base_url() }}">Beranda</a></li>
+            <li><a href="{{ base_url('blog/profil') }}">Profil</a></li>
+            <li><a href="{{ base_url('blog/informasi') }}">Informasi</a></li>
+            <li><a href="{{ base_url('blog/mauidhoh') }}">Mauidhoh</a></li>
+
           </ul>
-          <!--/.nav -->
-        </div>
+
+        </div><!-- /.navbar-collapse -->
         <!-- /.navbar-collapse -->
       </div>
       <!--/.container-->
     </nav>
     <!--/nav-->
     <!-- End Navigation -->
+
   </div>
   <!--/.header-area-->
 
