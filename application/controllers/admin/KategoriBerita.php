@@ -4,11 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   class KategoriBerita extends MY_Controller {
 
-    public function __construct(){
-      parent::__construct();
-      $this->load->model('KategoriBeritaModel');
-    }
-
     public function index(){
         $this->autenthicateAdmin();
         $data['admin'] = $this->session->userdata('admin_logged_in');
@@ -27,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         'category_name' => 'required',
       ]);
       KategoriBeritaModel::create($this->input->post());
-      var_dump($_POST);
+      redirect('admin/kategoriberita');
     }
 
     public function edit($id){
@@ -47,6 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     public function delete($id){
         KategoriBeritaModel::destroy($id);
+        redirect('admin/kategoriberita');
     }
 
 }

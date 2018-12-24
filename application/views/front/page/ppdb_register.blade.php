@@ -1,4 +1,4 @@
-@extends('front.template')
+@extends('front.no_header')
 @section('content')
 <!--contact start -->
 <?= form_open('ppdb/santri/store') ?>
@@ -18,7 +18,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">NIS</label>
-                        <input type="number" class="form-control" name="nis">
+                        <input type="number" class="form-control" name="nis" value="{{ old('nis') }}">
                         @if($errors->has('nis'))
                         <small class="text-danger">{{ $errors->first('nis') }}</small>
                         @endif
@@ -33,7 +33,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">Nama Lengkap</label>
-                        <input type="text" class="form-control" name="nama_lengkap">
+                        <input type="text" class="form-control" name="nama_lengkap" value="{{ old('nama_lengkap') }}">
                         @if($errors->has('nama_lengkap'))
                         <small class="text-danger">{{ $errors->first('nama_lengkap') }}</small>
                         @endif
@@ -49,7 +49,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">Nama Panggilan</label>
-                        <input type="text" class="form-control" name="panggilan">
+                        <input type="text" class="form-control" name="panggilan" value="{{ old('panggilan') }}">
                         @if($errors->has('panggilan'))
                         <small class="text-danger">{{ $errors->first('panggilan') }}</small>
                         @endif
@@ -64,7 +64,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">NIK</label>
-                        <input type="number" class="form-control" name="nik">
+                        <input type="number" class="form-control" name="nik" value="{{ old('nik') }}">
                         @if($errors->has('nik'))
                         <small class="text-danger">{{ $errors->first('nik') }}</small>
                         @endif
@@ -80,7 +80,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Tempat Lahir</label>
-                        <input type="text" class="form-control" name="tempat_lahir">
+                        <input type="text" class="form-control" name="tempat_lahir" value="{{ old('tempat_lahir') }}">
                         @if($errors->has('tempat_lahir'))
                         <small class="text-danger">{{ $errors->first('tempat_lahir') }}</small>
                         @endif
@@ -91,7 +91,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Tanggal Lahir</label>
-                        <input type="date" class="form-control" name="tgl_lahir">
+                        <input type="date" class="form-control" name="tgl_lahir" value="{{ old('tgl_lahir') }}">
                         @if($errors->has('tgl_lahir'))
                         <small class="text-danger">{{ $errors->first('tgl_lahir') }}</small>
                         @endif
@@ -109,7 +109,7 @@
                         <label for="">Telepon</label>
                         <div class="form-group input-group">
                               <span class="input-group-addon" value="0">+62</span>
-                              <input type="number" name="telepon" class="form-control" maxlength="10">
+                              <input type="number" name="telepon" class="form-control" maxlength="10" value="{{ old('telepon') }}">
                               @if($errors->has('telepon'))
                               <small class="text-danger">{{ $errors->first('telepon') }}</small>
                               @endif
@@ -135,7 +135,7 @@
                     <div class="col-sm-12">
                       <label for="">Alamat</label>
                       <div class="form-group">
-                        <textarea name="alamat" class="form-control" rows="3" id="comment" placeholder="Message"></textarea>
+                        <textarea name="alamat" class="form-control" rows="3" id="comment" placeholder="Message">{{ old('alamat') }}</textarea>
                       </div>
                       <!--/.form-group-->
                     </div>
@@ -147,7 +147,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Kelurahan</label>
-                        <input type="text" class="form-control" name="kelurahan">
+                        <input type="text" class="form-control" name="kelurahan" value="{{ old('kelurahan') }}">
                         @if($errors->has('kelurahan'))
                         <small class="text-danger">{{ $errors->first('kelurahan') }}</small>
                         @endif
@@ -158,7 +158,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Kecamatan</label>
-                        <input type="text" class="form-control"  name="kecamatan">
+                        <input type="text" class="form-control"  name="kecamatan" value="{{ old('kecamatan') }}">
                         @if($errors->has('kecamatan'))
                         <small class="text-danger">{{ $errors->first('kecamatan') }}</small>
                         @endif
@@ -173,7 +173,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Kota</label>
-                        <input type="text" class="form-control" name="kota">
+                        <input type="text" class="form-control" name="kota" value="{{ old('kota') }}">
                         @if($errors->has('kota'))
                         <small class="text-danger">{{ $errors->first('kota') }}</small>
                         @endif
@@ -184,7 +184,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Provinsi</label>
-                        <input type="text" class="form-control"  name="provinsi">
+                        <input type="text" class="form-control"  name="provinsi" value="{{ old('provinsi') }}">
                         @if($errors->has('provinsi'))
                         <small class="text-danger">{{ $errors->first('provinsi') }}</small>
                         @endif
@@ -199,7 +199,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">Kodepos</label>
-                        <input type="number" name="kode_pos" class="form-control" maxlength="5">
+                        <input type="number" name="kode_pos" class="form-control" maxlength="5" value="{{ old('kodepos') }}">
                         @if($errors->has('kode_pos'))
                           <small class="text-danger">{{ $errors->first('kode_pos') }}</small>
                         @endif

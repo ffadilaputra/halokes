@@ -9,7 +9,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       }
 
       public function store(){
-        $this->load->model('SantriModel');
         $this->validate($this->input->post(), [
           'nis' => 'required|numeric',
           'nama_lengkap' => 'required|string',
@@ -26,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           'telepon' => 'required',
           ]);
 
-          $id_santri = 'STR' . random_string('alnum', 5) . date('my');
+          $id_santri = 'STR'.random_string('alnum', 5).date('my');
           $_POST['id_santri'] = $id_santri;
           SantriModel::create($this->input->post());
           redirect('main');

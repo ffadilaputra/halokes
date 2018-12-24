@@ -178,76 +178,18 @@
   <div class="container">
     <div class="experience-content col-lg-12">
 
+      @foreach($post as $article)
       <div class="mau-panel col-lg-4 col-sm-12">
         <div class="panel">
           <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
+            <h3 class="panel-title">{{ $article->title }}</h3>
           </div>
           <div class="panel-body">
-            Basic panel example
+            {!! $article->description !!}
           </div>
         </div>
       </div>
-      <!-- end panel -->
-
-      <div class="mau-panel col-lg-4 col-sm-12">
-        <div class="panel">
-          <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <div class="panel-body">
-            Basic panel example
-          </div>
-        </div>
-      </div>
-
-      <!-- end panel -->
-      <div class="mau-panel col-lg-4 col-sm-12">
-        <div class="panel">
-          <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <div class="panel-body">
-            Basic panel example
-          </div>
-        </div>
-      </div>
-      <!-- end panel -->
-
-      <div class="mau-panel col-lg-4 col-sm-12">
-        <div class="panel">
-          <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <div class="panel-body">
-            Basic panel example
-          </div>
-        </div>
-      </div>
-      <!-- end panel -->
-
-      <div class="mau-panel col-lg-4 col-sm-12">
-        <div class="panel">
-          <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <div class="panel-body">
-            Basic panel example
-          </div>
-        </div>
-      </div>
-
-      <!-- end panel -->
-      <div class="mau-panel col-lg-4 col-sm-12">
-        <div class="panel">
-          <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <div class="panel-body">
-            Basic panel example
-          </div>
-        </div>
-      </div>
+      @endforeach
       <!-- end panel -->
 
     </div>
@@ -355,11 +297,9 @@
     <div class="container">
       <div class="portfolio-content">
         <div class="isotope">
-          <div class="row">
-
-            <div class="col-sm-4">
+          <div class="row" id="data">
+            {{-- <div class="col-sm-4">
               <div class="item">
-                <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p1.jpg" alt="portfolio image" />
                 <div class="isotope-overlay">
                   <a href="#">
                     ui/ux design
@@ -368,55 +308,8 @@
                 <!-- /.isotope-overlay -->
               </div>
               <!-- /.item -->
-              <div class="item">
-                <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p2.jpg" alt="portfolio image" />
-                <div class="isotope-overlay">
-                  <a href="#">
-                    ui/ux design
-                  </a>
-                </div>
-                <!-- /.isotope-overlay -->
-              </div>
-              <!-- /.item -->
-            </div>
+            </div> --}}
             <!-- /.col -->
-
-            <div class="col-sm-4">
-              <div class="item">
-                <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p3.jpg" alt="portfolio image" />
-                <div class="isotope-overlay">
-                  <a href="#">
-                    web design
-                  </a>
-                </div>
-                <!-- /.isotope-overlay -->
-              </div>
-              <!-- /.item -->
-            </div>
-            <!-- /.col -->
-
-            <div class="col-sm-4">
-              <div class="item">
-                <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p4.jpg" alt="portfolio image" />
-                <div class="isotope-overlay">
-                  <a href="#">
-                    web development
-                  </a>
-                </div>
-                <!-- /.isotope-overlay -->
-              </div>
-              <!-- /.item -->
-              <div class="item">
-                <img src="{{ base_url('assets/browny') }}/assets/images/portfolio/p5.jpg" alt="portfolio image" />
-                <div class="isotope-overlay">
-                  <a href="#">
-                    web development
-                  </a>
-                </div>
-                <!-- /.isotope-overlay -->
-              </div>
-              <!-- /.item -->
-            </div>
             <!-- /.col -->
           </div>
           <!-- /.row -->
@@ -436,7 +329,4 @@
 </section>
 <!--/.clients-->
 <!--clients end -->
-
-
-@include('front.partials.modal')
 @endsection
