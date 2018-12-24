@@ -603,6 +603,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio {
     padding:  50px 0 100px;
     border:  1px solid #e5ebf2;
+    background-color: #f9fbfd;
 }
 
 .portfolio-content {padding-top: 100px;}

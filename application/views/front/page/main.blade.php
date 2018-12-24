@@ -38,12 +38,12 @@
             </h3>
             <p>
               Pondok pesantren PPAI Darun Najah merupakan lembaga sosial publik yang berada di bawah naungan Yayasan Ma’had Darun Najah as-Salafiy, yang didirikan dengan tujuan utama untuk menjaga moral umat dan mencetak kader-kader dakwah Islam di kalangan masyarakat. Didirikan oleh KH. Achmad Muchtar Ghozali, pesantren ini telah berdiri sejak tahun 1967. Hingga kini pesantren ini masih diasuh dibawah bimbingan beliau langsung dan sebagai Ketua Dewan Pembina Yayasan Ma’had Darun Najah as-Salafy Pondok Pesantren Salafiyah PPAI Darun Najah.
-              <a href="#">Baca Selengkapnya ...</a>
+              <a href="{{ base_url('blog/profil') }}" target="_blank">Baca Selengkapnya ...</a>
             </p>
             <div class="row">
               <div class="col-sm-4">
                 <div class="single-about-add-info">
-                  <h3>phone</h3>
+                  <h3>Telepon</h3>
                   <p>987-123-6547</p>
                 </div>
               </div>
@@ -56,7 +56,7 @@
               <div class="col-sm-4">
                 <div class="single-about-add-info">
                   <h3>website</h3>
-                  <p>www.brownsine.com</p>
+                  <p>www.web.com</p>
                 </div>
               </div>
             </div>
@@ -178,14 +178,18 @@
   <div class="container">
     <div class="experience-content col-lg-12">
 
-      @foreach($post as $article)
+      @foreach($info as $data)
       <div class="mau-panel col-lg-4 col-sm-12">
         <div class="panel">
           <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">{{ $article->title }}</h3>
+            <h3 class="panel-title">{{ $data->title }}</h3>
+            <?php
+            $date = new DateTime($data->created_at);
+             ?>
+            <span>{{ $date->format('d-m-Y h:m:s') }}</span>
           </div>
           <div class="panel-body">
-            {!! $article->description !!}
+            {!! $data->description !!}
           </div>
         </div>
       </div>
@@ -208,76 +212,22 @@
   <div class="container">
     <div class="experience-content col-lg-12">
 
+      @foreach($mauido as $data)
       <div class="mau-panel col-lg-4 col-sm-12">
         <div class="panel">
           <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
+            <h3 class="panel-title">{{ $data->title }}</h3>
+            <?php
+            $date = new DateTime($data->created_at);
+             ?>
+            <span>{{ $date->format('d-m-Y h:m:s') }}</span>
           </div>
           <div class="panel-body">
-            Basic panel example
+            {!! $data->description !!}
           </div>
         </div>
       </div>
-      <!-- end panel -->
-
-      <div class="mau-panel col-lg-4 col-sm-12">
-        <div class="panel">
-          <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <div class="panel-body">
-            Basic panel example
-          </div>
-        </div>
-      </div>
-
-      <!-- end panel -->
-      <div class="mau-panel col-lg-4 col-sm-12">
-        <div class="panel">
-          <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <div class="panel-body">
-            Basic panel example
-          </div>
-        </div>
-      </div>
-      <!-- end panel -->
-
-      <div class="mau-panel col-lg-4 col-sm-12">
-        <div class="panel">
-          <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <div class="panel-body">
-            Basic panel example
-          </div>
-        </div>
-      </div>
-      <!-- end panel -->
-
-      <div class="mau-panel col-lg-4 col-sm-12">
-        <div class="panel">
-          <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <div class="panel-body">
-            Basic panel example
-          </div>
-        </div>
-      </div>
-
-      <!-- end panel -->
-      <div class="mau-panel col-lg-4 col-sm-12">
-        <div class="panel">
-          <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <div class="panel-body">
-            Basic panel example
-          </div>
-        </div>
-      </div>
+      @endforeach
       <!-- end panel -->
 
     </div>
