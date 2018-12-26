@@ -61,7 +61,6 @@ class RefreshCommand extends Command
         $this->call('migrate', [
             '--database' => $database,
             '--path' => $path,
-            '--realpath' => $this->input->getOption('realpath'),
             '--force' => $force,
         ]);
 
@@ -84,7 +83,6 @@ class RefreshCommand extends Command
         $this->call('migrate:rollback', [
             '--database' => $database,
             '--path' => $path,
-            '--realpath' => $this->input->getOption('realpath'),
             '--step' => $step,
             '--force' => $force,
         ]);
@@ -103,7 +101,6 @@ class RefreshCommand extends Command
         $this->call('migrate:reset', [
             '--database' => $database,
             '--path' => $path,
-            '--realpath' => $this->input->getOption('realpath'),
             '--force' => $force,
         ]);
     }
@@ -141,19 +138,17 @@ class RefreshCommand extends Command
     protected function getOptions()
     {
         return [
-            ['database', null, InputOption::VALUE_OPTIONAL, 'The database connection to use'],
+            ['database', null, InputOption::VALUE_OPTIONAL, 'The database connection to use.'],
 
-            ['force', null, InputOption::VALUE_NONE, 'Force the operation to run when in production'],
+            ['force', null, InputOption::VALUE_NONE, 'Force the operation to run when in production.'],
 
-            ['path', null, InputOption::VALUE_OPTIONAL, 'The path to the migrations files to be executed'],
+            ['path', null, InputOption::VALUE_OPTIONAL, 'The path of migrations files to be executed.'],
 
-            ['realpath', null, InputOption::VALUE_NONE, 'Indicate any provided migration file paths are pre-resolved absolute paths'],
+            ['seed', null, InputOption::VALUE_NONE, 'Indicates if the seed task should be re-run.'],
 
-            ['seed', null, InputOption::VALUE_NONE, 'Indicates if the seed task should be re-run'],
+            ['seeder', null, InputOption::VALUE_OPTIONAL, 'The class name of the root seeder.'],
 
-            ['seeder', null, InputOption::VALUE_OPTIONAL, 'The class name of the root seeder'],
-
-            ['step', null, InputOption::VALUE_OPTIONAL, 'The number of migrations to be reverted & re-run'],
+            ['step', null, InputOption::VALUE_OPTIONAL, 'The number of migrations to be reverted & re-run.'],
         ];
     }
 }
