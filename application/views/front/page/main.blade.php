@@ -50,7 +50,7 @@
               <div class="col-sm-4">
                 <div class="single-about-add-info">
                   <h3>email</h3>
-                  <p>browny@info.com</p>
+                  <p>email@info.com</p>
                 </div>
               </div>
               <div class="col-sm-4">
@@ -78,19 +78,6 @@
                     <i class="fa fa-dribbble" aria-hidden="true"></i>
                   </a>
 
-                </li>
-                <!-- / li -->
-                <li>
-                  <a href="#">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-
-                </li>
-                <!-- / li -->
-                <li>
-                  <a href="#">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </a>
                 </li>
                 <!-- / li -->
                 <li>
@@ -182,11 +169,11 @@
       <div class="mau-panel col-lg-4 col-sm-12">
         <div class="panel">
           <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">{{ $data->title }}</h3>
-            <?php
-            $date = new DateTime($data->created_at);
-             ?>
-            <span>{{ $date->format('d-m-Y h:m:s') }}</span>
+              <h3 class="panel-title"><a href="{{base_url()}}blog/informasi/show/{{$data->id}}">{{ $data->title }}</a></h3>
+              <?php
+              $date = new DateTime($data->created_at);
+              ?>
+              <span>{{ $date->format('d-m-Y h:m:s') }} WIB</span>
           </div>
           <div class="panel-body">
             {!! $data->description !!}
@@ -212,15 +199,15 @@
   <div class="container">
     <div class="experience-content col-lg-12">
 
-      @foreach($mauido as $data)
+      @foreach($mauidhoh as $data)
       <div class="mau-panel col-lg-4 col-sm-12">
         <div class="panel">
           <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">{{ $data->title }}</h3>
-            <?php
-            $date = new DateTime($data->created_at);
-             ?>
-            <span>{{ $date->format('d-m-Y h:m:s') }}</span>
+              <h3 class="panel-title"><a href="{{base_url()}}blog/mauidhoh/show/{{$data->id}}">{{ $data->title }}</a></h3>
+              <?php
+              $date = new DateTime($data->created_at);
+              ?>
+              <span>{{ $date->format('d-m-Y h:m:s') }} WIB</span>
           </div>
           <div class="panel-body">
             {!! $data->description !!}

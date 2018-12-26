@@ -9,6 +9,11 @@ class Informasi extends MY_Controller {
       $this->view('front.page.info.informasi', $data);
     }
 
+    public function show($id)
+    {
+      $data['info'] = BeritaModel::find($id);
+      $this->view('front.page.info.detail_info', $data);
+    }
 }
 
 /* End of file Controllername.php */

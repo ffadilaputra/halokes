@@ -48,7 +48,7 @@
               <div class="col-sm-4">
                 <div class="single-about-add-info">
                   <h3>email</h3>
-                  <p>browny@info.com</p>
+                  <p>email@info.com</p>
                 </div>
               </div>
               <div class="col-sm-4">
@@ -76,19 +76,6 @@
                     <i class="fa fa-dribbble" aria-hidden="true"></i>
                   </a>
 
-                </li>
-                <!-- / li -->
-                <li>
-                  <a href="#">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-
-                </li>
-                <!-- / li -->
-                <li>
-                  <a href="#">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </a>
                 </li>
                 <!-- / li -->
                 <li>
@@ -180,11 +167,11 @@
       <div class="mau-panel col-lg-4 col-sm-12">
         <div class="panel">
           <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title"><?php echo e($data->title); ?></h3>
-            <?php
-            $date = new DateTime($data->created_at);
-             ?>
-            <span><?php echo e($date->format('d-m-Y h:m:s')); ?></span>
+              <h3 class="panel-title"><a href="<?php echo e(base_url()); ?>blog/informasi/show/<?php echo e($data->id); ?>"><?php echo e($data->title); ?></a></h3>
+              <?php
+              $date = new DateTime($data->created_at);
+              ?>
+              <span><?php echo e($date->format('d-m-Y h:m:s')); ?> WIB</span>
           </div>
           <div class="panel-body">
             <?php echo $data->description; ?>
@@ -211,15 +198,15 @@
   <div class="container">
     <div class="experience-content col-lg-12">
 
-      <?php $__currentLoopData = $mauido; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <?php $__currentLoopData = $mauidhoh; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
       <div class="mau-panel col-lg-4 col-sm-12">
         <div class="panel">
           <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title"><?php echo e($data->title); ?></h3>
-            <?php
-            $date = new DateTime($data->created_at);
-             ?>
-            <span><?php echo e($date->format('d-m-Y h:m:s')); ?></span>
+              <h3 class="panel-title"><a href="<?php echo e(base_url()); ?>blog/mauidhoh/show/<?php echo e($data->id); ?>"><?php echo e($data->title); ?></a></h3>
+              <?php
+              $date = new DateTime($data->created_at);
+              ?>
+              <span><?php echo e($date->format('d-m-Y h:m:s')); ?> WIB</span>
           </div>
           <div class="panel-body">
             <?php echo $data->description; ?>
@@ -238,12 +225,37 @@
 <!--/.mauidhoh-->
 <!--mauidhoh end -->
 
+<!--galeri start -->
+<section id="galeri" class="portfolio">
+  <div class="portfolio-details">
+    <div class="section-heading text-center">
+      <h2>Galeri</h2>
+    </div>
+    <div class="container">
+      <div class="portfolio-content">
+        <div class="isotope">
+          <div class="row" id="data">
+            
+            <!-- /.col -->
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!--/.isotope-->
+      </div>
+      <!--/.gallery-content-->
+    </div>
+    <!--/.container-->
+  </div>
+  <!--/.portfolio-details-->
+
+</section>
+<!--/.portfolio-->
+<!--portfolio end -->
+
 </section>
 <!--/.clients-->
 <!--clients end -->
-
-
-<?php echo $__env->make('front.partials.modal', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('front.template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

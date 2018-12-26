@@ -9,41 +9,23 @@
   <div class="container">
     <div class="experience-content col-lg-12">
 
+      @foreach($info as $data)
       <div class="mau-panel col-lg-4 col-sm-12">
         <div class="panel">
           <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
+              <h3 class="panel-title"><a href="{{base_url()}}blog/informasi/show/{{$data->id}}">{{ $data->title }}</a></h3>
+              <?php
+              $date = new DateTime($data->created_at);
+              ?>
+              <span>By {{ $data->posted_by }} | {{ $date->format('d-m-Y h:m:s') }} WIB</span>
           </div>
           <div class="panel-body">
-            Basic panel example
+            {!! $data->description !!}
           </div>
         </div>
       </div>
       <!-- end panel -->
-
-      <div class="mau-panel col-lg-4 col-sm-12">
-        <div class="panel">
-          <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <div class="panel-body">
-            Basic panel example
-          </div>
-        </div>
-      </div>
-
-      <!-- end panel -->
-      <div class="mau-panel col-lg-4 col-sm-12">
-        <div class="panel">
-          <div class="panel-heading panel-heading-plus">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <div class="panel-body">
-            Basic panel example
-          </div>
-        </div>
-      </div>
-      <!-- end panel -->
+      @endforeach
 
     </div>
     <!--.mauidhoh-content-->

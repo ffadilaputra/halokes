@@ -1,6 +1,4 @@
-@extends('front.template_blog')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!--info start -->
 <section id="info" class="education">
   <div class="section-heading text-center">
@@ -9,22 +7,20 @@
   <div class="container">
     <div class="experience-content col-lg-12">
 
-      @foreach($mauidhoh as $data)
-      <div class="mau-panel col-lg-4 col-sm-12">
+      <div class="mau-panel col-lg-12 col-sm-12">
         <div class="panel">
           <div class="panel-heading panel-heading-plus">
-              <h3 class="panel-title"><a href="{{base_url()}}blog/mauidhoh/show/{{$data->id}}">{{ $data->title }}</a></h3>
-              <?php
-              $date = new DateTime($data->created_at);
-              ?>
-              <span>{{ $date->format('d-m-Y h:m:s') }} WIB</span>
+            <?php
+            $date = new DateTime($mauidhoh->created_at);
+             ?>
+            <span> <?php echo e($date->format('d-m-Y h:m:s')); ?></span>
           </div>
           <div class="panel-body">
-            {!! $data->description !!}
+            <?php echo e($mauidhoh->description); ?>
+
           </div>
         </div>
       </div>
-      @endforeach
       <!-- end panel -->
 
     </div>
@@ -34,4 +30,6 @@
 </section>
 <!--/.info-->
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('front.template_blog', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -6,10 +6,10 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
   <!-- top-area Start -->
-    <?php echo $__env->make('front.partials.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  <?php echo $__env->make('front.partials.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
   <!-- /.top-area-->
   <!-- top-area End -->
-    <?php echo $__env->yieldContent('content'); ?>
+  <?php echo $__env->yieldContent('content'); ?>
   <!--footer-copyright start-->
   <?php echo $__env->make('front.partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
   <!--/.footer-copyright-->

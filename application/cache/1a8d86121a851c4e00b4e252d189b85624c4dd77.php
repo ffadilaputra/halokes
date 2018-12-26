@@ -17,7 +17,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">NIS</label>
-                        <input type="number" class="form-control" name="nis">
+                        <input type="number" class="form-control" name="nis" value="<?php echo e(old('nis')); ?>">
                         <?php if($errors->has('nis')): ?>
                         <small class="text-danger"><?php echo e($errors->first('nis')); ?></small>
                         <?php endif; ?>
@@ -32,7 +32,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">Nama Lengkap</label>
-                        <input type="text" class="form-control" name="nama_lengkap">
+                        <input type="text" class="form-control" name="nama_lengkap" value="<?php echo e(old('nama_lengkap')); ?>">
                         <?php if($errors->has('nama_lengkap')): ?>
                         <small class="text-danger"><?php echo e($errors->first('nama_lengkap')); ?></small>
                         <?php endif; ?>
@@ -48,7 +48,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">Nama Panggilan</label>
-                        <input type="text" class="form-control" name="panggilan">
+                        <input type="text" class="form-control" name="panggilan" value="<?php echo e(old('panggilan')); ?>">
                         <?php if($errors->has('panggilan')): ?>
                         <small class="text-danger"><?php echo e($errors->first('panggilan')); ?></small>
                         <?php endif; ?>
@@ -63,7 +63,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">NIK</label>
-                        <input type="number" class="form-control" name="nik">
+                        <input type="number" class="form-control" name="nik" value="<?php echo e(old('nik')); ?>">
                         <?php if($errors->has('nik')): ?>
                         <small class="text-danger"><?php echo e($errors->first('nik')); ?></small>
                         <?php endif; ?>
@@ -79,7 +79,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Tempat Lahir</label>
-                        <input type="text" class="form-control" name="tempat_lahir">
+                        <input type="text" class="form-control" name="tempat_lahir" value="<?php echo e(old('tempat_lahir')); ?>">
                         <?php if($errors->has('tempat_lahir')): ?>
                         <small class="text-danger"><?php echo e($errors->first('tempat_lahir')); ?></small>
                         <?php endif; ?>
@@ -90,7 +90,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Tanggal Lahir</label>
-                        <input type="date" class="form-control" name="tgl_lahir">
+                        <input type="date" class="form-control" name="tgl_lahir" value="<?php echo e(old('tgl_lahir')); ?>">
                         <?php if($errors->has('tgl_lahir')): ?>
                         <small class="text-danger"><?php echo e($errors->first('tgl_lahir')); ?></small>
                         <?php endif; ?>
@@ -108,7 +108,7 @@
                         <label for="">Telepon</label>
                         <div class="form-group input-group">
                               <span class="input-group-addon" value="0">+62</span>
-                              <input type="number" name="telepon" class="form-control" maxlength="10">
+                              <input type="number" name="telepon" class="form-control" maxlength="10" value="<?php echo e(old('telepon')); ?>">
                               <?php if($errors->has('telepon')): ?>
                               <small class="text-danger"><?php echo e($errors->first('telepon')); ?></small>
                               <?php endif; ?>
@@ -134,19 +134,34 @@
                     <div class="col-sm-12">
                       <label for="">Alamat</label>
                       <div class="form-group">
-                        <textarea name="alamat" class="form-control" rows="3" id="comment" placeholder="Message"></textarea>
+                        <textarea name="alamat" class="form-control" rows="3" id="comment" placeholder="Message"><?php echo e(old('alamat')); ?></textarea>
                       </div>
                       <!--/.form-group-->
                     </div>
                     <!--/.col-->
                   </div>
                   <!--/.row-->
+                  <div class="row">
+                      <div class="col-sm-12">
+                        <label for="">Jenjang Pendidikan</label>
+                        <div class="form-group">
+                            <select name="jenjang" id="" class="form-control">
+                              <option value="">-- Pilih --</option>
+                              <option value="mi">Madrasah Ibtidaiyah</option>
+                              <option value="mts">Madrasah Tsanawiyah</option>
+                              <option value="ma">Madrasah Aliyah</option>
+                            </select>
+                        </div>
+                        <!--/.form-group-->
+                      </div>
+                      <!--/.col-->
+                    </div>
                   <!-- kecamatan dan kelurahan -->
                   <div class="row">
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Kelurahan</label>
-                        <input type="text" class="form-control" name="kelurahan">
+                        <input type="text" class="form-control" name="kelurahan" value="<?php echo e(old('kelurahan')); ?>">
                         <?php if($errors->has('kelurahan')): ?>
                         <small class="text-danger"><?php echo e($errors->first('kelurahan')); ?></small>
                         <?php endif; ?>
@@ -157,7 +172,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Kecamatan</label>
-                        <input type="text" class="form-control"  name="kecamatan">
+                        <input type="text" class="form-control"  name="kecamatan" value="<?php echo e(old('kecamatan')); ?>">
                         <?php if($errors->has('kecamatan')): ?>
                         <small class="text-danger"><?php echo e($errors->first('kecamatan')); ?></small>
                         <?php endif; ?>
@@ -172,7 +187,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Kota</label>
-                        <input type="text" class="form-control" name="kota">
+                        <input type="text" class="form-control" name="kota" value="<?php echo e(old('kota')); ?>">
                         <?php if($errors->has('kota')): ?>
                         <small class="text-danger"><?php echo e($errors->first('kota')); ?></small>
                         <?php endif; ?>
@@ -183,7 +198,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="form-group">
                         <label for="">Provinsi</label>
-                        <input type="text" class="form-control"  name="provinsi">
+                        <input type="text" class="form-control"  name="provinsi" value="<?php echo e(old('provinsi')); ?>">
                         <?php if($errors->has('provinsi')): ?>
                         <small class="text-danger"><?php echo e($errors->first('provinsi')); ?></small>
                         <?php endif; ?>
@@ -198,7 +213,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">Kodepos</label>
-                        <input type="number" name="kode_pos" class="form-control" maxlength="5">
+                        <input type="number" name="kode_pos" class="form-control" maxlength="5" value="<?php echo e(old('kodepos')); ?>">
                         <?php if($errors->has('kode_pos')): ?>
                           <small class="text-danger"><?php echo e($errors->first('kode_pos')); ?></small>
                         <?php endif; ?>
@@ -210,7 +225,7 @@
                   <!--/.row-->
                   <div class="row">
                     <div class="col-sm-12">
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="submit" class="btn btn-block btn-success">Submit</button>
                       <!--/.single-single-contact-btn-->
                     </div>
                     <!--/.col-->
@@ -233,4 +248,4 @@
   <!--/.contact-->
   <!--contact end -->
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('front.template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('front.no_header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
