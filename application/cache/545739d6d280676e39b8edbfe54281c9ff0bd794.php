@@ -1,0 +1,1 @@
+<h1><?php echo e($user->nama_lengkap); ?></h1>

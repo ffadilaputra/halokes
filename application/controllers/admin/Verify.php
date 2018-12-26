@@ -4,15 +4,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   class Verify extends MY_Controller {
 
+    public function __construct(){
+      parent::__construct();
+    }
+
   public function index(){
         $this->autenthicateAdmin();
         $data['admin'] = $this->session->userdata('admin_logged_in');
         $this->view('admin.santri.verifed',$data);
-   // redirect('admin/santri');
+        // redirect('admin/santri');
   }
 
    public function show($id){
-      $this->load->model('SantriModel');
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
       $data['santri'] = SantriModel::find($id);
@@ -25,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       ]);
       VerifikasiModel::create($this->input->post());
       //var_dump($this->input->post());
-      redirect('verify');
+      redirect('admin/santri');
    }
 
 }

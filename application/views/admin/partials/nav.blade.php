@@ -7,63 +7,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Admin</a>
+        <a class="navbar-brand" href="{{ base_url('admin') }}">Laman Admin</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-            <ul class="dropdown-menu message-dropdown">
-                <li class="message-preview">
-                    <a href="#">
-                        <div class="media">
-                            <span class="pull-left">
-                                <img class="media-object" src="http://placehold.it/50x50" alt="">
-                            </span>
-                            <div class="media-body">
-                                <h5 class="media-heading"><strong></strong>
-                                </h5>
-                                <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="message-preview">
-                    <a href="#">
-                        <div class="media">
-                            <span class="pull-left">
-                                <img class="media-object" src="http://placehold.it/50x50" alt="">
-                            </span>
-                            <div class="media-body">
-                                <h5 class="media-heading"><strong>{{ $admin->email}}</strong>
-                                </h5>
-                                <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="message-preview">
-                    <a href="#">
-                        <div class="media">
-                            <span class="pull-left">
-                                <img class="media-object" src="http://placehold.it/50x50" alt="">
-                            </span>
-                            <div class="media-body">
-                                <h5 class="media-heading"><strong>John Smith</strong>
-                                </h5>
-                                <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="message-footer">
-                    <a href="#">Read All New Messages</a>
-                </li>
-            </ul>
-        </li>
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{ $admin->email}} <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -92,9 +39,17 @@
                     <li>
                         <a href="{{ base_url('admin/santri') }}">Verifikasi Santri</a>
                     </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#pembayaran"><i class="fa fa-fw fa-user"></i>Pembayaran <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="pembayaran" class="collapse">
                     <li>
-                        <a href="#">Pembayaran</a>
+                        <a href="{{ base_url('admin/pembayaran') }}">Semua</a>
                     </li>
+                    {{-- <li>
+                        <a href="{{ base_url('admin/pembayaran/lunas') }}">Lunas</a>
+                    </li> --}}
                 </ul>
             </li>
             <li>
@@ -109,11 +64,12 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#pengumuman"><i class="fa fa-fw fa-book"></i>Berita <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#pengumuman"><i class="fa fa-fw fa-book"></i>Artikel <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="pengumuman" class="collapse">
                         <li><a href="{{ base_url('admin/berita/create') }}">Buat Berita</a></li>
                         <li><a href="{{ base_url('admin/kategoriberita')}}">Kategori Berita</a></li>
-                        <li><a href="{{ base_url('admin/berita') }}">Semua</a></li>
+                        <li><a href="{{ base_url('admin/berita') }}">Semua Berita</a></li>
+                        <li><a href="{{ base_url('admin/mauidhoh')}}">Mauidhoh</a></li>
                     </ul>
                 </a>
             </li>

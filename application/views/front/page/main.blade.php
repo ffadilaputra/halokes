@@ -238,10 +238,45 @@
 <!--/.mauidhoh-->
 <!--mauidhoh end -->
 
+<!--galeri start -->
+<section id="galeri" class="portfolio">
+  <div class="portfolio-details">
+    <div class="section-heading text-center">
+      <h2>Galeri</h2>
+    </div>
+    <div class="container">
+      <div class="portfolio-content">
+        <div class="isotope">
+          <div class="row" id="data">
+            {{-- <div class="col-sm-4">
+              <div class="item">
+                <div class="isotope-overlay">
+                  <a href="#">
+                    ui/ux design
+                  </a>
+                </div>
+                <!-- /.isotope-overlay -->
+              </div>
+              <!-- /.item -->
+            </div> --}}
+            <!-- /.col -->
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!--/.isotope-->
+      </div>
+      <!--/.gallery-content-->
+    </div>
+    <!--/.container-->
+  </div>
+  <!--/.portfolio-details-->
+
+</section>
+<!--/.portfolio-->
+<!--portfolio end -->
+
 </section>
 <!--/.clients-->
 <!--clients end -->
-
-
-@include('front.partials.modal')
 @endsection

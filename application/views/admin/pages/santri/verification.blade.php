@@ -20,7 +20,7 @@
               <i class="fa fa-money fa-fw"></i> Verifikasi Siswa</h3>
           </div>
           <div class="panel-body">
-            <?= form_open('admin/verify/submit') ?>
+            <?= form_open(base_url('admin/verify/submit')) ?>
             <div class="form-group">
               <label for="">Id Santri</label>
               <input type="hidden" name="id_santri" value="{{ $santri->id_santri }}">
@@ -38,7 +38,7 @@
               </select>
             </div>
             <div class="form-group">
-              <input type="submit" style="float:right" class="btn btn-success">
+              <input type="submit" style="float:left" class="btn btn-success">
             </div>
             <?= form_close() ?>
           </div>

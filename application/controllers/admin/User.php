@@ -4,18 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   class User extends MY_Controller {
 
-    public function __construct(){
-      parent::__construct();
-      $this->load->model('LevelModel');
-      $this->load->model('UsersModel');
-    }
-
     public function index(){
         $this->autenthicateAdmin();
         $data['admin'] = $this->session->userdata('admin_logged_in');
         $data['list'] = UsersModel::all();
         $this->view('admin.pages.user.index',$data);
-
     }
 
     public function create(){

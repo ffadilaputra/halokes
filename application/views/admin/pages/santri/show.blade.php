@@ -51,6 +51,18 @@
                       <label>Kota</label>
                       <h2> {{ $santri->kota }}</h2>
                   </div>
+                  <div class="form-group">
+                        <label>Jenjang Pendidikan</label>
+                        @if(is_null($santri->jenjang))
+                            <h2> Belum memilih jenjang</h2>
+                        @elseif($santri->jenjang == 'mi')
+                            <h2>Madarasah Ibtidaiyah</h2>
+                        @elseif($santri->jenjang == 'mts')
+                            <h2>Madarasah Tsanawiyah</h2>
+                        @elseif($santri->jenjang == 'ma')
+                            <h2>Madarasah Aliyah</h2>
+                        @endif
+                  </div>
               </div>
               <div class="col-md-6">
                   <div class="form-group">
