@@ -39,9 +39,25 @@
               <a class="nav-link active" href="{{ base_url('main') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Business</a>
+              <a class="nav-link" href="{{ base_url('blog') }}">Profile</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ base_url('lembaga') }}">Lembaga</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ base_url('informasi') }}">Informasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ base_url('mauidhoh') }}">Mauidhoh</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ base_url('galeri') }}">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ base_url('pendaftaran') }}">Pendaftaran</a>
+            </li>
+
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Travel</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
                 <a class="dropdown-item" href="category.html">Asia</a>
@@ -69,7 +85,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ base_url('contact') }}">Contact</a>
-            </li>
+            </li> -->
           </ul>
           
         </div>
