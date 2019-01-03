@@ -24,7 +24,7 @@
       <div class="row pt-5">
         <div class="col-12 text-center">
           <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
-          <h1 class="site-logo"><a href="index.html">Wordify</a></h1>
+          <h2 class="site-logo"><a href="index.html">Darunnajah Islamic Boarding School</a></h2>
         </div>
       </div>
     </div>
@@ -38,11 +38,27 @@
             <li class="nav-item">
               <a class="nav-link active" href="{{ base_url('main') }}">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ base_url('blog') }}">Profile</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="{{ base_url('profil/profile') }}">Sejarah</a>
+                <a class="dropdown-item" href="category.html">Fasilitas</a>
+                <a class="dropdown-item" href="category.html">Kajian</a>
+                <a class="dropdown-item" href="category.html">Kegiatan</a>
+                <a class="dropdown-item" href="category.html">Alumni</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ base_url('lembaga') }}">Lembaga</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="category.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lembaga</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown05">
+                <a class="dropdown-item" href="{{ base_url('kategori') }}">MTs</a>
+                <a class="dropdown-item" href="category.html">MA</a>
+                <a class="dropdown-item" href="category.html">TPQ-MQ</a>
+                <a class="dropdown-item" href="category.html">Madin</a>
+                <a class="dropdown-item" href="category.html">Majlis Ta'lim</a>
+                <a class="dropdown-item" href="category.html">Koppontren</a>
+              </div>
+
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ base_url('informasi') }}">Informasi</a>
@@ -56,20 +72,13 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ base_url('pendaftaran') }}">Pendaftaran</a>
             </li>
-
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Travel</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="category.html">Asia</a>
-                <a class="dropdown-item" href="category.html">Europe</a>
-                <a class="dropdown-item" href="category.html">Dubai</a>
-                <a class="dropdown-item" href="category.html">Africa</a>
-                <a class="dropdown-item" href="category.html">South America</a>
-              </div>
-
+            <li class="nav-item">
+              <a class="nav-link" href="{{ base_url('contact') }}">Contact Us</a>
             </li>
 
-            <li class="nav-item dropdown">
+            
+
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="category.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
               <div class="dropdown-menu" aria-labelledby="dropdown05">
                 <a class="dropdown-item" href="{{ base_url('kategori') }}">Lifestyle</a>
@@ -79,13 +88,11 @@
                 <a class="dropdown-item" href="category.html">Business</a>
               </div>
 
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ base_url('about') }}">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ base_url('contact') }}">Contact</a>
             </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="{{ base_url('about') }}">About</a>
+            </li> -->
+            
           </ul>
           
         </div>
