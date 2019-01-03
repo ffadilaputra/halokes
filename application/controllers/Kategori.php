@@ -2,10 +2,10 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-  class Main extends MY_Controller {
+  class Kategori extends MY_Controller {
 
     public function index(){
-      $this->view('front.wpage.main');
+      $this->view('front.wpage.category');
     }
 }
 ?>

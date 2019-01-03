@@ -1,3 +1,4 @@
+<div class="wrap">
 <footer class="site-footer">
    <div class="container">
       <div class="row mb-5">
@@ -92,4 +93,5 @@
       </div>
    </div>
 </footer>
+</div>
 <!-- END footer -->
