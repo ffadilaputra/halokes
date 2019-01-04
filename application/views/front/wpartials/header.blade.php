@@ -41,22 +41,22 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="{{ base_url('profil/profile') }}">Sejarah</a>
-                <a class="dropdown-item" href="category.html">Fasilitas</a>
-                <a class="dropdown-item" href="category.html">Kajian</a>
-                <a class="dropdown-item" href="category.html">Kegiatan</a>
-                <a class="dropdown-item" href="category.html">Alumni</a>
+                <a class="dropdown-item" href="{{ base_url('profile') }}">Sejarah</a>
+                <a class="dropdown-item" href="{{ base_url('profile/fasilitas') }}">Fasilitas</a>
+                <a class="dropdown-item" href="{{ base_url('profile/kajian') }}">Kajian</a>
+                <a class="dropdown-item" href="{{ base_url('profile/kegiatan') }}">Kegiatan</a>
+                <a class="dropdown-item" href="{{ base_url('profile/alumni') }}">Alumni</a>
               </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="category.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lembaga</a>
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lembaga</a>
               <div class="dropdown-menu" aria-labelledby="dropdown05">
-                <a class="dropdown-item" href="{{ base_url('kategori') }}">MTs</a>
-                <a class="dropdown-item" href="category.html">MA</a>
-                <a class="dropdown-item" href="category.html">TPQ-MQ</a>
-                <a class="dropdown-item" href="category.html">Madin</a>
-                <a class="dropdown-item" href="category.html">Majlis Ta'lim</a>
-                <a class="dropdown-item" href="category.html">Koppontren</a>
+                <a class="dropdown-item" href="{{ base_url('lembaga') }}">MTs</a>
+                <a class="dropdown-item" href="{{ base_url('lembaga/ma') }}">MA</a>
+                <a class="dropdown-item" href="{{ base_url('lembaga/tpq') }}">TPQ-MQ</a>
+                <a class="dropdown-item" href="{{ base_url('lembaga/madin') }}">Madin</a>
+                <a class="dropdown-item" href="{{ base_url('lembaga/majlis') }}">Majlis Ta'lim</a>
+                <a class="dropdown-item" href="{{ base_url('lembaga/koppontren') }}">Koppontren</a>
               </div>
 
             </li>
