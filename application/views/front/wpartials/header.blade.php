@@ -70,10 +70,13 @@
               <a class="nav-link" href="{{ base_url('galeri') }}">Galeri</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ base_url('pendaftaran') }}">Pendaftaran</a>
+              <a class="nav-link" href="{{ base_url('ppdb/santri') }}">Pendaftaran</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ base_url('contact') }}">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ base_url('login') }}"><b>Login</b></a>
             </li>
 
             
