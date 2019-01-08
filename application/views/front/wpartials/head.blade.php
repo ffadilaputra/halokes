@@ -1,10 +1,10 @@
 <head>
-   <title>Colorlib Wordify &mdash; Minimal Blog Template</title>
+   <title>Ma'had Darun Najah</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-   <link rel="shortcut icon" type="image/icon" href="{{ base_url('assets/browny') }}/assets/logo/favicon.png" />
+   <link rel="shortcut icon" type="image/icon" href="{{ base_url('assets/wordify') }}/images/favicon.jpg" />
 
    <link rel="stylesheet" href="{{ base_url('assets/wordify') }}/css/bootstrap.css">
    <link rel="stylesheet" href="{{ base_url('assets/wordify') }}/css/animate.css">
