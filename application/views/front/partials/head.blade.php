@@ -44,6 +44,9 @@
   <!--responsive.css-->
   <link rel="stylesheet" href="{{ base_url('assets/browny') }}/assets/css/responsive.css">
 
+  <!-- css sendiri -->
+  <link rel="stylesheet" href="{{ base_url('application/views') }}/front/partials/pendaftaran.css">
+  
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 
