@@ -14,4 +14,7 @@
    <link rel="stylesheet" href="{{ base_url('assets/wordify') }}/fonts/flaticon/font/flaticon.css">
    <!-- Theme Style -->
    <link rel="stylesheet" href="{{ base_url('assets/wordify') }}/css/style.css">
+
+   <!-- custom -->
+   <link rel="stylesheet" href="{{ base_url('assets/wordify') }}/css/custom.css">
 </head>

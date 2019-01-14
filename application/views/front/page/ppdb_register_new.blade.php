@@ -698,6 +698,99 @@
 
                         <br>
 
+                        <!-- identitas ortu santri -->
+                        <div>
+                            <div>
+                                <p><span class="w3-tag w3-xlarge" style="background-color:#28a745; padding-left:50px;">Berkas-berkas</span></p>
+                            </div>
+                            
+                            <div class="row">
+                                <!-- foto -->
+                                <div class="col-md-12 col-lg-12 main-content">
+                                    <div>
+                                        <p><span class="w3-tag w3-xlarge" style="background-color:#28a745;padding-left:25px;">Foto</span></p>
+                                    </div>
+                                    
+
+                                    <div class="row">
+                                        <!-- foto santri -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">Foto Santri</label>
+                                                <!-- <input type="file" name="fotosantri" id=""> -->
+                                                <div class="containerr">
+                                                    <label class="labell" for="input">Please upload a picture !</label>
+
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- foto wali santri -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">Foto Wali Santri</label>
+                                                <div class="containerr">
+                                                    <label class="labell" for="input2">Please upload a picture !</label>
+
+                                                    <div class="input2">
+                                                        <input name="input2" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- foto ayah santri -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">Foto Ayah Santri</label>
+                                                <div class="containerr">
+                                                    <label class="labell" for="input">Please upload a picture !</label>
+
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+
+                                                
+                                            </div>
+                                        </div>
+
+                                        <!-- foto ibu santri -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">Foto Ibu Santri</label>
+                                                <div class="containerr">
+                                                    <label class="labell" for="input">Please upload a picture !</label>
+
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                    </div>
+                                    
+                                
+                                </div> <!-- end foto --> 
+                                
+
+                                
+                            </div> <!-- end row -->
+
+                        </div> <!-- identitas ortu end-->
+
+
+                        <br>
+
                         <!-- btn submit -->
                         <div class="form-group">
                             <input type="submit" style="margin:0 auto; display:block;" value="DAFTAR" class="btn btn-info btn-lg">
