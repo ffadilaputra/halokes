@@ -7,7 +7,7 @@ class SantriModel extends Eloquent {
 
   protected $table      = 'ids_santri';
   protected $primaryKey = 'id_santri';
-  protected $fillable   = ['id_santri','nis','nama_lengkap','panggilan','nik','tempat_lahir','tgl_lahir','alamat','kelurahan','kecamatan','kota','provinsi','kode_pos','telepon'];
+  protected $fillable   = ['id_santri','tingkat_pendidikan','jenis_siswa','no_induk','nisn','nama_lengkap','panggilan','nik','no_kk','tempat_lahir','tgl_lahir','jenis_kelamin','status_keluarga','anak_ke','jml_saudara','no_kip','no_bpjs','no_jamkes','hobi','kebutuhan_khusus'];
   public $incrementing = false;
   public $timestamps = true;
 
