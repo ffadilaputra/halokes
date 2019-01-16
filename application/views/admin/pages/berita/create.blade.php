@@ -5,11 +5,21 @@
       Buat Berita
    </h1>
 </div>
-<?= form_open('admin/berita/store') ?>
+<?= form_open_multipart('admin/berita/store') ?>
 <div class="form-group">
    <label for="">Title</label>
    <input type="text" name="title" class="form-control">
+      @if($errors->has('title'))
+         <small class="text-danger">{{ $errors->first('title') }}</small>
+      @endif
 </div>
+<div class="form-group">
+    <label for="">Thumbnail</label>
+    <input name="thumb" type="file" class="form-control">
+    @if($errors->has('thumb'))
+         <small class="text-danger">{{ $errors->first('thumb') }}</small>
+    @endif
+ </div>
 <div class="form-group">
    <label for="">Kategori</label>
    <select name="id_news_category" class="form-control">

@@ -7,11 +7,11 @@ class BeritaModel extends Eloquent {
 
   protected $table      = 'news';
   protected $primaryKey = 'id_news';
-  protected $fillable   = ['title','id_news_category','description','posted_by'];
+  protected $fillable   = ['title','thumb','id_news_category','description','posted_by'];
   public $timestamps = true;
 
   public function detailNews(){
-    return $this->belongsTo('');
+    return $this->belongsTo('UsersModel','posted_by','id_users');
   }
 
 }

@@ -31,11 +31,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $data['admin'] = $this->session->userdata('admin_logged_in');
             $this->validate($this->input->post(),[
                 'title' => 'required',
+                'thumb' => 'mimes:jpeg,jpg,png',
+                'id_news_category' => 'required|string',
                 'description' => 'required',
               ]);
             $_POST['posted_by'] = $data['admin']->id_users;
+            if(!empty($_FILES['thumb']['name'])){
+              $_POST['thumb'] = $this->do_upload('thumb', 'assets/uploads/', 'image', TRUE);
+            }
             BeritaModel::create($this->input->post());
-            redirect('admin/berita');
+            var_dump($_POST);
+            //redirect('admin/berita');
         }
 
         public function edit($id){
