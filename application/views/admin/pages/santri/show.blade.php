@@ -42,10 +42,20 @@
           <div class="col-lg-12">
             <h2>Alamat</h2>
             <hr>
+            <div class="col-md-6">
+                  <div class="form-group">
+                      <label>Alamat</label>
+                      <h2> {{ $santri->alamat }}</h2>
+                  </div>
+                  <div class="form-group">
+                      <label>Kota</label>
+                      <h2> {{ $santri->kota }}</h2>
+                  </div>
+              </div>
               <div class="col-md-6">
                   <div class="form-group">
                       <label>Provinsi</label>
-                      <h2> {{ $santri->panggilan }}</h2>
+                      <h2> {{ $santri->provinsi }}</h2>
                   </div>
                   <div class="form-group">
                       <label>Kota</label>

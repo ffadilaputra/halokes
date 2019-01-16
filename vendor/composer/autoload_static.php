@@ -137,9 +137,11 @@ class ComposerStaticInitdc3eb80c3dab4a00ec358160c21c64f1
     public static $classMap = array (
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+        'AyahModel' => __DIR__ . '/../..' . '/application/models/AyahModel.php',
         'BeritaModel' => __DIR__ . '/../..' . '/application/models/BeritaModel.php',
         'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
+        'IbuModel' => __DIR__ . '/../..' . '/application/models/IbuModel.php',
         'KategoriBeritaModel' => __DIR__ . '/../..' . '/application/models/KategoriBeritaModel.php',
         'LevelModel' => __DIR__ . '/../..' . '/application/models/LevelModel.php',
         'MauidhohModel' => __DIR__ . '/../..' . '/application/models/MauidhohModel.php',
@@ -152,6 +154,7 @@ class ComposerStaticInitdc3eb80c3dab4a00ec358160c21c64f1
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
         'UsersModel' => __DIR__ . '/../..' . '/application/models/UsersModel.php',
         'VerifikasiModel' => __DIR__ . '/../..' . '/application/models/VerifikasiModel.php',
+        'WaliModel' => __DIR__ . '/../..' . '/application/models/WaliModel.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function index(){
       $data['info'] = BeritaModel::limit(6)->orderBy('created_at', 'desc')->get();
       $data['mauidhoh'] = MauidhohModel::latest()->take(9)->get();
-      $this->view('front.page.main', $data);
+      $this->view('front.wpage.main', $data);
     }
 }
 ?>
