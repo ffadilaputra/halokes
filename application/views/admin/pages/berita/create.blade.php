@@ -14,14 +14,13 @@
    <label for="">Kategori</label>
    <select name="id_news_category" class="form-control">
       <option value="">-- Pilih --</option>
-      @foreach ($category as $item)
-      <option value="{{ $item->id_news_category }}">{{ $item->category_name }}</option>
-      @endforeach
+      <option value="maulidoh">Maulidoh</option>
+      <option value="berita">Berita</option>
    </select>
 </div>
 <div class="form-group">
    <label for="">Dekripsi </label>
-   <textarea name="description"></textarea>
+   <textarea id="editor" name="description"></textarea>
 </div>
 <div class="form-group">
    <input type="submit" class="btn btn-success" style="float:right">
@@ -33,6 +32,14 @@
 <script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
-<script src="{{ base_url('assets/bower_components/tinymce/tinymce.min.js') }}"></script>
-<script>tinymce.init({ selector:'textarea' });</script>
+<script src="{{ base_url('assets/ckeditor/')}}ckeditor.js"></script>
+
+<script>
+  CKEDITOR.replace('editor' ,{
+        filebrowserImageBrowseUrl : '<?php echo base_url('assets/kcfinder');?>',
+
+});
+
+</script>
+
 @stop

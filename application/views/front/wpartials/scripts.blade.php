@@ -6,8 +6,9 @@
 <script src="{{ base_url('assets/wordify') }}/js/jquery.waypoints.min.js"></script>
 <script src="{{ base_url('assets/wordify') }}/js/jquery.stellar.min.js"></script>
 <script src="{{ base_url('assets/wordify') }}/js/jquery-migrate-3.0.0.js"></script>
+<script src="{{ base_url('assets/combodate') }}/combodate.js"></script>
 <script src="{{ base_url('assets/wordify') }}/js/main.js"></script>
 
-    
-    
-    
+
+
+
