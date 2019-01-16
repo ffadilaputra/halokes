@@ -48,3 +48,26 @@ img{
 	margin: 0 auto 15px;
 }
 
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn1 {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer!important;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}

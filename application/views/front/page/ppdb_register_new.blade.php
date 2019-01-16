@@ -724,7 +724,11 @@
 
                                                     <div class="input">
                                                         <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' onchange="readURL(this);" />
+                                                        <!-- <input type='file' onchange="readURL(this);" /> -->
+                                                        <div class="upload-btn-wrapper">
+                                                            <button class="btn1">Upload a file</button>
+                                                            <input type="file" name="myfile" onchange="readURL(this);" />
+                                                        </div>
                                                         
                                                     </div>
                                                     
@@ -742,7 +746,11 @@
 
                                                     <div class="input">
                                                         <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' onchange="readURL2(this);" />
+                                                        <!-- <input type='file' onchange="readURL2(this);" /> -->
+                                                        <div class="upload-btn-wrapper">
+                                                            <button class="btn1">Upload a file</button>
+                                                            <input type="file" name="myfile" onchange="readURL2(this);" />
+                                                        </div>
                                                         
                                                     </div>
                                                     
@@ -760,7 +768,11 @@
 
                                                     <div class="input">
                                                         <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' onchange="readURL3(this);" />
+                                                        <!-- <input type='file' onchange="readURL3(this);" /> -->
+                                                        <div class="upload-btn-wrapper">
+                                                            <button class="btn1">Upload a file</button>
+                                                            <input type="file" name="myfile" onchange="readURL3(this);" />
+                                                        </div>
                                                         
                                                     </div>
                                                     
@@ -778,7 +790,11 @@
 
                                                     <div class="input">
                                                         <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' onchange="readURL4(this);" />
+                                                        <!-- <input type='file' onchange="readURL4(this);" /> -->
+                                                        <div class="upload-btn-wrapper">
+                                                            <button class="btn1">Upload a file</button>
+                                                            <input type="file" name="myfile" onchange="readURL4(this);" />
+                                                        </div>
                                                         
                                                     </div>
                                                     
@@ -802,7 +818,7 @@
                                 <!-- foto -->
                                 <div class="col-md-12 col-lg-12 main-content">
                                     <div>
-                                        <p><span class="w3-tag w3-xlarge" style="background-color:#28a745;padding-left:25px;">Berkas</span></p>
+                                        <p><span class="w3-tag w3-xlarge" style="background-color:#28a745;padding-left:25px;">Dokumen</span></p>
                                     </div>
                                     
                                     <!-- baris 1 -->
@@ -978,8 +994,11 @@
 
                                                     <div class="input">
                                                         <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' id="file" onchange="readURL13(this);" />
-                                                        <!-- <label for="file" style="background-color:red;">Choose a file</label> -->
+                                                        <!-- <input type='file'  onchange="readURL13(this);" /> -->
+                                                        <div class="upload-btn-wrapper">
+                                                            <button class="btn1">Upload a file</button>
+                                                            <input type="file" name="myfile" onchange="readURL13(this);" />
+                                                        </div>
                                                     </div>
                                                     
                                                 </div>
