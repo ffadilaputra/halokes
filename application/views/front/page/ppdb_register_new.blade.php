@@ -704,6 +704,7 @@
                                 <p><span class="w3-tag w3-xlarge" style="background-color:#28a745; padding-left:50px;">Berkas-berkas</span></p>
                             </div>
                             
+                            <!-- foto -->
                             <div class="row">
                                 <!-- foto -->
                                 <div class="col-md-12 col-lg-12 main-content">
@@ -734,10 +735,10 @@
                                             <div class="form-group">
                                                 <label for="">Foto Wali Santri</label>
                                                 <div class="containerr">
-                                                    <label class="labell" for="input2">Please upload a picture !</label>
+                                                    <label class="labell" for="input">Please upload a picture !</label>
 
-                                                    <div class="input2">
-                                                        <input name="input2" id="file" type="file">
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
                                                     </div>
                                                     
                                                 </div>
@@ -786,6 +787,179 @@
                                 
                             </div> <!-- end row -->
 
+
+                            <!-- berkas -->
+                            <div class="row">
+                                <!-- foto -->
+                                <div class="col-md-12 col-lg-12 main-content">
+                                    <div>
+                                        <p><span class="w3-tag w3-xlarge" style="background-color:#28a745;padding-left:25px;">Berkas</span></p>
+                                    </div>
+                                    
+                                    <!-- baris 1 -->
+                                    <div class="row">
+                                        <!-- akta -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">Akte Kelahiran</label>
+                                                <!-- <input type="file" name="fotosantri" id=""> -->
+                                                <div class="containerr">
+                                                    <label class="labell" for="input">Please upload a picture !</label>
+
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- kk -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">KK</label>
+                                                <div class="containerr">
+                                                    <label class="labell" for="input">Please upload a picture !</label>
+
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- bpjs -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">BPJS</label>
+                                                <div class="containerr">
+                                                    <label class="labell" for="input">Please upload a picture !</label>
+
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+
+                                                
+                                            </div>
+                                        </div>
+
+                                        <!-- KTP -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">KTP</label>
+                                                <div class="containerr">
+                                                    <label class="labell" for="input">Please upload a picture !</label>
+
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                    </div>
+                                    <!-- end baris 1 -->
+
+                                    <!-- baris 2 -->
+                                    <div class="row">
+                                        <!-- ktp wali -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">KTP Wali</label>
+                                                <!-- <input type="file" name="fotosantri" id=""> -->
+                                                <div class="containerr">
+                                                    <label class="labell" for="input">Please upload a picture !</label>
+
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- ktp ayah -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">KTP Ayah</label>
+                                                <div class="containerr">
+                                                    <label class="labell" for="input">Please upload a picture !</label>
+
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- KTP Ibu -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">KTP Ibu</label>
+                                                <div class="containerr">
+                                                    <label class="labell" for="input">Please upload a picture !</label>
+
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+
+                                                
+                                            </div>
+                                        </div>
+
+                                        <!-- Ijazah -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">Ijazah</label>
+                                                <div class="containerr">
+                                                    <label class="labell" for="input">Please upload a picture !</label>
+
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- end baris 2 -->
+
+                                    <!-- baris 3 -->
+                                    <div class="row">
+                                        <!-- SKHUN -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">SKHUN</label>
+                                                <!-- <input type="file" name="fotosantri" id=""> -->
+                                                <div class="containerr">
+                                                    <label class="labell" for="input">Please upload a picture !</label>
+
+                                                    <div class="input">
+                                                        <input name="input" id="file" type="file">
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end baris 3 -->
+                                
+                                </div> <!-- end foto --> 
+                                
+
+                                
+                            </div> <!-- end row -->
+
+                            
                         </div> <!-- identitas ortu end-->
 
 
