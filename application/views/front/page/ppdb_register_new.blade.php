@@ -718,12 +718,14 @@
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="form-group">
                                                 <label for="">Foto Santri</label>
-                                                <!-- <input type="file" name="fotosantri" id=""> -->
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="santri" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' onchange="readURL(this);" />
+                                                        
                                                     </div>
                                                     
                                                 </div>
@@ -734,11 +736,14 @@
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="form-group">
                                                 <label for="">Foto Wali Santri</label>
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="wali" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' onchange="readURL2(this);" />
+                                                        
                                                     </div>
                                                     
                                                 </div>
@@ -749,16 +754,17 @@
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="form-group">
                                                 <label for="">Foto Ayah Santri</label>
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="ayah" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' onchange="readURL3(this);" />
+                                                        
                                                     </div>
                                                     
                                                 </div>
-
-                                                
                                             </div>
                                         </div>
 
@@ -766,11 +772,14 @@
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="form-group">
                                                 <label for="">Foto Ibu Santri</label>
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="ibu" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' onchange="readURL4(this);" />
+                                                        
                                                     </div>
                                                     
                                                 </div>
@@ -798,16 +807,19 @@
                                     
                                     <!-- baris 1 -->
                                     <div class="row">
-                                        <!-- akta -->
+                                        <!-- akte -->
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="form-group">
-                                                <label for="">Akte Kelahiran</label>
+                                                <label for="">Akte</label>
                                                 <!-- <input type="file" name="fotosantri" id=""> -->
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="akte" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' onchange="readURL5(this);" />
+                                                        
                                                     </div>
                                                     
                                                 </div>
@@ -818,26 +830,32 @@
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="form-group">
                                                 <label for="">KK</label>
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="blah" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' onchange="readURL6(this);" />
+                                                        
                                                     </div>
                                                     
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- bpjs -->
+                                        <!-- BPJS -->
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="form-group">
                                                 <label for="">BPJS</label>
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="blah2" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' onchange="readURL7(this);" />
+                                                        
                                                     </div>
                                                     
                                                 </div>
@@ -850,18 +868,20 @@
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="form-group">
                                                 <label for="">KTP</label>
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="ktp" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' onchange="readURL8(this);" />
+                                                        
                                                     </div>
                                                     
                                                 </div>
                                             </div>
                                         </div>
 
-                                        
                                     </div>
                                     <!-- end baris 1 -->
 
@@ -872,11 +892,14 @@
                                             <div class="form-group">
                                                 <label for="">KTP Wali</label>
                                                 <!-- <input type="file" name="fotosantri" id=""> -->
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="ktpwali" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' onchange="readURL9(this);" />
+                                                        
                                                     </div>
                                                     
                                                 </div>
@@ -887,11 +910,14 @@
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="form-group">
                                                 <label for="">KTP Ayah</label>
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="ktpayah" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' onchange="readURL10(this);" />
+                                                        
                                                     </div>
                                                     
                                                 </div>
@@ -902,11 +928,14 @@
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="form-group">
                                                 <label for="">KTP Ibu</label>
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="ktpibu" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' onchange="readURL11(this);" />
+                                                        
                                                     </div>
                                                     
                                                 </div>
@@ -919,11 +948,14 @@
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="form-group">
                                                 <label for="">Ijazah</label>
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="ijazah" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' onchange="readURL12(this);" />
+                                                        
                                                     </div>
                                                     
                                                 </div>
@@ -935,23 +967,31 @@
 
                                     <!-- baris 3 -->
                                     <div class="row">
-                                        <!-- SKHUN -->
+                                        <!-- skhun -->
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="form-group">
                                                 <label for="">SKHUN</label>
                                                 <!-- <input type="file" name="fotosantri" id=""> -->
-                                                <div class="containerr">
-                                                    <label class="labell" for="input">Please upload a picture !</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="blah3" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
 
                                                     <div class="input">
-                                                        <input name="input" id="file" type="file">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <input type='file' id="file" onchange="readURL13(this);" />
+                                                        <!-- <label for="file" style="background-color:red;">Choose a file</label> -->
                                                     </div>
                                                     
                                                 </div>
                                             </div>
                                         </div>
+
+                                        
+
                                     </div>
                                     <!-- end baris 3 -->
+
+                                    
                                 
                                 </div> <!-- end foto --> 
                                 
