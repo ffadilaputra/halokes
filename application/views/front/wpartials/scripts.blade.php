@@ -292,9 +292,72 @@ function readURL13(input) {
 
 </script>
 
+<!-- reset input file -->
+<script>
 
+    // reset akte
+    $('#btn-reset-akte').on('click', function(e){
+    var $el = $('#blah');
+    $el.wrap('<form>').closest('form').get(0).reset();
+    $el.unwrap();
+    });
 
+    // reset kk
+    $('#btn-reset-kk').on('click', function(e){
+    var $el = $('#blah2');
+    $el.wrap('<form>').closest('form').get(0).reset();
+    $el.unwrap();
+    });
 
+    // bpjs
+    $('#btn-reset-bpjs').on('click', function(e){
+    var $el = $('#blah3');
+    $el.wrap('<form>').closest('form').get(0).reset();
+    $el.unwrap();
+    });
+
+    // ktp
+    $('#btn-reset-ktp').on('click', function(e){
+    var $el = $('#blah4');
+    $el.wrap('<form>').closest('form').get(0).reset();
+    $el.unwrap();
+    });
+
+    // ktp wali
+    $('#btn-reset-ktpwali').on('click', function(e){
+    var $el = $('#blah5');
+    $el.wrap('<form>').closest('form').get(0).reset();
+    $el.unwrap();
+    });
+
+    //ktp ayah
+    $('#btn-reset-ktpayah').on('click', function(e){
+    var $el = $('#blah6');
+    $el.wrap('<form>').closest('form').get(0).reset();
+    $el.unwrap();
+    });
+
+    // ktp ibu
+    $('#btn-reset-ktpibu').on('click', function(e){
+    var $el = $('#blah7');
+    $el.wrap('<form>').closest('form').get(0).reset();
+    $el.unwrap();
+    });
+
+    // ijazah
+    $('#btn-reset-ijazah').on('click', function(e){
+    var $el = $('#blah8');
+    $el.wrap('<form>').closest('form').get(0).reset();
+    $el.unwrap();
+    });
+
+    // skhun
+    $('#btn-reset-skhun').on('click', function(e){
+    var $el = $('#blah9');
+    $el.wrap('<form>').closest('form').get(0).reset();
+    $el.unwrap();
+    });
+</script>
     
     
     

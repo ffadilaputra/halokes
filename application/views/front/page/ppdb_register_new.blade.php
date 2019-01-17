@@ -829,82 +829,83 @@
                                                 <tr>
                                                     <th>Akte</th>
                                                     <td>
-                                                        <input type="file" name="" id="akte">
+                                                        <input type="file" name="" id="blah">
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                        <button type="button" id="btn-reset-akte" class="btn btn-large btn-block btn-danger">Reset</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>KK</th>
                                                     <td>
-                                                        <input type="file" name="" id="kk">
+                                                        <input type="file" name="" id="blah2">
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                        <button type="button" id="btn-reset-kk" class="btn btn-large btn-block btn-danger">Reset</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>BPJS</th>
                                                     <td>
-                                                        <input type="file" name="" id="bpjs">
+                                                        <input type="file" name="" id="blah3">
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                        <button type="button" id="btn-reset-bpjs" class="btn btn-large btn-block btn-danger">Reset</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>KTP</th>
                                                     <td>
-                                                        <input type="file" name="" id="ktp">
+                                                        <input type="file" name="" id="blah4">
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                        <button type="button" id="btn-reset-ktp" class="btn btn-large btn-block btn-danger">Reset</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>KTP Wali</th>
                                                     <td>
-                                                        <input type="file" name="" id="ktpwali">
+                                                        <input type="file" name="" id="blah5">
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                        <button type="button" id="btn-reset-ktpwali" class="btn btn-large btn-block btn-danger">Reset</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>KTP Ayah</th>
                                                     <td>
-                                                        <input type="file" name="" id="ktpayah">
+                                                        <input type="file" name="" id="blah6">
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                        <button type="button" id="btn-reset-ktpayah" class="btn btn-large btn-block btn-danger">Reset</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>KTP Ibu</th>
                                                     <td>
-                                                        <input type="file" name="" id="ktpibu">
+                                                        <input type="file" name=""id="blah7">
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                        <button type="button" id="btn-reset-ktpibu" class="btn btn-large btn-block btn-danger">Reset</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>Ijazah</th>
                                                     <td>
-                                                        <input type="file" name="" id="ijazah">
+                                                        <input type="file" name="ijazah" id="blah8">
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                        <button type="button" id="btn-reset-ijazah" class="btn btn-large btn-block btn-danger">Reset</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>SKHUN</th>
                                                     <td>
-                                                        <input type="file" name="" id="skhun">
+                                                        <input type="file" name="skhun" id="blah9">
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                        <button type="button" id="btn-reset-skhun" class="btn btn-large btn-block btn-danger">Reset</button>
+                                                        
                                                     </td>
                                                 </tr>
                                             </tbody>
