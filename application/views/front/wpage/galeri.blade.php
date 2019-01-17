@@ -8,14 +8,14 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h2 class="mb-4">Berita Terbaru</h2>
+          <h2 class="mb-4">GALLERY</h2>
         </div>
       </div>
       <div class="row blog-entries">
         <div class="col-md-12 col-lg-12 main-content">
           <div class="row">
             <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
+              <a href="{{ base_url('blog') }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
                 <img src="{{ base_url('assets/wordify') }}/images/img_5.jpg" alt="Image placeholder">
                 <div class="blog-content-body">
                   <div class="post-meta">
@@ -28,7 +28,7 @@
               </a>
             </div>
             <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
+              <a href="{{ base_url('blog/blog1') }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
                 <img src="{{ base_url('assets/wordify') }}/images/img_6.jpg" alt="Image placeholder">
                 <div class="blog-content-body">
                   <div class="post-meta">
@@ -42,7 +42,7 @@
             </div>
 
             <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
+              <a href="{{ base_url('blog') }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
                 <img src="{{ base_url('assets/wordify') }}/images/img_7.jpg" alt="Image placeholder">
                 <div class="blog-content-body">
                   <div class="post-meta">
@@ -55,7 +55,7 @@
               </a>
             </div>
             <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
+              <a href="{{ base_url('blog') }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
                 <img src="{{ base_url('assets/wordify') }}/images/img_8.jpg" alt="Image placeholder">
                 <div class="blog-content-body">
                   <div class="post-meta">
@@ -69,7 +69,7 @@
             </div>
 
             <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
+              <a href="{{ base_url('blog') }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
                 <img src="{{ base_url('assets/wordify') }}/images/img_9.jpg" alt="Image placeholder">
                 <div class="blog-content-body">
                   <div class="post-meta">
@@ -82,7 +82,7 @@
               </a>
             </div>
             <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
+              <a href="{{ base_url('blog') }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
                 <img src="{{ base_url('assets/wordify') }}/images/img_10.jpg" alt="Image placeholder">
                 <div class="blog-content-body">
                   <div class="post-meta">

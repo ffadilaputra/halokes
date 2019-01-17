@@ -7,5 +7,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function index(){
       $this->view('front.wpage.blog-single');
     }
+
+    public function blog1(){
+      $this->view('front.wpage.blog-single');
+    }
 }
 ?>
