@@ -44,7 +44,7 @@
                                     <div class="form-group">
                                         <label for="noinduk">No Induk *</label>
                                         <input name="no_induk" type="number" class="form-control" id="noinduk" value="{{ old('no_induk') }}">
-                                        @if($errors->has('nis'))
+                                        @if($errors->has('no_induk'))
                                           <small class="text-danger">{{ $errors->first('no_induk') }}</small>
                                         @endif
                                     </div>
@@ -258,9 +258,9 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="kabkota">Kota/Kabupaten *</label>
-                                        <input name="kabkota_siswa" type="text" class="form-control" id="kabkota" value="{{ old('kabkota_siswa') }}">
-                                        @if($errors->has('kabkota_siswa'))
-                                          <small class="text-danger">{{ $errors->first('kabkota_siswa') }}</small>
+                                        <input name="kota" type="text" class="form-control" id="kabkota" value="{{ old('kota') }}">
+                                        @if($errors->has('kota'))
+                                          <small class="text-danger">{{ $errors->first('kota') }}</small>
                                         @endif
                                       </div>
                                     <div class="form-group">
@@ -606,10 +606,10 @@
                                         @endif
                                     </div>
                                     <div class="form-group">
-                                        <label for="prov">Provinsi *</label>
-                                        <input name="provinsi_ibu" type="text" class="form-control" id="prov" value="{{ old('provinsi_ibu') }}">
-                                        @if($errors->has('provinsi_ibu'))
-                                          <small class="text-danger">{{ $errors->first('provinsi_ibu') }}</small>
+                                        <label for="prov">Kode Pos *</label>
+                                        <input name="kodepos_ibu" type="text" class="form-control" id="prov" value="{{ old('provinsi_ibu') }}">
+                                        @if($errors->has('kodepos_ibu'))
+                                          <small class="text-danger">{{ $errors->first('kodepos_ibu') }}</small>
                                         @endif
                                     </div>
                                     <div class="form-group">
