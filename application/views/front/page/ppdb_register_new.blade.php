@@ -821,195 +821,96 @@
                                         <p><span class="w3-tag w3-xlarge" style="background-color:#28a745;padding-left:25px;">Dokumen</span></p>
                                     </div>
                                     
-                                    <!-- baris 1 -->
-                                    <div class="row">
-                                        <!-- akte -->
-                                        <div class="col-sm-3 col-xs-12">
-                                            <div class="form-group">
-                                                <label for="">Akte</label>
-                                                <!-- <input type="file" name="fotosantri" id=""> -->
-                                                <div class="container2">
-                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
-                                                    <img id="akte" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
-
-                                                    <div class="input">
-                                                        <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' onchange="readURL5(this);" />
-                                                        
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- kk -->
-                                        <div class="col-sm-3 col-xs-12">
-                                            <div class="form-group">
-                                                <label for="">KK</label>
-                                                <div class="container2">
-                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
-                                                    <img id="blah" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
-
-                                                    <div class="input">
-                                                        <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' onchange="readURL6(this);" />
-                                                        
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- BPJS -->
-                                        <div class="col-sm-3 col-xs-12">
-                                            <div class="form-group">
-                                                <label for="">BPJS</label>
-                                                <div class="container2">
-                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
-                                                    <img id="blah2" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
-
-                                                    <div class="input">
-                                                        <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' onchange="readURL7(this);" />
-                                                        
-                                                    </div>
-                                                    
-                                                </div>
-
-                                                
-                                            </div>
-                                        </div>
-
-                                        <!-- KTP -->
-                                        <div class="col-sm-3 col-xs-12">
-                                            <div class="form-group">
-                                                <label for="">KTP</label>
-                                                <div class="container2">
-                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
-                                                    <img id="ktp" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
-
-                                                    <div class="input">
-                                                        <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' onchange="readURL8(this);" />
-                                                        
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-
+                                    
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            
+                                            <tbody>
+                                                <tr>
+                                                    <th>Akte</th>
+                                                    <td>
+                                                        <input type="file" name="" id="akte">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>KK</th>
+                                                    <td>
+                                                        <input type="file" name="" id="kk">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>BPJS</th>
+                                                    <td>
+                                                        <input type="file" name="" id="bpjs">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>KTP</th>
+                                                    <td>
+                                                        <input type="file" name="" id="ktp">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>KTP Wali</th>
+                                                    <td>
+                                                        <input type="file" name="" id="ktpwali">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>KTP Ayah</th>
+                                                    <td>
+                                                        <input type="file" name="" id="ktpayah">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>KTP Ibu</th>
+                                                    <td>
+                                                        <input type="file" name="" id="ktpibu">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Ijazah</th>
+                                                    <td>
+                                                        <input type="file" name="" id="ijazah">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>SKHUN</th>
+                                                    <td>
+                                                        <input type="file" name="" id="skhun">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-large btn-block btn-danger">button</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <!-- end baris 1 -->
-
-                                    <!-- baris 2 -->
-                                    <div class="row">
-                                        <!-- ktp wali -->
-                                        <div class="col-sm-3 col-xs-12">
-                                            <div class="form-group">
-                                                <label for="">KTP Wali</label>
-                                                <!-- <input type="file" name="fotosantri" id=""> -->
-                                                <div class="container2">
-                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
-                                                    <img id="ktpwali" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
-
-                                                    <div class="input">
-                                                        <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' onchange="readURL9(this);" />
-                                                        
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- ktp ayah -->
-                                        <div class="col-sm-3 col-xs-12">
-                                            <div class="form-group">
-                                                <label for="">KTP Ayah</label>
-                                                <div class="container2">
-                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
-                                                    <img id="ktpayah" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
-
-                                                    <div class="input">
-                                                        <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' onchange="readURL10(this);" />
-                                                        
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- KTP Ibu -->
-                                        <div class="col-sm-3 col-xs-12">
-                                            <div class="form-group">
-                                                <label for="">KTP Ibu</label>
-                                                <div class="container2">
-                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
-                                                    <img id="ktpibu" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
-
-                                                    <div class="input">
-                                                        <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' onchange="readURL11(this);" />
-                                                        
-                                                    </div>
-                                                    
-                                                </div>
-
-                                                
-                                            </div>
-                                        </div>
-
-                                        <!-- Ijazah -->
-                                        <div class="col-sm-3 col-xs-12">
-                                            <div class="form-group">
-                                                <label for="">Ijazah</label>
-                                                <div class="container2">
-                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
-                                                    <img id="ijazah" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
-
-                                                    <div class="input">
-                                                        <!-- <input name="input" id="file2" type="file"> -->
-                                                        <input type='file' onchange="readURL12(this);" />
-                                                        
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end baris 2 -->
-
-                                    <!-- baris 3 -->
-                                    <div class="row">
-                                        <!-- skhun -->
-                                        <div class="col-sm-3 col-xs-12">
-                                            <div class="form-group">
-                                                <label for="">SKHUN</label>
-                                                <!-- <input type="file" name="fotosantri" id=""> -->
-                                                <div class="container2">
-                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
-                                                    <img id="blah3" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
-
-                                                    <div class="input">
-                                                        <!-- <input name="input" id="file2" type="file"> -->
-                                                        <!-- <input type='file'  onchange="readURL13(this);" /> -->
-                                                        <div class="upload-btn-wrapper">
-                                                            <button class="btn1">Upload a file</button>
-                                                            <input type="file" name="myfile" onchange="readURL13(this);" />
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        
-
-                                    </div>
-                                    <!-- end baris 3 -->
-
+                                    
                                     
                                 
                                 </div> <!-- end foto --> 
