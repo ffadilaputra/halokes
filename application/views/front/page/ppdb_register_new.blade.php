@@ -44,7 +44,7 @@
                                     <div class="form-group">
                                         <label for="noinduk">No Induk *</label>
                                         <input name="no_induk" type="number" class="form-control" id="noinduk" value="{{ old('no_induk') }}">
-                                        @if($errors->has('nis'))
+                                        @if($errors->has('no_induk'))
                                           <small class="text-danger">{{ $errors->first('no_induk') }}</small>
                                         @endif
                                     </div>
@@ -258,9 +258,9 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="kabkota">Kota/Kabupaten *</label>
-                                        <input name="kabkota_siswa" type="text" class="form-control" id="kabkota" value="{{ old('kabkota_siswa') }}">
-                                        @if($errors->has('kabkota_siswa'))
-                                          <small class="text-danger">{{ $errors->first('kabkota_siswa') }}</small>
+                                        <input name="kota" type="text" class="form-control" id="kabkota" value="{{ old('kota') }}">
+                                        @if($errors->has('kota'))
+                                          <small class="text-danger">{{ $errors->first('kota') }}</small>
                                         @endif
                                       </div>
                                     <div class="form-group">
@@ -606,10 +606,10 @@
                                         @endif
                                     </div>
                                     <div class="form-group">
-                                        <label for="prov">Provinsi *</label>
-                                        <input name="provinsi_ibu" type="text" class="form-control" id="prov" value="{{ old('provinsi_ibu') }}">
-                                        @if($errors->has('provinsi_ibu'))
-                                          <small class="text-danger">{{ $errors->first('provinsi_ibu') }}</small>
+                                        <label for="prov">Kode Pos *</label>
+                                        <input name="kodepos_ibu" type="text" class="form-control" id="prov" value="{{ old('provinsi_ibu') }}">
+                                        @if($errors->has('kodepos_ibu'))
+                                          <small class="text-danger">{{ $errors->first('kodepos_ibu') }}</small>
                                         @endif
                                     </div>
                                     <div class="form-group">
@@ -827,8 +827,234 @@
 
                                                           </div> <!-- end left -->
 
-                        </div> <!-- wali santri end-->
+                        <!-- identitas ortu santri -->
+                        <div>
+                            <div>
+                                <p><span class="w3-tag w3-xlarge" style="background-color:#28a745; padding-left:50px;">Berkas-berkas</span></p>
+                            </div>
+
+                            <!-- foto -->
+                            <div class="row">
+                                <!-- foto -->
+                                <div class="col-md-12 col-lg-12 main-content">
+                                    <div>
+                                        <p><span class="w3-tag w3-xlarge" style="background-color:#28a745;padding-left:25px;">Foto</span></p>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <!-- foto santri -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">Foto Santri</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="santri" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
+
+                                                    <div class="input">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <!-- <input type='file' onchange="readURL(this);" /> -->
+                                                        <div class="upload-btn-wrapper">
+                                                            <button class="btn1">Upload a file</button>
+                                                            <input type="file" name="myfile" onchange="readURL(this);" />
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- foto wali santri -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">Foto Wali Santri</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="wali" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
+
+                                                    <div class="input">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <!-- <input type='file' onchange="readURL2(this);" /> -->
+                                                        <div class="upload-btn-wrapper">
+                                                            <button class="btn1">Upload a file</button>
+                                                            <input type="file" name="myfile" onchange="readURL2(this);" />
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- foto ayah santri -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">Foto Ayah Santri</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="ayah" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
+
+                                                    <div class="input">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <!-- <input type='file' onchange="readURL3(this);" /> -->
+                                                        <div class="upload-btn-wrapper">
+                                                            <button class="btn1">Upload a file</button>
+                                                            <input type="file" name="myfile" onchange="readURL3(this);" />
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- foto ibu santri -->
+                                        <div class="col-sm-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="">Foto Ibu Santri</label>
+                                                <div class="container2">
+                                                    <!-- <label class="labell" for="input">Please upload a picture !</label> -->
+                                                    <img id="ibu" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
+
+                                                    <div class="input">
+                                                        <!-- <input name="input" id="file2" type="file"> -->
+                                                        <!-- <input type='file' onchange="readURL4(this);" /> -->
+                                                        <div class="upload-btn-wrapper">
+                                                            <button class="btn1">Upload a file</button>
+                                                            <input type="file" name="myfile" onchange="readURL4(this);" />
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div> <!-- end foto -->
+
+
+
+                            </div> <!-- end row -->
+
+
+                            <!-- berkas -->
+                            <div class="row">
+                                <!-- foto -->
+                                <div class="col-md-12 col-lg-12 main-content">
+                                    <div>
+                                        <p><span class="w3-tag w3-xlarge" style="background-color:#28a745;padding-left:25px;">Dokumen</span></p>
+                                    </div>
+
+
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+
+                                            <tbody>
+                                                <tr>
+                                                    <th>Akte</th>
+                                                    <td>
+                                                        <input type="file" name="" id="blah">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" id="btn-reset-akte" class="btn btn-large btn-block btn-danger">Reset</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>KK</th>
+                                                    <td>
+                                                        <input type="file" name="" id="blah2">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" id="btn-reset-kk" class="btn btn-large btn-block btn-danger">Reset</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>BPJS</th>
+                                                    <td>
+                                                        <input type="file" name="" id="blah3">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" id="btn-reset-bpjs" class="btn btn-large btn-block btn-danger">Reset</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>KTP</th>
+                                                    <td>
+                                                        <input type="file" name="" id="blah4">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" id="btn-reset-ktp" class="btn btn-large btn-block btn-danger">Reset</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>KTP Wali</th>
+                                                    <td>
+                                                        <input type="file" name="" id="blah5">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" id="btn-reset-ktpwali" class="btn btn-large btn-block btn-danger">Reset</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>KTP Ayah</th>
+                                                    <td>
+                                                        <input type="file" name="" id="blah6">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" id="btn-reset-ktpayah" class="btn btn-large btn-block btn-danger">Reset</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>KTP Ibu</th>
+                                                    <td>
+                                                        <input type="file" name=""id="blah7">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" id="btn-reset-ktpibu" class="btn btn-large btn-block btn-danger">Reset</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Ijazah</th>
+                                                    <td>
+                                                        <input type="file" name="ijazah" id="blah8">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" id="btn-reset-ijazah" class="btn btn-large btn-block btn-danger">Reset</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>SKHUN</th>
+                                                    <td>
+                                                        <input type="file" name="skhun" id="blah9">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" id="btn-reset-skhun" class="btn btn-large btn-block btn-danger">Reset</button>
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+
+                                </div> <!-- end foto -->
+
+
+
+                            </div> <!-- end row -->
+
+
+                        </div> <!-- identitas ortu end-->
+
+
                         <br>
+
                         <!-- btn submit -->
                         <div class="form-group">
                             <input type="submit" style="margin:0 auto; display:block;" value="DAFTAR" class="btn btn-info btn-lg">
