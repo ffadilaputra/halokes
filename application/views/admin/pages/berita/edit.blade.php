@@ -33,7 +33,7 @@
             <select name="id_news_category" class="form-control">
                 <option value="">-- Pilih --</option>
                   <option @if($edit->id_news_category == 'berita') {!! 'selected' !!}  @endif value="berita">Berita</option>
-                  <option @if($edit->id_news_category == 'maulidoh') {!! 'selected' !!}  @endif value="maulidoh">Maulidoh</option>
+                  <option @if($edit->id_news_category == 'mauidhoh') {!! 'selected' !!}  @endif value="mauidhoh">Maulidoh</option>
             </select>
         </div>
         <div class="form-group">

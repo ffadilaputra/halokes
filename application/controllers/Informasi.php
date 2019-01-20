@@ -10,6 +10,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         'id_news_category' => 'berita'
       ])->limit(9)->get();
 
+      $data['footer'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(3)->get();
+
       $this->view('front.wpage.informasi',$data);
     }
 
@@ -18,7 +22,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         'id_news_category' => 'mauidhoh'
       ])->limit(9)->get();
 
-      $this->view('front.wpage.informasi',$data);
+      $data['footer'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(3)->get();
+
+      $this->view('front.wpage.mauidhoh',$data);
     }
 
 }
