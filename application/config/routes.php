@@ -6,3 +6,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['admin'] = 'admin/dashboard';
 $route['ppdb'] = 'ppdb/santri';
+$route['mauidhoh'] = 'informasi/mauidhoh';

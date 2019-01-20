@@ -10,8 +10,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         'id_news_category' => 'berita'
       ])->limit(9)->get();
 
+      $this->view('front.wpage.informasi',$data);
+    }
+
+    public function mauidhoh(){
+      $data['article'] = BeritaModel::where([
+        'id_news_category' => 'mauidhoh'
+      ])->limit(9)->get();
 
       $this->view('front.wpage.informasi',$data);
     }
+
 }
 ?>

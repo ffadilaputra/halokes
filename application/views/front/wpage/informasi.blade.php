@@ -16,7 +16,11 @@
             @foreach($article as $data)
             <div class="col-md-4">
               <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                <img src="{{ base_url('assets/wordify') }}/images/img_5.jpg" alt="Image placeholder">
+                @if(is_null($data->thumb))
+                  <img src="{{ base_url('assets/wordify') }}/images/img_5.jpg" alt="Image placeholder">
+                    @else
+                  <img src="{{ base_url('assets/uploads/').$data->thumb }}" alt="Image placeholder">
+                @endif
                 <div class="blog-content-body">
                   <div class="post-meta">
                     <span class="author mr-2"><img src="{{ base_url('assets/wordify') }}/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
