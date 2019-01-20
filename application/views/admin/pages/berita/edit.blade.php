@@ -6,23 +6,42 @@
     </h1>
 </div>
 <div>
-    <?= form_open('admin/berita/update/'.$edit->id_news) ?>
+    <?= form_open_multipart('admin/berita/update/'.$edit->id_news) ?>
         <div class="form-group">
-            <label for="">Title</label>
+            <label>Title</label>
             <input type="text" name="title" class="form-control" value="{{ $edit->title }}">
+            @if($errors->has('title'))
+              <small class="text-danger">{{ $errors->first('title') }}</small>
+            @endif
         </div>
+        <div class="form-group">
+            @if(is_null($edit->thumb))
+              <small class="text-danger">Gambar tidak ada</small>
+            @else
+              <img src="{{ base_url('assets/uploads/').$edit->thumb }}" alt="">
+            @endif
+        </div>
+        <div class="form-group">
+          <label for="">Thumbnail</label>
+          <input name="thumb" type="file" class="form-control">
+            @if($errors->has('thumb'))
+                <small class="text-danger">{{ $errors->first('thumb') }}</small>
+            @endif
+      </div>
         <div class="form-group">
             <label for="">Kategori</label>
             <select name="id_news_category" class="form-control">
                 <option value="">-- Pilih --</option>
-                    @foreach ($category as $item)
-                        <option @if($item->id_news_category == $edit->id_news_category) {!! 'selected' !!}  @endif value="{{ $item->id_news_category }}">{{ $item->category_name }}</option>
-                    @endforeach
+                  <option @if($edit->id_news_category == 'berita') {!! 'selected' !!}  @endif value="berita">Berita</option>
+                  <option @if($edit->id_news_category == 'maulidoh') {!! 'selected' !!}  @endif value="maulidoh">Maulidoh</option>
             </select>
         </div>
         <div class="form-group">
             <label for="">Dekripsi </label>
-            <textarea id="desc" name="description">{!! $edit->description !!}</textarea>
+            <textarea id="editor" name="description">{!! $edit->description !!}</textarea>
+            @if($errors->has('description'))
+              <small class="text-danger">{{ $errors->first('description') }}</small>
+            @endif
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-success" style="float:right">
@@ -36,9 +55,11 @@
 <script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
-<script src="{{ base_url('assets/bower_components/tinymce/tinymce.min.js') }}"></script>
+<script src="{{ base_url('assets/ckeditor/')}}ckeditor.js"></script>
 <script>
-    tinymce.init({ selector:'textarea' });
+  CKEDITOR.replace('editor' ,{
+        filebrowserImageBrowseUrl : '<?php echo base_url('assets/kcfinder');?>',
+});
 </script>
 
 @stop
