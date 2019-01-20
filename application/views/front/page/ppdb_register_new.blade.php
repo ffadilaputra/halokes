@@ -1048,17 +1048,17 @@
 
 
                             </div> <!-- end row -->
-
-
                         </div> <!-- identitas ortu end-->
-
-
                         <br>
-
                         <!-- btn submit -->
                         <div class="form-group">
+                          <center>
+                            <div class="g-recaptcha" data-sitekey="6LesgYoUAAAAAFbqCI_A39QgBUO0CcfErCFo2TQ2"></div>
+                          </center>
+                          <br>
                             <input type="submit" style="margin:0 auto; display:block;" value="DAFTAR" class="btn btn-info btn-lg">
                         </div>
+
                     </form>
                 </div>
             </div>

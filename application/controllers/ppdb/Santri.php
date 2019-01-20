@@ -5,7 +5,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   class Santri extends MY_Controller {
 
       public function index(){
-          $this->view('front.page.ppdb_register_new');
+        $data['footer'] = BeritaModel::where([
+          'id_news_category' => 'berita'
+        ])->limit(3)->get();
+          $this->view('front.page.ppdb_register_new', $data);
       }
 
       public function store(){
