@@ -67,9 +67,13 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#pengumuman"><i class="fa fa-fw fa-book"></i>Artikel <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="pengumuman" class="collapse">
                         <li><a href="{{ base_url('admin/berita/create') }}">Buat Berita</a></li>
+<<<<<<< HEAD
                         <li><a href="{{ base_url('admin/kategoriberita')}}">Kategori Berita</a></li>
                         <li><a href="{{ base_url('admin/berita') }}">Semua Berita</a></li>
                         <li><a href="{{ base_url('admin/mauidhoh')}}">Mauidhoh</a></li>
+=======
+                        <li><a href="{{ base_url('admin/berita') }}">Semua</a></li>
+>>>>>>> dc37021efea437c393067d92b4ba4b1f7ef58395
                     </ul>
                 </a>
             </li>

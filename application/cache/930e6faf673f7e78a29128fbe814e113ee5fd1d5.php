@@ -42,105 +42,23 @@
       <div class="row blog-entries">
         <div class="col-md-12 col-lg-12 main-content">
           <div class="row">
+            <?php $__currentLoopData = $article; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                <img src="<?php echo e(base_url('assets/wordify')); ?>/images/img_5.jpg" alt="Image placeholder">
+              <a href="#" class="blog-entry element-animate" data-animate-effect="fadeIn">
+                <img src="<?php echo e(base_url('assets/uploads/').$data->thumb); ?>" alt="Image placeholder">
                 <div class="blog-content-body">
                   <div class="post-meta">
-                    <span class="author mr-2"><img src="<?php echo e(base_url('assets/wordify')); ?>/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                    <span class="mr-2">March 15, 2018 </span> &bullet;
-                    <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                    <span class="author mr-2">
+                      <img src="<?php echo e(base_url('assets/wordify')); ?>/images/person_1.jpg" alt="Colorlib">&nbsp;<?php echo $data->detailNews->nama_lengkap; ?></span>&bullet;
+                  <span class="mr-2"><?php echo $data->created_at; ?></span> &bullet;
+                    <span class="ml-2"><span class="fa fa-tag"> <?php echo $data->id_news_category; ?></span></span>
                   </div>
-                  <h2>How to Find the Video Games of Your Youth</h2>
+                  <h2><?php echo $data->title; ?></h2>
                 </div>
               </a>
             </div>
-            <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                <img src="<?php echo e(base_url('assets/wordify')); ?>/images/img_6.jpg" alt="Image placeholder">
-                <div class="blog-content-body">
-                  <div class="post-meta">
-                    <span class="author mr-2"><img src="<?php echo e(base_url('assets/wordify')); ?>/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                    <span class="mr-2">March 15, 2018 </span> &bullet;
-                    <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                  </div>
-                  <h2>How to Find the Video Games of Your Youth</h2>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                <img src="<?php echo e(base_url('assets/wordify')); ?>/images/img_7.jpg" alt="Image placeholder">
-                <div class="blog-content-body">
-                  <div class="post-meta">
-                    <span class="author mr-2"><img src="<?php echo e(base_url('assets/wordify')); ?>/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                    <span class="mr-2">March 15, 2018 </span> &bullet;
-                    <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                  </div>
-                  <h2>How to Find the Video Games of Your Youth</h2>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                <img src="<?php echo e(base_url('assets/wordify')); ?>/images/img_8.jpg" alt="Image placeholder">
-                <div class="blog-content-body">
-                  <div class="post-meta">
-                    <span class="author mr-2"><img src="<?php echo e(base_url('assets/wordify')); ?>/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                    <span class="mr-2">March 15, 2018 </span> &bullet;
-                    <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                  </div>
-                  <h2>How to Find the Video Games of Your Youth</h2>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                <img src="<?php echo e(base_url('assets/wordify')); ?>/images/img_9.jpg" alt="Image placeholder">
-                <div class="blog-content-body">
-                  <div class="post-meta">
-                    <span class="author mr-2"><img src="<?php echo e(base_url('assets/wordify')); ?>/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                    <span class="mr-2">March 15, 2018 </span> &bullet;
-                    <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                  </div>
-                  <h2>How to Find the Video Games of Your Youth</h2>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                <img src="<?php echo e(base_url('assets/wordify')); ?>/images/img_10.jpg" alt="Image placeholder">
-                <div class="blog-content-body">
-                  <div class="post-meta">
-                    <span class="author mr-2"><img src="<?php echo e(base_url('assets/wordify')); ?>/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                    <span class="mr-2">March 15, 2018 </span> &bullet;
-                    <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                  </div>
-                  <h2>How to Find the Video Games of Your Youth</h2>
-                </div>
-              </a>
-            </div>
-
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
           </div>
-
-          <!-- <div class="row mt-5">
-            <div class="col-md-12 text-center">
-              <nav aria-label="Page navigation" class="text-center">
-                <ul class="pagination">
-                  <li class="page-item  active"><a class="page-link" href="#">&lt;</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">4</a></li>
-                  <li class="page-item"><a class="page-link" href="#">5</a></li>
-                  <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div> -->
-
         </div>
 
         <!-- END main-content -->
@@ -157,8 +75,6 @@
 
 <!-- loader -->
 <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-
-
 <?php echo $__env->make('front.partials.modal', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <?php $__env->stopSection(); ?>
 

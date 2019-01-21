@@ -40,8 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               $_POST['thumb'] = $this->do_upload('thumb', 'assets/uploads/', 'image', TRUE);
             }
             BeritaModel::create($this->input->post());
-            var_dump($_POST);
-            //redirect('admin/berita');
+            redirect('admin/berita');
         }
 
         public function edit($id){
@@ -55,8 +54,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           public function update($id){
             $this->validate($this->input->post(),[
               'title' => 'required',
+              'thumb' => 'mimes:jpeg,jpg,png',
+              'id_news_category' => 'required|string',
               'description' => 'required'
             ]);
+
+            if(!empty($_FILES['thumb']['name'])){
+              $_POST['thumb'] = $this->do_upload('thumb', 'assets/uploads/', 'image', TRUE);
+              $berita = BeritaModel::find($id);
+              unlink('assets/uploads/' . $berita->thumb);
+            }
             BeritaModel::find($id)->update($this->input->post());
             redirect('admin/berita');
         }

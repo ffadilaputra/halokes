@@ -47,7 +47,6 @@
 <script>
   CKEDITOR.replace('editor' ,{
         filebrowserImageBrowseUrl : '<?php echo base_url('assets/kcfinder');?>',
-
 });
 
 </script>

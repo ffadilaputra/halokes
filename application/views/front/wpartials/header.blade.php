@@ -24,7 +24,7 @@
         <div class="col-12 text-center">
           <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
           <h2 class="site-logo">
-            <a href="index.html">
+          <a href=" {{ base_url() }}">
               <img src="{{base_url('assets/wordify/images/header.jpg')}}" alt="">
             </a>
           </h2>
@@ -34,8 +34,6 @@
 
     <nav class="navbar navbar-expand-md  navbar-light bg-light">
       <div class="container">
-
-
         <div class="collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
