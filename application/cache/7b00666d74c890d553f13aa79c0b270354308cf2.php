@@ -15,7 +15,7 @@
 
                 <div class="comment-form-wrap pt-5">
                     
-                      <?= form_open('ppdb/santri/store') ?>
+                      <?= form_open_multipart('ppdb/santri/store') ?>
                         <!-- identitas siswa -->
                         <div>
                             <div>
@@ -191,16 +191,24 @@
                                     <div class="form-group">
                                     <label for="hobi">Hobi</label>
                                     <select name="hobi" class="form-control" id="hobi" value="<?php echo e(old('hobi')); ?>">
+                                        <option <?php if(old('hobi') == 'menulis'): ?> selected <?php endif; ?> value="menulis">Menulis</option>
+                                        <option <?php if(old('hobi') == 'olahraga'): ?> selected <?php endif; ?> value="olahraga">Olahraga</option>
                                         <option <?php if(old('hobi') == 'berenang'): ?> selected <?php endif; ?> value="berenang">Berenang</option>
                                         <option <?php if(old('hobi') == 'membaca'): ?> selected <?php endif; ?> value="membaca">Membaca</option>
+                                        <option <?php if(old('hobi') == 'rekreasi'): ?> selected <?php endif; ?> value="rekreasi">Rekreasi</option>
+                                        <option <?php if(old('hobi') == 'kesenian'): ?> selected <?php endif; ?> value="kesenian">Kesenian</option>
                                     </select>
                                     </div>
                                     <div class="form-group">
                                     <label for="cita_cita">Cita-cita</label>
                                     <select class="form-control" name="cita_cita" id="citacita" value="<?php echo e(old('cita_cita')); ?>">
+                                        <option <?php if(old('cita_cita') == 'pns'): ?> selected <?php endif; ?> value="pns">PNS</option>
+                                        <option <?php if(old('cita_cita') == 'dokter'): ?> selected <?php endif; ?> value="dokter">Dokter</option>
                                         <option <?php if(old('cita_cita') == 'pilot'): ?> selected <?php endif; ?> value="pilot">Pilot</option>
-                                        <option <?php if(old('cita_cita') == 'nelayan'): ?> selected <?php endif; ?> value="nelayan">Nelayan</option>
-                                        <option></option>
+                                        <option <?php if(old('cita_cita') == 'politikus'): ?> selected <?php endif; ?> value="politikus">Politikus</option>
+                                        <option <?php if(old('cita_cita') == 'guru/dosen'): ?> selected <?php endif; ?> value="guru/dosen">Guru/Dosen</option>
+                                        <option <?php if(old('cita_cita') == 'wiraswasta'): ?> selected <?php endif; ?> value="wiraswasta">Wiraswasta</option>
+                                        <option <?php if(old('cita_cita') == 'seni'): ?> selected <?php endif; ?> value="seni">Pekerja Seni/Lukis/Artis/Sejenis</option>
                                     </select>
                                     </div>
                                     <div class="form-group">
@@ -855,7 +863,7 @@
                                                         <!-- <input type='file' onchange="readURL(this);" /> -->
                                                         <div class="upload-btn-wrapper">
                                                             <button class="btn1">Upload a file</button>
-                                                            <input type="file" name="myfile" onchange="readURL(this);" />
+                                                            <input type="file" name="foto_santri" onchange="readURL(this);" />
                                                         </div>
 
                                                     </div>
@@ -877,7 +885,7 @@
                                                         <!-- <input type='file' onchange="readURL2(this);" /> -->
                                                         <div class="upload-btn-wrapper">
                                                             <button class="btn1">Upload a file</button>
-                                                            <input type="file" name="myfile" onchange="readURL2(this);" />
+                                                            <input type="file" name="foto_wali_santri" onchange="readURL2(this);" />
                                                         </div>
 
                                                     </div>
@@ -899,7 +907,7 @@
                                                         <!-- <input type='file' onchange="readURL3(this);" /> -->
                                                         <div class="upload-btn-wrapper">
                                                             <button class="btn1">Upload a file</button>
-                                                            <input type="file" name="myfile" onchange="readURL3(this);" />
+                                                            <input type="file" name="foto_ayah_santri" onchange="readURL3(this);" />
                                                         </div>
 
                                                     </div>
@@ -921,7 +929,7 @@
                                                         <!-- <input type='file' onchange="readURL4(this);" /> -->
                                                         <div class="upload-btn-wrapper">
                                                             <button class="btn1">Upload a file</button>
-                                                            <input type="file" name="myfile" onchange="readURL4(this);" />
+                                                            <input type="file" name="foto_ibu_santri" onchange="readURL4(this);" />
                                                         </div>
 
                                                     </div>
@@ -957,7 +965,7 @@
                                                 <tr>
                                                     <th>Akte</th>
                                                     <td>
-                                                        <input type="file" name="" id="blah">
+                                                        <input type="file" name="akta_santri" id="blah">
                                                     </td>
                                                     <td>
                                                         <button type="button" id="btn-reset-akte" class="btn btn-large btn-block btn-danger">Reset</button>
@@ -966,7 +974,7 @@
                                                 <tr>
                                                     <th>KK</th>
                                                     <td>
-                                                        <input type="file" name="" id="blah2">
+                                                        <input type="file" name="kk_santri" id="blah2">
                                                     </td>
                                                     <td>
                                                         <button type="button" id="btn-reset-kk" class="btn btn-large btn-block btn-danger">Reset</button>
@@ -975,7 +983,7 @@
                                                 <tr>
                                                     <th>BPJS</th>
                                                     <td>
-                                                        <input type="file" name="" id="blah3">
+                                                        <input type="file" name="bpjs_santri" id="blah3">
                                                     </td>
                                                     <td>
                                                         <button type="button" id="btn-reset-bpjs" class="btn btn-large btn-block btn-danger">Reset</button>
@@ -984,7 +992,7 @@
                                                 <tr>
                                                     <th>KTP</th>
                                                     <td>
-                                                        <input type="file" name="" id="blah4">
+                                                        <input type="file" name="ktp_santri" id="blah4">
                                                     </td>
                                                     <td>
                                                         <button type="button" id="btn-reset-ktp" class="btn btn-large btn-block btn-danger">Reset</button>
@@ -993,7 +1001,7 @@
                                                 <tr>
                                                     <th>KTP Wali</th>
                                                     <td>
-                                                        <input type="file" name="" id="blah5">
+                                                        <input type="file" name="ktp_wali" id="blah5">
                                                     </td>
                                                     <td>
                                                         <button type="button" id="btn-reset-ktpwali" class="btn btn-large btn-block btn-danger">Reset</button>
@@ -1002,7 +1010,7 @@
                                                 <tr>
                                                     <th>KTP Ayah</th>
                                                     <td>
-                                                        <input type="file" name="" id="blah6">
+                                                        <input type="file" name="ktp_ayah" id="blah6">
                                                     </td>
                                                     <td>
                                                         <button type="button" id="btn-reset-ktpayah" class="btn btn-large btn-block btn-danger">Reset</button>
@@ -1011,7 +1019,7 @@
                                                 <tr>
                                                     <th>KTP Ibu</th>
                                                     <td>
-                                                        <input type="file" name=""id="blah7">
+                                                        <input type="file" name="ktp_ibu" id="blah7">
                                                     </td>
                                                     <td>
                                                         <button type="button" id="btn-reset-ktpibu" class="btn btn-large btn-block btn-danger">Reset</button>
@@ -1020,7 +1028,7 @@
                                                 <tr>
                                                     <th>Ijazah</th>
                                                     <td>
-                                                        <input type="file" name="ijazah" id="blah8">
+                                                        <input type="file" name="ijazah_santri" id="blah8">
                                                     </td>
                                                     <td>
                                                         <button type="button" id="btn-reset-ijazah" class="btn btn-large btn-block btn-danger">Reset</button>
@@ -1029,7 +1037,7 @@
                                                 <tr>
                                                     <th>SKHUN</th>
                                                     <td>
-                                                        <input type="file" name="skhun" id="blah9">
+                                                        <input type="file" name="skhun_santri" id="blah9">
                                                     </td>
                                                     <td>
                                                         <button type="button" id="btn-reset-skhun" class="btn btn-large btn-block btn-danger">Reset</button>
@@ -1047,17 +1055,17 @@
 
 
                             </div> <!-- end row -->
-
-
                         </div> <!-- identitas ortu end-->
-
-
                         <br>
-
                         <!-- btn submit -->
                         <div class="form-group">
+                          <center>
+                            <div class="g-recaptcha" data-sitekey="6LesgYoUAAAAAFbqCI_A39QgBUO0CcfErCFo2TQ2"></div>
+                          </center>
+                          <br>
                             <input type="submit" style="margin:0 auto; display:block;" value="DAFTAR" class="btn btn-info btn-lg">
                         </div>
+
                     </form>
                 </div>
             </div>

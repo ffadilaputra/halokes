@@ -192,16 +192,24 @@
                                     <div class="form-group">
                                     <label for="hobi">Hobi</label>
                                     <select name="hobi" class="form-control" id="hobi" value="{{ old('hobi') }}">
+                                        <option @if(old('hobi') == 'menulis') selected @endif value="menulis">Menulis</option>
+                                        <option @if(old('hobi') == 'olahraga') selected @endif value="olahraga">Olahraga</option>
                                         <option @if(old('hobi') == 'berenang') selected @endif value="berenang">Berenang</option>
                                         <option @if(old('hobi') == 'membaca') selected @endif value="membaca">Membaca</option>
+                                        <option @if(old('hobi') == 'rekreasi') selected @endif value="rekreasi">Rekreasi</option>
+                                        <option @if(old('hobi') == 'kesenian') selected @endif value="kesenian">Kesenian</option>
                                     </select>
                                     </div>
                                     <div class="form-group">
                                     <label for="cita_cita">Cita-cita</label>
                                     <select class="form-control" name="cita_cita" id="citacita" value="{{ old('cita_cita') }}">
+                                        <option @if(old('cita_cita') == 'pns') selected @endif value="pns">PNS</option>
+                                        <option @if(old('cita_cita') == 'dokter') selected @endif value="dokter">Dokter</option>
                                         <option @if(old('cita_cita') == 'pilot') selected @endif value="pilot">Pilot</option>
-                                        <option @if(old('cita_cita') == 'nelayan') selected @endif value="nelayan">Nelayan</option>
-                                        <option></option>
+                                        <option @if(old('cita_cita') == 'politikus') selected @endif value="politikus">Politikus</option>
+                                        <option @if(old('cita_cita') == 'guru/dosen') selected @endif value="guru/dosen">Guru/Dosen</option>
+                                        <option @if(old('cita_cita') == 'wiraswasta') selected @endif value="wiraswasta">Wiraswasta</option>
+                                        <option @if(old('cita_cita') == 'seni') selected @endif value="seni">Pekerja Seni/Lukis/Artis/Sejenis</option>
                                     </select>
                                     </div>
                                     <div class="form-group">
@@ -238,15 +246,21 @@
                                     <div class="form-group">
                                         <label for="jenisSekolah">Jenis Sekolah</label>
                                         <select class="form-control" name="jenis_sekolah_siswa" id="jenisSekolah" value="{{ old('jenis_sekolah_siswa') }}">
-                                            <option @if(old('jenis_sekolah_siswa') == 'a') selected @endif value="a">A</option>
-                                            <option @if(old('jenis_sekolah_siswa') == 'b') selected @endif value="b">B</option>
+                                            <option @if(old('jenis_sekolah_siswa') == 'sd') selected @endif value="sd">SD</option>
+                                            <option @if(old('jenis_sekolah_siswa') == 'mi') selected @endif value="mi">MI</option>
+                                            <option @if(old('jenis_sekolah_siswa') == 'smp') selected @endif value="smp">SMP</option>
+                                            <option @if(old('jenis_sekolah_siswa') == 'mts') selected @endif value="mts">MTs</option>
+                                            <option @if(old('jenis_sekolah_siswa') == 'sma/smk') selected @endif value="sma/smk">SMA/SMK</option>
+                                            <option @if(old('jenis_sekolah_siswa') == 'ma') selected @endif value="ma">MA</option>
+                                            <option @if(old('jenis_sekolah_siswa') == 'paketa') selected @endif value="paketa">Paket A</option>
+                                            <option @if(old('jenis_sekolah_siswa') == 'paketb') selected @endif value="paketb">Paket B</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="statusSekolah">Status Sekolah</label>
                                         <select class="form-control" name="status_sekolah_siswa" id="statusSekolah" value="{{ old('status_sekolah_siswa') }}">
-                                            <option @if(old('status_sekolah_siswa') == 'a') selected @endif>A</option>
-                                            <option @if(old('status_sekolah_siswa') == 'b') selected @endif >B</option>
+                                            <option @if(old('status_sekolah_siswa') == 'negeri') selected @endif value="negeri">Negeri</option>
+                                            <option @if(old('status_sekolah_siswa') == 'swasta') selected @endif value="swasta">Swasta</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -408,13 +422,15 @@
                                       <select class="form-control" name="hbgn_ayah_santri">
                                         <option @if(old('hbgn_ayah_santri') == 'kandung') selected @endif value="kandung">Ayah Kandung</option>
                                         <option @if(old('hbgn_ayah_santri') == 'tiri') selected @endif value="tiri">Ayah Tiri</option>
+                                        <option @if(old('hbgn_ayah_santri') == 'angkat') selected @endif value="angkat">Ayah Angkat</option>
                                       </select>
                                     </div>
                                     <div class="form-group">
                                       <label>Status Ayah</label>
                                       <select class="form-control" name="status_ayah_santri">
-                                        <option @if(old('status_ayah_santri') == 'a') selected @endif value="a">A</option>
-                                        <option @if(old('status_ayah_santri') == 'b') selected @endif value="b">B</option>
+                                        <option @if(old('status_ayah_santri') == 'hidup') selected @endif value="hidup">Hidup</option>
+                                        <option @if(old('status_ayah_santri') == 'meninggal') selected @endif value="meninggal">Meninggal</option>
+                                        <option @if(old('status_ayah_santri') == 'hilang') selected @endif value="hilang">Hilang</option>
                                       </select>
                                     </div>
                                     <div class="form-group">
@@ -469,11 +485,14 @@
                                     <div class="form-group">
                                       <label for="">Pekerjaan</label>
                                       <select class="form-control" name="pekerjaan_ayah" id="">
-                                        <option @if(old('pekerjaan_ayah') == 'Swasta') selected @endif value="Swasta">Swasta</option>
                                         <option @if(old('pekerjaan_ayah') == 'PNS') selected @endif value="PNS">PNS</option>
+                                        <option @if(old('pekerjaan_ayah') == 'TNI/Polri') selected @endif value="TNI/Polri">TNI/Polri</option>
+                                        <option @if(old('pekerjaan_ayah') == 'Pengusaha') selected @endif value="Pengusaha">Pengusaha</option>
                                         <option @if(old('pekerjaan_ayah') == 'Wiraswasta') selected @endif value="Wiraswasta">Wiraswasta</option>
-                                        <option @if(old('pekerjaan_ayah') == 'Petani') selected @endif value="Petani">Petani</option>
-                                        <option @if(old('pekerjaan_ayah') == 'Buruh') selected @endif value="Buruh">Buruh</option>
+                                        <option @if(old('pekerjaan_ayah') == 'Petani/Peternak') selected @endif value="Petani/Peternak">Petani/Peternak</option>
+                                        <option @if(old('pekerjaan_ayah') == 'Sopir/Masinis') selected @endif value="Sopir/Masinis">Sopir/Masinis</option>
+                                        <option @if(old('pekerjaan_ayah') == 'Pensiunan') selected @endif value="Pensiunan">Pensiunan</option>
+                                        <option @if(old('pekerjaan_ayah') == 'TidahBekerja') selected @endif value="TidahBekerja">Tidah Bekerja</option>
                                       </select>
                                     </div>
                                     <div class="form-group">
@@ -575,13 +594,15 @@
                                       <select class="form-control" name="hbgn_ibu_santri">
                                         <option @if(old('hbgn_ibu_santri') == 'kandung') selected @endif value="kandung">Ibu Kandung</option>
                                         <option @if(old('hbgn_ibu_santri') == 'tiri') selected @endif value="tiri">Ibu Tiri</option>
+                                        <option @if(old('hbgn_ibu_santri') == 'angkat') selected @endif value="angkat">Ibu Angkat</option>
                                       </select>
                                     </div>
                                     <div class="form-group">
                                       <label for="">Status Ibu</label>
                                       <select class="form-control" name="status_ibu_santri" id="">
-                                        <option @if(old('status_ibu_santri') == 'a') selected @endif>A</option>
-                                        <option @if(old('status_ibu_santri') == 'b') selected @endif>B</option>
+                                        <option @if(old('status_ibu_santri') == 'hidup') selected @endif value="hidup">Hidup</option>
+                                        <option @if(old('status_ibu_santri') == 'meninggal') selected @endif value="meninggal">Meninggal</option>
+                                        <option @if(old('status_ibu_santri') == 'hilang') selected @endif value="hilang">Hilang</option>
                                       </select>
                                     </div>
                                     <div class="form-group">
@@ -744,13 +765,15 @@
                                                                 <select class="form-control" name="hbgn_wali_santri">
                                                                   <option @if(old('hbgn_wali_santri') == 'kandung') selected @endif value="kandung">wali Kandung</option>
                                                                   <option @if(old('hbgn_wali_santri') == 'tiri') selected @endif value="tiri">wali Tiri</option>
+                                                                  <option @if(old('hbgn_wali_santri') == 'angkat') selected @endif value="angkat">wali Angkat</option>
                                                                 </select>
                                                               </div>
                                                               <div class="form-group">
                                                                 <label>Status wali</label>
                                                                 <select class="form-control" name="status_wali_santri">
-                                                                  <option @if(old('status_wali_santri') == 'a') selected @endif value="a">A</option>
-                                                                  <option @if(old('status_wali_santri') == 'b') selected @endif value="b">B</option>
+                                                                  <option @if(old('status_wali_santri') == 'hidup') selected @endif value="hidup">Hidup</option>
+                                                                  <option @if(old('status_wali_santri') == 'meninggal') selected @endif value="meninggal">Meninggal</option>
+                                                                  <option @if(old('status_wali_santri') == 'hilang') selected @endif value="hilang">Hilang</option>
                                                                 </select>
                                                               </div>
                                                               <div class="form-group">

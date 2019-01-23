@@ -44,38 +44,37 @@
           <div class="row">
             <?php $__currentLoopData = $article; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="col-md-4">
-              <a href="#" class="blog-entry element-animate" data-animate-effect="fadeIn">
+              <a href="<?php echo e(base_url('blog/detail/').$data->id_news); ?>" class="blog-entry element-animate" data-animate-effect="fadeIn">
                 <img src="<?php echo e(base_url('assets/uploads/').$data->thumb); ?>" alt="Image placeholder">
                 <div class="blog-content-body">
                   <div class="post-meta">
                     <span class="author mr-2">
-                      <img src="<?php echo e(base_url('assets/wordify')); ?>/images/person_1.jpg" alt="Colorlib">&nbsp;<?php echo $data->detailNews->nama_lengkap; ?></span>&bullet;
-                  <span class="mr-2"><?php echo $data->created_at; ?></span> &bullet;
-                    <span class="ml-2"><span class="fa fa-tag"> <?php echo $data->id_news_category; ?></span></span>
+                      <?php echo $data->detailNews->nama_lengkap; ?></span>&bullet;
+                      <span class="mr-2"><?php echo $data->created_at; ?></span> &bullet;
+                      <span class="ml-2"><span class="fa fa-tag"> <?php echo $data->id_news_category; ?></span></span>
+                    </div>
+                    <h2><?php echo $data->title; ?></h2>
                   </div>
-                  <h2><?php echo $data->title; ?></h2>
-                </div>
-              </a>
+                </a>
+              </div>
+              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
           </div>
+
+          <!-- END main-content -->
+
+
         </div>
-
-        <!-- END main-content -->
-
-
       </div>
-    </div>
-  </section>
-  <!-- END section -->
+    </section>
+    <!-- END section -->
 
 
 
-</div>
+  </div>
 
-<!-- loader -->
-<div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-<?php echo $__env->make('front.partials.modal', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-<?php $__env->stopSection(); ?>
+  <!-- loader -->
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+  <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('front.template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

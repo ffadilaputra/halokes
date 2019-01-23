@@ -12,48 +12,7 @@
          <div class="col-md-6 ml-auto">
             <div class="row">
                <div class="col-md-7">
-                  <h3>Berita Terbaru</h3>
-                  <div class="post-entry-sidebar">
-                     <ul>
-                        <li>
-                           <a href="">
-                              <img src="<?php echo e(base_url('assets/wordify')); ?>/images/img_6.jpg" alt="Image placeholder" class="mr-4">
-                              <div class="text">
-                                 <h4>How to Find the Video Games of Your Youth</h4>
-                                 <div class="post-meta">
-                                    <span class="mr-2">March 15, 2018 </span> &bullet;
-                                    <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                                 </div>
-                              </div>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="">
 
-                              <img src="<?php echo e(base_url('assets/wordify')); ?>/images/img_3.jpg" alt="Image placeholder" class="mr-4">
-                              <div class="text">
-                                 <h4>How to Find the Video Games of Your Youth</h4>
-                                 <div class="post-meta">
-                                    <span class="mr-2">March 15, 2018 </span> &bullet;
-                                    <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                                 </div>
-                              </div>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="">
-                              <img src="<?php echo e(base_url('assets/wordify')); ?>/images/img_4.jpg" alt="Image placeholder" class="mr-4">
-                              <div class="text">
-                                 <h4>How to Find the Video Games of Your Youth</h4>
-                                 <div class="post-meta">
-                                    <span class="mr-2">March 15, 2018 </span> &bullet;
-                                    <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                                 </div>
-                              </div>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
                </div>
                <div class="col-md-1"></div>
                <div class="col-md-4">
@@ -70,9 +29,9 @@
                   <div class="mb-5">
                      <h3>Sosial Media</h3>
                      <ul class="list-unstyled footer-social">
-                        <li><a href="#"><span class="fa fa-facebook"></span> Facebook</a></li>
-                        <li><a href="#"><span class="fa fa-instagram"></span> Instagram</a></li>
-                        <li><a href="#"><span class="fa fa-youtube-play"></span> Youtube</a></li>
+                        <li><a href="https://web.facebook.com/DarunNajahMalang/" target="_blank"><span class="fa fa-facebook"></span> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/santridarunnajah/" target="_blank"><span class="fa fa-instagram"></span> Instagram</a></li>
+                        <!-- <li><a href="#"><span class="fa fa-youtube-play"></span> Youtube</a></li> -->
                      </ul>
                   </div>
                </div>

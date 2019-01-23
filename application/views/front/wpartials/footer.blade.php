@@ -12,24 +12,7 @@
          <div class="col-md-6 ml-auto">
             <div class="row">
                <div class="col-md-7">
-                  <h3>Berita Terbaru</h3>
-                  <div class="post-entry-sidebar">
-                     <ul>
-                        <li>
-                          @foreach($footer as $data)
-                           <a href="{{ base_url('berita/detail/').$data->id_news }}">
-                              <img src="{{ base_url('assets/wordify') }}/images/img_6.jpg" alt="Image placeholder" class="mr-4">
-                              <div class="text">
-                                 <h4> {{ $data->title }} </h4>
-                                 <div class="post-meta">
-                                    <span class="mr-2">{{ $data->created_at }}</span>
-                                 </div>
-                              </div>
-                           </a>
-                           @endforeach
-                        </li>
-                     </ul>
-                  </div>
+
                </div>
                <div class="col-md-1"></div>
                <div class="col-md-4">
@@ -46,9 +29,9 @@
                   <div class="mb-5">
                      <h3>Sosial Media</h3>
                      <ul class="list-unstyled footer-social">
-                        <li><a href="#"><span class="fa fa-facebook"></span> Facebook</a></li>
-                        <li><a href="#"><span class="fa fa-instagram"></span> Instagram</a></li>
-                        <li><a href="#"><span class="fa fa-youtube-play"></span> Youtube</a></li>
+                        <li><a href="https://web.facebook.com/DarunNajahMalang/" target="_blank"><span class="fa fa-facebook"></span> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/santridarunnajah/" target="_blank"><span class="fa fa-instagram"></span> Instagram</a></li>
+                        <!-- <li><a href="#"><span class="fa fa-youtube-play"></span> Youtube</a></li> -->
                      </ul>
                   </div>
                </div>

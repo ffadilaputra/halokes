@@ -4,9 +4,9 @@
       <div class="container">
         <div class="row">
           <div class="col-9 social">
-            <a href="#"><span class="fa fa-facebook"></span></a>
-            <a href="#"><span class="fa fa-instagram"></span></a>
-            <a href="#"><span class="fa fa-youtube-play"></span></a>
+            <a href="https://web.facebook.com/DarunNajahMalang/" target="_blank"><span class="fa fa-facebook"></span></a>
+            <a href="https://www.instagram.com/santridarunnajah/" target="_blank"><span class="fa fa-instagram"></span></a>
+            <!-- <a href="#"><span class="fa fa-youtube-play"></span></a> -->
           </div>
           <div class="col-3 search-top">
             <!-- <a href="#"><span class="fa fa-search"></span></a> -->
@@ -74,27 +74,10 @@
               <a class="nav-link" href="{{ base_url('ppdb/santri') }}">Pendaftaran</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ base_url('contact') }}">Contact Us</a>
+              <a class="nav-link" href="{{ base_url('contact') }}">Tentang Kami</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ base_url('login') }}"><b>Login</b></a>
-            </li>
-
-
-
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="category.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown05">
-                <a class="dropdown-item" href="{{ base_url('kategori') }}">Lifestyle</a>
-                <a class="dropdown-item" href="category.html">Food</a>
-                <a class="dropdown-item" href="category.html">Adventure</a>
-                <a class="dropdown-item" href="category.html">Travel</a>
-                <a class="dropdown-item" href="category.html">Business</a>
-              </div>
-
-            </li> -->
             <!-- <li class="nav-item">
-              <a class="nav-link" href="{{ base_url('about') }}">About</a>
+              <a class="nav-link" href="{{ base_url('login') }}"><b>Login</b></a>
             </li> -->
 
           </ul>

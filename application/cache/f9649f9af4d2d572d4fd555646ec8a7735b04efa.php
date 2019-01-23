@@ -1,50 +1,50 @@
 <?php $__env->startSection('content'); ?>
 
 <div class="wrap">
-    <section class="site-section">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <h1>Contact Me</h1>
-                </div>
-            </div>
-            <div class="row blog-entries">
-                <div class="col-md-12 col-lg-8 main-content">
-                    <form action="#" method="post">
-                    <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control ">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <label for="phone">Phone</label>
-                            <input type="text" id="phone" class="form-control ">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control ">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="message">Write Message</label>
-                            <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                            <input type="submit" value="Send Message" class="btn btn-primary">
-                        </div>
-                    </div>
-                    </form>
-                </div>
-                <!-- END main-content -->
-                <?php echo $__env->make('front.wpartials.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-                <!-- END sidebar -->
-            </div>
+  <section class="site-section">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <h1>Yayasan Ma'had Darun Najah as-Salafy</h1>
+          <h3>Pondok Pesantren Salafiyah PPAI Darun Najah</h3>
+          <span>Jalan Pesantren (Manyar) no. 51 desa Ngijo kecamatan Karangploso
+            Kabupaten Malang – Jawa Timur
+          </span>
         </div>
-    </section>
+      </div>
+      <div class="row blog-entries">
+        <div class="col-md-12 col-lg-8 main-content">
+          <div class="row">
+            <div class="col-md-12">
+              <label for="name">Email</label>
+              <p>ppaidarunnajah.id@gmail.com </p>
+              <p>ppaidarunnajah@yahoo.com</p>
+            </div>
+            <div class="col-md-12">
+              <label for="phone">Instagram</label>
+              <p>Santri Darun Najah</p>
+            </div>
+            <div class="col-md-12">
+              <label for="email">Facebook</label>
+              <p>Santri Darun Najah</p>
+          </div>
+          <div class="col-md-12">
+            <label for="">Whatsapp</label>
+            <p>081805074204</p>
+        </div>
+        <div class="col-md-12">
+          <label for="email">SMS Center</label>
+          <p>0895333666620</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- END main-content -->
+  </div>
+</div>
+</section>
 </div>
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('front.template', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<?php echo $__env->make('front.template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

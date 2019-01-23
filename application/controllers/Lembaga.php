@@ -5,32 +5,56 @@ class Lembaga extends MY_Controller {
 
     public function index()
     {
-        $this->view('front.wpage.lembaga.mts');
+      $data['sidebar'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(6)->get();
+
+        $this->view('front.wpage.lembaga.mts', $data);
     }
 
     public function ma()
     {
-        $this->view('front.wpage.lembaga.ma');
+      $data['sidebar'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(6)->get();
+
+        $this->view('front.wpage.lembaga.ma', $data);
     }
-    
+
     public function tpq()
     {
-        $this->view('front.wpage.lembaga.tpq');
+      $data['sidebar'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(6)->get();
+
+        $this->view('front.wpage.lembaga.tpq', $data);
     }
 
     public function madin()
     {
-        $this->view('front.wpage.lembaga.madin');
+      $data['sidebar'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(6)->get();
+
+        $this->view('front.wpage.lembaga.madin', $data);
     }
-    
+
     public function majlis()
     {
-        $this->view('front.wpage.lembaga.majlis');
+      $data['sidebar'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(6)->get();
+
+        $this->view('front.wpage.lembaga.majlis', $data);
     }
 
     public function koppontren()
     {
-        $this->view('front.wpage.lembaga.koppontren');
+      $data['sidebar'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(6)->get();
+
+        $this->view('front.wpage.lembaga.koppontren', $data);
     }
 
 }
