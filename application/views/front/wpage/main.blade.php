@@ -46,7 +46,7 @@
           <div class="row">
             @foreach($article as $data)
             <div class="col-md-4">
-              <a href="#" class="blog-entry element-animate" data-animate-effect="fadeIn">
+            <a href="{{ base_url('blog/detail/').$data->id_news }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
                 <img src="{{ base_url('assets/uploads/').$data->thumb }}" alt="Image placeholder">
                 <div class="blog-content-body">
                   <div class="post-meta">
