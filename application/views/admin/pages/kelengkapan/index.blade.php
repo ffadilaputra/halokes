@@ -3,7 +3,7 @@
 <div class="row">
    <div class="col-lg-12">
       <h1 class="page-header">
-         Data Berita
+         Data Kelengkapan santri
       </h1>
       <ol class="breadcrumb">
          <li class="active">
@@ -16,7 +16,7 @@
    <div class="panel panel-default">
       <div class="panel-heading">
          <h3 class="panel-title">
-            <i class="fa fa-file fa-fw"></i>Berita Panel
+            <i class="fa fa-file fa-fw"></i> Panel
          </h3>
       </div>
       <div class="panel-body">
@@ -25,22 +25,27 @@
                <thead>
                   <tr>
                      <th style="width:5%">No.</th>
-                     <th style="width:25%">Judul</th>
-                     <th>kategori</th>
+                     <th style="width:25%">Nama Santri</th>
+                     <th>Jenis Kelamin</th>
+                     <th>Tempat tgl lahir</th>
+                     <th>Jenjang Madarasah</th>
                      <th style="width:20%">Opsi</th>
                   </tr>
                </thead>
                <tbody>
                   <?php $n = 1 ?>
-                  @foreach($post as $data)
+                  @foreach($santri as $data)
                   <tr>
                      <td>{{ $n++ }}</td>
-                     <td>{{ $data->title }}</td>
-                     <td>{{ $data->id_news_category }}</td>
+                     <td>{{ $data->nama_lengkap }}</td>
+                     <td>{{ $data->jenis_kelamin }}</td>
+                     <td>{{ $data->tempat_lahir }}</td>
+                     <td>{{ $data->tingkat_pendidikan }}</td>
                      <td>
-                        <a class="btn btn-success" href="{{ base_url('admin/berita/show/').$data->id_news }}"><i class="fa fa-eye"></i></a>
-                        <a class="btn btn-primary" href="{{ base_url('admin/berita/edit/').$data->id_news }}"><i class="fa fa-pencil"></i></a>
-                        <a class="btn btn-danger" href="{{ base_url('admin/berita/delete/').$data->id_news }}"><i class="fa fa-trash"></i></a>
+                     <a class="btn btn-success" href="{{ base_url('admin/berkas/parents/'.$data->id_santri) }}"><i class="fa fa-user"></i></a>
+                        <a class="btn btn-success" href="{{ base_url('admin/berkas/education/'.$data->id_santri) }} "><i class="fa fa-university"></i></a>
+                        <a class="btn btn-success" href="{{ base_url('admin/berkas/archive/'.$data->id_santri) }}"><i class="fa fa-upload"></i></a>
+
                      </td>
                   </tr>
                   @endforeach

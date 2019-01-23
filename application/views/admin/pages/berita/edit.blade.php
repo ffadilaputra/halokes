@@ -18,11 +18,11 @@
             @if(is_null($edit->thumb))
               <small class="text-danger">Gambar tidak ada</small>
             @else
-              <img src="{{ base_url('assets/uploads/').$edit->thumb }}" alt="">
+              <img style="width:600px;height:400px;"  src="{{ base_url('assets/uploads/').$edit->thumb }}" alt="">
             @endif
         </div>
         <div class="form-group">
-          <label for="">Thumbnail</label>
+          <label for="">Ganti Gambar</label>
           <input name="thumb" type="file" class="form-control">
             @if($errors->has('thumb'))
                 <small class="text-danger">{{ $errors->first('thumb') }}</small>

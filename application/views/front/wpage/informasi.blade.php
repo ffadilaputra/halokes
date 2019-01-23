@@ -15,7 +15,7 @@
           <div class="row">
             @foreach($article as $data)
             <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
+            <a href="{{ base_url('blog/detail/').$data->id_news }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
                 @if(is_null($data->thumb))
                   <img src="{{ base_url('assets/wordify') }}/images/img_5.jpg" alt="Image placeholder">
                     @else
@@ -23,9 +23,8 @@
                 @endif
                 <div class="blog-content-body">
                   <div class="post-meta">
-                    <span class="author mr-2"><img src="{{ base_url('assets/wordify') }}/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                    <span class="mr-2">{{ $data->created_at }}</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> {{ $data->detailNews->nama_lengkap }}</span>
+                    <span class="author mr-2"><img src="{{ base_url('assets/images/') }}avatar.png" alt="Colorlib">  {{ $data->detailNews->nama_lengkap }}</span>&bullet;
+                    <span class="mr-2">{{ $data->created_at }}</span>
                   </div>
                   <h2>{{ $data->title }}</h2>
                 </div>
