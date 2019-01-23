@@ -17,7 +17,7 @@
                      <ul>
                         <li>
                           @foreach($footer as $data)
-                           <a href="{{ base_url('berita/detail/').$data->id_news }}">
+                           <a href="{{ base_url('blog/detail/').$data->id_news }}">
                               <img src="{{ base_url('assets/wordify') }}/images/img_6.jpg" alt="Image placeholder" class="mr-4">
                               <div class="text">
                                  <h4> {{ $data->title }} </h4>
