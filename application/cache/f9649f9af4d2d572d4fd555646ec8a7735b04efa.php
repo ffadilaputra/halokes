@@ -22,11 +22,11 @@
             </div>
             <div class="col-md-12">
               <label for="phone">Instagram</label>
-              <p>Santri Darun Najah</p>
+              <a href="https://www.instagram.com/santridarunnajah/" target="_blank"><p>Santri Darun Najah</p></a>
             </div>
             <div class="col-md-12">
               <label for="email">Facebook</label>
-              <p>Santri Darun Najah</p>
+              <a href="https://web.facebook.com/DarunNajahMalang/" target="_blank"><p>Santri Darun Najah</p></a>
           </div>
           <div class="col-md-12">
             <label for="">Whatsapp</label>

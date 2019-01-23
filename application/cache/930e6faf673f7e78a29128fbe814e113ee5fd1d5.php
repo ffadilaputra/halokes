@@ -49,17 +49,11 @@
                 <div class="blog-content-body">
                   <div class="post-meta">
                     <span class="author mr-2">
-<<<<<<< HEAD
                       <?php echo $data->detailNews->nama_lengkap; ?></span>&bullet;
                       <span class="mr-2"><?php echo $data->created_at; ?></span> &bullet;
                       <span class="ml-2"><span class="fa fa-tag"> <?php echo $data->id_news_category; ?></span></span>
                     </div>
                     <h2><?php echo $data->title; ?></h2>
-=======
-                        <span class="author mr-2"><img src="<?php echo e(base_url('assets/images/')); ?>avatar.png" alt="Colorlib">  <?php echo e($data->detailNews->nama_lengkap); ?></span>&bullet;
-                  <span class="mr-2"><?php echo $data->created_at; ?></span> &bullet;
-                    <span class="ml-2"><span class="fa fa-tag"> <?php echo $data->id_news_category; ?></span></span>
->>>>>>> 1a716d19246717c3add00f2b8f40cac12ab81296
                   </div>
                 </a>
               </div>

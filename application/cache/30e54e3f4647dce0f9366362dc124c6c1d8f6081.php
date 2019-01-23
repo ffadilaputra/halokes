@@ -19,7 +19,7 @@
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
          </ul>
       </div>
-   </div>
+    </div>
    <!-- END sidebar-box -->
 </div>
 <!-- END sidebar -->

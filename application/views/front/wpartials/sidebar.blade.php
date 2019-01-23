@@ -19,7 +19,6 @@
             @endforeach
          </ul>
       </div>
-      @endforeach
     </div>
    <!-- END sidebar-box -->
 </div>
