@@ -211,5 +211,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           var_dump($_POST);
           //redirect('main');
       }
+
+      public function sukses(){
+        $this->view('front.wpage.success');
+      }
   }
 ?>
