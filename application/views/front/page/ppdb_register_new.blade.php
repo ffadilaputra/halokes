@@ -22,7 +22,7 @@
                            <div class="col-md-12 col-lg-6 main-content">
                               <div class="form-group">
                                  <label for="tingkatPendidikan">Tingkat Pendidikan</label>
-                                 <select class="form-control" name="tingkat_pendidikan" id="" value={{ old('tingkat_pendidikan') }}>
+                                 <select class="form-control" name="tingkat_pendidikan" id="" value={{ old('tingkat_pendidikan') }} required>
                                  <option @if(old('tingkat_pendidikan') == 'ma') selected @endif name="ma">Madarasah Aliyah</option>
                                  <option @if(old('tingkat_pendidikan') == 'mt') selected @endif value="mt">Madarasah Tsanawiyah</option>
                                  <option @if(old('tingkat_pendidikan') == 'md') selected @endif name="md">Madarasah Diniyah</option>
@@ -30,7 +30,7 @@
                               </div>
                               <div class="form-group">
                                  <label for="">Jenis Siswa</label>
-                                 <select class="form-control" name="jenis_siswa" value="{{ old('jenis_siswa') }}">
+                                 <select class="form-control" name="jenis_siswa" value="{{ old('jenis_siswa') }}" required>
                                  <option @if(old('jenis_siswa') == 'lama') selected @endif value="lama">Lama</option>
                                  <option @if(old('jenis_siswa') == 'baru') selected @endif value="baru">Baru</option>
                                  </select>
@@ -51,35 +51,35 @@
                               </div>
                               <div class="form-group">
                                  <label for="nama">Nama Lengkap *</label>
-                                 <input name="nama_lengkap" type="text" class="form-control" id="nama" value="{{ old('nama_lengkap') }}">
+                                 <input name="nama_lengkap" type="text" class="form-control" id="nama" value="{{ old('nama_lengkap') }}" required>
                                  @if($errors->has('nama_lengkap'))
                                  <small class="text-danger">{{ $errors->first('nama_lengkap') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
                                  <label for="namaPanggilan">Nama Panggilan *</label>
-                                 <input name="nama_panggilan" type="text" class="form-control" id="namaPanggilan" value="{{ old('nama_panggilan') }}">
+                                 <input name="nama_panggilan" type="text" class="form-control" id="namaPanggilan" value="{{ old('nama_panggilan') }}" required>
                                  @if($errors->has('nama_panggilan'))
                                  <small class="text-danger">{{ $errors->first('nama_panggilan') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
                                  <label for="nik">NIK *</label>
-                                 <input name="nik" type="number" class="form-control" id="nik" value="{{ old('nik') }}">
+                                 <input name="nik" type="number" class="form-control" id="nik" value="{{ old('nik') }}" required>
                                  @if($errors->has('nik'))
                                  <small class="text-danger">{{ $errors->first('nik') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
                                  <label for="kk">No KK *</label>
-                                 <input name="no_kk" type="number" class="form-control" id="kk" value="{{ old('no_kk') }}">
+                                 <input name="no_kk" type="number" class="form-control" id="kk" value="{{ old('no_kk') }}" required>
                                  @if($errors->has('no_kk'))
                                  <small class="text-danger">{{ $errors->first('no_kk') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
                                  <label for="tempatLahir">Tempat Lahir *</label>
-                                 <input name="tempat_lahir_siswa" type="text" class="form-control" id="tempatLahir" value="{{ old('tempat_lahir_siswa') }}">
+                                 <input name="tempat_lahir_siswa" type="text" class="form-control" id="tempatLahir" value="{{ old('tempat_lahir_siswa') }}" required>
                                  @if($errors->has('tempat_lahir_siswa'))
                                  <small class="text-danger">{{ $errors->first('tempat_lahir_siswa') }}</small>
                                  @endif
@@ -101,7 +101,7 @@
                                  <div class="col-sm-5 col-xs-12">
                                     <div class="form-group">
                                        <label for="">Bulan</label>
-                                       <select class="form-control" name="bulan_siswa" id="" value="{{ old('bulan_siswa') }}">
+                                       <select class="form-control" name="bulan_siswa" id="" value="{{ old('bulan_siswa') }}" required>
                                        <option @if(old('bulan_siswa') == 1) selected @endif value="1">Januari</option>
                                        <option @if(old('bulan_siswa') == 2) selected @endif value="2">Februari</option>
                                        <option @if(old('bulan_siswa') == 3) selected @endif value="3">Maret</option>
@@ -134,14 +134,14 @@
                            <div class="col-md-12 col-lg-6 main-content">
                               <div class="form-group">
                                  <label for="">Jenis Kelamin</label>
-                                 <select class="form-control" name="jenis_kelamin" value="{{ old('jenis_kelamin') }}">
+                                 <select class="form-control" name="jenis_kelamin" value="{{ old('jenis_kelamin') }}" required>
                                  <option @if(old('jenis_kelamin') == 'laki-laki') selected @endif value="laki-laki">Laki-Laki</option>
                                  <option @if(old('jenis_kelamin') == 'perempuan') selected @endif value="perempuan">Perempuan</option>
                                  </select>
                               </div>
                               <div class="form-group">
                                  <label for="">Status dalam Keluarga</label>
-                                 <select class="form-control" name="status_keluarga" value="{{ old('status_keluarga') }}">
+                                 <select class="form-control" name="status_keluarga" value="{{ old('status_keluarga') }}" required>
                                  <option @if(old('status_keluarga') == 'kandunh') selected @endif value="kandung">Kandung</option>
                                  <option @if(old('status_keluarga') == 'tiri') selected @endif value="tiri">Tiri</option>
                                  <option @if(old('status_keluarga') == 'asuh') selected @endif value="asuh">Asuh</option>
@@ -149,14 +149,14 @@
                               </div>
                               <div class="form-group">
                                  <label for="anakke">Anak ke *</label>
-                                 <input name="anak_ke" type="number" class="form-control" id="anakke" value="{{ old('anak_ke') }}">
+                                 <input name="anak_ke" type="number" class="form-control" id="anakke" value="{{ old('anak_ke') }}" required>
                                  @if($errors->has('anak_ke'))
                                  <small class="text-danger">{{ $errors->first('anak_ke') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
                                  <label for="jmlsaudara">Jumlah Saudara *</label>
-                                 <input name="jml_sdr" type="number" class="form-control" id="jmlsaudara" value="{{ old('jml_sdr') }}">
+                                 <input name="jml_sdr" type="number" class="form-control" id="jmlsaudara" value="{{ old('jml_sdr') }}" required>
                                  @if($errors->has('jml_sdr'))
                                  <small class="text-danger">{{ $errors->first('jml_sdr') }}</small>
                                  @endif
@@ -184,7 +184,7 @@
                               </div>
                               <div class="form-group">
                                  <label for="hobi">Hobi</label>
-                                 <select name="hobi" class="form-control" id="hobi" value="{{ old('hobi') }}">
+                                 <select name="hobi" class="form-control" id="hobi" value="{{ old('hobi') }}" required>
                                  <option @if(old('hobi') == 'olahraga') selected @endif value="olahraga">Olahraga</option>
                                  <option @if(old('hobi') == 'rekreasi') selected @endif value="rekreasi">Rekreasi</option>
                                  <option @if(old('hobi') == 'menulis') selected @endif value="menulis">Menulis</option>
@@ -195,7 +195,7 @@
                               </div>
                               <div class="form-group">
                                  <label for="cita_cita">Cita-cita</label>
-                                 <select class="form-control" name="cita_cita" id="citacita" value="{{ old('cita_cita') }}">
+                                 <select class="form-control" name="cita_cita" id="citacita" value="{{ old('cita_cita') }}" required>
                                     <option @if(old('cita_cita') == 'pns') selected @endif value="pns">PNS</option>
                                     <option @if(old('cita_cita') == 'dokter') selected @endif value="dokter">dokter</option>
                                     <option @if(old('cita_cita') == 'ppekerjaserabutan') selected @endif value="pekerjaserabutan">Pekerja Serabutan</option>
@@ -208,7 +208,7 @@
                               </div>
                               <div class="form-group">
                                  <label for="kebKhusus">Berkebutuhan Khusus</label>
-                                 <select class="form-control" name="keb_khusus" id="kebKhusus" value="{{ old('keb_khusus') }}">
+                                 <select class="form-control" name="keb_khusus" id="kebKhusus" value="{{ old('keb_khusus') }}" required>
                                  <option @if(old('keb_khusus') == 'null') selected @endif value="null">-- Piih --</option>
                                  <option @if(old('keb_khusus') == 'tunaRungu') selected @endif value="tunaRungu">Tuna Rungu</option>
                                  <option @if(old('keb_khusus') == 'tunaGrahita') selected @endif value="tunaGrahita">Tuna Grahita</option>
@@ -845,8 +845,8 @@
                         <!-- end left -->
                      </div>
 
-                        <!-- berkas upload -->
-                        <div>
+                     <!-- berkas upload -->
+                     <div>
                            <div>
                               <p><span class="w3-tag w3-xlarge" style="background-color:#28a745; padding-left:50px;">Berkas-berkas</span></p>
                            </div>
@@ -1034,21 +1034,22 @@
                               <!-- end foto -->
                            </div>
                            <!-- foto end row -->
-                        </div>
-                        <!-- berkas upload end-->
-                        <br>
+                     </div>
+                     <!-- berkas upload end-->
+                     <br>
 
-                        <!-- btn submit -->
-                        <div class="form-group">
+                     <!-- btn submit -->
+                     <div class="form-group">
                            <center>
                               <div class="g-recaptcha" data-sitekey="6LesgYoUAAAAAFbqCI_A39QgBUO0CcfErCFo2TQ2"></div>
                            </center>
                            <br>
-                           <input type="submit" onclick="ara()" style="margin:0 auto; display:block;" value="DAFTAR" class="btn btn-info btn-lg">
-                        </div>
-                        <div>
-                              <a href="{{ base_url('ppdb/santri/sukses') }}">sukses</a>
-                        </div>
+                           <input type="submit" style="margin:0 auto; display:block;" value="DAFTAR" class="btn btn-info btn-lg">
+                     </div>
+
+                     <div>
+                           <a href="{{ base_url('ppdb/santri/sukses') }}">sukses</a>
+                     </div>
                   </form>
                   </div>
                </div>
