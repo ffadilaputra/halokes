@@ -5,26 +5,41 @@ class Profile extends MY_Controller {
 
     public function index()
     {
-        $this->view('front.wpage.profile.sejarah');
+        $data['footer'] = BeritaModel::where([
+          'id_news_category' => 'berita'
+        ])->limit(3)->get();
+        $this->view('front.wpage.profile.sejarah',$data);
     }
 
     public function fasilitas()
     {
-        $this->view('front.wpage.profile.fasilitas');
+        $data['footer'] = BeritaModel::where([
+          'id_news_category' => 'berita'
+        ])->limit(3)->get();
+        $this->view('front.wpage.profile.fasilitas',$data);
     }
-    
+
     public function kegiatan()
     {
-        $this->view('front.wpage.profile.kegiatan');
+        $data['footer'] = BeritaModel::where([
+          'id_news_category' => 'berita'
+        ])->limit(3)->get();
+        $this->view('front.wpage.profile.kegiatan',$data);
     }
 
     public function kajian()
     {
-        $this->view('front.wpage.profile.kajian');
+        $data['footer'] = BeritaModel::where([
+          'id_news_category' => 'berita'
+        ])->limit(3)->get();
+        $this->view('front.wpage.profile.kajian',$data);
     }
     public function alumni()
     {
-        $this->view('front.wpage.profile.alumni');
+        $data['footer'] = BeritaModel::where([
+          'id_news_category' => 'berita'
+        ])->limit(3)->get();
+        $this->view('front.wpage.profile.alumni',$data);
     }
 
 }
