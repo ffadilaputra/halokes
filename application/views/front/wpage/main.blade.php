@@ -51,7 +51,7 @@
                 <div class="blog-content-body">
                   <div class="post-meta">
                     <span class="author mr-2">
-                      <img src="{{ base_url('assets/wordify') }}/images/person_1.jpg" alt="Colorlib">&nbsp;{!! $data->detailNews->nama_lengkap !!}</span>&bullet;
+                        <span class="author mr-2"><img src="{{ base_url('assets/images/') }}avatar.png" alt="Colorlib">  {{ $data->detailNews->nama_lengkap }}</span>&bullet;
                   <span class="mr-2">{!! $data->created_at !!}</span> &bullet;
                     <span class="ml-2"><span class="fa fa-tag"> {!!$data->id_news_category !!}</span></span>
                   </div>

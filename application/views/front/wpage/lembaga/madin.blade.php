@@ -4,7 +4,7 @@
 <div class="wrap">
     <section class="site-section py-lg">
       <div class="container">
-        
+
         <div class="row blog-entries element-animate">
 
           <div class="col-md-12 col-lg-8 main-content">
@@ -16,7 +16,7 @@
                       </div>
             <h1 class="mb-4">MADRASAH DINIYAH DARUN NAJAH</h1>
             <a class="category mb-5" href="#">Lembaga</a> <a class="category mb-5" href="#">TPQ-MQ</a>
-           
+
             <div class="post-content-body">
                 <div>
                     <h4>Sejarah</h4>
@@ -33,9 +33,9 @@
                     <h4>Jenjang dan durasi pendidikan</h4>
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dengan demikian jenjang pendidikan Madrasah Diniyah Darun Najah terklasifikasi dalam tiga program pendidikan sebagai berikut:
-                        
+
                         <table class="table table-hover">
-                            
+
                             <tbody>
                                 <tr>
                                     <td>1</td>
@@ -55,8 +55,8 @@
                             </tbody>
                         </table>
 
-                        Jika santri mampu, maka semua jenjang tersebut bisa diselesaikan dalam waktu 6 hingga 7 tahun sesuai dengan durasi waktu para santri menyelesaikan pendidikan formal Madrasah Tsanawiyah (MTs) hingga Madrasah Aliyah (MA). 
-                        
+                        Jika santri mampu, maka semua jenjang tersebut bisa diselesaikan dalam waktu 6 hingga 7 tahun sesuai dengan durasi waktu para santri menyelesaikan pendidikan formal Madrasah Tsanawiyah (MTs) hingga Madrasah Aliyah (MA).
+
                     </p>
                     <br>
 
@@ -68,7 +68,7 @@
                             <li>Madrasah I’dadiyah</li>
                                 <p>Madrasah i’dadiyah berorientasi untuk menyiapkan santri agar siap dalam menjalani program pendidikan di jenjang Madrasah Tsanawiyah Diniyah yang merupakan pendidikan diniyah dasar. Itu sebabnya kurikulum di Madrasah I’dadiya disusun sebagai berikut: <br>
                                     <table class="table table-hover">
-                                
+
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
@@ -106,7 +106,7 @@
                             <li>Madrasah Tsanawiyah</li>
                                 <p>Madrasah Tsanawiyah Diniyah berorientasi untuk menyiapkan santri agar mampu membaca kitab kuning secara mandiri dan memahami kajian kitab-kitab turots para ulama salaf. Itu sebabnya kurikulum di Madrasah Tsanawiyah disusun sebagai berikut: <br>
                                     <table class="table table-hover">
-                                
+
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
@@ -154,7 +154,7 @@
                             <li>Madrasah Aliyah</li>
                                 <p>Madrasah Aliyah Diniyah berorientasi untuk menyiapkan santri bukan saja bisa membaca kitab kuning secara mandiri, tapi juga memahami kajian kitab-kitab turots para ulama salaf dengan dibekali kemampuan berfikir secara manhaji (ilmu-ilmu metodologi berfikir). Itu sebabnya komposisi kurikulum di Madrasah Aliyah didesain sebagai berikut: <br>
                                     <table class="table table-hover">
-                                
+
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
@@ -231,13 +231,13 @@
                                 </p>
 
                         </ol>
-                    
+
                     <br>
 
 
                 </div>
-            
-              
+
+
               <div class="comment-form-wrap pt-5">
                 <h3 class="mb-5">Leave a comment</h3>
                 <form action="#" class="p-5 bg-light">
@@ -275,56 +275,6 @@
 
         </div>
       </div>
-    </section>
-
-    <section class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="mb-3 ">Related Post</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <a href="#" class="a-block sm d-flex align-items-center height-md" style="background-image: url('assets/wordify/images/img_9.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Lifestyle</span>
-                  <span class="mr-2">March 15, 2018 </span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="#" class="a-block sm d-flex align-items-center height-md" style="background-image: url('assets/wordify/images/img_7.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Travel</span>
-                  <span class="mr-2">March 15, 2018 </span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="#" class="a-block sm d-flex align-items-center height-md" style="background-image: url('assets/wordify/images/img_6.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Food</span>
-                  <span class="mr-2">March 15, 2018 </span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
     </section>
     <!-- END section -->
 </div>

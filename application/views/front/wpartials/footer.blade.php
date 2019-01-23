@@ -5,7 +5,7 @@
          <div class="col-md-4">
             <h3>Tentang</h3>
             <p class="mb-4">
-               <img src="{{ base_url('assets/wordify') }}/images/img4.jpg" alt="Image placeholder" class="img-fluid">
+               <img src="{{ base_url('assets/uploads/') }}/images/img4.jpg" alt="Image placeholder" class="img-fluid">
             </p>
             <p><a href="{{base_url('profile') }}">Pondok Pesantren Ma'had Darun Najah</a></p>
          </div>
@@ -18,7 +18,7 @@
                         <li>
                           @foreach($footer as $data)
                            <a href="{{ base_url('blog/detail/').$data->id_news }}">
-                              <img src="{{ base_url('assets/wordify') }}/images/img_6.jpg" alt="Image placeholder" class="mr-4">
+                              <img src="{{ base_url('assets/uploads/').$data->thumb }}" alt="Image placeholder" class="mr-4">
                               <div class="text">
                                  <h4> {{ $data->title }} </h4>
                                  <div class="post-meta">

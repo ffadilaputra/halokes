@@ -4,7 +4,7 @@
 <div class="wrap">
     <section class="site-section py-lg">
       <div class="container">
-        
+
         <div class="row blog-entries element-animate">
 
           <div class="col-md-12 col-lg-8 main-content">
@@ -16,7 +16,7 @@
                       </div>
             <h1 class="mb-4">MADRASAH TSANAWIYAH DARUN NAJAH</h1>
             <a class="category mb-5" href="#">Lembaga</a> <a class="category mb-5" href="#">Ponpes</a>
-           
+
             <div class="post-content-body">
                 <div>
                     <h4>Sejarah</h4>
@@ -118,8 +118,8 @@
                     <br>
 
                 </div>
-            
-              
+
+
               <div class="comment-form-wrap pt-5">
                 <h3 class="mb-5">Leave a comment</h3>
                 <form action="#" class="p-5 bg-light">
@@ -157,56 +157,6 @@
 
         </div>
       </div>
-    </section>
-
-    <section class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="mb-3 ">Related Post</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <a href="#" class="a-block sm d-flex align-items-center height-md" style="background-image: url('assets/wordify/images/img_9.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Lifestyle</span>
-                  <span class="mr-2">March 15, 2018 </span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="#" class="a-block sm d-flex align-items-center height-md" style="background-image: url('assets/wordify/images/img_7.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Travel</span>
-                  <span class="mr-2">March 15, 2018 </span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="#" class="a-block sm d-flex align-items-center height-md" style="background-image: url('assets/wordify/images/img_6.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Food</span>
-                  <span class="mr-2">March 15, 2018 </span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
     </section>
     <!-- END section -->
 </div>
