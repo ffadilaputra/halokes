@@ -215,5 +215,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       public function sukses(){
         $this->view('front.wpage.success');
       }
+
+      public function preview(){
+        $this->view('front.page.ppdb_preview');
+      }
+
+      public function edit(){
+        $this->view('front.page.ppdb_edit');
+      }
   }
 ?>

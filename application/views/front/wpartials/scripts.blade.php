@@ -209,7 +209,7 @@
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                $('#blah3')
+                $('#blah4')
                     .attr('src', e.target.result)
                     .width(150)
                     .height(200);
@@ -240,7 +240,7 @@
 
     // bpjs
     $('#btn-reset-bpjs').on('click', function(e){
-    var $el = $('#blah3');
+    var $el = $('#blah4');
     $el.wrap('<form>').closest('form').get(0).reset();
     $el.unwrap();
     });
@@ -316,11 +316,13 @@
 
 <script>
 function ara(){
-Swal.fire(
-  'Registrasi Berhasil!',
-  'Selamat Registrasi Berhasil, nantikan pemberitahuan selanjutnya!',
-  'success'
-)}
+    Swal.fire({
+  type: 'success',
+  title: 'Done!',
+  text: 'Selamat Registrasi Anda Berhasil',
+  footer: 
+    '<h4>Info selanjutnya</h4>'+'&nbsp;'+'<h4><a href="//github.com">Cek Disini!</a></h4>'
+})}
 
 </script>
 
