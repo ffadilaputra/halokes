@@ -5,7 +5,7 @@
    <div class="container">
       <div class="row blog-entries element-animate">
          <div class="col-md-12 col-lg-12 main-content">
-            <h1 class="mb-1" style="text-align:center">PENDAFTARAN</h1>
+            <h1 class="mb-1" style="text-align:center">DETAIL PENDAFTARAN</h1>
             <div class="post-content-body">
                <div class="comment-form-wrap pt-5">
             
@@ -1002,9 +1002,6 @@
                            
                         </div>
 
-                        <div>
-                              <a href="{{ base_url('ppdb/santri/sukses') }}">sukses</a>
-                        </div>
                   </form>
                   </div>
                </div>
