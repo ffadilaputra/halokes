@@ -17,4 +17,7 @@
 
    <!-- custom -->
    <link rel="stylesheet" href="<?php echo e(base_url('assets/wordify')); ?>/css/custom.css">
+
+   <!-- swall -->
+   <link rel="stylesheet" href="<?php echo e(base_url('node_modules/sweetalert2')); ?>/dist/sweetalert2.min.css">
 </head>

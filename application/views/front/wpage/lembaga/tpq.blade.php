@@ -49,7 +49,6 @@
 
           @include('front.wpartials.sidebar')
           <!-- END sidebar -->
-
         </div>
       </div>
     </section>

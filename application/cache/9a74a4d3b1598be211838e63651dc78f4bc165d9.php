@@ -5,14 +5,35 @@
          <div class="col-md-4">
             <h3>Tentang</h3>
             <p class="mb-4">
-               <img src="<?php echo e(base_url('assets/wordify')); ?>/images/img4.jpg" alt="Image placeholder" class="img-fluid">
+               <img src="<?php echo e(base_url('assets/uploads/')); ?>/images/img4.jpg" alt="Image placeholder" class="img-fluid">
             </p>
             <p><a href="<?php echo e(base_url('profile')); ?>">Pondok Pesantren Ma'had Darun Najah</a></p>
          </div>
          <div class="col-md-6 ml-auto">
             <div class="row">
                <div class="col-md-7">
+<<<<<<< HEAD
 
+=======
+                  <h3>Berita Terbaru</h3>
+                  <div class="post-entry-sidebar">
+                     <ul>
+                        <li>
+                          <?php $__currentLoopData = $footer; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                           <a href="<?php echo e(base_url('blog/detail/').$data->id_news); ?>">
+                              <img src="<?php echo e(base_url('assets/uploads/').$data->thumb); ?>" alt="Image placeholder" class="mr-4">
+                              <div class="text">
+                                 <h4> <?php echo e($data->title); ?> </h4>
+                                 <div class="post-meta">
+                                    <span class="mr-2"><?php echo e($data->created_at); ?></span>
+                                 </div>
+                              </div>
+                           </a>
+                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </li>
+                     </ul>
+                  </div>
+>>>>>>> 1a716d19246717c3add00f2b8f40cac12ab81296
                </div>
                <div class="col-md-1"></div>
                <div class="col-md-4">

@@ -5,7 +5,7 @@
          <div class="col-md-4">
             <h3>Tentang</h3>
             <p class="mb-4">
-               <img src="{{ base_url('assets/wordify') }}/images/img4.jpg" alt="Image placeholder" class="img-fluid">
+               <img src="{{ base_url('assets/uploads/') }}/images/img4.jpg" alt="Image placeholder" class="img-fluid">
             </p>
             <p><a href="{{base_url('profile') }}">Pondok Pesantren Ma'had Darun Najah</a></p>
          </div>

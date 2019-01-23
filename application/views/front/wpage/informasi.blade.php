@@ -15,7 +15,7 @@
           <div class="row">
             @foreach($article as $data)
             <div class="col-md-4">
-              <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
+            <a href="{{ base_url('blog/detail/').$data->id_news }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
                 @if(is_null($data->thumb))
                   <img src="{{ base_url('assets/wordify') }}/images/img_5.jpg" alt="Image placeholder">
                     @else
@@ -43,5 +43,4 @@
 
 <!-- loader -->
 <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-@include('front.partials.modal')
 @endsection

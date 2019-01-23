@@ -9,213 +9,215 @@
 <script src="<?php echo e(base_url('assets/combodate')); ?>/combodate.js"></script>
 <script src="<?php echo e(base_url('assets/wordify')); ?>/js/main.js"></script>
 
+<script src="<?php echo e(base_url('node_modules/sweetalert2')); ?>/dist/sweetalert2.min.js"></script>
+
 <script>
-// santri
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // santri
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#santri')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#santri')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
-// wali
-function readURL2(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // wali
+    function readURL2(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#wali')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#wali')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
-// ayah
-function readURL3(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // ayah
+    function readURL3(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#ayah')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#ayah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
-// ibu
-function readURL4(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // ibu
+    function readURL4(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#ibu')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#ibu')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
-// akte
-function readURL5(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // akte
+    function readURL5(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#akte')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#akte')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
-// kk
-function readURL6(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // kk
+    function readURL6(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#blah')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
-// bpjs
-function readURL7(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // bpjs
+    function readURL7(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#blah2')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#blah2')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
-// ktp
-function readURL8(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // ktp
+    function readURL8(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#ktp')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#ktp')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
-// ktp wali
-function readURL9(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // ktp wali
+    function readURL9(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#ktpwali')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#ktpwali')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
-// ktp ayah
-function readURL10(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // ktp ayah
+    function readURL10(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#ktpayah')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#ktpayah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
-// ktp ibu
-function readURL11(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // ktp ibu
+    function readURL11(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#ktpibu')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#ktpibu')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
-// ijazah
-function readURL12(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // ijazah
+    function readURL12(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#ijazah')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#ijazah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
-// skhun
-function readURL13(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    // skhun
+    function readURL13(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#blah3')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
+            reader.onload = function (e) {
+                $('#blah4')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
 </script>
 
@@ -238,7 +240,7 @@ function readURL13(input) {
 
     // bpjs
     $('#btn-reset-bpjs').on('click', function(e){
-    var $el = $('#blah3');
+    var $el = $('#blah4');
     $el.wrap('<form>').closest('form').get(0).reset();
     $el.unwrap();
     });
@@ -301,14 +303,27 @@ function readURL13(input) {
       console.table(data);
       for( x in data.data ){
         $('#data').append('<div class="col-sm-4"> <div class="item"> <img src="'+data.data[x].images.low_resolution.url+'"></div></div>');
-  }
-},
-error: function(data){
-  console.log(data); // send the error notifications to console
-}
-})
+    }
+    },
+        error: function(data){
+        console.log(data); // send the error notifications to console
+    }
+    })
 
 </script>
+
 <script src='https://www.google.com/recaptcha/api.js'></script>
+
+<script>
+function ara(){
+    Swal.fire({
+  type: 'success',
+  title: 'Done!',
+  text: 'Selamat Registrasi Anda Berhasil',
+  footer: 
+    '<h4>Info selanjutnya</h4>'+'&nbsp;'+'<h4><a href="//github.com">Cek Disini!</a></h4>'
+})}
+
+</script>
 
 
