@@ -11,6 +11,7 @@
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
+
         {{-- <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
             <ul class="dropdown-menu message-dropdown">
@@ -95,9 +96,9 @@
                     <li>
                         <a href="{{ base_url('admin/pembayaran') }}">Semua</a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ base_url('admin/pembayaran/lunas') }}">Lunas</a>
-                    </li>
+                    </li> --}}
                 </ul>
             </li>
             <li>
@@ -112,7 +113,7 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#pengumuman"><i class="fa fa-fw fa-book"></i>Berita <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#pengumuman"><i class="fa fa-fw fa-book"></i>Artikel <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="pengumuman" class="collapse">
                         <li><a href="{{ base_url('admin/berita/create') }}">Buat Berita</a></li>
                         <li><a href="{{ base_url('admin/berita') }}">Semua</a></li>

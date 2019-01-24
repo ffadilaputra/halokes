@@ -5,41 +5,46 @@ class Profile extends MY_Controller {
 
     public function index()
     {
-        $data['footer'] = BeritaModel::where([
-          'id_news_category' => 'berita'
-        ])->limit(3)->get();
-        $this->view('front.wpage.profile.sejarah',$data);
+      $data['sidebar'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(6)->get();
+
+        $this->view('front.wpage.profile.sejarah', $data);
     }
 
     public function fasilitas()
     {
-        $data['footer'] = BeritaModel::where([
-          'id_news_category' => 'berita'
-        ])->limit(3)->get();
-        $this->view('front.wpage.profile.fasilitas',$data);
+      $data['sidebar'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(6)->get();
+
+        $this->view('front.wpage.profile.fasilitas', $data);
     }
 
     public function kegiatan()
     {
-        $data['footer'] = BeritaModel::where([
-          'id_news_category' => 'berita'
-        ])->limit(3)->get();
-        $this->view('front.wpage.profile.kegiatan',$data);
+      $data['sidebar'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(6)->get();
+
+        $this->view('front.wpage.profile.kegiatan', $data);
     }
 
     public function kajian()
     {
-        $data['footer'] = BeritaModel::where([
-          'id_news_category' => 'berita'
-        ])->limit(3)->get();
-        $this->view('front.wpage.profile.kajian',$data);
+      $data['sidebar'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(6)->get();
+
+        $this->view('front.wpage.profile.kajian', $data);
     }
     public function alumni()
     {
-        $data['footer'] = BeritaModel::where([
-          'id_news_category' => 'berita'
-        ])->limit(3)->get();
-        $this->view('front.wpage.profile.alumni',$data);
+      $data['sidebar'] = BeritaModel::where([
+        'id_news_category' => 'berita'
+      ])->limit(6)->get();
+
+        $this->view('front.wpage.profile.alumni', $data);
     }
 
 }

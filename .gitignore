@@ -24,3 +24,6 @@ application/logs/*
 # ENV
 .env.development
 .env.production
+
+composer.lock
+package-lock.json

@@ -2,6 +2,9 @@
 span.nama-lembaga{
   font-size: 30px;
 }
+.nama-lembaga button{
+  color: #4caf50;
+}
 .lembaga-deskripsi{
   padding: 20px 25px;
 }
@@ -81,9 +84,13 @@ span.nama-lembaga{
 }
 
 .panel-heading-plus{
-  padding-top: 25px;
-  padding-bottom: 25px;
-  background-color: #f0f0f0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #4caf50;
+  color: #fafafa;
+}
+.panel-heading-plus span{
+  font-size: 11px;
 }
 .panel-fix-height{
   box-shadow: 0 1px 1px rgba(0,0,0,.09);
@@ -100,3 +107,7 @@ span.nama-lembaga{
   margin-top: 120px;
 }
 /* end modal */
+
+.panel-heading a:hover{
+  color: #ddd;
+}

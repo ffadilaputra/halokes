@@ -46,36 +46,35 @@
           <div class="row">
             @foreach($article as $data)
             <div class="col-md-4">
-            <a href="{{ base_url('blog/detail/').$data->id_news }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
+              <a href="{{ base_url('blog/detail/').$data->id_news }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
                 <img src="{{ base_url('assets/uploads/').$data->thumb }}" alt="Image placeholder">
                 <div class="blog-content-body">
                   <div class="post-meta">
                     <span class="author mr-2">
-                        <span class="author mr-2"><img src="{{ base_url('assets/images/') }}avatar.png" alt="Colorlib">  {{ $data->detailNews->nama_lengkap }}</span>&bullet;
-                  <span class="mr-2">{!! $data->created_at !!}</span> &bullet;
-                    <span class="ml-2"><span class="fa fa-tag"> {!!$data->id_news_category !!}</span></span>
+                      {!! $data->detailNews->nama_lengkap !!}</span>&bullet;
+                      <span class="mr-2">{!! $data->created_at !!}</span> &bullet;
+                      <span class="ml-2"><span class="fa fa-tag"> {!!$data->id_news_category !!}</span></span>
+                    </div>
+                    <h2>{!! $data->title !!}</h2>
                   </div>
-                  <h2>{!! $data->title !!}</h2>
-                </div>
-              </a>
+                </a>
+              </div>
+              @endforeach
             </div>
-            @endforeach
           </div>
+
+          <!-- END main-content -->
+
+
         </div>
-
-        <!-- END main-content -->
-
-
       </div>
-    </div>
-  </section>
-  <!-- END section -->
+    </section>
+    <!-- END section -->
 
 
 
-</div>
+  </div>
 
-<!-- loader -->
-<div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-@include('front.partials.modal')
-@endsection
+  <!-- loader -->
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+  @endsection

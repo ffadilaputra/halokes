@@ -10,9 +10,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         'id_news_category' => 'berita'
       ])->limit(9)->get();
 
-      $data['footer'] = BeritaModel::where([
-        'id_news_category' => 'berita'
-      ])->limit(3)->get();
+      // $data['footer'] = BeritaModel::where([
+      //   'id_news_category' => 'berita'
+      // ])->limit(3)->get();
 
       $this->view('front.wpage.main',$data);
     }

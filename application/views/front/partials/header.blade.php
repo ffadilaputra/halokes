@@ -34,10 +34,6 @@
             <li class="smooth-menu">
               <a href="#mauidhoh">Mauidhoh</a>
             </li>
-            <li class="smooth-menu">
-            <!-- video dari IG -->
-              <a href="#galeri">Galeri</a>
-            </li>
             <li>
             <a href="{{ base_url('ppdb/santri') }}" target="_blank">Pendaftaran</a>
             </li>
