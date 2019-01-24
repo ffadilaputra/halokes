@@ -26,5 +26,4 @@ application/logs/*
 .env.production
 
 composer.lock
-composer.json
 package-lock.json
