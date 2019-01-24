@@ -8,9 +8,6 @@
             <h1 class="mb-1" style="text-align:center">PENDAFTARAN</h1>
             <div class="post-content-body">
                <div class="comment-form-wrap pt-5">
-
-                  <form action="#" class="p-5 bg-light">
-
                      <?= form_open_multipart('ppdb/santri/store') ?>
                      <!-- identitas siswa -->
                      <div>

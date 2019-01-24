@@ -177,8 +177,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $_POST['ktp_ibu'] = $this->do_upload('ktp_ibu', 'assets/uploads', 'image', TRUE);
           }
 
-          if(!empty($_FILES['no_ijazah_siswa']['name'])){
-            $_POST['no_ijazah_siswa'] = $this->do_upload('no_ijazah_siswa', 'assets/uploads', 'image', TRUE);
+          if(!empty($_FILES['ijazah_santri']['name'])){
+            $_POST['ijazah_santri'] = $this->do_upload('ijazah_santri', 'assets/uploads', 'image', TRUE);
           }
 
           if(!empty($_FILES['skhun_santri']['name'])){
@@ -207,9 +207,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           WaliModel::create($wali);
           PendidikanTerakhirModel::create($pendidikan);
           BerkasSantriModel::create($berkas);
-
-          var_dump($_POST);
-          //redirect('main');
+          redirect('ppdb/santri/sukses');
       }
 
       public function sukses(){
