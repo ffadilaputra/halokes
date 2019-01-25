@@ -9,7 +9,7 @@
             <div class="post-content-body">
                <div class="comment-form-wrap pt-5">
             
-                  <form action="#" class="p-5 bg-light">
+                  <!-- <form action="" class="p-5 bg-light"> -->
                      
                      <?= form_open_multipart('ppdb/santri/store') ?>
                      <!-- identitas siswa -->
@@ -1046,7 +1046,7 @@
                      <div>
                            <a href="{{ base_url('ppdb/santri/sukses') }}">sukses</a>
                      </div>
-                  </form>
+                  <!-- </form> -->
                   </div>
                </div>
             </div>
