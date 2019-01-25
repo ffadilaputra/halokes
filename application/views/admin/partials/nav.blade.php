@@ -120,15 +120,14 @@
                     </ul>
                 </a>
             </li>
-            {{-- <li>
+            <li>
                     <a href="javascript:;" data-toggle="collapse" data-target="#master"><i class="fa fa-fw fa-archive"></i>Master <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="master" class="collapse">
-                            <li><a href="{{ base_url('admin/level') }}">Level</a></li>
-                            <li><a href="{{ base_url('admin/pendidikan') }}">Pendidikan</a></li>
-                            <li><a href="{{ base_url('admin/provesi') }}">Provesi</a></li>
+                            <li><a href="{{ base_url('admin/TahunAkademik') }}">Tahun Akademik</a></li>
+                            <li><a href="{{ base_url('admin/KategoriKeuangan') }}">Kategori Keuangan</a></li>
                         </ul>
                     </a>
-                </li> --}}
+                </li>
         </ul>
     </div>
 

@@ -2,49 +2,49 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-  class TahunAkademik extends MY_Controller {
+  class KategoriKeuangan extends MY_Controller {
 
     public function index(){
-        $data['list'] = TahunAkademikModel::all();
+        $data['list'] = KategoriKeuanganModel::all();
         $this->autenthicateAdmin();
         $data['admin'] = $this->session->userdata('admin_logged_in');
 
-        $this->view('admin.pages.tahun_akademik.index',$data);
+        $this->view('admin.pages.kategori.keuangan.index',$data);
     }
 
     public function create(){
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
 
-      $this->view('admin.pages.tahun_akademik.create',$data);
+      $this->view('admin.pages.kategori.keuangan.create',$data);
     }
 
     public function store(){
       $this->validate($this->input->post(),[
         'nama' => 'required',
       ]);
-      TahunAkademikModel::create($this->input->post());
-      redirect('admin/TahunAkademik');
+      KategoriKeuanganModel::create($this->input->post());
+      redirect('admin/KategoriKeuangan');
     }
 
     public function edit($id){
-      $data['edit'] = TahunAkademikModel::find($id);
+      $data['edit'] = KategoriKeuanganModel::find($id);
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
-      $this->view('admin.pages.tahun_akademik.edit',$data);
+      $this->view('admin.pages.kategori.keuangan.edit',$data);
     }
 
     public function update($id){
       $this->validate($this->input->post(),[
         'nama' => 'required',
       ]);
-      TahunAkademikModel::find($id)->update($this->input->post());
-      redirect('admin/TahunAkademik');
+      KategoriKeuanganModel::find($id)->update($this->input->post());
+      redirect('admin/KategoriKeuangan');
     }
 
     public function delete($id){
-      TahunAkademikModel::destroy($id);
-      redirect('admin/TahunAkademik');
+      KategoriKeuanganModel::destroy($id);
+      redirect('admin/KategoriKeuangan');
     }
 
 }
