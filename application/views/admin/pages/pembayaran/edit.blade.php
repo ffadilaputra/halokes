@@ -13,7 +13,7 @@
    </div>
 </div>
 <div class="col-lg-8">
-   <?= form_open_multipart('admin/pembayaran/update/'.$santri->id); ?>
+   <?= form_open_multipart('admin/pembayaran/update/'.$edit->id_tanggugan); ?>
    <div class="form-group">
    <label for="">Nama Santri</label><br>
    <h3>{{ $santri->pembayaranSantri->nama_lengkap }}</h3>
@@ -40,11 +40,6 @@
         <input type="submit" class="btn btn-success" style="float:right">
     </div>
    <?= form_close() ?>
-</div>
-
-<div class="col-md-4">
-    <label for="">Bukti Pembayaran Sebelumnya</label><br>
-    <img src="{{ base_url('assets/uploads/'.$santri->bukti_pembayaran) }}" class="img-thumbnail" alt="Cinque Terre">
 </div>
 
 @stop

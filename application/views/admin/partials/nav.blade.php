@@ -94,7 +94,7 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#pembayaran"><i class="fa fa-fw fa-user"></i>Pembayaran <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="pembayaran" class="collapse">
                     <li>
-                        <a href="{{ base_url('admin/pembayaran') }}">Semua</a>
+                        <a href="{{ base_url('admin/tanggungan') }}">Tanggungan</a>
                     </li>
                     {{-- <li>
                         <a href="{{ base_url('admin/pembayaran/lunas') }}">Lunas</a>
