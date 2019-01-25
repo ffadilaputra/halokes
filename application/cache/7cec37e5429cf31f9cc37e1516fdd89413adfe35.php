@@ -5,9 +5,7 @@
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
-                            <a href="#">
-                                <img src="images/icon/logo.png" alt="CoolAdmin">
-                            </a>
+
                         </div>
                         <div class="login-form">
                         <?= form_open('admin/login/loginProcess') ?>
@@ -27,12 +25,6 @@
                                     <?php endif; ?>
                                 </div>
                                 <div class="login-checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember">Remember Me
-                                    </label>
-                                    <label>
-                                        <a href="#">Forgotten Password?</a>
-                                    </label>
                                 </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
                                 <!-- <div class="social-login-content">
@@ -43,12 +35,6 @@
                                 </div> -->
                             <!-- </form> -->
                         <?= form_close() ?>
-                            <div class="register-link">
-                                <p>
-                                    Don't you have account?
-                                    <a href="#">Sign Up Here</a>
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -58,4 +44,4 @@
     </div>
 
 
-<?php echo $__env->make('front.login.template', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('front.login.template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
