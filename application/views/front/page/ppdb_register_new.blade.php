@@ -1043,10 +1043,6 @@
                            <br>
                            <input type="submit" style="margin:0 auto; display:block;" value="DAFTAR" class="btn btn-info btn-lg">
                      </div>
-
-                     <div>
-                           <a href="{{ base_url('ppdb/santri/sukses') }}">sukses</a>
-                     </div>
                   </form>
                   </div>
                </div>

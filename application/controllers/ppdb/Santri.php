@@ -196,7 +196,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             'ktp_wali' => $this->input->post('ktp_wali'),
             'ktp_ayah' => $this->input->post('ktp_ayah'),
             'ktp_ibu' => $this->input->post('ktp_ibu'),
-            'ijazah_santri' => $this->input->post('no_ijazah_siswa'),
+            'ijazah_santri' => $this->input->post('ijazah_santri'),
             'skhun_santri' => $this->input->post('skhun_santri'),
             'id_santri' => $id_santri
           );
