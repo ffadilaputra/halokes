@@ -122,7 +122,7 @@
                                  <div class="col-sm-4 col-xs-12">
                                     <div class="form-group">
                                        <label for="">Tahun</label>
-                                       <input name="tahun_siswa"  type="number" min="1990" max="2018" class="form-control medqInput" id="tahun"  required onkeyup="capt()" value="{{ old('tahun_siswa') }}">
+                                       <input name="tahun_siswa"  type="number" min="1930" max="2018" class="form-control medqInput" id="tahun"  required onkeyup="capt()" value="{{ old('tahun_siswa') }}">
                                        @if($errors->has('tahun_siswa'))
                                        <small class="text-danger">{{ $errors->first('tahun_siswa') }}</small>
                                        @endif
@@ -409,7 +409,7 @@
                                  <div class="col-sm-4 col-xs-12">
                                     <div class="form-group">
                                        <label for="">Tahun</label>
-                                       <input name="tahun_ayah"  type="number" min="1990" max="2018" class="form-control medqInput" id="tahun"  required onkeyup="capt()" value="{{ old('tahun_ayah') }}">
+                                       <input name="tahun_ayah"  type="number" min="1930" max="2018" class="form-control medqInput" id="tahun"  required onkeyup="capt()" value="{{ old('tahun_ayah') }}">
                                        @if($errors->has('tahun_ayah'))
                                        <small class="text-danger">{{ $errors->first('tahun_ayah') }}</small>
                                        @endif
@@ -575,7 +575,7 @@
                                  <div class="col-sm-4 col-xs-12">
                                     <div class="form-group">
                                        <label for="">Tahun</label>
-                                       <input name="tahun_ibu"  type="number" min="1990" max="2018" class="form-control medqInput" id="tahun"  required onkeyup="capt()" value="{{ old('tahun_ibu') }}">
+                                       <input name="tahun_ibu"  type="number" min="1930" max="2018" class="form-control medqInput" id="tahun"  required onkeyup="capt()" value="{{ old('tahun_ibu') }}">
                                        @if($errors->has('tahun_ibu'))
                                        <small class="text-danger">{{ $errors->first('tahun_ibu') }}</small>
                                        @endif
@@ -749,7 +749,7 @@
                               <div class="col-sm-4 col-xs-12">
                                  <div class="form-group">
                                     <label for="">Tahun</label>
-                                    <input name="tahun_wali"  type="number" min="1990" max="2018" class="form-control medqInput" id="tahun"  required onkeyup="capt()" value="{{ old('tahun_wali') }}">
+                                    <input name="tahun_wali"  type="number" min="1930" max="2018" class="form-control medqInput" id="tahun"  required onkeyup="capt()" value="{{ old('tahun_wali') }}">
                                     @if($errors->has('tahun_wali'))
                                     <small class="text-danger">{{ $errors->first('tahun_wali') }}</small>
                                     @endif
