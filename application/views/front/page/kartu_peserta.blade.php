@@ -30,7 +30,7 @@
          <section class="site-section py-lg">
             <div class="container">
                <!-- download -->
-               <a href="//google.com" class="btn" style="background-color:#408ab4; color:white" download><i class="fa fa-download"></i> Cetak Kartu Peserta</a>
+               <a href="{{base_url('ppdb/santri/cetak') }}" class="btn" style="background-color:#408ab4; color:white" download><i class="fa fa-download"></i> Cetak Kartu Peserta</a>
                <br><br>
                <div class="card">
                   <!-- tabel header -->
@@ -143,7 +143,7 @@
                      </div>
                   </div>
                   <!-- tabel footer end -->
-                  
+
                   <br>
                </div>
             </div>

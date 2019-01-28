@@ -32,7 +32,7 @@
          <section class="site-section py-lg">
             <div class="container">
                <div class="card">
-                  <table style="border:2px solid black; width:50%"> <!-- tabel utama border -->
+                  <table style="border:2px solid black; width:70%"> <!-- tabel utama border -->
                     <tr>
                         <td>
                             <!-- tabel header -->
