@@ -1,111 +1,164 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Laporan</title>
-	<style>
-	.grid-container {
-  display: grid;
-  grid-template-columns: 10% 20% 60%;
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
-}
+   <head>
+      <title>Laporan</title>
+      <style>
+         table{
+         border-collapse: collapse;
+         width:70%;
+         margin: 0 auto;
+         }
+         table th{
+         border:0px solid #000;
+         padding: 3px;
+         font-weight: bold;
+         text-align: center;
+         font-size:15pt;
+         }
+         table td{
+         border: 0px solid #000;
+         padding: 3px;
+         vertical-align: top;
+         font-size:15pt;
+         }
+         .inlineTable {
+            display: inline-block;
+        }
+      </style>
+   </head>
+   <body>
+      <div class="wrap">
+         <section class="site-section py-lg">
+            <div class="container">
+               <div class="card">
+                  <table style="border:2px solid black; width:50%"> <!-- tabel utama border -->
+                    <tr>
+                        <td>
+                            <!-- tabel header -->
+                            <table>
+                                <tr>
+                                    <td align="right" ><br><br>
+                                    <img src="{{ base_url('assets/wordify/') }}images/logo.jpg" alt="" align="center" width="128" height="120"> 
+                                    </td>
+                                    <td style="text-align: left; padding-left:20px;">
+                                    <br>
+                                    <h4>
+                                        YAYASAN MA'HAD DARUN NAJAH<br><br>
+                                        PONDOK PESANTREN PPAI DARUN NAJAH<br><br>
+                                        Jl. Pesantren, No. 51, Ngijo, Karangploso, Malang, (0341)5034501<br>
+                                    </h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><hr></td>
+                                </tr>
+                            </table>
+                            
+                            <!-- tabel header end -->
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  
-  padding: 20px 0;
-  font-size: 20px;
-}
+                            <!-- card body start -->
+                            <div class="card-body">
+                            
+                                <!-- row start -->
+                                <div class="row">
+                                    <!-- tabel utama -->
+                                    <table>
+                                    <tr>
+                                        <td>
+                                            <!-- img santri -->
+                                            <img src="" alt=""  style="width:200px;float:left; height:250px; background-color:#eeeeee"> 
+                                            <!-- tabel isi --> 
+                                            <table style="border:3px solid black">
+                                                <tr>
+                                                <th style="text-align:left;padding-left:10px;">Nama</th>
+                                                <td style="padding-left:20px;">: Aura Kanza Caesaria</td>
+                                                </tr>
+                                                <tr>
+                                                <th style="text-align:left;padding-left:10px;">TTL</th>
+                                                <td style="padding-left:20px;">: Banjarmasin, 11 Februari 1998</td>
+                                                </tr>
+                                                <tr>
+                                                <th style="text-align:left;padding-left:10px;">Alamat</th>
+                                                <td style="padding-left:20px;">: Jl. Soekarno Hatta no. 9</td>
+                                                </tr>
+                                                <tr>
+                                                <th style="text-align:left;padding-left:10px;">Jenjang</th>
+                                                <td style="padding-left:20px;">: Madrasah Aliyah</td>
+                                                </tr>
+                                                <tr>
+                                                <th colspan="2">
+                                                    <h4>Nomor Virtual Account</h4>
+                                                </th>
+                                                </tr>
+                                                <tr>
+                                                <th colspan="2">
+                                                    <h3>9883005511180001</h3>
+                                                </th>
+                                                </tr>
+                                                <tr>
+                                                <th colspan="2">
+                                                    <h4>Nomor Induk</h4>
+                                                </th>
+                                                </tr>
+                                                <tr>
+                                                <th colspan="2">
+                                                    <h3>180001</h3>
+                                                </th>
+                                                </tr>
+                                            </table>
+                                            <!-- tabel isi end-->
+                                        </td>
+                                    </tr>
+                                    </table>
+                                    <!-- tabel utama end -->
+                                </div><!-- row end -->
+                                
+                                <br>
 
-.item1 {
-  grid-row-end: span 4;
-}
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 200px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-* {
-  box-sizing: border-box;
-}
-	</style>
-</head>
-
-<body>
-<div class="wrap">
-<section class="site-section py-lg">
-    <div class="container">
-        <div class="card">
-            <!-- tabel header -->
-            <!-- <table>
-                <tr align="center">
-                    
-                    <td colspan="" align="right" style="border: 0px"><br><br>
-                        <img src="{{ base_url('assets/wordify/') }}images/logo.jpg" alt="" align="center" width="128" height="120"> 
-                    </td>
-                    <td colspan="" style="text-align: left; border: 0px">
-                        <br><br><br>
-                        <h5 style="padding-left:40px;">
-                        YAYASAN MA'HAD DARUN NAJAH<br>
-                        PONDOK PESANTREN PPAI DARUN NAJAH<br>
-                        Jl. Pesantren, No. 51, Ngijo, Karangploso, Malang, (0341)5034501<br>
-                        </h5>
-                    </td>
-                </tr>
-            </table><hr>  -->
-            <!-- tabel header end -->
-
-            <div class="row">
-                <div class="column" align="right">
-                    <img src="{{ base_url('assets/wordify/') }}images/logo.jpg" alt="" align="center" width="128" height="120"> 
-                </div>
-                <div class="column">
-                    <h3 style="padding-left:40px;">
-                        YAYASAN MA'HAD DARUN NAJAH<br>
-                        PONDOK PESANTREN PPAI DARUN NAJAH<br>
-                        Jl. Pesantren, No. 51, Ngijo, Karangploso, Malang, (0341)5034501<br>
-                    </h3>
-                </div>
+                                <!-- footer row -->
+                                <div class="row">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <table style="width:90%">
+                                                    <tr>
+                                                        <td colspan="2">Pengumuman</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Pembayaran PPDB</td>
+                                                        <td>: 1-31 Mei 2019</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Checkin Pesantren</td>
+                                                        <td>: 21 Juli 2019</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <table style="width:90%"> 
+                                                <tr>
+                                                    <td style="text-align:right;">Malang,1 Januari 2019</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:right;">Petugas</td>
+                                                </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table><br>
+                                </div> <!-- footer row end -->
+                            </div>
+                            <!-- card body start -->
+                        </td>
+                    </tr>
+                  </table> <!-- tabel utama border end -->
+               </div>
             </div>
-            <!-- card body start -->
-            <div class="card-body">
-                <!-- row start -->
-                <div class="row">  
-                    <div class="grid-container">
-                        <div class="item1"><img src="" alt="" align="right" style=" padding-left:15px;width:150px; height:200px; background-color:#eeeeee"></div>
-                        <div class="item2" style="text-align: right; padding-right:15px;">Nama</div>
-                        <div class="item3" style="text-align: left; padding-left:15px;">Aura Kanza Caesaria</div>  
-                        <div class="item4" style="text-align: right; padding-right:15px;">TTL</div>
-                        <div class="item5" style="text-align: left; padding-left:15px;">Banjarmasin, 11 Februari 1998</div>
-                        <div class="item6" style="text-align: right; padding-right:15px;">Alamat</div>
-                        <div class="item7" style="text-align: left; padding-left:15px;">Jl. Soekarno Hatta no.1</div>
-                        <div class="item8" style="text-align: right; padding-right:15px;">Telp</div>
-                        <div class="item9" style="text-align: left; padding-left:15px;">990909</div>
-                    </div>
-                </div>
-                <!-- row end -->
-                <br>
-            </div> <!-- card body start -->
-
-            
-                <!-- tabel footer -->
-                
-                <!-- tabel footer end -->
-            <br>
-        </div>
-    </div>
-</section>
-</div>	
-		
-</body>
+         </section>
+      </div>
+   </body>
 </html>
