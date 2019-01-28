@@ -50,14 +50,14 @@
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="namaPanggilan">Nama Panggilan *</label>
+                                 <label for="namaPanggilan">Nama Panggilan</label>&nbsp;<label style="color:red">*</label>
                                  <input name="nama_panggilan" type="text" class="form-control" id="namaPanggilan" value="{{ old('nama_panggilan') }}" required>
                                  @if($errors->has('nama_panggilan'))
                                  <small class="text-danger">{{ $errors->first('nama_panggilan') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="nik">NIK *</label>
+                                 <label for="nik">NIK</label>&nbsp;<label style="color:red">*</label>
                                  <input name="nik" type="number" class="form-control" id="nik" value="{{ old('nik') }}" required>
                                  @if($errors->has('nik'))
                                  <small class="text-danger">{{ $errors->first('nik') }}</small>
