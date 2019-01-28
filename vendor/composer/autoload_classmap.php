@@ -6,15 +6,23 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
+    'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
     'AyahModel' => $baseDir . '/application/models/AyahModel.php',
     'BeritaModel' => $baseDir . '/application/models/BeritaModel.php',
     'BerkasSantriModel' => $baseDir . '/application/models/BerkasSantriModel.php',
+<<<<<<< HEAD
     'CetakModel' => $baseDir . '/application/models/CetakModel.php',
+=======
+    'DivisionByZeroError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+    'Error' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/Error.php',
+>>>>>>> origin/dev-web
     'IbuModel' => $baseDir . '/application/models/IbuModel.php',
     'KategoriBeritaModel' => $baseDir . '/application/models/KategoriBeritaModel.php',
     'KategoriKeuanganModel' => $baseDir . '/application/models/KategoriKeuanganModel.php',
     'LevelModel' => $baseDir . '/application/models/LevelModel.php',
     'MauidhohModel' => $baseDir . '/application/models/MauidhohModel.php',
+    'ParseError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
     'PembayaranModel' => $baseDir . '/application/models/PembayaranModel.php',
     'PendidikanModel' => $baseDir . '/application/models/PendidikanModel.php',
     'PendidikanTerakhirModel' => $baseDir . '/application/models/PendidikanTerakhirModel.php',

@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-lg-12">
    <h1 class="page-header">
-      Master Level
+      Tanggungan
    </h1>
    <a href="{{ base_url('admin/Tanggungan/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Create</a>
    <br><br>
@@ -18,8 +18,9 @@
       </tr>
    </thead>
    <tbody>
-      <?php $no=1; ?>
+      <?php $no=1; var_dump($list); ?>
       @foreach($list as $data)
+      <?php echo "test_d"; var_dump($data); ?>
       <tr>
          <td>{{ $no++ }}</td>
          <td>{{ $data->detailSantri->nama_lengkap }}</td>

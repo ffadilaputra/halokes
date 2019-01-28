@@ -9,26 +9,27 @@ class ComposerStaticInit0b383b5c09644bac37d71b40397cfa67
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
+        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        'S' => 
+        'S' =>
         array (
+            'Symfony\\Polyfill\\Php70\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Contracts\\' => 18,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\HttpFoundation\\' => 33,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Debug\\' => 24,
         ),
-        'P' => 
+        'P' =>
         array (
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
             'Philo\\Blade\\' => 12,
         ),
-        'I' => 
+        'I' =>
         array (
             'Illuminate\\View\\' => 16,
             'Illuminate\\Validation\\' => 22,
@@ -40,90 +41,90 @@ class ComposerStaticInit0b383b5c09644bac37d71b40397cfa67
             'Illuminate\\Contracts\\' => 21,
             'Illuminate\\Container\\' => 21,
         ),
-        'D' => 
+        'D' =>
         array (
             'Doctrine\\Common\\Inflector\\' => 26,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Symfony\\Polyfill\\Mbstring\\' => 
+        'Symfony\\Polyfill\\Php70\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php70',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
-        'Symfony\\Contracts\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/contracts',
-        ),
-        'Symfony\\Component\\Translation\\' => 
+        'Symfony\\Component\\Translation\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
         ),
-        'Symfony\\Component\\HttpFoundation\\' => 
+        'Symfony\\Component\\HttpFoundation\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
         ),
-        'Symfony\\Component\\Finder\\' => 
+        'Symfony\\Component\\Finder\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/finder',
         ),
-        'Symfony\\Component\\Debug\\' => 
+        'Symfony\\Component\\Debug\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/debug',
         ),
-        'Psr\\SimpleCache\\' => 
+        'Psr\\SimpleCache\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
         ),
-        'Psr\\Log\\' => 
+        'Psr\\Log\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
-        'Psr\\Container\\' => 
+        'Psr\\Container\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
-        'Philo\\Blade\\' => 
+        'Philo\\Blade\\' =>
         array (
             0 => __DIR__ . '/..' . '/philo/laravel-blade/src',
         ),
-        'Illuminate\\View\\' => 
+        'Illuminate\\View\\' =>
         array (
             0 => __DIR__ . '/..' . '/illuminate/view',
         ),
-        'Illuminate\\Validation\\' => 
+        'Illuminate\\Validation\\' =>
         array (
             0 => __DIR__ . '/..' . '/illuminate/validation',
         ),
-        'Illuminate\\Translation\\' => 
+        'Illuminate\\Translation\\' =>
         array (
             0 => __DIR__ . '/..' . '/illuminate/translation',
         ),
-        'Illuminate\\Support\\' => 
+        'Illuminate\\Support\\' =>
         array (
             0 => __DIR__ . '/..' . '/illuminate/support',
         ),
-        'Illuminate\\Filesystem\\' => 
+        'Illuminate\\Filesystem\\' =>
         array (
             0 => __DIR__ . '/..' . '/illuminate/filesystem',
         ),
-        'Illuminate\\Events\\' => 
+        'Illuminate\\Events\\' =>
         array (
             0 => __DIR__ . '/..' . '/illuminate/events',
         ),
-        'Illuminate\\Database\\' => 
+        'Illuminate\\Database\\' =>
         array (
             0 => __DIR__ . '/..' . '/illuminate/database',
         ),
-        'Illuminate\\Contracts\\' => 
+        'Illuminate\\Contracts\\' =>
         array (
             0 => __DIR__ . '/..' . '/illuminate/contracts',
         ),
-        'Illuminate\\Container\\' => 
+        'Illuminate\\Container\\' =>
         array (
             0 => __DIR__ . '/..' . '/illuminate/container',
         ),
-        'Doctrine\\Common\\Inflector\\' => 
+        'Doctrine\\Common\\Inflector\\' =>
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
         ),
@@ -134,15 +135,23 @@ class ComposerStaticInit0b383b5c09644bac37d71b40397cfa67
     );
 
     public static $classMap = array (
+        'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
+        'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'AyahModel' => __DIR__ . '/../..' . '/application/models/AyahModel.php',
         'BeritaModel' => __DIR__ . '/../..' . '/application/models/BeritaModel.php',
         'BerkasSantriModel' => __DIR__ . '/../..' . '/application/models/BerkasSantriModel.php',
+<<<<<<< HEAD
         'CetakModel' => __DIR__ . '/../..' . '/application/models/CetakModel.php',
+=======
+        'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+        'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
+>>>>>>> origin/dev-web
         'IbuModel' => __DIR__ . '/../..' . '/application/models/IbuModel.php',
         'KategoriBeritaModel' => __DIR__ . '/../..' . '/application/models/KategoriBeritaModel.php',
         'KategoriKeuanganModel' => __DIR__ . '/../..' . '/application/models/KategoriKeuanganModel.php',
         'LevelModel' => __DIR__ . '/../..' . '/application/models/LevelModel.php',
         'MauidhohModel' => __DIR__ . '/../..' . '/application/models/MauidhohModel.php',
+        'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
         'PembayaranModel' => __DIR__ . '/../..' . '/application/models/PembayaranModel.php',
         'PendidikanModel' => __DIR__ . '/../..' . '/application/models/PendidikanModel.php',
         'PendidikanTerakhirModel' => __DIR__ . '/../..' . '/application/models/PendidikanTerakhirModel.php',

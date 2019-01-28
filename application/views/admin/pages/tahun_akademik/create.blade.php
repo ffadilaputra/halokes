@@ -13,7 +13,7 @@
    </div>
 </div>
 <div class="col-lg-4">
-   <?= form_open('admin/KategoriKeuangan/store'); ?>
+   <?= form_open('admin/TahunAkademik/store'); ?>
    <div class="form-group">
       <label>Tahun Akademik</label>
       <input class="form-control" type="text" name="nama">

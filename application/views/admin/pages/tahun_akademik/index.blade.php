@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-lg-12">
    <h1 class="page-header">
-      Master Level
+      Master Tahun Akademik
    </h1>
    <a href="{{ base_url('admin/TahunAkademik/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Create</a>
    <br><br>

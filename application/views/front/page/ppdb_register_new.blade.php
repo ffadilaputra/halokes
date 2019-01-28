@@ -18,7 +18,7 @@
                            <!-- left -->
                            <div class="col-md-12 col-lg-6 main-content">
                               <div class="form-group">
-                                 <label for="tingkatPendidikan">Tingkat Pendidikan</label>
+                                 <label for="tingkatPendidikan">Tingkat Pendidikan</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="tingkat_pendidikan" id="" value={{ old('tingkat_pendidikan') }} required>
                                  <option @if(old('tingkat_pendidikan') == 'ma') selected @endif value="ma">Madarasah Aliyah</option>
                                  <option @if(old('tingkat_pendidikan') == 'mt') selected @endif value="mt">Madarasah Tsanawiyah</option>
@@ -26,49 +26,49 @@
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="">Jenis Siswa</label>
+                                 <label for="">Jenis Siswa</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="jenis_siswa" value="{{ old('jenis_siswa') }}" required>
                                  <option @if(old('jenis_siswa') == 'lama') selected @endif value="lama">Lama</option>
                                  <option @if(old('jenis_siswa') == 'baru') selected @endif value="baru">Baru</option>
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="nisn">NISN </label>&nbsp;<label style="color:red">*</label>
+                                 <label for="nisn">NISN </label>
                                  <input name="nisn" type="number" class="form-control" id="nisn" value="{{ old('nisn') }}">
                                  @if($errors->has('nisn'))
                                  <small class="text-danger">{{ $errors->first('nisn') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="nama">Nama Lengkap</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="nama">Nama Lengkap</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <input name="nama_lengkap" type="text" class="form-control" id="nama" value="{{ old('nama_lengkap') }}" required>
                                  @if($errors->has('nama_lengkap'))
                                  <small class="text-danger">{{ $errors->first('nama_lengkap') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="namaPanggilan">Nama Panggilan</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="namaPanggilan">Nama Panggilan</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <input name="nama_panggilan" type="text" class="form-control" id="namaPanggilan" value="{{ old('nama_panggilan') }}" required>
                                  @if($errors->has('nama_panggilan'))
                                  <small class="text-danger">{{ $errors->first('nama_panggilan') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="nik">NIK</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="nik">NIK </label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <input name="nik" type="number" class="form-control" id="nik" value="{{ old('nik') }}" required>
                                  @if($errors->has('nik'))
                                  <small class="text-danger">{{ $errors->first('nik') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="kk">No KK</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="kk">No KK</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <input name="no_kk" type="number" class="form-control" id="kk" value="{{ old('no_kk') }}" required>
                                  @if($errors->has('no_kk'))
                                  <small class="text-danger">{{ $errors->first('no_kk') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="tempatLahir">Tempat Lahir</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="tempatLahir">Tempat Lahir</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <input name="tempat_lahir_siswa" type="text" class="form-control" id="tempatLahir" value="{{ old('tempat_lahir_siswa') }}" required>
                                  @if($errors->has('tempat_lahir_siswa'))
                                  <small class="text-danger">{{ $errors->first('tempat_lahir_siswa') }}</small>
@@ -120,7 +120,7 @@
                                  </div>
                               </div>
                               <div class="form-group">
-                                 <label for="">Jenis Kelamin</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="">Jenis Kelamin</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="jenis_kelamin" value="{{ old('jenis_kelamin') }}" required>
                                  <option @if(old('jenis_kelamin') == 'laki-laki') selected @endif value="laki-laki">Laki-Laki</option>
                                  <option @if(old('jenis_kelamin') == 'perempuan') selected @endif value="perempuan">Perempuan</option>
@@ -130,7 +130,7 @@
                            <!-- right -->
                            <div class="col-md-12 col-lg-6 main-content">
                               <div class="form-group">
-                                 <label for="">Status dalam Keluarga</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="">Status dalam Keluarga</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="status_keluarga" value="{{ old('status_keluarga') }}" required>
                                  <option @if(old('status_keluarga') == 'kandunh') selected @endif value="kandung">Kandung</option>
                                  <option @if(old('status_keluarga') == 'tiri') selected @endif value="tiri">Tiri</option>
@@ -138,14 +138,14 @@
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="anakke">Anak ke </label>&nbsp;<label style="color:red">*</label>
+                                 <label for="anakke">Anak ke </label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <input name="anak_ke" type="number" class="form-control" id="anakke" value="{{ old('anak_ke') }}" required>
                                  @if($errors->has('anak_ke'))
                                  <small class="text-danger">{{ $errors->first('anak_ke') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="jmlsaudara">Jumlah Saudara</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="jmlsaudara">Jumlah Saudara</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <input name="jml_sdr" type="number" class="form-control" id="jmlsaudara" value="{{ old('jml_sdr') }}" required>
                                  @if($errors->has('jml_sdr'))
                                  <small class="text-danger">{{ $errors->first('jml_sdr') }}</small>
@@ -173,7 +173,7 @@
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="hobi">Hobi</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="hobi">Hobi</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select name="hobi" class="form-control" id="hobi" value="{{ old('hobi') }}" required>
                                  <option @if(old('hobi') == 'olahraga') selected @endif value="olahraga">Olahraga</option>
                                  <option @if(old('hobi') == 'rekreasi') selected @endif value="rekreasi">Rekreasi</option>
@@ -184,7 +184,7 @@
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="cita_cita">Cita-cita</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="cita_cita">Cita-cita</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="cita_cita" id="citacita" value="{{ old('cita_cita') }}" required>
                                     <option @if(old('cita_cita') == 'pns') selected @endif value="pns">PNS</option>
                                     <option @if(old('cita_cita') == 'dokter') selected @endif value="dokter">dokter</option>
@@ -197,9 +197,9 @@
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="kebKhusus">Berkebutuhan Khusus</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="kebKhusus">Berkebutuhan Khusus</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="keb_khusus" id="kebKhusus" value="{{ old('keb_khusus') }}" required>
-                                 <option @if(old('keb_khusus') == 'null') selected @endif value="null">-- Piih --</option>
+                                 <option @if(old('keb_khusus') == 'tidak') selected @endif value="tidak">Tidak</option>
                                  <option @if(old('keb_khusus') == 'tunaRungu') selected @endif value="tunaRungu">Tuna Rungu</option>
                                  <option @if(old('keb_khusus') == 'tunaGrahita') selected @endif value="tunaGrahita">Tuna Grahita</option>
                                  <option @if(old('keb_khusus') == 'tunaNetra') selected @endif value="tunaNetra">Tuna Netra</option>
@@ -226,15 +226,15 @@
                            <!-- left -->
                            <div class="col-md-12 col-lg-6 main-content">
                               <div class="form-group">
-                                 <label for="sekolah">Nama Sekolah</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="nama_sekolah_siswa" type="text" class="form-control" id="sekolah" value="{{ old('nama_sekolah_siswa') }}" required>
+                                 <label for="sekolah">Nama Sekolah</label>
+                                 <input name="nama_sekolah_siswa" type="text" class="form-control" id="sekolah" value="{{ old('nama_sekolah_siswa') }}">
                                  @if($errors->has('nama_sekolah_siswa'))
                                  <small class="text-danger">{{ $errors->first('nama_sekolah_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="jenisSekolah">Jenis Sekolah</label>&nbsp;<label style="color:red">*</label>
-                                 <select class="form-control" name="jenis_sekolah_siswa" id="jenisSekolah" value="{{ old('jenis_sekolah_siswa') }}" required>
+                                 <label for="jenisSekolah">Jenis Sekolah</label>
+                                 <select class="form-control" name="jenis_sekolah_siswa" id="jenisSekolah" value="{{ old('jenis_sekolah_siswa') }}">
                                  <option @if(old('jenis_sekolah_siswa') == 'sd') selected @endif value="sd">SD</option>
                                  <option @if(old('jenis_sekolah_siswa') == 'mi') selected @endif value="mi">MI</option>
                                  <option @if(old('jenis_sekolah_siswa') == 'smp') selected @endif value="smp">SMP</option>
@@ -247,28 +247,28 @@
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="statusSekolah">Status Sekolah</label>&nbsp;<label style="color:red">*</label>
-                                 <select class="form-control" name="status_sekolah_siswa" id="statusSekolah" value="{{ old('status_sekolah_siswa') }}" required>
+                                 <label for="statusSekolah">Status Sekolah</label>
+                                 <select class="form-control" name="status_sekolah_siswa" id="statusSekolah" value="{{ old('status_sekolah_siswa') }}">
                                  <option @if(old('status_sekolah_siswa') == 'negeri') selected @endif>Negeri</option>
                                  <option @if(old('status_sekolah_siswa') == 'swasta') selected @endif >Swasta</option>
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="alamat">Alamat Sekolah</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="alamat">Alamat Sekolah</label>
                                  <input name="alamat_sekolah_siswa" type="text" class="form-control" id="alamat" value="{{ old('alamat_sekolah_siswa') }}">
                                  @if($errors->has('alamat_sekolah_siswa'))
                                  <small class="text-danger">{{ $errors->first('alamat_sekolah_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="kabkota">Kota/Kabupaten</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="kabkota">Kota/Kabupaten</label>
                                  <input name="kota" type="text" class="form-control" id="kabkota" value="{{ old('kota') }}">
                                  @if($errors->has('kota'))
                                  <small class="text-danger">{{ $errors->first('kota') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="prov">Provinsi</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="prov">Provinsi</label>
                                  <input name="provinsi_siswa" type="text" class="form-control" id="prov" value="{{ old('provinsi_siswa') }}">
                                  @if($errors->has('provinsi_siswa'))
                                  <small class="text-danger">{{ $errors->first('provinsi_siswa') }}</small>
@@ -279,35 +279,35 @@
                            <!-- right -->
                            <div class="col-md-12 col-lg-6 main-content">
                               <div class="form-group">
-                                 <label for="nss">NSS/NSM</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="nss">NSS/NSM</label>
                                  <input name="nss_siswa" type="number" class="form-control" id="nss">
                                  @if($errors->has('nss_siswa'))
                                  <small class="text-danger">{{ $errors->first('nss_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="npsn">NPSN</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="npsn">NPSN</label>
                                  <input name="npsn_siswa" type="number" class="form-control" id="npsn">
                                  @if($errors->has('npsn_siswa'))
                                  <small class="text-danger">{{ $errors->first('npsn_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="ijazah">No Seri Ijazah</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="ijazah">No Seri Ijazah</label>
                                  <input name="no_ijazah_siswa" type="text" class="form-control" id="noijazah">
                                  @if($errors->has('no_ijazah_siswa'))
                                  <small class="text-danger">{{ $errors->first('no_ijazah_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="skhun">No Seri SKHUN</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="skhun">No Seri SKHUN</label>
                                  <input name="skhun_siswa" type="text" class="form-control" id="skhun">
                                  @if($errors->has('skhun_siswa'))
                                  <small class="text-danger">{{ $errors->first('skhun_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="noUn">No Peserta Ujian UN</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="noUn">No Peserta Ujian UN</label>
                                  <input name="no_un_siswa" type="text" class="form-control" id="noUn">
                                  @if($errors->has('no_un_siswa'))
                                  <small class="text-danger">{{ $errors->first('no_un_siswa') }}</small>
@@ -334,28 +334,28 @@
                                  <p><span class="w3-tag w3-xlarge" style="background-color:#28a745;padding-left:25px;">Identitas Ayah</span></p>
                               </div>
                               <div class="form-group">
-                                 <label for="namaAyah">Nama Lengkap</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="nama_ayah_siswa" type="text" class="form-control" id="namaAyah" value="{{ old('nama_ayah_siswa') }}">
+                                 <label for="namaAyah">Nama Lengkap</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <input name="nama_ayah_siswa" type="text" class="form-control" id="namaAyah" value="{{ old('nama_ayah_siswa') }}" required>
                                  @if($errors->has('nama_ayah_siswa'))
                                  <small class="text-danger">{{ $errors->first('nama_ayah_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="panggilanAyah">Nama Panggilan</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="napang_ayah_siswa" type="text" class="form-control" id="panggilanAyah" value="{{ old('napang_ayah_siswa') }}">
+                                 <label for="panggilanAyah">Nama Panggilan</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <input name="napang_ayah_siswa" type="text" class="form-control" id="panggilanAyah" value="{{ old('napang_ayah_siswa') }}" required>
                                  @if($errors->has('napang_ayah_siswa'))
                                  <small class="text-danger">{{ $errors->first('napang_ayah_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="nikAyah">NIK</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="nik_ayah_siswa" type="number" class="form-control" id="nikAyah" value="{{ old('nik_ayah_siswa') }}">
+                                 <label for="nikAyah">NIK</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <input name="nik_ayah_siswa" type="number" class="form-control" id="nikAyah" value="{{ old('nik_ayah_siswa') }}" required>
                                  @if($errors->has('nik_ayah_siswa'))
                                  <small class="text-danger">{{ $errors->first('nik_ayah_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="tempatLahir">Tempat Lahir</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="tempatLahir">Tempat Lahir</label>
                                  <input name="tempat_lahir_ayah" type="text" class="form-control" id="tempat_lahir_ayah" value="{{ old('tempat_lahir_ayah') }}">
                                  @if($errors->has('tempat_lahir_ayah'))
                                  <small class="text-danger">{{ $errors->first('tempat_lahir_ayah') }}</small>
@@ -407,58 +407,58 @@
                                  </div>
                               </div>
                               <div class="form-group">
-                                 <label>Hubungan Ayah dengan Santri</label>&nbsp;<label style="color:red">*</label>
-                                 <select class="form-control" name="hbgn_ayah_santri">&nbsp;<label style="color:red">*</label>
+                                 <label>Hubungan Ayah dengan Santri</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <select class="form-control" name="hbgn_ayah_santri">&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <option @if(old('hbgn_ayah_santri') == 'kandung') selected @endif value="kandung">Ayah Kandung</option>
                                  <option @if(old('hbgn_ayah_santri') == 'tiri') selected @endif value="tiri">Ayah Tiri</option>
                                  <option @if(old('hbgn_ayah_santri') == 'angkat') selected @endif value="angkat">Ayah Angkat</option>
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label>Status Ayah</label>&nbsp;<label style="color:red">*</label>
-                                 <select class="form-control" name="status_ayah_santri">&nbsp;<label style="color:red">*</label>
+                                 <label>Status Ayah</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <select class="form-control" name="status_ayah_santri">&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <option @if(old('status_ayah_santri') == 'hidup') selected @endif value="hidup">Hidup</option>
                                  <option @if(old('status_ayah_santri') == 'meninggal') selected @endif value="meninggal">Meninggal</option>
                                  <option @if(old('status_ayah_santri') == 'hilang') selected @endif value="hilang">Hilang</option>
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="alamat">Alamat</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="alamat_ayah" type="text" class="form-control" id="alamat" value="{{ old('alamat_ayah') }}">
+                                 <label for="alamat">Alamat</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <input name="alamat_ayah" type="text" class="form-control" id="alamat" value="{{ old('alamat_ayah') }}" required>
                                  @if($errors->has('alamat_ayah'))
                                  <small class="text-danger">{{ $errors->first('alamat_ayah') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="kabkota">Kota/Kabupaten</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="kabkota_ayah" type="text" class="form-control" id="kabkota" value="{{ old('kabkota_ayah') }}">
+                                 <label for="kabkota">Kota/Kabupaten</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <input name="kabkota_ayah" type="text" class="form-control" id="kabkota" value="{{ old('kabkota_ayah') }}" required>
                                  @if($errors->has('kabkota_ayah'))
                                  <small class="text-danger">{{ $errors->first('kabkota_ayah') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="prov">Provinsi</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="provinsi_ayah" type="text" class="form-control" id="prov" value="{{ old('provinsi_ayah') }}">
+                                 <label for="prov">Provinsi</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <input name="provinsi_ayah" type="text" class="form-control" id="prov" value="{{ old('provinsi_ayah') }}" required>
                                  @if($errors->has('provinsi_ayah'))
                                  <small class="text-danger">{{ $errors->first('provinsi_ayah') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="kodepos">Kode Pos</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="kodepos_ayah" type="number" class="form-control" id="kodepos" value="{{ old('kodepos_ayah') }}">
+                                 <label for="kodepos">Kode Pos</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <input name="kodepos_ayah" type="number" class="form-control" id="kodepos" value="{{ old('kodepos_ayah') }}" required>
                                  @if($errors->has('kodepos_ayah'))
                                  <small class="text-danger">{{ $errors->first('kodepos_ayah') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="telp">Telp</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="telepon_ayah" type="number" class="form-control" id="telp">
+                                 <label for="telp">Nomor HP / Whatsapp</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <input name="telepon_ayah" type="number" class="form-control" id="telp" required>
                                  @if($errors->has('telepon_ayah'))
                                  <small class="text-danger">{{ $errors->first('telepon_ayah') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="">Pendidikan</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="">Pendidikan</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="pendidikan_terakhir_ayah" id="" value="{{ old('pendidikan_terakhir_ayah') }}">
                                  <option @if(old('pendidikan_terakhir_ayah') == 'SD/MI') selected @endif value="SD/MI">SD/MI</option>
                                  <option @if(old('pendidikan_terakhir_ayah') == 'SMP/MTs/SLTP') selected @endif value="SMP/MTs/SLTP">SMP/MTs/SLTP</option>
@@ -472,7 +472,7 @@
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="">Pekerjaan</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="">Pekerjaan</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="pekerjaan_ayah" id="">
                                  <option @if(old('pekerjaan_ayah') == 'Swasta') selected @endif value="Swasta">Swasta</option>
                                  <option @if(old('pekerjaan_ayah') == 'PNS') selected @endif value="PNS">PNS</option>
@@ -482,7 +482,7 @@
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="">Rata-rata Penghasilan tetap Perbulan</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="">Rata-rata Penghasilan tetap Perbulan</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="penghasilan_ayah" id="">
                                  <option @if(old('penghasilan_ayah') == '<1jt') selected @endif value="<1jt">< Rp 1000.000,-</option>
                                  <option @if(old('penghasilan_ayah') == '1jt-2jt') selected @endif value="1jt-2jt">Rp 1.000.000,- - Rp 2.0000.000,-</option>
@@ -500,28 +500,28 @@
                                  <p><span class="w3-tag w3-xlarge" style="background-color:#28a745;padding-left:25px;">Identitas Ibu</span></p>
                               </div>
                               <div class="form-group">
-                                 <label for="namaIbu">Nama Lengkap</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="nama_ibu_siswa" type="text" class="form-control" id="namaIbu" value="{{ old('nama_ibu_siswa') }}">
+                                 <label for="namaIbu">Nama Lengkap</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <input name="nama_ibu_siswa" type="text" class="form-control" id="namaIbu" value="{{ old('nama_ibu_siswa') }}" required>
                                  @if($errors->has('nama_ibu_siswa'))
                                  <small class="text-danger">{{ $errors->first('nama_ibu_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="panggilanIbu">Nama Panggilan</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="napang_ibu_siswa" type="text" class="form-control" id="panggilanIbu" value="{{ old('napang_ibu_siswa') }}">
+                                 <label for="panggilanIbu">Nama Panggilan</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <input name="napang_ibu_siswa" type="text" class="form-control" id="panggilanIbu" value="{{ old('napang_ibu_siswa') }}" required>
                                  @if($errors->has('napang_ibu_siswa'))
                                  <small class="text-danger">{{ $errors->first('napang_ibu_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="nikIbu">NIK</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="nik_ibu_siswa" type="number" class="form-control" id="nikIbu" value="{{ old('nik_ibu_siswa') }}">
+                                 <label for="nikIbu">NIK</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <input name="nik_ibu_siswa" type="number" class="form-control" id="nikIbu" value="{{ old('nik_ibu_siswa') }}" required>
                                  @if($errors->has('nik_ibu_siswa'))
                                  <small class="text-danger">{{ $errors->first('nik_ibu_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="tempatLahir">Tempat Lahir</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="tempatLahir">Tempat Lahir</label>
                                  <input name="tempat_lahir_ibu" type="text" class="form-control" id="tempatLahir" value="{{ old('tempat_lahir_ibu') }}">
                                  @if($errors->has('tempat_lahir_ibu'))
                                  <small class="text-danger">{{ $errors->first('tempat_lahir_ibu') }}</small>
@@ -573,7 +573,7 @@
                                  </div>
                               </div>
                               <div class="form-group">
-                                 <label for="">Hubungan Ibu dengan Santri</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="">Hubungan Ibu dengan Santri</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="hbgn_ibu_santri">
                                  <option @if(old('hbgn_ibu_santri') == 'kandung') selected @endif value="kandung">Ibu Kandung</option>
                                  <option @if(old('hbgn_ibu_santri') == 'tiri') selected @endif value="tiri">Ibu Tiri</option>
@@ -581,7 +581,7 @@
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="">Status Ibu</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="">Status Ibu</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="status_ibu_santri" id="">
                                  <option @if(old('status_ibu_santri') == 'hidup') selected @endif value="hidup">Hidup</option>
                                  <option @if(old('status_ibu_santri') == 'meninggal') selected @endif value="meninggal">Meninggal</option>
@@ -589,42 +589,42 @@
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="alamat">Alamat</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="alamat">Alamat</label>
                                  <input name="alamat_ibu" type="text" class="form-control" id="alamat" value="{{ old('alamat_ibu') }}">
                                  @if($errors->has('alamat_ibu'))
                                  <small class="text-danger">{{ $errors->first('alamat_ibu') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="kabkota">Kota/Kabupaten</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="kabkota">Kota/Kabupaten</label>
                                  <input name="kabkota_ibu" type="text" class="form-control" id="kabkota" value="{{ old('kabkota_ibu') }}">
                                  @if($errors->has('kabkota_ibu'))
                                  <small class="text-danger">{{ $errors->first('kabkota_ibu') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="prov">Provinsi</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="prov">Provinsi</label>
                                  <input name="provinsi_ibu" type="text" class="form-control" id="prov" value="{{ old('provinsi_ibu') }}">
                                  @if($errors->has('provinsi_ibu'))
                                  <small class="text-danger">{{ $errors->first('provinsi_ibu') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="prov">Kode Pos</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="prov">Kode Pos</label>
                                  <input name="kodepos_ibu" type="text" class="form-control" id="prov" value="{{ old('provinsi_ibu') }}">
                                  @if($errors->has('kodepos_ibu'))
                                  <small class="text-danger">{{ $errors->first('kodepos_ibu') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="telp">Telp</label>&nbsp;<label style="color:red">*</label>
-                                 <input name="telepon_ibu" type="number" class="form-control" id="telp">
+                                 <label for="telp">Nomor HP / Whatsapp</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                 <input name="telepon_ibu" type="number" class="form-control" id="telp" required>
                                  @if($errors->has('telepon_ibu'))
                                  <small class="text-danger">{{ $errors->first('telepon_ibu') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
-                                 <label for="">Pendidikan</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="">Pendidikan</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="pendidikan_terakhir_ibu" id="" value="{{ old('pendidikan_terakhir_ibu') }}">
                                  <option @if(old('pendidikan_terakhir_ibu') == 'SD/MI') selected @endif value="SD/MI">SD/MI</option>
                                  <option @if(old('pendidikan_terakhir_ibu') == 'SMP/MTs/SLTP') selected @endif value="SMP/MTs/SLTP">SMP/MTs/SLTP</option>
@@ -638,7 +638,7 @@
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="">Pekerjaan</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="">Pekerjaan</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="pekerjaan_ibu" id="">
                                  <option @if(old('pekerjaan_ibu') == 'Swasta') selected @endif value="Swasta">Swasta</option>
                                  <option @if(old('pekerjaan_ibu') == 'PNS') selected @endif value="PNS">PNS</option>
@@ -648,7 +648,7 @@
                                  </select>
                               </div>
                               <div class="form-group">
-                                 <label for="">Rata-rata Penghasilan tetap Perbulan</label>&nbsp;<label style="color:red">*</label>
+                                 <label for="">Rata-rata Penghasilan tetap Perbulan</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="penghasilan_ibu" id="">
                                  <option @if(old('penghasilan_ibu') == '<1jt') selected @endif value="<1jt">< Rp 1000.000,-</option>
                                  <option @if(old('penghasilan_ibu') == '1jt-2jt') selected @endif value="1jt-2jt">Rp 1.000.000,- - Rp 2.0000.000,-</option>
@@ -675,8 +675,8 @@
                                     <p><span class="w3-tag w3-xlarge" style="background-color:#28a745;padding-left:25px;">Identitas Wali</span></p>
                               </div>
                               <div class="form-group">
-                                    <label for="namaAyah">Nama Lengkap</label>
-                                    <input name="nama_wali_siswa" type="text" class="form-control" id="namawali" value="{{ old('nama_wali_siswa') }}">
+                                    <label for="namaAyah">Nama Lengkap</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                    <input name="nama_wali_siswa" type="text" class="form-control" id="namawali" value="{{ old('nama_wali_siswa') }}" required>
                                     @if($errors->has('nama_wali_siswa'))
                                     <small class="text-danger">{{ $errors->first('nama_wali_siswa') }}</small>
                                     @endif
@@ -740,7 +740,7 @@
                                     <div class="col-sm-4 col-xs-12">
                                     <div class="form-group">
                                           <label for="">Tahun</label>
-                                          <input name="tahun_wali"  type="number" min="1930" max="2018" class="form-control medqInput" id="tahun"  onkeyup="capt()" value="{{ old('tahun_wali') }}">
+                                          <input name="tahun_wali"  type="number" min="1930" max="2018" class="form-control medqInput" id="tahun" onkeyup="capt()" value="{{ old('tahun_wali') }}">
                                           @if($errors->has('tahun_wali'))
                                           <small class="text-danger">{{ $errors->first('tahun_wali') }}</small>
                                           @endif
@@ -791,7 +791,7 @@
                                     @endif
                               </div>
                               <div class="form-group">
-                                    <label for="telp">Telp</label>
+                                    <label for="telp">Nomor HP / Whatsapp</label>
                                     <input name="telepon_wali" type="number" class="form-control" id="telp">
                                     @if($errors->has('telepon_wali'))
                                     <small class="text-danger">{{ $errors->first('telepon_wali') }}</small>
@@ -853,7 +853,7 @@
                                     <!-- foto santri -->
                                     <div class="col-sm-3 col-xs-12">
                                        <div class="form-group">
-                                          <label for="">Foto Santri</label>&nbsp;<label style="color:red">*</label>
+                                          <label for="">Foto Santri</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                           <div class="container2">
                                              <!-- <label class="labell" for="input">Please upload a picture !</label> -->
                                              <img id="santri" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
@@ -871,7 +871,7 @@
                                     <!-- foto wali santri -->
                                     <div class="col-sm-3 col-xs-12">
                                        <div class="form-group">
-                                          <label for="">Foto Wali Santri</label>&nbsp;<label style="color:red">*</label>
+                                          <label for="">Foto Wali Santri</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                           <div class="container2">
                                              <!-- <label class="labell" for="input">Please upload a picture !</label> -->
                                              <img id="wali" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
@@ -889,7 +889,7 @@
                                     <!-- foto ayah santri -->
                                     <div class="col-sm-3 col-xs-12">
                                        <div class="form-group">
-                                          <label for="">Foto Ayah Santri</label>&nbsp;<label style="color:red">*</label>
+                                          <label for="">Foto Ayah Santri</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                           <div class="container2">
                                              <!-- <label class="labell" for="input">Please upload a picture !</label> -->
                                              <img id="ayah" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
@@ -907,7 +907,7 @@
                                     <!-- foto ibu santri -->
                                     <div class="col-sm-3 col-xs-12">
                                        <div class="form-group">
-                                          <label for="">Foto Ibu Santri</label>&nbsp;<label style="color:red">*</label>
+                                          <label for="">Foto Ibu Santri</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                           <div class="container2">
                                              <!-- <label class="labell" for="input">Please upload a picture !</label> -->
                                              <img id="ibu" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
