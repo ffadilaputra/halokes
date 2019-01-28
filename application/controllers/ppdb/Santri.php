@@ -59,7 +59,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
            'no_jamkes' => $this->input->post('no_jamkes'),
            'hobi' => $this->input->post('hobi'),
            'cita_cita' => $this->input->post('cita_cita'),
-           'kebutuhan_khusus' => $this->input->post('keb_khusus')
+           'kebutuhan_khusus' => $this->input->post('keb_khusus'),
+           'status_verifikasi' => 'belum_verifikasi',
           );
 
           $data['ayah'] = array(

@@ -10,6 +10,7 @@ class TanggunganPembayaranModel extends Eloquent {
   protected $fillable   = ['nominal','id_tahun_akademik','id_kategori_keuangan','id_santri'];
   public $timestamps = true;
 
+
   public function detailSantri(){
     return $this->belongsTo('SantriModel','id_santri','id_santri');
   }

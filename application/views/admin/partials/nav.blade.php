@@ -107,9 +107,6 @@
                     <li>
                         <a href="{{ base_url('admin/santri/all') }}">Semua</a>
                     </li>
-                    <li>
-                        <a href="{{ base_url('admin/santri/verifed') }}">Terverifikasi</a>
-                    </li>
                 </ul>
             </li>
             <li>

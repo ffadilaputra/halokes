@@ -26,7 +26,7 @@
          <small class="text-danger">{{ $errors->first('id_santri') }}</small>
       @endif
       <label>Tahun Akademik</label>
-      <select name="id_santri_tahun_akademik" class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+      <select name="id_tahun_akademik" class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
         <option value="">-- Pilih --</option>
         @foreach ($tahun as $item)
           <option value="{{ $item->id_tahun_akademik }}">{{ $item->nama }}</option>
@@ -39,7 +39,7 @@
       <select name="id_kategori_keuangan" class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
         <option value="">-- Pilih --</option>
         @foreach ($kategori as $item)
-          <option value="{{ $item->id_tahun_akademik }}">{{ $item->nama }}</option>
+          <option value="{{ $item->id_kategori_keuangan }}">{{ $item->nama }}</option>
         @endforeach
         @if($errors->has('id_kategori_keuangan'))
          <small class="text-danger">{{ $errors->first('id_kategori_keuangan') }}</small>

@@ -18,9 +18,8 @@
       </tr>
    </thead>
    <tbody>
-      <?php $no=1; var_dump($list); ?>
+      <?php $no=1; ?>
       @foreach($list as $data)
-      <?php echo "test_d"; var_dump($data); ?>
       <tr>
          <td>{{ $no++ }}</td>
          <td>{{ $data->detailSantri->nama_lengkap }}</td>

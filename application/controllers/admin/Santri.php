@@ -7,7 +7,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function index(){
         $this->autenthicateAdmin();
         $data['admin'] = $this->session->userdata('admin_logged_in');
-        $data['santri'] = SantriModel::get();
+        $data['santri'] = SantriModel::where([
+          'status_verifikasi'=> 'belum_verifikasi'
+        ])->get();
         $this->view('admin.pages.santri.index',$data);
     }
 
@@ -20,16 +22,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function all(){
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
-      $data['santri'] = SantriModel::get();
+      $data['santri'] = SantriModel::all();
       $this->view('admin.pages.santri.verifed',$data);
     }
 
-    public function verifed(){
+    public function verify($id){
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
-      $data['santri'] = VerifikasiModel::get()->where('status','terima');
-      $this->view('admin.pages.santri.verifed_santri',$data);
+      SantriModel::find($id)->update(['status_verifikasi'=> 'terverifikasi']);
+      //redirect('admin/santri');
+      var_dump($_POST);
+      }
+
     }
 
-}
+
 ?>
