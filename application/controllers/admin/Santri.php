@@ -30,8 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
       SantriModel::find($id)->update(['status_verifikasi'=> 'terverifikasi']);
-      //redirect('admin/santri');
-      var_dump($_POST);
+      redirect('admin/santri/all');
       }
 
     }

@@ -25,14 +25,12 @@
                <thead>
                   <tr>
                     <th>No</th>
-                    <td>NIS</td>
                     <td>Nama Lengkap</td>
-                    <td>Kecamatan</td>
+                    <td>Tempat Lahir</td>
                     <td>Kota</td>
-                    <td>Profinsi</td>
-                    <td>Telepon</td>
-                    <td>Kodepos</td>
-                    <td>Status</td>
+                    <td>Tanggal Lahir</td>
+                    <td>Jenis Kelamin</td>
+                    <td>Status Akun</td>
                     <td>Opsi</td>
                   </tr>
                </thead>
@@ -41,22 +39,20 @@
                   @foreach($santri as $item)
                   <tr>
                     <td>{{ $n++ }}</td>
-                    <td>{{ $item->nis }}</td>
                     <td>{{ $item->nama_lengkap }} </td>
-                    <td>{{ $item->kecamatan }}</td>
+                    <td>{{ $item->tempat_lahir }}</td>
                     <td>{{ $item->kota }}</td>
-                    <td>{{ $item->provinsi }}</td>
-                    <td>{{ $item->telepon }}</td>
-                    <td>{{ $item->kode_pos }}</td>
-                      @if(isset($item->getVerification->status))
-                        <td>{{ $item->getVerification->status }}</td>
-                        @else
-                        <td>Belum</td>
-                      @endif
+                    <td>{{ $item->tgl_lahir }}</td>
+                    <td>{{ $item->jenis_kelamin }}</td>
+                    <td>{{ $item->status_verifikasi }}</td>
                     <td>
                         <a class="btn btn-info" href="{{ base_url('admin/santri/show/').$item->id_santri }}"><i class="fa fa-eye"></i>&nbsp;Detail</a>
-                        <a class="btn btn-success" href="{{ base_url('admin/santri/verifiy/').$item->id_santri }}"><i class="fa fa-check-square-o" aria-hidden="true"></i> Verifikasi</a>
-                    </td>
+                        @if($item->status_verifikasi == 'terverifikasi')
+                        @elseif($item->status_verifikasi == 'belum_terverifikasi')
+                        <a class="btn btn-success" href="{{ base_url('admin/santri/verify/').$item->id_santri }}"><i class="fa fa-check"></i>&nbsp;Detail</a>
+                        @endif
+
+                      </td>
                   </tr>
                   @endforeach
                </tbody>
