@@ -223,5 +223,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       public function edit(){
         $this->view('front.page.ppdb_edit');
       }
+
+      public function kartu(){
+        $this->view('front.page.kartu_peserta');
+      }
+      public function cetak(){
+        $this->view('front.page.cetak_kartu');
+      }
   }
 ?>
