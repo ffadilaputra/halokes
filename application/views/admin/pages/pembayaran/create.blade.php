@@ -58,16 +58,4 @@
 <script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-
-<script>
-    // $('#stats').change(function() {
-    //     if($(this).val() == 'lunas'){
-    //         $('body').append('<input class="form-control" id="id_bukti" name="bukti" type="file">')
-    //         console.log('Berhasil membuat element')
-    //     }else{
-    //         $('id_bukti').remove()
-    //     }
-    // })
-</script>
-
 @stop

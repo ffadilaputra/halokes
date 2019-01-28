@@ -42,7 +42,7 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#pembayaran"><i class="fa fa-fw fa-user"></i>Pembayaran <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="pembayaran" class="collapse">
                     <li>
-                        <a href="<?php echo e(base_url('admin/pembayaran')); ?>">Semua</a>
+                        <a href="<?php echo e(base_url('admin/tanggungan')); ?>">Tanggungan</a>
                     </li>
                     
                 </ul>
@@ -66,7 +66,14 @@
                     </ul>
                 </a>
             </li>
-            
+            <li>
+                    <a href="javascript:;" data-toggle="collapse" data-target="#master"><i class="fa fa-fw fa-archive"></i>Master <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="master" class="collapse">
+                            <li><a href="<?php echo e(base_url('admin/TahunAkademik')); ?>">Tahun Akademik</a></li>
+                            <li><a href="<?php echo e(base_url('admin/KategoriKeuangan')); ?>">Kategori Keuangan</a></li>
+                        </ul>
+                    </a>
+                </li>
         </ul>
     </div>
 

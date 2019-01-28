@@ -10,7 +10,7 @@
             <div class="card-body">
                 <h5 class="card-title">Untuk informasi lebih lanjut, klik button dibawah ini: </h5>
                 <!-- <p class="card-text">Untuk Informasi lebih lanjut dapat dicek.</p> -->
-                <a href="//google.com" class="btn btn-primary">Cek Disini</a>
+            <a href="{{ base_url() }}" class="btn btn-primary">Cek Disini</a>
             </div>
         </div>
     </div>
