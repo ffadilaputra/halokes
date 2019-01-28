@@ -137,6 +137,7 @@ class ComposerStaticInit0b383b5c09644bac37d71b40397cfa67
         'AyahModel' => __DIR__ . '/../..' . '/application/models/AyahModel.php',
         'BeritaModel' => __DIR__ . '/../..' . '/application/models/BeritaModel.php',
         'BerkasSantriModel' => __DIR__ . '/../..' . '/application/models/BerkasSantriModel.php',
+        'CetakModel' => __DIR__ . '/../..' . '/application/models/CetakModel.php',
         'IbuModel' => __DIR__ . '/../..' . '/application/models/IbuModel.php',
         'KategoriBeritaModel' => __DIR__ . '/../..' . '/application/models/KategoriBeritaModel.php',
         'KategoriKeuanganModel' => __DIR__ . '/../..' . '/application/models/KategoriKeuanganModel.php',
@@ -151,6 +152,7 @@ class ComposerStaticInit0b383b5c09644bac37d71b40397cfa67
         'TanggunganPembayaranModel' => __DIR__ . '/../..' . '/application/models/TanggunganPembayaranModel.php',
         'UsersModel' => __DIR__ . '/../..' . '/application/models/UsersModel.php',
         'VerifikasiModel' => __DIR__ . '/../..' . '/application/models/VerifikasiModel.php',
+        'VirtualAkunModel' => __DIR__ . '/../..' . '/application/models/VirtualAkunModel.php',
         'WaliModel' => __DIR__ . '/../..' . '/application/models/WaliModel.php',
     );
 

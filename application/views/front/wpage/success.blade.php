@@ -44,6 +44,9 @@
                     </div>
                 </div>
               </div>
+                <a href="//google.com" class="btn btn-primary">Cek Disini</a>
+                <a href="{{base_url('ppdb/santri/kartu') }}" class="btn" style="background-color:#408ab4; color:white;"><i class="fa fa-download"></i> Kartu Peserta</a>
+            </div>
         </div>
     </div>
 

@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
            'kebutuhan_khusus' => $this->input->post('keb_khusus')
           );
 
-          $ayah = array(
+          $data['ayah'] = array(
             'nama_lengkap' => $this->input->post('nama_ayah_siswa'),
             'panggilan' => $this->input->post('napang_ayah_siswa'),
             'nik' => $this->input->post('nik_ayah_siswa'),
@@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             'id_santri' => $id_santri,
            );
 
-           $ibu = array(
+           $data['ibu'] = array(
             'nama_lengkap' => $this->input->post('nama_ibu_siswa'),
             'panggilan' => $this->input->post('napang_ibu_siswa'),
             'nik' => $this->input->post('nik_ibu_siswa'),
@@ -100,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             'id_santri' => $id_santri,
            );
 
-           $wali = array(
+           $data['wali'] = array(
             'nama_lengkap' => $this->input->post('nama_wali_siswa'),
             'panggilan' => $this->input->post('napang_wali_siswa'),
             'nik' => $this->input->post('nik_wali_siswa'),
@@ -119,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             'id_santri' => $id_santri,
            );
 
-           $pendidikan = array(
+           $data['pendidikan'] = array(
              'nama_sekolah_siswa' => $this->input->post('nama_sekolah_siswa'),
              'jenis_sekolah_siswa' => $this->input->post('jenis_sekolah_siswa'),
              'status_sekolah_siswa' => $this->input->post('status_sekolah_siswa'),
@@ -185,7 +185,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $_POST['skhun_santri'] = $this->do_upload('skhun_santri', 'assets/uploads', 'image', TRUE);
           }
 
-          $berkas = array('foto_santri' => $this->input->post('foto_santri'),
+          $data['berkas'] = array(
+            'foto_santri' => $this->input->post('foto_santri'),
             'foto_wali_santri' => $this->input->post('foto_wali_santri'),
             'foto_ayah_santri' => $this->input->post('foto_ayah_santri') ,
             'foto_ibu_santri' => $this->input->post('foto_ibu_santri'),
@@ -201,12 +202,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             'id_santri' => $id_santri
           );
 
-          // SantriModel::create($santri);
-          // AyahModel::create($ayah);
-          // IbuModel::create($ibu);
-          // WaliModel::create($wali);
-          // PendidikanTerakhirModel::create($pendidikan);
-          // BerkasSantriModel::create($berkas);
           $jenjang = $this->generateJenjang($data['santri']['tingkat_pendidikan']);
           $now = date("Y/m/d");
           $dat = str_replace("/", "", $now);
@@ -214,8 +209,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $count = SantriModel::count();
           $urut = str_pad($count+1,4,'0',STR_PAD_LEFT);
           $data['nomor'] = $dat.$jk.$jenjang.$urut;
-          //var_dump($data['nomor']);
-          $this->view('front.wpage.success', $data);
+          $data['no_induk'] = $jenjang.$jk.$urut;
+
+          SantriModel::create($data['santri']);
+          AyahModel::create($data['ayah']);
+          IbuModel::create($data['ibu']);
+          WaliModel::create($data['wali']);
+          PendidikanTerakhirModel::create($data['pendidikan']);
+          BerkasSantriModel::create($data['berkas']);
+
+          $data['virtual_acc'] = array(
+            'id_santri'=> $id_santri,
+            'no_pendaftaran' => $data['nomor'],
+            'nomor_induk' => $data['no_induk'],
+          );
+
+          VirtualAkunModel::create($data['virtual_acc']);
+
+          $this->view('front.page.kartu_peserta', $data);
       }
 
       public function sukses(){
@@ -242,6 +253,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           }elseif($jk == 'perempuan'){
             return 2;
           }
+        }
+
+      public function kartu(){
+        $this->view('front.page.kartu_peserta');
+      }
+      public function cetak(){
+        $this->view('front.page.cetak_kartu');
       }
   }
 ?>

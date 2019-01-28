@@ -9,6 +9,7 @@ return array(
     'AyahModel' => $baseDir . '/application/models/AyahModel.php',
     'BeritaModel' => $baseDir . '/application/models/BeritaModel.php',
     'BerkasSantriModel' => $baseDir . '/application/models/BerkasSantriModel.php',
+    'CetakModel' => $baseDir . '/application/models/CetakModel.php',
     'IbuModel' => $baseDir . '/application/models/IbuModel.php',
     'KategoriBeritaModel' => $baseDir . '/application/models/KategoriBeritaModel.php',
     'KategoriKeuanganModel' => $baseDir . '/application/models/KategoriKeuanganModel.php',
@@ -23,5 +24,6 @@ return array(
     'TanggunganPembayaranModel' => $baseDir . '/application/models/TanggunganPembayaranModel.php',
     'UsersModel' => $baseDir . '/application/models/UsersModel.php',
     'VerifikasiModel' => $baseDir . '/application/models/VerifikasiModel.php',
+    'VirtualAkunModel' => $baseDir . '/application/models/VirtualAkunModel.php',
     'WaliModel' => $baseDir . '/application/models/WaliModel.php',
 );
