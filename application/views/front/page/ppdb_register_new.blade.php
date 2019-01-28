@@ -20,9 +20,9 @@
                               <div class="form-group">
                                  <label for="tingkatPendidikan">Tingkat Pendidikan</label>
                                  <select class="form-control" name="tingkat_pendidikan" id="" value={{ old('tingkat_pendidikan') }} required>
-                                 <option @if(old('tingkat_pendidikan') == 'ma') selected @endif name="ma">Madarasah Aliyah</option>
+                                 <option @if(old('tingkat_pendidikan') == 'ma') selected @endif value="ma">Madarasah Aliyah</option>
                                  <option @if(old('tingkat_pendidikan') == 'mt') selected @endif value="mt">Madarasah Tsanawiyah</option>
-                                 <option @if(old('tingkat_pendidikan') == 'md') selected @endif name="md">Madarasah Diniyah</option>
+                                 <option @if(old('tingkat_pendidikan') == 'md') selected @endif value="md">Madarasah Diniyah</option>
                                  </select>
                               </div>
                               <div class="form-group">

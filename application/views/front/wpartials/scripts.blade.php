@@ -8,11 +8,9 @@
 <script src="{{ base_url('assets/wordify') }}/js/jquery-migrate-3.0.0.js"></script>
 <script src="{{ base_url('assets/combodate') }}/combodate.js"></script>
 <script src="{{ base_url('assets/wordify') }}/js/main.js"></script>
-
-<script src="{{ base_url('node_modules/sweetalert2') }}/dist/sweetalert2.min.js"></script>
-
 <script>
     // santri
+    document.getElementsByName('foto_santri').required = true
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -275,16 +273,16 @@
 
     // ijazah
     $('#btn-reset-ijazah').on('click', function(e){
-    var $el = $('#blah8');
-    $el.wrap('<form>').closest('form').get(0).reset();
-    $el.unwrap();
+      var $el = $('#blah8');
+      $el.wrap('<form>').closest('form').get(0).reset();
+      $el.unwrap();
     });
 
     // skhun
     $('#btn-reset-skhun').on('click', function(e){
-    var $el = $('#blah9');
-    $el.wrap('<form>').closest('form').get(0).reset();
-    $el.unwrap();
+      var $el = $('#blah9');
+      $el.wrap('<form>').closest('form').get(0).reset();
+      $el.unwrap();
     });
 </script>
 
@@ -311,19 +309,6 @@
     })
 
 </script>
-
 <script src='https://www.google.com/recaptcha/api.js'></script>
-
-<script>
-function ara(){
-    Swal.fire({
-  type: 'success',
-  title: 'Done!',
-  text: 'Selamat Registrasi Anda Berhasil',
-  footer: 
-    '<h4>Info selanjutnya</h4>'+'&nbsp;'+'<h4><a href="//github.com">Cek Disini!</a></h4>'
-})}
-
-</script>
 
 

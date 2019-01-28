@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $thn_wali = $this->input->post('tahun_wali');
           $tgl_lahir_wali = $thn_wali.':'.$bln_wali.':'.$tgl_wali;
 
-          $santri = array(
+          $data['santri'] = array(
            'id_santri' => $id_santri,
            'tingkat_pendidikan' => $this->input->post('tingkat_pendidikan'),
            'jenis_siswa'=> $this->input->post('jenis_siswa'),
@@ -201,25 +201,47 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             'id_santri' => $id_santri
           );
 
-          SantriModel::create($santri);
-          AyahModel::create($ayah);
-          IbuModel::create($ibu);
-          WaliModel::create($wali);
-          PendidikanTerakhirModel::create($pendidikan);
-          BerkasSantriModel::create($berkas);
-          redirect('ppdb/santri/sukses');
+          // SantriModel::create($santri);
+          // AyahModel::create($ayah);
+          // IbuModel::create($ibu);
+          // WaliModel::create($wali);
+          // PendidikanTerakhirModel::create($pendidikan);
+          // BerkasSantriModel::create($berkas);
+          $jenjang = $this->generateJenjang($data['santri']['tingkat_pendidikan']);
+          $now = date("Y/m/d");
+          $dat = str_replace("/", "", $now);
+          $jk = $this->generateJK($data['santri']['jenis_kelamin']);
+          $count = SantriModel::count();
+          $urut = str_pad($count+1,4,'0',STR_PAD_LEFT);
+          $data['nomor'] = $dat.$jk.$jenjang.$urut;
+          //var_dump($data['nomor']);
+          $this->view('front.wpage.success', $data);
       }
 
       public function sukses(){
         $this->view('front.wpage.success');
       }
 
-      public function preview(){
-        $this->view('front.page.ppdb_preview');
-      }
-
       public function edit(){
         $this->view('front.page.ppdb_edit');
+      }
+
+      public function generateJenjang($jenjang){
+          if($jenjang == 'mts'){
+            return 1;
+          }elseif($jenjang == 'ma'){
+            return 2;
+          }elseif($jenjang == 'md'){
+            return 3;
+          }
+      }
+
+      public function generateJK($jk){
+          if($jk == 'laki-laki'){
+            return 1;
+          }elseif($jk == 'perempuan'){
+            return 2;
+          }
       }
   }
 ?>
