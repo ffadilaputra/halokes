@@ -66,10 +66,17 @@ class Pembayaran extends MY_Controller {
         redirect('admin/pembayaran');
     }
 
-    public function nota(){
-        // $this->autenthicateAdmin();
-        // $data['admin'] = $this->session->userdata('admin_logged_in');
-        $this->view('admin.pages.pembayaran.preview_nota');
+    public function nota($id){
+        $this->autenthicateAdmin();
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        $data['tanggungan'] = TanggunganPembayaranModel::where([
+          'id_santri'=> $id
+        ])->first();
+        $data['list'] = TanggunganPembayaranModel::where([
+          'id_santri'=> $id
+        ])->get();
+        $data['keuangan'] = KategoriKeuanganModel::all();
+        $this->view('admin.pages.pembayaran.preview_nota',$data);
     }
 
     public function preview(){

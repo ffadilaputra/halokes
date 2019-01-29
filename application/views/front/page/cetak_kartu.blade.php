@@ -30,6 +30,9 @@
    <body>
       <div class="wrap">
          <section class="site-section py-lg">
+          <div class="form-control">
+            <button onCLick="print()" class="btn btn-success">Cetak kartu</button>
+          </div>
             <div class="container">
                <div class="card">
                   <table style="border:2px solid black; width:70%"> <!-- tabel utama border -->

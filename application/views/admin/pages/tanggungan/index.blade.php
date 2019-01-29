@@ -28,6 +28,7 @@
          <td>
             <a class="btn btn-primary" href="{{ base_url('admin/tanggungan/edit/'.$data->id_tanggugan_pembayaran) }}"><i class="fa fa-pencil"></i></a>
             <a class="btn btn-danger" href="{{ base_url('admin/tanggungan/delete/').$data->id_tanggugan_pembayaran }}"><i class="fa fa-trash"></i></a>
+            <a class="btn btn-info" href="{{ base_url('admin/pembayaran/nota/').$data->id_santri }}"><i class="fa fa-print"></i></a>
          </td>
       </tr>
       @endforeach
