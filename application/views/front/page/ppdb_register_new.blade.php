@@ -933,7 +933,7 @@
                               <!-- foto -->
                               <div class="col-md-12 col-lg-12 main-content">
                                  <div>
-                                    <p><span class="w3-tag w3-xlarge" style="background-color:#28a745;padding-left:25px;">Dokumen</span></p>
+                                    <p><span class="w3-tag w3-xlarge" style="background-color:#28a745;padding-left:25px;">Foto Dokumen</span></p>
                                  </div>
                                  <div class="table-responsive">
                                     <table class="table table-hover">

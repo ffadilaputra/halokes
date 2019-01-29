@@ -7,7 +7,7 @@
    <a href="{{ base_url('admin/Tanggungan/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Create</a>
    <br><br>
 </div>
-<table class="table">
+<table class="table" id="main">
    <thead>
       <tr>
          <th>No</th>

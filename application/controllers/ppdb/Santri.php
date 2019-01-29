@@ -226,7 +226,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           );
 
           VirtualAkunModel::create($data['virtual_acc']);
-
           $this->view('front.page.kartu_peserta', $data);
       }
 

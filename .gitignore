@@ -27,4 +27,4 @@ application/logs/*
 
 composer.lock
 package-lock.json
-composer.json
+

@@ -33,6 +33,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       redirect('admin/santri/all');
       }
 
+    public function print($id){
+      $this->autenthicateAdmin();
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+
+      $this->view('admin.pages.santri.cetak',$data);
+    }
+
     }
 
 

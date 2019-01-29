@@ -32,6 +32,7 @@
                     <td>Jenis Kelamin</td>
                     <td>Status Akun</td>
                     <td>Opsi</td>
+                    <td>Cetak</td>
                   </tr>
                </thead>
                <tbody>
@@ -51,8 +52,10 @@
                         @elseif($item->status_verifikasi == 'belum_terverifikasi')
                         <a class="btn btn-success" href="{{ base_url('admin/santri/verify/').$item->id_santri }}"><i class="fa fa-check"></i>&nbsp;Detail</a>
                         @endif
-
                       </td>
+                    <td>
+                    <a href="{{ base_url('admin/santri/print/').$item->id_santri }}" class="btn btn-info"><i class="fa fa-print"></i></a>
+                    </td>
                   </tr>
                   @endforeach
                </tbody>
