@@ -15,7 +15,8 @@ color: #999;
 }
 
 body {
-    margin-top: 100px;
+    width:100%;
+    min-height:100%;
     background-color: #222;
 }
 
@@ -23,6 +24,7 @@ body {
     body {
         margin-top: 50px;
     }
+
 }
 
 #wrapper {
