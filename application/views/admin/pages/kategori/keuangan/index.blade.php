@@ -7,11 +7,12 @@
    <a href="{{ base_url('admin/KategoriKeuangan/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Create</a>
    <br><br>
 </div>
-<table class="table">
+<table class="table" id="main">
    <thead>
       <tr>
          <th>No</th>
          <th>Kategori Keuangan</th>
+         <th>Nominal</th>
          <th>Option</th>
       </tr>
    </thead>
@@ -21,6 +22,7 @@
       <tr>
          <td>{{ $no++ }}</td>
          <td>{{ $data->nama }}</td>
+         <td>{{ convertRupiah($data->biaya) }}</td>
          <td>
             <a class="btn btn-primary" href="{{ base_url('admin/KategoriKeuangan/edit/').$data->id_kategori_keuangan }}"><i class="fa fa-pencil"></i></a>
             <a class="btn btn-danger" href="{{ base_url('admin/KategoriKeuangan/delete/').$data->id_kategori_keuangan }}"><i class="fa fa-trash"></i></a>

@@ -4,8 +4,9 @@
 <section class="site-section py-lg">
     <div class="container">
         <!-- download -->
-        <a onclick="print()" href="" class="btn" style="background-color:#408ab4; color:white" download><i class="fa fa-download"></i> Cetak Kartu Peserta</a>
-        <br><br>
+        <div class="form-group">
+          <a onClick="print()" class="btn" style="background-color:#408ab4; color:white" download><i class="fa fa-download"></i> Cetak Kartu Peserta</a>
+        </div>
         <div class="card">
             <!-- tabel header -->
             <table>

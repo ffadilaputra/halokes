@@ -11,3 +11,9 @@ if ( ! function_exists('old')){
         }
     }
 }
+
+if( ! function_exists('convertRupiah')){
+  function convertRupiah($value) {
+      return 'Rp ' . number_format($value);
+  }
+}
