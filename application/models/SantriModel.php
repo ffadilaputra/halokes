@@ -31,5 +31,10 @@ class SantriModel extends Eloquent {
     return $this->belongsTo('BerkasSantriModel','id_santri','id_santri');
   }
 
+  public function virtualAkun(){
+    return $this->belongsTo('VirtualAkunModel','id_santri','id_santri');
+  }
+
+
 }
 ?>

@@ -36,7 +36,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function print($id){
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
-
+      $data['santri'] = SantriModel::find($id);
+      $data['date_now'] = longdate_indo(date("Y-m-d"));
       $this->view('admin.pages.santri.cetak',$data);
     }
 
