@@ -23,7 +23,6 @@ return array(
     'TahunAkademikModel' => $baseDir . '/application/models/TahunAkademikModel.php',
     'TanggunganPembayaranModel' => $baseDir . '/application/models/TanggunganPembayaranModel.php',
     'UsersModel' => $baseDir . '/application/models/UsersModel.php',
-    'VerifikasiModel' => $baseDir . '/application/models/VerifikasiModel.php',
     'VirtualAkunModel' => $baseDir . '/application/models/VirtualAkunModel.php',
     'WaliModel' => $baseDir . '/application/models/WaliModel.php',
 );

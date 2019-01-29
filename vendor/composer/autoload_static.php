@@ -151,7 +151,6 @@ class ComposerStaticInit0b383b5c09644bac37d71b40397cfa67
         'TahunAkademikModel' => __DIR__ . '/../..' . '/application/models/TahunAkademikModel.php',
         'TanggunganPembayaranModel' => __DIR__ . '/../..' . '/application/models/TanggunganPembayaranModel.php',
         'UsersModel' => __DIR__ . '/../..' . '/application/models/UsersModel.php',
-        'VerifikasiModel' => __DIR__ . '/../..' . '/application/models/VerifikasiModel.php',
         'VirtualAkunModel' => __DIR__ . '/../..' . '/application/models/VirtualAkunModel.php',
         'WaliModel' => __DIR__ . '/../..' . '/application/models/WaliModel.php',
     );

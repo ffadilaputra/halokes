@@ -23,7 +23,15 @@
                    <tbody>
                        <tr>
                            <td class="col-sm-6 col-xs-6"><b>Tingkat Pendidikan</b></td>
-                           <td class="col-sm-6 col-xs-6">{{ $santri->tingkat_pendidikan }}</td>
+                           <td class="col-sm-6 col-xs-6">
+                              @if($santri->tingkat_pendidikan == 'mt')
+                                <label class="text-success">Madarasah Tsanawiyah</label>
+                              @elseif($santri->tingkat_pendidikan == 'ma')
+                                <label class="text-success">Madarasah Aliyah</label>
+                              @elseif($santri->tingkat_pendidikan == 'md')
+                                <label class="text-success">Madarasah Diniyah</label>
+                              @endif
+                           </td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Jenis Siswa</b></td>
@@ -130,28 +138,28 @@
                    <tbody>
                        <tr>
                            <td class="col-sm-6 col-xs-6"><b>Nama Sekolah</b></td>
-                           <td class="col-sm-6 col-xs-6">{{ $santri->nama_sekolah_siswa }}</td>
+                           <td class="col-sm-6 col-xs-6">{{ $santri->detailPendidikan->nama_sekolah_siswa }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Jenis Sekolah</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->jenis_sekolah_siswa }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->detailPendidikan->jenis_sekolah_siswa }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Status Sekolah</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->status_sekolah_siswa }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->detailPendidikan->status_sekolah_siswa }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Alamat Sekolah</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->alamat_sekolah_siswa }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->detailPendidikan->alamat_sekolah_siswa }}</td>
                        </tr>
                        <tr>
                             <!-- van iki kab/kota e alamatnya sekolah -->
                             <td class="col-sm-6 col-xs-6"><b>Kota/Kabupaten</b></td>
-                            <td class="col-sm-6 col-xs-6">q binun</td>
+                            <td class="col-sm-6 col-xs-6"> - </td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Provinsi</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->provinsi_siswa }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->detailPendidikan->provinsi_siswa }}</td>
                        </tr>
                    </tbody>
                </table>
@@ -163,23 +171,23 @@
                    <tbody>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>NSS/NSM</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->nss }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->detailPendidikan->nss }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>NPSN</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->npsn }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->detailPendidikan->npsn }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>No Seri Ijazah</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->no_seri_ijazah }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->detailPendidikan->no_seri_ijazah }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>No Seri SKHUN</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->no_seri_skhun }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->detailPendidikan->no_seri_skhun }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>No Peserta Ujian UN</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->no_peserta_ujian }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->detailPendidikan->no_peserta_ujian }}</td>
                        </tr>
                    </tbody>
                </table>
@@ -206,63 +214,79 @@
                    <tbody>
                        <tr>
                            <td class="col-sm-6 col-xs-6"><b>Nama Lengkap</b></td>
-                           <td class="col-sm-6 col-xs-6">{{ $santri->nama_lengkap }}</td>
+                           <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->nama_lengkap }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Nama Panggilan</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->panggilan }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->panggilan }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>NIK</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->nik }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->nik }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Tempat Lahir</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->tempat_lahir }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->tempat_lahir }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Tanggal Lahir</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->tgl_lahir }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->tgl_lahir }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Hubungan Ayah dengan Santri</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->hbgn_ayah_santri }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->hbgn_ayah_santri }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Status Ayah</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->status_ayah }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->status_ayah }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Alamat</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->alamat }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->alamat }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Kota/Kabupaten</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->kota }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->kota }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Provinsi</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->provinsi }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->provinsi }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Kode Pos</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->kode_pos }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->kode_pos }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Telp</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->telepon }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->telepon }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Pendidikan</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->pendidikan }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->pendidikan }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Pekerjaan</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->pekerjaan }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->pekerjaan }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Penghasilan Perbulan</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->penghasilan }}</td>
+                            <td class="col-sm-6 col-xs-6">
+                              @if($santri->ayahSantri->penghasilan == '<1jt')
+                                <label class="text-warning">Kurang dari Rp 1000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '1jt-2jt')
+                                <label class="text-primary">Rp 1.000.000,- - Rp 2.0000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '2jt-3jt')
+                                <label class="text-primary">Rp 2.000.000,- - Rp 3.0000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '4jt-5jt')
+                                <label class="text-primary">Rp 4.000.000,- - Rp 5.000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '10jt')
+                                <label class="text-primary">Lebih dari Rp 10.000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '>5jt')
+                                <label class="text-primary">Lebih dari > Rp 5.000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '10jt')
+                                <label class="text-primary">Lebih dari Rp 10.000.000,-</label>
+                              @endif
+                            </td>
                        </tr>
                    </tbody>
                </table>
@@ -278,63 +302,79 @@
                    <tbody>
                        <tr>
                            <td class="col-sm-6 col-xs-6"><b>Nama Lengkap</b></td>
-                           <td class="col-sm-6 col-xs-6">{{ $santri->nama_lengkap }}</td>
+                           <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->nama_lengkap }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Nama Panggilan</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->panggilan }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->panggilan }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>NIK</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->nik }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->nik }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Tempat Lahir</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->tempat_lahir }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->tempat_lahir }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Tanggal Lahir</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->tgl_lahir }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->tgl_lahir }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Hubungan Ayah dengan Santri</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->hbgn_ayah_santri }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->hbgn_ibu_santri }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Status Ayah</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->status_ayah }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->status_ibu }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Alamat</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->alamat }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->alamat }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Kota/Kabupaten</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->kota }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->kota }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Provinsi</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->provinsi }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->provinsi }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Kode Pos</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->kode_pos }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->kode_pos }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Telp</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->telepon }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->telepon }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Pendidikan</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->pendidikan }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->pendidikan }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Pekerjaan</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->pekerjaan }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->pekerjaan }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Penghasilan Perbulan</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->penghasilan }}</td>
+                            <td class="col-sm-6 col-xs-6">
+                              @if($santri->ibuSantri->penghasilan == '<1jt')
+                                <label class="text-warning">Kurang dari Rp 1000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '1jt-2jt')
+                                <label class="text-primary">Rp 1.000.000,- - Rp 2.0000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '2jt-3jt')
+                                <label class="text-primary">Rp 2.000.000,- - Rp 3.0000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '4jt-5jt')
+                                <label class="text-primary">Rp 4.000.000,- - Rp 5.000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '10jt')
+                                <label class="text-primary">Lebih dari Rp 10.000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '>5jt')
+                                <label class="text-primary">Lebih dari > Rp 5.000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '10jt')
+                                <label class="text-primary">Lebih dari Rp 10.000.000,-</label>
+                              @endif
+                            </td>
                        </tr>
                    </tbody>
                </table>
@@ -353,63 +393,79 @@
                    <tbody>
                        <tr>
                            <td class="col-sm-6 col-xs-6"><b>Nama Lengkap</b></td>
-                           <td class="col-sm-6 col-xs-6">{{ $santri->nama_lengkap }}</td>
+                           <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->nama_lengkap }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Nama Panggilan</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->panggilan }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->panggilan }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>NIK</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->nik }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->nik }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Tempat Lahir</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->tempat_lahir }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->tempat_lahir }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Tanggal Lahir</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->tgl_lahir }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->tgl_lahir }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Hubungan Ayah dengan Santri</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->hbgn_ayah_santri }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->hbgn_wali_santri }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Status Ayah</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->status_ayah }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->status_wali }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Alamat</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->alamat }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->alamat }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Kota/Kabupaten</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->kota }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->kota }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Provinsi</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->provinsi }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->provinsi }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Kode Pos</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->kode_pos }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->kode_pos }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Telp</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->telepon }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->telepon }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Pendidikan</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->pendidikan }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->pendidikan }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Pekerjaan</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->pekerjaan }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->pekerjaan }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Penghasilan Perbulan</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->penghasilan }}</td>
+                            <td class="col-sm-6 col-xs-6">
+                              @if($santri->waliSantri->penghasilan == '<1jt')
+                                <label class="text-warning">Kurang dari Rp 1000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '1jt-2jt')
+                                <label class="text-primary">Rp 1.000.000,- - Rp 2.0000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '2jt-3jt')
+                                <label class="text-primary">Rp 2.000.000,- - Rp 3.0000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '4jt-5jt')
+                                <label class="text-primary">Rp 4.000.000,- - Rp 5.000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '10jt')
+                                <label class="text-primary">Lebih dari Rp 10.000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '>5jt')
+                                <label class="text-primary">Lebih dari > Rp 5.000.000,-</label>
+                              @elseif($santri->ayahSantri->penghasilan == '10jt')
+                                <label class="text-primary">Lebih dari Rp 10.000.000,-</label>
+                              @endif
+                            </td>
                        </tr>
                    </tbody>
                </table>
@@ -445,22 +501,38 @@
                        <tr>
                            <td>
                                 <center>
-                                <img id="santri" src="{{ base_url('assets/wordify/') }}images/img_1.jpg" alt="your image" style="width:150px; height:200px; background-color:#eeeeee;" />
+                                  @if($santri->berkasSantri->foto_santri)
+                                  <img id="santri" src="{{ base_url('assets/uploads/').$santri->berkasSantri->foto_santri }}" alt="your image" style="width:150px; height:200px; background-color:#eeeeee;" />
+                                  @else
+                                    <p>Gambar belum di unggah</p>
+                                  @endif
+                                  </center>
+                           </td>
+                           <td>
+                                <center>
+                                  @if($santri->berkasSantri->foto_santri)
+                                    <img id="santri" src="{{ base_url('assets/uploads/').$santri->berkasSantri->foto_wali_santri }}" alt="your image" style="width:150px; height:200px; background-color:#eeeeee;" />
+                                  @else
+                                    <p>Gambar belum di unggah</p>
+                                  @endif
                                 </center>
                            </td>
                            <td>
                                 <center>
-                                <img id="santri" src="{{ base_url('assets/wordify/') }}images/img_1.jpg" alt="your image" style="width:150px; height:200px; background-color:#eeeeee;" />
+                                    @if($santri->berkasSantri->foto_santri)
+                                    <img id="santri" src="{{ base_url('assets/uploads/').$santri->berkasSantri->foto_ayah_santri }}" alt="your image" style="width:150px; height:200px; background-color:#eeeeee;" />
+                                    @else
+                                      <p>Gambar belum di unggah</p>
+                                    @endif
                                 </center>
                            </td>
                            <td>
                                 <center>
-                                <img id="santri" src="{{ base_url('assets/wordify/') }}images/img_1.jpg" alt="your image" style="width:150px; height:200px; background-color:#eeeeee;" />
-                                </center>
-                           </td>
-                           <td>
-                                <center>
-                                <img id="santri" src="{{ base_url('assets/wordify/') }}images/img_1.jpg" alt="your image" style="width:150px; height:200px; background-color:#eeeeee;" />
+                                    @if($santri->berkasSantri->foto_santri)
+                                    <img id="santri" src="{{ base_url('assets/uploads/').$santri->berkasSantri->foto_ibu_santri }}" alt="your image" style="width:150px; height:200px; background-color:#eeeeee;" />
+                                    @else
+                                    <p>Gambar belum di unggah</p>
+                                    @endif
                                 </center>
                            </td>
                        </tr>
@@ -482,39 +554,93 @@
                    <tbody>
                        <tr>
                            <th class="col-sm-4 col-xs-4">Akte</th>
-                           <td class="col-sm-8 col-xs-8"></td>
+                           <td class="col-sm-8 col-xs-8">
+                            @if($santri->berkasSantri->akta_santri)
+                              <a target="_blank" href="{{ base_url('assets/uploads/').$santri->berkasSantri->akta_santri }}">File akta santri</a>
+                            @else
+                              <span class="label label-danger">File belum di unggah</span>
+                            @endif
+                           </td>
                        </tr>
                        <tr>
                            <th class="col-sm-4 col-xs-4">KK</th>
-                           <td class="col-sm-8 col-xs-8"></td>
+                           <td class="col-sm-8 col-xs-8">
+                              @if($santri->berkasSantri->kk_santri)
+                                <a target="_blank" href="{{ base_url('assets/uploads/').$santri->berkasSantri->kk_santri }}">File akta santri</a>
+                              @else
+                              <span class="label label-danger">File belum di unggah</span>
+                              @endif
+                           </td>
                        </tr>
                        <tr>
                            <th class="col-sm-4 col-xs-4">BPJS</th>
-                           <td class="col-sm-8 col-xs-8"></td>
+                           <td class="col-sm-8 col-xs-8">
+                              @if($santri->berkasSantri->bpjs_santri)
+                                <a target="_blank" href="{{ base_url('assets/uploads/').$santri->berkasSantri->bpjs_santri }}">File akta santri</a>
+                              @else
+                              <span class="label label-danger">File belum di unggah</span>
+                              @endif
+                           </td>
                        </tr>
                        <tr>
                            <th class="col-sm-4 col-xs-4">KTP</th>
-                           <td class="col-sm-8 col-xs-8"></td>
+                           <td class="col-sm-8 col-xs-8">
+                              @if($santri->berkasSantri->ktp_santri)
+                                <a target="_blank" href="{{ base_url('assets/uploads/').$santri->berkasSantri->kk_santri }}">File akta santri</a>
+                              @else
+                              <span class="label label-danger">File belum di unggah</span>
+                              @endif
+                           </td>
                        </tr>
                        <tr>
                            <th class="col-sm-4 col-xs-4">KTP Wali</th>
-                           <td class="col-sm-8 col-xs-8"></td>
+                           <td class="col-sm-8 col-xs-8">
+                              @if($santri->berkasSantri->ktp_wali)
+                                <a target="_blank" href="{{ base_url('assets/uploads/').$santri->berkasSantri->ktp_wali }}">File akta santri</a>
+                              @else
+                                <span class="label label-danger">File belum di unggah</span>
+                              @endif
+                           </td>
                        </tr>
                        <tr>
                            <th class="col-sm-4 col-xs-4">KTP Ayah</th>
-                           <td class="col-sm-8 col-xs-8"></td>
+                           <td class="col-sm-8 col-xs-8">
+                              @if($santri->berkasSantri->ktp_ayah)
+                                <a target="_blank" href="{{ base_url('assets/uploads/').$santri->berkasSantri->ktp_ayah }}">File akta santri</a>
+                              @else
+                                <span class="label label-danger">File belum di unggah</span>
+                              @endif
+                           </td>
                        </tr>
                        <tr>
                            <th class="col-sm-4 col-xs-4">KTP Ibu</th>
-                           <td class="col-sm-8 col-xs-8"></td>
+                           <td class="col-sm-8 col-xs-8">
+                              @if($santri->berkasSantri->ktp_ibu)
+                                <a target="_blank" href="{{ base_url('assets/uploads/').$santri->berkasSantri->ktp_ibu }}">File akta santri</a>
+                              @else
+                                <span class="label label-danger">File belum di unggah</span>
+                              @endif
+                           </td>
                        </tr>
                        <tr>
                            <th class="col-sm-4 col-xs-4">Ijazah</th>
-                           <td class="col-sm-8 col-xs-8"></td>
+                           <td class="col-sm-8 col-xs-8">
+                              @if($santri->berkasSantri->ijazah_santri)
+                                <a target="_blank" href="{{ base_url('assets/uploads/').$santri->berkasSantri->ijazah_santri }}">File akta santri</a>
+                              @else
+                                <span class="label label-danger">File belum di unggah</span>
+                              @endif
+                           </td>
                        </tr>
                        <tr>
                            <th class="col-sm-4 col-xs-4">SKHUN</th>
-                           <td class="col-sm-8 col-xs-8"></td>
+                           <td class="col-sm-8 col-xs-8">
+                              @if($santri->berkasSantri->skhun_santri)
+                                <a target="_blank" href="{{ base_url('assets/uploads/').$santri->berkasSantri->skhun_santri }}">File akta santri</a>
+                              @else
+                                <span class="label label-danger">File belum di unggah</span>
+                              @endif
+                           </td>
                        </tr>
 
                    </tbody>

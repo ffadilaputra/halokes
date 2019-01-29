@@ -11,5 +11,25 @@ class SantriModel extends Eloquent {
   public $incrementing = false;
   public $timestamps = true;
 
+  public function detailPendidikan(){
+    return $this->belongsTo('PendidikanTerakhirModel','id_santri','id_siswa');
+  }
+
+  public function ayahSantri(){
+    return $this->belongsTo('AyahModel','id_santri','id_santri');
+  }
+
+  public function ibuSantri(){
+    return $this->belongsTo('IbuModel','id_santri','id_santri');
+  }
+
+  public function waliSantri(){
+    return $this->belongsTo('WaliModel','id_santri','id_santri');
+  }
+
+  public function berkasSantri(){
+    return $this->belongsTo('BerkasSantriModel','id_santri','id_santri');
+  }
+
 }
 ?>
