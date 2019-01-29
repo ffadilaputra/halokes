@@ -76,7 +76,7 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td style="width:20%">1</td>
                                                             <td>Pangkal</td>
                                                             <td>Rp. 1.000.000</td>
                                                             <td>Rp. 1.000.000</td>
@@ -147,7 +147,7 @@
                                                 <table class="table ">
                                                     <thead>
                                                         <tr>
-                                                            <th style="border:0px solid white">Nama</th>
+                                                            <th style="border:0px solid white;">Nama</th>
                                                             <td style="border:0px solid white">Aura Kanza</td>
                                                         </tr>
                                                         <tr>
