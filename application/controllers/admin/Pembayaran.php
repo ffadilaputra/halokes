@@ -66,4 +66,18 @@ class Pembayaran extends MY_Controller {
         redirect('admin/pembayaran');
     }
 
+    public function nota(){
+        // $this->autenthicateAdmin();
+        // $data['admin'] = $this->session->userdata('admin_logged_in');
+        $this->view('admin.pages.pembayaran.preview_nota');
+    }
+
+    public function preview(){
+        $this->view('admin.pages.pembayaran.preview_va');
+    }
+
+    public function cetak(){
+        $this->view('admin.pages.pembayaran.cetak_va');
+    }
+
 }
