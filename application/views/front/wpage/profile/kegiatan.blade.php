@@ -4,22 +4,17 @@
 <div class="wrap">
     <section class="site-section py-lg">
       <div class="container">
-
         <div class="row blog-entries element-animate">
-
           <div class="col-md-12 col-lg-8 main-content">
-            <img src="{{ base_url('assets/wordify') }}/images/kegiatan.jpeg" alt="Image" class="img-fluid mb-5">
-
+            <img src="{{ base_url('assets/images/kegiatan-min.jpeg') }}" alt="Image" class="img-fluid mb-5">
             <h1 class="mb-4">KEGIATAN SANTRI</h1>
             <a class="category mb-5" href="#">Kegiatan</a> <a class="category mb-5" href="#">Ponpes</a>
-
             <div class="post-content-body">
                <div>
                     <p>
                     Kegiatan santri di Pondok Pesantren Salafiyah PPAI Darun Najah didesain secara padat untuk memungkinkan santri bisa fokus dalam pembelajaran dan menginternalisasi ajaran dan pelajaran yang diberikan dan menjadi tujuan santri belajar di Pondok Pesantren, baik pelajaran formal, non formal maupun ekstrakurikuler. <br>
                     Berikut ini jadual kegiatan harian, mingguan dan bulanan yang wajib diikuti oleh setiap santri selama di pondok pesantren.
                     </p>
-
                     <h5 style="text-align:center">KEGIATAN HARIAN</h5>
                     <table class="table table-bordered table-hover">
                         <thead style="text-align:center">

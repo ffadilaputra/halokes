@@ -8,7 +8,7 @@
         <div class="row blog-entries element-animate">
 
           <div class="col-md-12 col-lg-8 main-content">
-            <img src="{{ base_url('assets/wordify') }}/images/P1010130.JPG" alt="Image" class="img-fluid mb-5">
+            <img src="{{ base_url('assets/images/P1010130-min.JPG') }}" alt="Image" class="img-fluid mb-5">
 
             <h1 class="mb-4">JUMLAH SANTRI DAN KAPASITAS SARANA DAN PRASARANA</h1>
             <a class="category mb-5" href="#">Fasilitas</a> <a class="category mb-5" href="#">Ponpes</a>

@@ -12,15 +12,15 @@
 
           <div class="owl-carousel owl-theme home-slider">
             <div>
-              <a href="blog-single.html" class="a-block d-flex align-items-center height-lg" style="background-image: url('assets/wordify/images/img1.jpg'); ">
+              <a href="#" class="a-block d-flex align-items-center height-lg" style="background-image: url('{{'assets/images/img1-min.jpg'}}'); ">
               </a>
             </div>
             <div>
-              <a href="blog-single.html" class="a-block d-flex align-items-center height-lg" style="background-image: url('assets/wordify/images/img2.jpg'); ">
+              <a href="#" class="a-block d-flex align-items-center height-lg" style="background-image: url('{{'assets/images/img2-min.jpg'}}'); ">
               </a>
             </div>
             <div>
-              <a href="blog-single.html" class="a-block d-flex align-items-center height-lg" style="background-image: url('assets/wordify/images/img3.jpg'); ">
+              <a href="#" class="a-block d-flex align-items-center height-lg" style="background-image: url('{{'assets/images/img3-min.jpg'}}'); ">
               </a>
             </div>
           </div>
