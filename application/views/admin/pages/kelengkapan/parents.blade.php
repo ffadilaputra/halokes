@@ -3,10 +3,15 @@
 
 <div class="row">
 
+  <div>
+    <!-- <a class="btn btn-primary" href="{{ base_url('admin/berkas/parents/'.$data->id_santri) }}"><i class="fa fa-user"></i></a> -->
+  </div>
+
   <div class="col-md-6">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4>Data Ibu</h4>
+            <a class="btn btn-success" href="" style="float:right"><i class="fa fa-pencil"></i> Edit</a>
         </div>
         <div class="panel-body">
           <h4><b>Data Pribadi</b></h4>
@@ -99,6 +104,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4>Data Ayah</h4>
+            <a class="btn btn-success" href="" style="float:right"><i class="fa fa-pencil"></i> Edit</a>
         </div>
         <div class="panel-body">
           <h4><b>Data Pribadi</b></h4>
@@ -191,6 +197,8 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4>Data Wali</h4>
+            <!-- <a class="btn btn-success" href="{{ base_url('admin/berkas/eWali/'.$data->id_santri) }}" style="float:right"><i class="fa fa-pencil"></i> Edit</a> -->
+            <a class="btn btn-success" href="" style="float:right"><i class="fa fa-pencil"></i> Edit</a>
         </div>
         <div class="panel-body">
           <h4><b>Data Pribadi</b></h4>

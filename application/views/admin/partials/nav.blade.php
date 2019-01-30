@@ -105,13 +105,13 @@
             <a href="{{ base_url('admin/santri/all') }}">Semua</a>
           </li>
           <li>
-            <a href="{{ base_url('admin/santri/all') }}">Madarasah Aliyah</a>
+            <a href="{{ base_url('admin/santri/ma') }}">Madarasah Aliyah</a>
           </li>
           <li>
-            <a href="{{ base_url('admin/santri/all') }}">Madarasah Tsanawiyah</a>
+            <a href="{{ base_url('admin/santri/mts') }}">Madarasah Tsanawiyah</a>
           </li>
           <li>
-            <a href="{{ base_url('admin/santri/all') }}">Madarasah Diniyah</a>
+            <a href="{{ base_url('admin/santri/md') }}">Madarasah Diniyah</a>
           </li>
         </ul>
       </li>
