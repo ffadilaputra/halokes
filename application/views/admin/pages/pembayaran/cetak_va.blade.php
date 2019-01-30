@@ -78,10 +78,6 @@
                                                 <td style="padding-left:20px;">: Banjarmasin, 11 Februari 1998</td>
                                                 </tr>
                                                 <tr>
-                                                <th style="text-align:left;padding-left:10px;">Alamat</th>
-                                                <td style="padding-left:20px;">: Jl. Soekarno Hatta no. 9</td>
-                                                </tr>
-                                                <tr>
                                                 <th style="text-align:left;padding-left:10px;">Jenjang</th>
                                                 <td style="padding-left:20px;">: Madrasah Aliyah</td>
                                                 </tr>

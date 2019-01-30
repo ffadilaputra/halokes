@@ -78,10 +78,6 @@
                                                     <td style="padding-left:20px;">: {{ $santri['tempat_lahir'] }}, {{ $santri['tgl_lahir'] }}</td>
                                                 </tr>
                                                 <tr>
-                                                    <th style="text-align:left;padding-left:10px;">Alamat</th>
-                                                    <td style="padding-left:20px;">: {{ $santri['alamat'] }}</td>
-                                                </tr>
-                                                <tr>
                                                     <th style="text-align:left;padding-left:10px;">Jenjang</th>
                                                     @if($santri['tingkat_pendidikan'] == 'ma')
                                                         <td style="padding-left:20px;">: {{ 'Madarasah Aliyah' }}</td>
