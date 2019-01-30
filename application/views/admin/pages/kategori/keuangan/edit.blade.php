@@ -18,6 +18,10 @@
       <label>Kategori Keuangan</label>
       <input class="form-control"  type="text" name="nama" value="{{ $edit->nama }}">
    </div>
+   <div class="form-group">
+    <label>Biaya</label>
+    <input class="form-control"  type="text" name="biaya" value="{{ $edit->biaya }}">
+    </div>
    <input type="submit" class="btn btn-success" style="float:right">
    <?= form_close() ?>
 </div>

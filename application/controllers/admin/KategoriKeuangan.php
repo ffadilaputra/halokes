@@ -40,6 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       ]);
       KategoriKeuanganModel::find($id)->update($this->input->post());
       redirect('admin/KategoriKeuangan');
+
     }
 
     public function delete($id){

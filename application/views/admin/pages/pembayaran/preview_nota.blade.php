@@ -190,7 +190,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td colspan="2">Total Biaya</td>
-                                                            <td colspan="2">{{ $total_pengeluaran  }}</td>
+                                                            <td colspan="2">{{ convertRupiah($total_pengeluaran)  }}</td>
                                                         </tr>
                                                         <tr>
                                                             <td colspan="2">Potongan</td>
