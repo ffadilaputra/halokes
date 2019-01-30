@@ -29,14 +29,14 @@
 </head>
 <body>
 <br><br>
-<div class="container-fluid">
+<div class="container-fluid" >
     <div class="form-group">
         <button onClick="print()" class="btn btn-success"></i>Cetak</button>
       </div>
     <div class="card">
         <!-- header -->
         <h4 class="card-header" align="center">Bukti Pembayaran Santri</h4>
-    <h5 class="card-header" align="center">Nomor: A</h5>
+    <h5 class="card-header" align="center">Nomor : A</h5>
         <!-- header end -->
 
         <!-- body -->
@@ -52,20 +52,15 @@
                             <!-- left -->
                             <td style="border:0px solid white">
                                 <!-- tabel left -->
-                                <table class="table " >
-                                    <tbody>
-                                        <tr>
-                                            <td style="border:0px solid white">
-                                                <!-- utama -->
-                                                <table class="table">
+                                <table class="table">
                                                     <thead>
                                                         <tr>
                                                             <th style="border:0px solid white">Nomor Induk</th>
-                                                            <td style="border:0px solid white">{{ $tanggungan->detailSantri->virtualAkun->nomor_induk }}</td>
+                                                            <td colspan="3" style="border:0px solid white">: {{ $tanggungan->detailSantri->virtualAkun->nomor_induk }}</td>
                                                         </tr>
                                                         <tr>
                                                             <th style="border:0px solid white">Tahun Pelajaran</th>
-                                                        <td style="border:0px solid white">{{ $tanggungan->detailTahun->nama }}</td>
+                                                            <td colspan="3" style="border:0px solid white">: {{ $tanggungan->detailTahun->nama }}</td>
                                                         </tr>
                                                         <tr>
                                                             <th colspan="4" style="border:0px solid white">Akumulasi Biaya dan Pembayaran/ Tanggungan</th>
@@ -124,39 +119,28 @@
                                                             </td>
                                                         </tr>
                                                     </tbody>
-                                                </table>
-                                                <!-- utama end -->
-                                            </td>
-                                        </tr>
-                                    </tbody>
                                 </table>
                                 <!-- table left end -->
                             </td><!-- left end -->
 
                             <!-- right -->
                             <td style="border:0px solid white">
-                                <!-- tabel right -->
-                                <table class="table " >
-                                    <tbody>
-                                        <tr>
-                                            <td style="border:0px solid white">
-                                                <!-- right -->
-                                                <!-- utama -->
-                                                <table class="table ">
+                               
+                                <!-- utama -->
+                                <table class="table ">
                                                     <thead>
                                                         <tr>
                                                             <th style="border:0px solid white">Nama</th>
-                                                            <td style="border:0px solid white"> {{ $tanggungan->detailSantri->nama_lengkap }}</td>
+                                                            <td colspan="2" style="border:0px solid white">: {{ $tanggungan->detailSantri->nama_lengkap }}</td>
                                                         </tr>
                                                         <tr>
                                                             <th style="border:0px solid white">Kelas</th>
-                                                            <td style="border:0px solid white"> - </td>
+                                                            <td colspan="2" style="border:0px solid white">: - </td>
                                                         </tr>
                                                         <tr>
                                                             <th colspan="4" style="border:0px solid white">Jenis Pembayaran</th>
                                                         </tr>
                                                         <tr>
-                                                            <th>No Pembayaran</th>
                                                             <th>Nama Biaya</th>
                                                             <th>Bayar</th>
                                                             <th>Tanggal</th>
@@ -168,7 +152,6 @@
                                                         @endphp
                                                       @foreach($keuangan as $key => $val)
                                                         <tr>
-                                                            <td></td>
                                                             <td> {{ $val->nama }}</td>
                                                             <td> {{ convertRupiah($val->biaya) }}</td>
                                                             <td></td>
@@ -180,38 +163,32 @@
                                                             <td></td>
                                                             <td></td>
                                                             <td></td>
-                                                            <td></td>
                                                         </tr>
                                                         <tr>
                                                             <td></td>
                                                             <td></td>
                                                             <td></td>
-                                                            <td></td>
                                                         </tr>
                                                         <tr>
-                                                            <td colspan="2">Total Biaya</td>
+                                                            <td colspan="1">Total Biaya</td>
                                                             <td colspan="2">{{ convertRupiah($total_pengeluaran)  }}</td>
                                                         </tr>
                                                         <tr>
-                                                            <td colspan="2">Potongan</td>
+                                                            <td colspan="1">Potongan</td>
                                                             <td colspan="2"></td>
                                                         </tr>
                                                         <tr>
-                                                            <td colspan="2">Total Terbayar</td>
+                                                            <td colspan="1">Total Terbayar</td>
                                                             <td colspan="2"> {{ convertRupiah($nom) }} </td>
                                                         </tr>
                                                         <tr>
-                                                            <td colspan="1">Terbilang</td>
-                                                            <td colspan="3">{{ terbilang($nom) }}</td>
+                                                            <td colspan="">Terbilang</td>
+                                                            <td colspan="2">{{ terbilang($nom) }}</td>
                                                         </tr>
                                                     </tbody>
-                                                </table>
-                                                <!-- utama end -->
-                                            </td>
-                                        </tr>
-                                    </tbody>
                                 </table>
-                                <!-- table right end -->
+                                <!-- utama end -->
+
                             </td><!-- right end -->
                         </tr>
                         <!-- main end -->

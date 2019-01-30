@@ -13,7 +13,7 @@
             <div class="card-body">
                 <h5 class="card-title">Untuk informasi lebih lanjut, klik button dibawah ini: </h5>
                 <!-- <p class="card-text">Untuk Informasi lebih lanjut dapat dicek.</p> -->
-                <div class="col-xs-12 col-sm-6 col-md-6">
+                <!-- <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="well well-sm">
                         <div class="row">
                             <div class="col-sm-6 col-md-4">
@@ -42,8 +42,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-              </div>
+                </div> -->
+             
                 <a href="//google.com" class="btn btn-primary">Cek Disini</a>
                 <a href="{{base_url('ppdb/santri/kartu') }}" class="btn" style="background-color:#408ab4; color:white;"><i class="fa fa-download"></i> Kartu Peserta</a>
                 <a href="{{base_url('admin/pembayaran') }}" class="btn" style="background-color:#408ab4; color:white;"><i class="fa fa-download"></i> Bukti Pembayaran</a>
