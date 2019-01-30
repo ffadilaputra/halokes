@@ -5,7 +5,7 @@
       <style>
          table{
          border-collapse: collapse;
-         width:70%;
+         width:90%;
          margin: 0 auto;
          }
          table th{
@@ -64,9 +64,12 @@
                                     <!-- tabel utama -->
                                     <table>
                                     <tr>
+                                        <td >
+                                        <!-- img santri -->
+                                        <img src="" alt=""  style="width:200px;float:left;margin-left:10px; height:250px; background-color:#eeeeee"> 
+                                        </td>
                                         <td>
-                                            <!-- img santri -->
-                                            <img src="" alt=""  style="width:200px;float:left; height:250px; background-color:#eeeeee"> 
+                                            
                                             <!-- tabel isi --> 
                                             <table style="border:3px solid black">
                                                 <tr>
