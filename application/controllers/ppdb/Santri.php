@@ -21,6 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $bln_santri = $this->input->post('bulan_siswa');
           $thn_santri = $this->input->post('tahun_siswa');
           $tgl_santri = $thn_santri.':'.$bln_santri.':'.$tgl_siswa;
+          $tgl_santry = $thn_santri.'-'.$bln_santri.'-'.$tgl_siswa;
 
           $tgl_ayah = $this->input->post('tgl_ayah');
           $bln_ayah = $this->input->post('bulan_ayah');
@@ -204,7 +205,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           );
 
           $jenjang = $this->generateJenjang($data['santri']['tingkat_pendidikan']);
-          $now = date("Y/m/d");
+          $now = date("d/m/Y");
           $dat = str_replace("/", "", $now);
           $jk = $this->generateJK($data['santri']['jenis_kelamin']);
           $count = SantriModel::count();
@@ -226,7 +227,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           );
 
           VirtualAkunModel::create($data['virtual_acc']);
-          //$this->view('front.page.kartu_peserta', $data);
+          $data['gambar'] = BerkasSantriModel::where([
+            'id_santri' => $id_santri,
+          ])->first();
+
+          $data['lahir'] = tgl_indo($tgl_santry);
           $this->view('front.page.cetak_kartu',$data);
       }
 
