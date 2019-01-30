@@ -70,7 +70,7 @@
                                     <tr>
                                         <td>
                                             <!-- img santri -->
-                                            <img src="" alt=""  style="width:170px;float:left; height:220px; background-color:#eeeeee">
+                                        <img src="{{ base_url('assets/uploads/'.$gambar->foto_santri) }}" alt=""  style="width:170px;float:left; height:220px; background-color:#eeeeee">
                                             <!-- tabel isi -->
                                             <table style="border:3px solid black">
                                                 <tr>
@@ -79,7 +79,7 @@
                                                 </tr>
                                                 <tr>
                                                 <th style="text-align:left;padding-left:10px;">TTL</th>
-                                                <td style="padding-left:20px;">: {{ $santri['tempat_lahir'] }}, 11 Februari 1998</td>
+                                                <td style="padding-left:20px;">: {{ $santri['tempat_lahir'] }}, {{ $lahir }}</td>
                                                 </tr>
                                                 <tr>
                                                 <th style="text-align:left;padding-left:10px;">Jenjang</th>
