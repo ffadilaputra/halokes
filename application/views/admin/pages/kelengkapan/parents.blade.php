@@ -198,7 +198,6 @@
         <div class="panel-heading">
             <h4>Data Wali</h4>
             <!-- <a class="btn btn-success" href="{{ base_url('admin/berkas/eWali/'.$data->id_santri) }}" style="float:right"><i class="fa fa-pencil"></i> Edit</a> -->
-            <a class="btn btn-success" href="" style="float:right"><i class="fa fa-pencil"></i> Edit</a>
         </div>
         <div class="panel-body">
           <h4><b>Data Pribadi</b></h4>

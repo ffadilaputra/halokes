@@ -42,6 +42,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     public function edit($id){
+      $this->autenthicateAdmin();
+      $data['admin'] = $this->session->userdata('admin_logged_in');
       $data['user'] = UsersModel::find($id);
       $this->view('admin.pages.user.edit',$data);
     }

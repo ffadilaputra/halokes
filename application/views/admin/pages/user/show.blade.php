@@ -17,6 +17,9 @@
       <div class="row">
          <div class="col-lg-12">
             <h2>Identitas User</h2>
+            
+            <a class="btn btn-primary btn-lg" href="" style="float:right"><i class="fa fa-pencil"></i> Edit</a>
+            <br>
             <hr>
             <div class="col-lg-12">
                
@@ -56,6 +59,8 @@
          </div>
       </div>
    </div>
+   <br>
+   
 </div> <!-- identitas siswa end -->
 
 
