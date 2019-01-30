@@ -22,7 +22,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function all(){
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
-      $data['santri'] = SantriModel::all();
+      $data['santri'] = SantriModel::where([
+        'status_verifikasi' => 'terverifikasi'
+      ])->get();
       $this->view('admin.pages.santri.verifed',$data);
     }
 
