@@ -5,7 +5,7 @@
       <style>
          table{
          border-collapse: collapse;
-         width:70%;
+         width:90%;
          margin: 0 auto;
          }
          table th{
@@ -64,23 +64,33 @@
                                     <!-- tabel utama -->
                                     <table>
                                     <tr>
+                                        <td >
+                                        <!-- img santri -->
+                                        <img src="" alt=""  style="width:200px;float:left;margin-left:10px; height:250px; background-color:#eeeeee"> 
+                                        </td>
                                         <td>
-                                            <!-- img santri -->
-                                            <img src="" alt=""  style="width:200px;float:left; height:250px; background-color:#eeeeee"> 
+                                            
                                             <!-- tabel isi --> 
                                             <table style="border:3px solid black">
                                                 <tr>
                                                 <th style="text-align:left;padding-left:10px;">Nama</th>
-                                                <td style="padding-left:20px;">: Aura Kanza Caesaria</td>
+                                                <td style="padding-left:20px;">: {{ $santri['nama_lengkap'] }}</td>
                                                 </tr>
                                                 <tr>
-                                                <th style="text-align:left;padding-left:10px;">TTL</th>
-                                                <td style="padding-left:20px;">: Banjarmasin, 11 Februari 1998</td>
+                                                    <th style="text-align:left;padding-left:10px;">TTL</th>
+                                                    <td style="padding-left:20px;">: {{ $santri['tempat_lahir'] }}, {{ $santri['tgl_lahir'] }}</td>
                                                 </tr>
                                                 <tr>
-                                                <th style="text-align:left;padding-left:10px;">Jenjang</th>
-                                                <td style="padding-left:20px;">: Madrasah Aliyah</td>
+                                                    <th style="text-align:left;padding-left:10px;">Jenjang</th>
+                                                    @if($santri['tingkat_pendidikan'] == 'ma')
+                                                        <td style="padding-left:20px;">: {{ 'Madarasah Aliyah' }}</td>
+                                                        @elseif($santri['tingkat_pendidikan'] == 'mt')
+                                                        <td style="padding-left:20px;">: {{ 'Madarasah Tsanawiyah' }}</td>
+                                                        @elseif($santri['tingkat_pendidikan'] == 'md')
+                                                        <td style="padding-left:20px;">: {{ 'Madarasah Diniyah' }}</td>
+                                                    @endif
                                                 </tr>
+                                                
                                                 <tr>
                                                 <th colspan="2">
                                                     <h4>Nomor Virtual Account</h4>
@@ -88,7 +98,7 @@
                                                 </tr>
                                                 <tr>
                                                 <th colspan="2">
-                                                    <h3>9883005511180001</h3>
+                                                    <h3>{{ $santri->virtualAkun->no_pendaftaran }}</h3>
                                                 </th>
                                                 </tr>
                                                 <tr>
@@ -98,7 +108,7 @@
                                                 </tr>
                                                 <tr>
                                                 <th colspan="2">
-                                                    <h3>180001</h3>
+                                                    <h3>{{ $santri->virtualAkun->nomor_induk }}</h3>
                                                 </th>
                                                 </tr>
                                             </table>
@@ -133,7 +143,7 @@
                                             <td>
                                                 <table style="width:90%"> 
                                                 <tr>
-                                                    <td style="text-align:right;">Malang,1 Januari 2019</td>
+                                                    <td style="text-align:right;">{{ $date_now }}</td>
                                                 </tr>
                                                 <tr>
                                                     <td><br></td>

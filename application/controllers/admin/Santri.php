@@ -27,6 +27,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       ])->get();
       $this->view('admin.pages.santri.verifed',$data);
     }
+    public function ma(){
+      $this->autenthicateAdmin();
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+      $data['santri'] = SantriModel::all();
+      $this->view('admin.pages.santri.ma',$data);
+    }
+
+    public function mts(){
+      $this->autenthicateAdmin();
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+      $data['santri'] = SantriModel::all();
+      $this->view('admin.pages.santri.mts',$data);
+    }
+    
+    public function md(){
+      $this->autenthicateAdmin();
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+      $data['santri'] = SantriModel::all();
+      $this->view('admin.pages.santri.md',$data);
+    }
 
     public function verify($id){
       $this->autenthicateAdmin();
@@ -40,8 +60,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $data['admin'] = $this->session->userdata('admin_logged_in');
       $data['santri'] = SantriModel::find($id);
       $data['date_now'] = longdate_indo(date("Y-m-d"));
-      $this->view('admin.pages.santri.cetak',$data);
+      $this->view('admin.pages.santri.cetak_va',$data);
     }
+
+
 
     }
 

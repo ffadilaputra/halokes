@@ -42,8 +42,9 @@
                     <td>{{ $data->tempat_lahir }}</td>
                     <td>{{ $data->telepon }}</td>
                     <td>
-                      <a class="btn btn-default" href="{{ base_url('admin/user/show/').$data->id_users }}"><i class="fa fa-eye"></i></a>
-                      <a class="btn btn-default" href="{{ base_url('admin/user/edit/').$data->id_users }}"><i class="fa fa-pencil"></i></a>
+                      <a class="btn btn-warning" href="{{ base_url('admin/user/show/').$data->id_users }}"><i class="fa fa-eye"></i></a>
+                      <a class="btn btn-primary" href="{{ base_url('admin/user/edit/').$data->id_users }}"><i class="fa fa-pencil"></i></a>
+                      <a class="btn btn-danger" href="{{ base_url('admin/user/delete/').$data->id_users }}"><i class="fa fa-trash"></i></a>
                     </td>
                   </tr>
                   @endforeach

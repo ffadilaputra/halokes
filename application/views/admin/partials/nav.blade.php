@@ -69,7 +69,8 @@
       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{ $admin->email}} <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li>
-          <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
+          <!-- <a href="{{ base_url('admin/user/show/').$data->id_users }}"><i class="fa fa-fw fa-user"></i> Profile</a> -->
+          <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
         </li>
         <li class="divider"></li>
         <li>
@@ -103,6 +104,15 @@
         <ul id="santri" class="collapse">
           <li>
             <a href="{{ base_url('admin/santri/all') }}">Semua</a>
+          </li>
+          <li>
+            <a href="{{ base_url('admin/santri/ma') }}">Madarasah Aliyah</a>
+          </li>
+          <li>
+            <a href="{{ base_url('admin/santri/mts') }}">Madarasah Tsanawiyah</a>
+          </li>
+          <li>
+            <a href="{{ base_url('admin/santri/md') }}">Madarasah Diniyah</a>
           </li>
         </ul>
       </li>

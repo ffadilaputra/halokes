@@ -233,6 +233,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           $data['lahir'] = tgl_indo($tgl_santry);
           $this->view('front.page.cetak_kartu',$data);
+          // var_dump($_POST);
       }
 
       public function sukses(){
@@ -261,11 +262,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           }
         }
 
-      public function kartu(){
-        $this->view('front.page.kartu_peserta');
+      public function kartu($id){
+        $data['santri'] = SantriModel::find($id);
+        $data['date_now'] = longdate_indo(date("Y-m-d"));
+        $this->view('front.page.kartu_peserta',$data);
       }
       public function cetak(){
-        $this->view('front.page.cetak_kartu');
+        // $this->view('front.page.cetak_kartu');
+        var_dump($_POST);
       }
   }
 ?>
