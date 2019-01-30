@@ -1,4 +1,4 @@
-<h1>{{ $user->nama_lengkap }}</h1>
+
 @extends('admin.template')
 
 @section('content')
@@ -17,18 +17,18 @@
       <div class="row">
          <div class="col-lg-12">
             <h2>Identitas User</h2>
-            
-            <a class="btn btn-primary btn-lg" href="" style="float:right"><i class="fa fa-pencil"></i> Edit</a>
+
+         <a class="btn btn-primary btn-lg" href="{{ base_url('admin/user/edit/').$user->id_users }}" style="float:right"><i class="fa fa-pencil"></i> Ubah</a>
             <br>
             <hr>
             <div class="col-lg-12">
-               
+
                <table class="table table-bordered table-hover">
                    <tbody>
                        <tr>
                            <td colspan="2">
                                 <center>
-                                <img id="santri" src="{{ base_url('assets/wordify/') }}images/img_1.jpg" alt="your image" style="width:200px; height:250px; background-color:#eeeeee;" />
+                                {{-- <img id="santri" src="" style="width:200px; height:250px; background-color:#eeeeee;" /> --}}
                                 </center>
                            </td>
                        </tr>
@@ -52,24 +52,18 @@
                             <td class="col-sm-6 col-xs-6"><b>Email</b></td>
                             <td class="col-sm-6 col-xs-6">{{ $user->email }}</td>
                        </tr>
+                       <tr>
+                          <td class="col-sm-6 col-xs-6"><b>Alamat</b></td>
+                          <td class="col-sm-6 col-xs-6">{{ $user->alamat }}</td>
+                     </tr>
                    </tbody>
                </table>
-               
+
             </div>
          </div>
       </div>
    </div>
    <br>
-   
+
 </div> <!-- identitas siswa end -->
-
-
-@stop
-
-{{-- INI HARUS ADA DISEMUA LAYOUT SUPAYA BIAR BISA DI KLIK DROPDOWNNYA --}}
-@section('scripts')
-<!-- jQuery -->
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
 @stop
