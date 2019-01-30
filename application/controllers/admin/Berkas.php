@@ -66,6 +66,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           }else {
             echo ':(';
           }
-        }
+      }
+
+      public function delete($id){
+        SantriModel::destroy($id);
+        redirect('admin/berkas');
+      }
+
     }
+    
 ?>

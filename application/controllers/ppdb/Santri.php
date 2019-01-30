@@ -232,7 +232,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           ])->first();
 
           $data['lahir'] = tgl_indo($tgl_santry);
-          $this->view('front.page.cetak_kartu',$data);
+          // $this->view('front.page.cetak_kartu',$data);
+          var_dump($_POST);
       }
 
       public function sukses(){
@@ -267,7 +268,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $this->view('front.page.kartu_peserta',$data);
       }
       public function cetak(){
-        $this->view('front.page.cetak_kartu');
+        // $this->view('front.page.cetak_kartu');
+        var_dump($_POST);
       }
   }
 ?>
