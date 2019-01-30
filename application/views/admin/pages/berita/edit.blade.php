@@ -18,11 +18,11 @@
             @if(is_null($edit->thumb))
               <small class="text-danger">Gambar tidak ada</small>
             @else
-              <img src="{{ base_url('assets/uploads/').$edit->thumb }}" alt="">
+              <img style="width:600px;height:400px;"  src="{{ base_url('assets/uploads/').$edit->thumb }}" alt="">
             @endif
         </div>
         <div class="form-group">
-          <label for="">Thumbnail</label>
+          <label for="">Ganti Gambar</label>
           <input name="thumb" type="file" class="form-control">
             @if($errors->has('thumb'))
                 <small class="text-danger">{{ $errors->first('thumb') }}</small>
@@ -48,18 +48,5 @@
         </div>
         <?= form_close() ?>
 </div>
-
 @stop
-@section('scripts')
-<!-- jQuery -->
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
-<script src="{{ base_url('assets/ckeditor/')}}ckeditor.js"></script>
-<script>
-  CKEDITOR.replace('editor' ,{
-        filebrowserImageBrowseUrl : '<?php echo base_url('assets/kcfinder');?>',
-});
-</script>
 
-@stop

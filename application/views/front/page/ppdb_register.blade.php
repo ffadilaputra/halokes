@@ -3,10 +3,10 @@
 <!--contact start -->
  <!-- form_open('ppdb/santri/store')  -->
 
-<?= 
+<?=
 form_open('ppdb/santri/store')
 //  $atribut = array('id' => 'contact-form');
-//  form_open('ppdb/santri/store', $atribut); 
+//  form_open('ppdb/santri/store', $atribut);
 ?>
 
 <section id="contact" class="contact">
@@ -66,10 +66,10 @@ form_open('ppdb/santri/store')
 <!--contact start -->
  <!-- form_open('ppdb/santri/store')  -->
 
-<?= 
+<?=
 form_open('ppdb/santri/store')
 //  $atribut = array('id' => 'contact-form');
-//  form_open('ppdb/santri/store', $atribut); 
+//  form_open('ppdb/santri/store', $atribut);
 ?>
 
 <section id="contact" class="contact">
@@ -170,7 +170,7 @@ form_open('ppdb/santri/store')
                       <div class="form-group">
                         <label for="">Tgl</label>
                         <input type="number" min="1" max="31"  class="form-control" name="tgl"  id="tgl" required onkeyup="capt()">
-                        
+
                         @if($errors->has('tempat_lahir'))
                         <small class="text-danger">{{ $errors->first('tempat_lahir') }}</small>
                         @endif
@@ -181,10 +181,6 @@ form_open('ppdb/santri/store')
                     <!-- bln -->
                     <div class="col-sm-5 col-xs-12">
                       <div class="form-group">
-<<<<<<< HEAD
-                        <label for="">Tanggal Lahir</label>
-                        <input type="date" class="form-control" name="tgl_lahir" value="{{ old('tgl_lahir') }}">
-=======
                         <label for="">Bulan</label>
                         <select name="bln" id="bulan" class="form-control" required="required" placeholder="Bulan" style="border: 1px solid #ea8a8a;">
                           <option value="1">Januari</option>
@@ -200,7 +196,6 @@ form_open('ppdb/santri/store')
                           <option value="11">November</option>
                           <option value="12">Desember</option>
                         </select>
->>>>>>> frontend
                         @if($errors->has('tgl_lahir'))
                         <small class="text-danger">{{ $errors->first('tgl_lahir') }}</small>
                         @endif
@@ -226,15 +221,9 @@ form_open('ppdb/santri/store')
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label for="">Telepon</label>
-<<<<<<< HEAD
-                        <div class="form-group input-group">
-                              <span class="input-group-addon" value="0">+62</span>
-                              <input type="number" name="telepon" class="form-control" maxlength="10" value="{{ old('telepon') }}">
-=======
                         <!-- <div class="form-group input-group"> -->
                               <!-- <span class="input-group-addon" value="0">+62</span> -->
                               <input type="number" name="telepon" class="form-control" maxlength="13">
->>>>>>> frontend
                               @if($errors->has('telepon'))
                               <small class="text-danger">{{ $errors->first('telepon') }}</small>
                               @endif
@@ -263,11 +252,7 @@ form_open('ppdb/santri/store')
                     <div class="col-sm-12">
                       <label for="">Alamat</label>
                       <div class="form-group">
-<<<<<<< HEAD
-                        <textarea name="alamat" class="form-control" rows="3" id="comment" placeholder="Message">{{ old('alamat') }}</textarea>
-=======
                         <textarea name="alamat" class="form-control" rows="3" id="comment"></textarea>
->>>>>>> frontend
                       </div>
                       <!--/.form-group-->
                     </div>
@@ -391,25 +376,25 @@ form_open('ppdb/santri/store')
 
                           // validate the ReCaptcha, if something is wrong, we throw an Exception,
                           // i.e. code stops executing and goes to catch() block
-                          
+
                           if (!isset($_POST['g-recaptcha-response'])) {
                               throw new \Exception('ReCaptcha is not set.');
                           }
 
                           // do not forget to enter your secret key from https://www.google.com/recaptcha/admin
-                          
+
                           $recaptcha = new \ReCaptcha\ReCaptcha($recaptchaSecret, new \ReCaptcha\RequestMethod\CurlPost());
-                          
+
                           // we validate the ReCaptcha field together with the user's IP address
-                          
+
                           $response = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
 
                           if (!$response->isSuccess()) {
                               throw new \Exception('ReCaptcha was not validated.');
                           }
-                          
+
                           // everything went well, we can compose the message, as usually
-                          
+
                           $emailText = "You have a new message from your contact form\n=============================\n";
 
                           foreach ($_POST as $key => $value) {
@@ -418,14 +403,14 @@ form_open('ppdb/santri/store')
                                   $emailText .= "$fields[$key]: $value\n";
                               }
                           }
-                      
+
                           // All the neccessary headers for the email.
                           $headers = array('Content-Type: text/plain; charset="UTF-8";',
                               'From: ' . $from,
                               'Reply-To: ' . $from,
                               'Return-Path: ' . $from,
                           );
-                          
+
                           // Send email
                           mail($sendTo, $subject, $emailText, implode("\n", $headers));
 
@@ -450,7 +435,7 @@ form_open('ppdb/santri/store')
                   <!-- btn submit -->
                   <div class="row">
                     <div class="col-sm-12">
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="submit" class="btn btn-block btn-success">Submit</button>
                       <!--/.single-single-contact-btn-->
                     </div>
                     <!--/.col-->
@@ -474,6 +459,6 @@ form_open('ppdb/santri/store')
   <!--contact end -->
 
   <script>
-  
+
   </script>
 @endsection

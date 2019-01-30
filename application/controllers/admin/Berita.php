@@ -15,8 +15,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         public function create(){
             $this->autenthicateAdmin();
             $data['admin'] = $this->session->userdata('admin_logged_in');
-            $data['category'] = KategoriBeritaModel::all();
-
             $this->view('admin.pages.berita.create',$data);
         }
 
@@ -47,7 +45,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->autenthicateAdmin();
             $data['admin'] = $this->session->userdata('admin_logged_in');
             $data['edit'] = BeritaModel::find($id);
-            $data['category'] = KategoriBeritaModel::all();
             $this->view('admin.pages.berita.edit',$data);
         }
 

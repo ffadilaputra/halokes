@@ -30,6 +30,9 @@
    <body>
       <div class="wrap">
          <section class="site-section py-lg">
+          <div class="form-control">
+            <button onCLick="print()" class="btn btn-success">Cetak kartu</button>
+          </div>
             <div class="container">
                <div class="card">
                   <table style="border:2px solid black; width:70%"> <!-- tabel utama border -->
@@ -39,7 +42,7 @@
                             <table>
                                 <tr>
                                     <td align="right" ><br><br>
-                                    <img src="{{ base_url('assets/wordify/') }}images/logo.jpg" alt="" align="center" width="128" height="120"> 
+                                    <img src="{{ base_url('assets/wordify/') }}images/logo.jpg" alt="" align="center" width="128" height="120">
                                     </td>
                                     <td style="text-align: left; padding-left:20px;">
                                     <br>
@@ -54,12 +57,12 @@
                                     <td colspan="2"><hr></td>
                                 </tr>
                             </table>
-                            
+
                             <!-- tabel header end -->
 
                             <!-- card body start -->
                             <div class="card-body">
-                            
+
                                 <!-- row start -->
                                 <div class="row">
                                     <!-- tabel utama -->
@@ -67,20 +70,28 @@
                                     <tr>
                                         <td>
                                             <!-- img santri -->
-                                            <img src="" alt=""  style="width:170px;float:left; height:220px; background-color:#eeeeee"> 
-                                            <!-- tabel isi --> 
+                                            <img src="" alt=""  style="width:170px;float:left; height:220px; background-color:#eeeeee">
+                                            <!-- tabel isi -->
                                             <table style="border:3px solid black">
                                                 <tr>
                                                 <th style="text-align:left;padding-left:10px;">Nama</th>
-                                                <td style="padding-left:20px;">: Aura Kanza Caesaria</td>
+                                                <td style="padding-left:20px;">: {{ $santri['nama_lengkap'] }}</td>
                                                 </tr>
                                                 <tr>
                                                 <th style="text-align:left;padding-left:10px;">TTL</th>
-                                                <td style="padding-left:20px;">: Banjarmasin, 11 Februari 1998</td>
+                                                <td style="padding-left:20px;">: {{ $santri['tempat_lahir'] }}, 11 Februari 1998</td>
                                                 </tr>
                                                 <tr>
                                                 <th style="text-align:left;padding-left:10px;">Jenjang</th>
-                                                <td style="padding-left:20px;">: Madrasah Aliyah</td>
+
+                                                @if($santri['tingkat_pendidikan'] == 'ma')
+                                                    <td style="padding-left:20px;">: {{ 'Madarasah Aliyah' }}</td>
+                                                  @elseif($santri['tingkat_pendidikan'] == 'mt')
+                                                    <td style="padding-left:20px;">: {{ 'Madarasah Tsanawiyah' }}</td>
+                                                  @elseif($santri['tingkat_pendidikan'] == 'md')
+                                                  <td style="padding-left:20px;">: {{ 'Madarasah Diniyah' }}</td>
+                                                @endif
+
                                                 </tr>
                                                 <tr>
                                                 <th colspan="2">
@@ -89,10 +100,10 @@
                                                 </tr>
                                                 <tr>
                                                 <th colspan="2">
-                                                    <h3>2101019110001</h3>
+                                                    <h3>{{ $nomor }}</h3>
                                                 </th>
                                                 </tr>
-                                                
+
                                             </table>
                                             <!-- tabel isi end-->
                                         </td>
@@ -100,7 +111,7 @@
                                     </table>
                                     <!-- tabel utama end -->
                                 </div><!-- row end -->
-                                
+
                                 <br>
                             </div>
                             <!-- card body start -->

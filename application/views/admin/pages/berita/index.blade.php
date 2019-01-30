@@ -26,7 +26,6 @@
                   <tr>
                      <th style="width:5%">No.</th>
                      <th style="width:25%">Judul</th>
-                     <th style="width:60%">Isi</th>
                      <th>kategori</th>
                      <th style="width:20%">Opsi</th>
                   </tr>
@@ -37,7 +36,6 @@
                   <tr>
                      <td>{{ $n++ }}</td>
                      <td>{{ $data->title }}</td>
-                     <td>{!! $data->description !!}</td>
                      <td>{{ $data->id_news_category }}</td>
                      <td>
                         <a class="btn btn-success" href="{{ base_url('admin/berita/show/').$data->id_news }}"><i class="fa fa-eye"></i></a>
@@ -57,17 +55,4 @@
       </div>
    </div>
 </div>
-@stop
-@section('scripts')
-<!-- jQuery -->
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.dataTables.min.js"></script>
-<script src="{{ base_url('assets/sb-admin/') }}js/dataTables.bootstrap.min.js"></script>
-<script>
-   $(document).ready(()=> {
-     $('#main').DataTable();
-   })
-</script>
 @stop

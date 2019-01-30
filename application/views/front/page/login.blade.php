@@ -6,9 +6,7 @@
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
-                            <a href="#">
-                                <img src="images/icon/logo.png" alt="CoolAdmin">
-                            </a>
+
                         </div>
                         <div class="login-form">
                         <?= form_open('admin/login/loginProcess') ?>
@@ -28,12 +26,6 @@
                                     @endif
                                 </div>
                                 <div class="login-checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember">Remember Me
-                                    </label>
-                                    <label>
-                                        <a href="#">Forgotten Password?</a>
-                                    </label>
                                 </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
                                 <!-- <div class="social-login-content">
@@ -44,12 +36,6 @@
                                 </div> -->
                             <!-- </form> -->
                         <?= form_close() ?>
-                            <div class="register-link">
-                                <p>
-                                    Don't you have account?
-                                    <a href="#">Sign Up Here</a>
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>

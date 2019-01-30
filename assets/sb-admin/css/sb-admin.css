@@ -6,8 +6,17 @@
 
 /* Global Styles */
 
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+
 body {
-    margin-top: 100px;
+    width:100%;
+    min-height:100%;
     background-color: #222;
 }
 
@@ -15,6 +24,7 @@ body {
     body {
         margin-top: 50px;
     }
+
 }
 
 #wrapper {

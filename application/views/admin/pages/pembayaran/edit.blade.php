@@ -13,7 +13,7 @@
    </div>
 </div>
 <div class="col-lg-8">
-   <?= form_open_multipart('admin/pembayaran/update/'.$santri->id); ?>
+   <?= form_open_multipart('admin/pembayaran/update/'.$edit->id_tanggugan); ?>
    <div class="form-group">
    <label for="">Nama Santri</label><br>
    <h3>{{ $santri->pembayaranSantri->nama_lengkap }}</h3>
@@ -41,23 +41,5 @@
     </div>
    <?= form_close() ?>
 </div>
-
-<div class="col-md-4">
-    <label for="">Bukti Pembayaran Sebelumnya</label><br>
-    <img src="{{ base_url('assets/uploads/'.$santri->bukti_pembayaran) }}" class="img-thumbnail" alt="Cinque Terre">
-</div>
-
-@stop
-{{-- INI HARUS ADA DISEMUA LAYOUT SUPAYA BIAR BISA DI KLIK DROPDOWNNYA --}}
-@section('scripts')
-<!-- jQuery -->
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-
-<script>
-</script>
 
 @stop

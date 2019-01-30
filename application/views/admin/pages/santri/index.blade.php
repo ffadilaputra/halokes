@@ -42,8 +42,10 @@
                     <td>{{ $data->nik }}</td>
                     <td>{{ date("d/m/Y",strtotime($data->tgl_lahir)) }}</td>
                     <td>
-                      <a class="btn btn-default" href="{{ base_url('admin/santri/show/').$data->id_santri }}"><i class="fa fa-eye"></i></a>
-                      <a class="btn btn-warning" href="{{ base_url('admin/verify/show/').$data->id_santri }}"><i class="fa fa-check"></i></a>
+
+                      <a class="btn btn-info" href="{{ base_url('admin/santri/show/').$data->id_santri }}"><i class="fa fa-eye"></i>&nbsp;Detail</a>
+                      <a class="btn btn-success" href="{{ base_url('admin/santri/verify/').$data->id_santri }}"><i class="fa fa-check-square-o" aria-hidden="true"></i> Verify</a>
+
                     </td>
                   </tr>
                   @endforeach
@@ -58,19 +60,4 @@
       </div>
    </div>
 </div>
-@stop
-
-{{-- INI HARUS ADA DISEMUA LAYOUT SUPAYA BIAR BISA DI KLIK DROPDOWNNYA --}}
-@section('scripts')
-<!-- jQuery -->
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.dataTables.min.js"></script>
-<script src="{{ base_url('assets/sb-admin/') }}js/dataTables.bootstrap.min.js"></script>
-<script>
-   $(document).ready(()=> {
-     $('#main').DataTable();
-   })
-</script>
 @stop

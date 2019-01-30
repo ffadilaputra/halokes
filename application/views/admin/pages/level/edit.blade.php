@@ -13,19 +13,12 @@
    </div>
 </div>
 <div class="col-lg-4">
-   <?= form_open('admin/level/update/'.$edit->id_level); ?>
+   <?= form_open('admin/tahunakademik/update/'.$edit->id_tahun_akademik); ?>
    <div class="form-group">
       <label>Level</label>
-      <input class="form-control"  type="text" name="level" value="{{ $edit->level }}">
+      <input class="form-control"  type="text" name="nama" value="{{ $edit->level }}">
    </div>
    <input type="submit" class="btn btn-success" style="float:right">
    <?= form_close() ?>
 </div>
-@stop
-{{-- INI HARUS ADA DISEMUA LAYOUT SUPAYA BIAR BISA DI KLIK DROPDOWNNYA --}}
-@section('scripts')
-<!-- jQuery -->
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
 @stop
