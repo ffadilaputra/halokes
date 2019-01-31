@@ -56,4 +56,4 @@ Thumbs.db
 !.phpcs.xml.dist
 
 # Upload Folder
-
+/assets/uploads/
