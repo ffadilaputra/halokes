@@ -3,11 +3,11 @@
 <div class="row">
    <div class="col-lg-12">
       <h1 class="page-header">
-         Verifikasi Santri
+         Data semua santri terverifikasi
       </h1>
       <ol class="breadcrumb">
          <li class="active">
-            <i class="fa fa-check-square-o" aria-hidden="true"></i> Verifikasi Santri
+            <i class="fa fa-check-square-o" aria-hidden="true"></i> Data Santri
          </li>
       </ol>
    </div>
@@ -27,7 +27,6 @@
                     <th>No</th>
                     <td>Nama Lengkap</td>
                     <td>Tempat Lahir</td>
-                    <td>Kota</td>
                     <td>Tanggal Lahir</td>
                     <td>Jenis Kelamin</td>
                     <td>Status Akun</td>
@@ -42,20 +41,19 @@
                     <td>{{ $n++ }}</td>
                     <td>{{ $item->nama_lengkap }} </td>
                     <td>{{ $item->tempat_lahir }}</td>
-                    <td>{{ $item->kota }}</td>
                     <td>{{ $item->tgl_lahir }}</td>
                     <td>{{ $item->jenis_kelamin }}</td>
-                    <td>{{ $item->status_verifikasi }}</td>
+                    <td><span class="label label-success">{{ $item->status_verifikasi }}</span></td>
                     <td>
-                        <a class="btn btn-info" href="{{ base_url('admin/santri/show/').$item->id_santri }}"><i class="fa fa-eye"></i>&nbsp;Detail</a>
+                          <a class="btn btn-info" href="{{ base_url('admin/santri/show/').$item->id_santri }}"><i class="fa fa-eye"></i>&nbsp;Detail</a>
                         @if($item->status_verifikasi == 'terverifikasi')
                         @elseif($item->status_verifikasi == 'belum_terverifikasi')
-                        <a class="btn btn-success" href="{{ base_url('admin/santri/verify/').$item->id_santri }}"><i class="fa fa-check"></i>&nbsp;Detail</a>
+                          <a class="btn btn-success" href="{{ base_url('admin/santri/verify/').$item->id_santri }}"><i class="fa fa-check"></i>&nbsp;Detail</a>
                         @endif
                       </td>
                     <td>
                     <a href="{{ base_url('admin/santri/print/').$item->id_santri }}" class="btn btn-info"><i class="fa fa-print"></i></a>
-                    </td>
+                  </td>
                   </tr>
                   @endforeach
                </tbody>

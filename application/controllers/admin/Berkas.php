@@ -29,8 +29,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }else{
           echo 'santri belum mengisi berkas orang tua/wali';
         }
-      }else {
-        echo ':(';
       }
     }
 
@@ -44,8 +42,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           }else{
             echo 'santri belum mengisi pendidikan terakhir';
           }
-        }else {
-          echo ':(';
         }
       }
 
@@ -63,8 +59,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }else{
               echo 'santri belum mengisi kelengkapan berkas';
             }
-          }else {
-            echo ':(';
           }
       }
 
@@ -72,62 +66,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         SantriModel::destroy($id);
         redirect('admin/berkas');
       }
-
-      // wali
-      public function eWali($id = NULL){
-        $this->autenthicateAdmin();
-        if(isset($id)){
-          $data['parents'] = IbuModel::where(['id_santri' => $id])->first();
-          $data['ayah'] = AyahModel::where(['id_santri' => $id])->first();
-          $data['wali'] = WaliModel::where(['id_santri' => $id])->first();
-          if(isset($data['parents'])){
-            $data['admin'] = $this->session->userdata('admin_logged_in');
-            $this->view('admin.pages.kelengkapan.edit_wali',$data);
-          }else{
-            echo 'santri belum mengisi berkas orang tua/wali';
-          }
-        }else {
-          echo ':(';
-        }
-      }
-
-      // ibu
-      public function eIbu($id = NULL){
-        $this->autenthicateAdmin();
-        if(isset($id)){
-          $data['parents'] = IbuModel::where(['id_santri' => $id])->first();
-          $data['ayah'] = AyahModel::where(['id_santri' => $id])->first();
-          $data['wali'] = WaliModel::where(['id_santri' => $id])->first();
-          if(isset($data['parents'])){
-            $data['admin'] = $this->session->userdata('admin_logged_in');
-            $this->view('admin.pages.kelengkapan.edit_ibu',$data);
-          }else{
-            echo 'santri belum mengisi berkas orang tua/wali';
-          }
-        }else {
-          echo ':(';
-        }
-      }
-
-      // ayah
-      public function eAyah($id = NULL){
-        $this->autenthicateAdmin();
-        if(isset($id)){
-          $data['parents'] = IbuModel::where(['id_santri' => $id])->first();
-          $data['ayah'] = AyahModel::where(['id_santri' => $id])->first();
-          $data['wali'] = WaliModel::where(['id_santri' => $id])->first();
-          if(isset($data['parents'])){
-            $data['admin'] = $this->session->userdata('admin_logged_in');
-            $this->view('admin.pages.kelengkapan.edit_ayah',$data);
-          }else{
-            echo 'santri belum mengisi berkas orang tua/wali';
-          }
-        }else {
-          echo ':(';
-        }
-      }
-
-
     }
-    
+
 ?>

@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $_POST['password'] = md5($_POST['password']);
       $_POST['id_alamat'] = 0;
       UsersModel::create($this->input->post());
-      var_dump($_POST);
+      redirect('admin/user');
     }
 
     public function show($id){
@@ -49,20 +49,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     public function update($id){
-      $this->validate($this->input->post(),[
-        'nama_lengkap' => 'required',
-        'tempat_lahir' => 'required',
-        'tgl_lahir' => 'required',
-        'telepon' => 'required',
-        'email' => 'required',
-        'password'=> 'required',
-        'id_level' => 'required',
-      ]);
-      UsersModel::find($id)->update($this->input->post());
+      $_POST['password'] = md5($_POST['password']);
+        UsersModel::find($id)->update($this->input->post());
+        redirect('admin/user');
     }
 
     public function delete($id){
-      UsersModel::destroy($id);
+        UsersModel::destroy($id);
     }
 
 }

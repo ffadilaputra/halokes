@@ -46,5 +46,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       redirect('admin/pendidikan');
     }
 
+    public function pendidikan_edit($id){
+      $this->autenthicateAdmin();
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+      $data['edit'] = PendidikanTerakhirModel::where([
+        'id_siswa' => $id
+      ])->first();
+      $this->view('admin.pages.kelengkapan.edit_pendidikan',$data);
+    }
+
+    public function pendidikan_update($id){
+      PendidikanTerakhirModel::where(['id_siswa' => $id])->update($this->input->post());
+      redirect('admin/pendidikan/pendidikan_edit/'.$id);
+    }
+
 }
 ?>

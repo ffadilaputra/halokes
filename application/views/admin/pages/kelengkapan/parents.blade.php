@@ -2,16 +2,11 @@
 @section('content')
 
 <div class="row">
-
-  <div>
-    <!-- <a class="btn btn-primary" href="{{ base_url('admin/berkas/parents/'.$data->id_santri) }}"><i class="fa fa-user"></i></a> -->
-  </div>
-
   <div class="col-md-6">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4>Data Ibu</h4>
-            <a class="btn btn-success" href="" style="float:right"><i class="fa fa-pencil"></i> Edit</a>
+            <a class="btn btn-success" href="<?= base_url('admin/parents/ibu/'.$parents->id_santri) ?>" style="float:right"><i class="fa fa-pencil"></i> Edit</a>
         </div>
         <div class="panel-body">
           <h4><b>Data Pribadi</b></h4>
@@ -32,7 +27,7 @@
                   </tr>
                   <tr>
                       <th>Tanggal Lahir</th>
-                      <td>{{ $parents->tgl_lahir }}</td>
+                      <td>{{ tgl_indo($parents->tgl_lahir) }}</td>
                   </tr>
               </tbody>
           </table>
@@ -93,7 +88,7 @@
                   </tr>
               </tbody>
           </table>
-          
+
         </div>
     </div>
 
@@ -104,7 +99,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4>Data Ayah</h4>
-            <a class="btn btn-success" href="" style="float:right"><i class="fa fa-pencil"></i> Edit</a>
+        <a class="btn btn-success" href="{{ base_url('admin/parents/ayah/'.$parents->id_santri) }} " style="float:right"><i class="fa fa-pencil"></i> Edit</a>
         </div>
         <div class="panel-body">
           <h4><b>Data Pribadi</b></h4>
@@ -186,7 +181,7 @@
                   </tr>
               </tbody>
           </table>
-          
+
         </div>
     </div>
 
@@ -197,11 +192,11 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4>Data Wali</h4>
-            <!-- <a class="btn btn-success" href="{{ base_url('admin/berkas/eWali/'.$data->id_santri) }}" style="float:right"><i class="fa fa-pencil"></i> Edit</a> -->
+            <a class="btn btn-success" href="{{ base_url('admin/parents/wali/'.$parents->id_santri) }}" style="float:right"><i class="fa fa-pencil"></i> Edit</a>
         </div>
         <div class="panel-body">
           <h4><b>Data Pribadi</b></h4>
-          <hr>
+            <hr>
           <table class="table table-bordered table-hover">
               <tbody>
                   <tr>
@@ -279,7 +274,7 @@
                   </tr>
               </tbody>
           </table>
-          
+
         </div>
     </div>
 

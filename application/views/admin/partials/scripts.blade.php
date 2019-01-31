@@ -5,6 +5,7 @@
 <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 <script src="{{ base_url('assets/ckeditor/')}}ckeditor.js"></script>
 <script>
   CKEDITOR.replace('editor' ,{
@@ -14,5 +15,11 @@
 <script>
     $(document).ready(()=> {
       $('#main').DataTable();
-    })
+    });
+    $('.input-group.date').datepicker({
+      format: "yyyy-m-d",
+      clearBtn: true,
+      language: "id",
+      calendarWeeks: true
+    });
  </script>

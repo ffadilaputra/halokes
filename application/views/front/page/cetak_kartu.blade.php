@@ -32,6 +32,7 @@
          <section class="site-section py-lg">
           <div class="form-control">
             <button onCLick="print()" class="btn btn-success">Cetak kartu</button>
+            <a href="{{ base_url('main') }}" >Kembali ke laman utama</a>
           </div>
             <div class="container">
                <div class="card">
