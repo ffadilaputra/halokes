@@ -31,6 +31,7 @@
             <div class="container">
                <!-- download -->
                <a href="{{base_url('ppdb/santri/cetak') }}" class="btn" style="background-color:#408ab4; color:white" onclick=print();><i class="fa fa-download"></i> Cetak Kartu Peserta</a>
+               <center><a href="{{ base_url('main') }}" >Kembali ke laman utama</a></center>
                <br><br>
                <div class="card">
                   <!-- tabel header -->

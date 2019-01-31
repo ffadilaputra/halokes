@@ -126,6 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
              'jenis_sekolah_siswa' => $this->input->post('jenis_sekolah_siswa'),
              'status_sekolah_siswa' => $this->input->post('status_sekolah_siswa'),
              'alamat_sekolah_siswa' => $this->input->post('alamat_sekolah_siswa'),
+             'kota' => $this->input->post('provinsi_siswa'),
              'provinsi_siswa' => $this->input->post('provinsi_siswa'),
              'nss' => $this->input->post('nss_siswa'),
              'npsn' => $this->input->post('npsn_siswa'),

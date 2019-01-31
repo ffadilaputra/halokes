@@ -16,7 +16,7 @@ application/logs/*
 !application/logs/.htaccess
 /application/vendor/
 
-# jetbrains
+# jetbrainsfoto
 .idea
 
 # ENV
@@ -54,3 +54,6 @@ Thumbs.db
 !.gitignore
 !.editorconfig
 !.phpcs.xml.dist
+
+# Upload Folder
+

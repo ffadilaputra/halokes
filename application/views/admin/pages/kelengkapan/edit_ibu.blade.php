@@ -12,70 +12,105 @@
         <div class="panel-body">
           <h4><b>Data Pribadi</b></h4>
           <hr>
-
-          
+          <?= form_open('admin/parents/update_ibu/'.$parents->id_santri) ?>
           <div class="form-group">
               <label>Nama Lengkap</label>
-              <input type="text" name="" id="" class="form-control" value="{{ $parents->nama_lengkap }}">
-              
+              <input type="text" name="nama_lengkap" class="form-control" value="{{ $parents->nama_lengkap }}">
           </div>
           <div class="form-group">
               <label>Panggilan</label>
-              <input type="text" name="" class="form-control" id="" value="{{ $parents->panggilan }}">
-              
+              <input type="text" name="panggilan" class="form-control" id="" value="{{ $parents->panggilan }}">
           </div>
           <div class="form-group">
               <label>NIK</label>
-              <input type="text" name="" class="form-control" id="" value="{{ $parents->nik }}">
+              <input type="text" name="nik" class="form-control" id="" value="{{ $parents->nik }}">
           </div>
           <div class="form-group">
               <label>Tanggal Lahir</label>
-              <input type="text" name="" class="form-control" id="" value="{{ $parents->tgl_lahir }}">
-          </div>
+              <div class="input-group date">
+                  <input name="tgl_lahir" type="text" class="form-control" value="{{ $parents->tgl_lahir }}">
+                  <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-th"></i>
+                  </span>
+              </div>
+            </div>
           <h4><b>Alamat Lengkap</b></h4>
           <hr>
           <div class="form-group">
               <label>Provinsi</label>
-              <input type="text" name="" class="form-control" id="" value=" {{ $parents->provinsi }} ">
+              <input type="text" name="provinsi" class="form-control" id="" value=" {{ $parents->provinsi }} ">
           </div>
           <div class="form-group">
               <label>Kota</label>
-              <input type="text" name="" class="form-control" id="" value="{{ $parents->kota }} ">
+              <input type="text" name="kota" class="form-control" id="" value="{{ $parents->kota }} ">
           </div>
           <div class="form-group">
               <label>Alamat Lengkap</label>
-              <input type="text" name="" class="form-control" id="" value=" {{ $parents->alamat }} ">
+              <input type="text" name="alamat" class="form-control" id="" value=" {{ $parents->alamat }} ">
           </div>
           <h4><b>Pendidikan dan Pekerjaan</b></h4>
           <hr>
           <div class="form-group">
               <label>Pendidikan Terakhir</label>
-              <input type="text" name="" class="form-control" id="" value="{{ $parents->pendidikan }}">
+               <select class="form-control" name="pendidikan" id="" value="">
+                  <option @if($parents->pendidikan == 'SD/MI') selected @endif value="SD/MI">SD/MI</option>
+                  <option @if($parents->pendidikan == 'SMP/MTs/SLTP') selected @endif value="SMP/MTs/SLTP">SMP/MTs/SLTP</option>
+                  <option @if($parents->pendidikan == 'SMA/MA/SLTA/SMK') selected @endif value="SMA/MA/SLTA/SMK">SMA/MA/SLTA/SMK</option>
+                  <option @if($parents->pendidikan == 'D1') selected @endif value="D1">D1</option>
+                  <option @if($parents->pendidikan == 'D3') selected @endif value="D3">D3</option>
+                  <option @if($parents->pendidikan == 'D4') selected @endif value="D4">D4</option>
+                  <option @if($parents->pendidikan == 'S1') selected @endif value="S1">S1</option>
+                  <option @if($parents->pendidikan == 'S2') selected @endif value="S2">S2</option>
+                  <option @if($parents->pendidikan == 'S3') selected @endif value="S3">S3</option>
+              </select>
           </div>
           <div class="form-group">
               <label>Pekerjaan saat ini</label>
-              <input type="text" name="" class="form-control" id="" value="{{ $parents->pekerjaan }}">
-          </div>
+              <select class="form-control" name="pekerjaan" id="">
+                  <option @if($parents->pekerjaan == 'Swasta') selected @endif value="Swasta">Swasta</option>
+                  <option @if($parents->pekerjaan == 'PNS') selected @endif value="PNS">PNS</option>
+                  <option @if($parents->pekerjaan == 'Wiraswasta') selected @endif value="Wiraswasta">Wiraswasta</option>
+                  <option @if($parents->pekerjaan == 'Petani') selected @endif value="Petani">Petani</option>
+                  <option @if($parents->pekerjaan == 'Buruh') selected @endif value="Buruh">Buruh</option>
+              </select>
+            </div>
           <div class="form-group">
               <label>Penghasilan perbulan</label>
-              <input type="text" name="" class="form-control" id="" value="{{ $parents->penghasilan }}">
+              <select class="form-control" name="penghasilan" id="">
+                  <option @if($parents->penghasilan == '<1jt') selected @endif value="<1jt">&lt; Rp 1000.000,-</option>
+                  <option @if($parents->penghasilan == '1jt-2jt') selected @endif value="1jt-2jt">Rp 1.000.000,- - Rp 2.0000.000,-</option>
+                  <option @if($parents->penghasilan == '2jt-3jt') selected @endif value="2jt-3jt">Rp 2.000.000,- - Rp 3.0000.000,-</option>
+                  <option @if($parents->penghasilan == '4jt-5jt') selected @endif value="4jt-5jt">Rp 4.000.000,- - Rp 5.0000.000,-</option>
+                  <option @if($parents->penghasilan == '>5jt') selected @endif value=">5jt"> &gt; Rp 5.0000.000,-</option>
+                  <option @if($parents->penghasilan == '>10jt') selected @endif value=">10jt"> &gt; Rp 10.0000.000,-</option>
+              </select>
           </div>
           <h4><b>Status</b></h4>
           <hr>
           <div class="form-group">
               <label>Hubungan ibu dengan santri</label>
-              <input type="text" name="" class="form-control" id="" value="{{ $parents->hbgn_ibu_santri }}">
+              <select class="form-control" name="hbgn_ibu_santri">
+                  <option @if($parents->hbgn_ibu_santri == 'kandung' ) selected @endif value="kandung">Ibu Kandung</option>
+                  <option @if($parents->hbgn_ibu_santri == 'tiri' ) selected @endif value="tiri">Ibu Tiri</option>
+                  <option @if($parents->hbgn_ibu_santri == 'angkat' ) selected @endif value="angkat">Ibu Angkat</option>
+              </select>
           </div>
           <div class="form-group">
               <label>Status Ibu</label>
-              <input type="text" name="" class="form-control" id="" value="{{ $parents->status_ibu }}">
+              <select class="form-control" name="status_ibu" id="">
+                  <option @if($parents->status_ibu == 'hidup' ) selected @endif  value="hidup">Hidup</option>
+                  <option @if($parents->status_ibu == 'meninggal' ) selected @endif value="meninggal">Meninggal</option>
+                  <option @if($parents->status_ibu == 'hilang' ) selected @endif value="hilang">Hilang</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <input type="submit" class="btn btn-success">
           </div>
         </div>
+        <?= form_close() ?>
     </div>
-
     <!-- Split button -->
 </div>
-
 </div>
 @stop
 

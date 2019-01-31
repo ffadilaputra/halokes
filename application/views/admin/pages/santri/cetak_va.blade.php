@@ -38,7 +38,7 @@
                             <table>
                                 <tr>
                                     <td align="right" ><br><br>
-                                    <img src="{{ base_url('assets/wordify/') }}images/logo.jpg" alt="" align="center" width="128" height="120"> 
+                                    <img src="{{ base_url('assets/wordify/') }}images/logo.jpg" alt="" align="center" width="128" height="120">
                                     </td>
                                     <td style="text-align: left; padding-left:20px;">
                                     <br>
@@ -53,12 +53,12 @@
                                     <td colspan="2"><hr></td>
                                 </tr>
                             </table>
-                            
+
                             <!-- tabel header end -->
 
                             <!-- card body start -->
                             <div class="card-body">
-                            
+
                                 <!-- row start -->
                                 <div class="row">
                                     <!-- tabel utama -->
@@ -66,11 +66,15 @@
                                     <tr>
                                         <td >
                                         <!-- img santri -->
-                                        <img src="" alt=""  style="width:200px;float:left;margin-left:10px; height:250px; background-color:#eeeeee"> 
-                                        </td>
+                                        @if(isset($santri->berkasSantri->foto_santri))
+                                          <img src="{{ base_url('assets/uploads/'.$santri->berkasSantri->foto_santri) }}" alt=""  style="width:200px;float:left;margin-left:10px; height:250px;">
+                                        @else
+                                          <h3>Santri belum melengkapi berkas</h3>
+                                        @endif
+                                      </td>
                                         <td>
-                                            
-                                            <!-- tabel isi --> 
+
+                                            <!-- tabel isi -->
                                             <table style="border:3px solid black">
                                                 <tr>
                                                 <th style="text-align:left;padding-left:10px;">Nama</th>
@@ -90,7 +94,7 @@
                                                         <td style="padding-left:20px;">: {{ 'Madarasah Diniyah' }}</td>
                                                     @endif
                                                 </tr>
-                                                
+
                                                 <tr>
                                                 <th colspan="2">
                                                     <h4>Nomor Virtual Account</h4>
@@ -98,7 +102,11 @@
                                                 </tr>
                                                 <tr>
                                                 <th colspan="2">
-                                                    <h3>{{ $santri->virtualAkun->no_pendaftaran }}</h3>
+                                                  @if(isset($santri->virtualAkun->no_virtual_account))
+                                                    <h3>{{ $santri->virtualAkun->no_virtual_account }}</h3>
+                                                  @else
+                                                    <h3>Akun belum diverifikasi gan..</h3>
+                                                  @endif
                                                 </th>
                                                 </tr>
                                                 <tr>
@@ -118,7 +126,7 @@
                                     </table>
                                     <!-- tabel utama end -->
                                 </div><!-- row end -->
-                                
+
                                 <br>
 
                                 <!-- footer row -->
@@ -141,7 +149,7 @@
                                                 </table>
                                             </td>
                                             <td>
-                                                <table style="width:90%"> 
+                                                <table style="width:90%">
                                                 <tr>
                                                     <td style="text-align:right;">{{ $date_now }}</td>
                                                 </tr>
