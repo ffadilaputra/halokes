@@ -7,7 +7,7 @@ class VirtualAkunModel extends Eloquent {
 
   protected $table      = 'virtual_akun';
   protected $primaryKey = 'id_virtual_akun';
-  protected $fillable   = ['id_santri','no_pendaftaran','nomor_induk'];
+  protected $fillable   = ['id_santri','no_virtual_account','no_pendaftaran','nomor_induk'];
   public $timestamps = true;
 
   public function getDetails(){
