@@ -29,6 +29,7 @@
    <body>
       <div class="wrap">
          <section class="site-section py-lg">
+           <a href="" onClick="print()">Cetak Dokumen</a>
             <div class="container">
                <div class="card">
                   <table style="border:2px solid black; width:70%"> <!-- tabel utama border -->
