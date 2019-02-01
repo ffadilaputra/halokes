@@ -62,6 +62,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           }
       }
 
+      public function santri($id){
+        $this->autenthicateAdmin();
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        $data['santri'] = SantriModel::where(['id_santri' => $id])->first();
+        $this->view('admin.pages.kelengkapan.show_santri',$data);
+      }
+
       public function delete($id){
         SantriModel::destroy($id);
         redirect('admin/berkas');

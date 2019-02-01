@@ -4,6 +4,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   class Parents extends MY_Controller {
 
+    public function santri($santri){
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+      $data['santri'] = SantriModel::where(['id_santri' => $santri])->first();
+      $this->view('admin.pages.kelengkapan.edit_santri',$data);
+    }
+
+    public function update_santri($santri){
+      SantriModel::where(['id_santri' => $santri])->update($this->input->post());
+      redirect('admin/berkas/santri/'.$santri);
+    }
 
     public function ibu($santri){
       $this->autenthicateAdmin();

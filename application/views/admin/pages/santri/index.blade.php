@@ -25,7 +25,6 @@
                <thead>
                   <tr>
                      <th>No</th>
-                     <th>NIS</th>
                      <th>Nama Lengkap</th>
                      <th>NIK</th>
                      <th>Tanggal lahir</th>
@@ -37,7 +36,6 @@
                   @foreach($santri as $data)
                   <tr>
                     <td>{{ $n++ }}</td>
-                    <td>{{ $data->nis }}</td>
                     <td>{{ $data->nama_lengkap }}</td>
                     <td>{{ $data->nik }}</td>
                     <td>{{ date("d/m/Y",strtotime($data->tgl_lahir)) }}</td>

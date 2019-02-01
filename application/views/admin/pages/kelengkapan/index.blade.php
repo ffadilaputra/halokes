@@ -42,9 +42,10 @@
                      <td>{{ $data->tempat_lahir }}</td>
                      <td>{{ $data->tingkat_pendidikan }}</td>
                      <td>
-                        <a class="btn btn-primary" href="{{ base_url('admin/berkas/parents/'.$data->id_santri) }}"><i class="fa fa-user"></i></a>
-                        <a class="btn btn-info" href="{{ base_url('admin/berkas/education/'.$data->id_santri) }} "><i class="fa fa-university"></i></a>
-                        <a class="btn btn-success" href="{{ base_url('admin/berkas/archive/'.$data->id_santri) }}"><i class="fa fa-upload"></i></a>
+                        <a class="btn btn-sm btn-warning" href="{{ base_url('admin/berkas/santri/'.$data->id_santri) }}"><i class="fa fa-user"></i></a>
+                        <a class="btn btn-sm btn-primary" href="{{ base_url('admin/berkas/parents/'.$data->id_santri) }}"><i class="fa fa-users"></i></a>
+                        <a class="btn btn-sm btn-info" href="{{ base_url('admin/berkas/education/'.$data->id_santri) }} "><i class="fa fa-university"></i></a>
+                        <a class="btn btn-sm btn-success" href="{{ base_url('admin/berkas/archive/'.$data->id_santri) }}"><i class="fa fa-upload"></i></a>
                      </td>
                   </tr>
                   @endforeach
