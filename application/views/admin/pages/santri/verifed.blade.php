@@ -41,7 +41,7 @@
                     <td>{{ $n++ }}</td>
                     <td>{{ $item->nama_lengkap }} </td>
                     <td>{{ $item->tempat_lahir }}</td>
-                    <td>{{ $item->tgl_lahir }}</td>
+                    <td>{{ tgl_indo($item->tgl_lahir) }}</td>
                     <td>{{ $item->jenis_kelamin }}</td>
                     <td><span class="label label-success">{{ $item->status_verifikasi }}</span></td>
                     <td>

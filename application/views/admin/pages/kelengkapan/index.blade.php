@@ -40,7 +40,15 @@
                      <td>{{ $data->nama_lengkap }}</td>
                      <td>{{ $data->jenis_kelamin }}</td>
                      <td>{{ $data->tempat_lahir }}</td>
-                     <td>{{ $data->tingkat_pendidikan }}</td>
+                     <td>
+                       @if($data->tingkat_pendidikan == 'ma')
+                          Madarasah Aliyah
+                       @elseif($data->tingkat_pendidikan == 'mt')
+                          Madarasah Tsanawiyah
+                       @elseif($data->tingkat_pendidikan == 'md')
+                          Madarasah Diniyah
+                       @endif
+                     </td>
                      <td>
                         <a class="btn btn-sm btn-warning" href="{{ base_url('admin/berkas/santri/'.$data->id_santri) }}"><i class="fa fa-user"></i></a>
                         <a class="btn btn-sm btn-primary" href="{{ base_url('admin/berkas/parents/'.$data->id_santri) }}"><i class="fa fa-users"></i></a>
