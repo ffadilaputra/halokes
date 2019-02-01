@@ -59,23 +59,12 @@
                             <tr>
                                 <th>
                                     <h4>Nomor Virtual Account</h4>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                <h3>{{ $santri->virtualAkun->no_pendaftaran }}</h3>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
+                                    <h3>{{ $santri->virtualAkun->no_pendaftaran }}</h3>
                                     <h4>Nomor Induk</h4>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
                                     <h3>{{ $santri->virtualAkun->nomor_induk }}</h3>
                                 </th>
                             </tr>
+                            
                         </table><!-- virtual acc end -->
                     </table> <!-- tabel isi end-->
                 </div>
