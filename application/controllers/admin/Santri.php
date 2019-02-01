@@ -31,7 +31,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function destroy($id){
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
-      SantriModel::destroy($id);
+
+      $berkas = BerkasSantriModel::where(['id_santri'=> $id])->first();
+      if(isset($berkas->foto_santri)){
+        unlink('assets/uploads/'.$berkas->foto_santri);
+      }
+      if(isset($berkas->foto_wali_santri)){
+        unlink('assets/uploads/'.$berkas->foto_wali_santri);
+      }
+      if(isset($berkas->foto_ayah_santri)){
+        unlink('assets/uploads/'.$berkas->foto_ayah_santri);
+      }
+      if(isset($berkas->foto_ibu_santri)){
+        unlink('assets/uploads/'.$berkas->foto_ibu_santri);
+      }
+      if(isset($berkas->akta_santri)){
+        unlink('assets/uploads/'.$berkas->akta_santri);
+      }
+      if(isset($berkas->kk_santri)){
+        unlink('assets/uploads/'.$berkas->kk_santri);
+      }
+      if(isset($berkas->bpjs_santri)){
+        unlink('assets/uploads/'.$berkas->bpjs_santri);
+      }
+      if(isset($berkas->ktp_santri)){
+        unlink('assets/uploads/'.$berkas->ktp_santri);
+      }
+      if(isset($berkas->ktp_wali)){
+        unlink('assets/uploads/'.$berkas->ktp_wali);
+      }
+      if(isset($berkas->ktp_ayah)){
+        unlink('assets/uploads/'.$berkas->ktp_ayah);
+      }
+      if(isset($berkas->ktp_ibu)){
+        unlink('assets/uploads/'.$berkas->ktp_ibu);
+      }
+      if(isset($berkas->ijazah_santri)){
+        unlink('assets/uploads/'.$berkas->ijazah_santri);
+      }
+      if(isset($berkas->skhun_santri)){
+        unlink('assets/uploads/'.$berkas->skhun_santri);
+      }
+      BerkasSantriModel::where(['id_santri' => $id])->delete();
+      AyahModel::where(['id_santri' => $id])->delete();
+      IbuModel::where(['id_santri' => $id])->delete();
+      WaliModel::where(['id_santri' => $id])->delete();
+      PendidikanTerakhirModel::where(['id_siswa' => $id])->delete();
+      VirtualAkunModel::where(['id_santri' => $id])->delete();
+      SantriModel::where(['id_santri' => $id])->delete();
       redirect('admin/santri');
     }
 
@@ -78,8 +125,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $tahun_masuk = substr($get_date, -2);
       $urut = str_pad($count+1,4,'0',STR_PAD_LEFT);
       $virtual_acc_code = $kode_yayasan.$jenjang.$jk.$tahun_masuk.$urut;
+      $induk = $jenjang.$jk.$tahun_masuk.$urut;
 
-      VirtualAkunModel::where(['id_santri' => $id])->update(['no_virtual_account'=> $virtual_acc_code]);
+      VirtualAkunModel::where(['id_santri' => $id])->update(['no_virtual_account'=> $virtual_acc_code , 'nomor_induk' => $induk]);
       SantriModel::find($id)->update(['status_verifikasi'=> 'terverifikasi']);
       redirect('admin/santri/all');
       }

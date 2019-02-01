@@ -50,6 +50,7 @@
                         @elseif($item->status_verifikasi == 'belum_terverifikasi')
                           <a class="btn btn-success" href="{{ base_url('admin/santri/verify/').$item->id_santri }}"><i class="fa fa-check"></i>&nbsp;Detail</a>
                         @endif
+                        <a href="{{ base_url('admin/santri/destroy/').$item->id_santri }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                       </td>
                     <td>
                     <a href="{{ base_url('admin/santri/print/').$item->id_santri }}" class="btn btn-info"><i class="fa fa-print"></i></a>

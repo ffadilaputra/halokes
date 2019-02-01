@@ -42,7 +42,8 @@
                     <td>
                       <a class="btn btn-info" href="{{ base_url('admin/santri/show/').$data->id_santri }}"><i class="fa fa-eye"></i>&nbsp;Detail</a>
                       <a class="btn btn-success" href="{{ base_url('admin/santri/verify/').$data->id_santri }}"><i class="fa fa-check-square-o" aria-hidden="true"></i> Verify</a>
-                     </td>
+                      <a href="{{ base_url('admin/santri/destroy/').$data->id_santri }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                    </td>
                   </tr>
                   @endforeach
                </tbody>
