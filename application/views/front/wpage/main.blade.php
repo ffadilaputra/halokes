@@ -2,9 +2,6 @@
 
 @section('content')
 <div class="wrap">
-
-
-
   <section class="site-section pt-5 pb-5">
     <div class="container">
       <div class="row">
@@ -68,12 +65,17 @@
 
         </div>
       </div>
+
+      <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link">{!! $pagination !!}</a>
+          </li>
+        </ul>
+      </div>
+
     </section>
     <!-- END section -->
 
-
-
-  </div>
 
   <!-- loader -->
   <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
