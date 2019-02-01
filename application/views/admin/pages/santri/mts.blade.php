@@ -3,11 +3,11 @@
 <div class="row">
    <div class="col-lg-12">
       <h1 class="page-header">
-         Verifikasi Santri
+         Santri Madarasah Tsanawiyah
       </h1>
       <ol class="breadcrumb">
          <li class="active">
-            <i class="fa fa-check-square-o" aria-hidden="true"></i> Verifikasi Santri
+            <i class="fa fa-check-square-o" aria-hidden="true"></i> Halaman Santri Madarasah Tsanawiyah
          </li>
       </ol>
    </div>
@@ -25,7 +25,6 @@
                <thead>
                   <tr>
                      <th>No</th>
-                     <th>NIS</th>
                      <th>Nama Lengkap</th>
                      <th>NIK</th>
                      <th>Tanggal lahir</th>
@@ -37,15 +36,11 @@
                   @foreach($santri as $data)
                   <tr>
                     <td>{{ $n++ }}</td>
-                    <td>{{ $data->nis }}</td>
                     <td>{{ $data->nama_lengkap }}</td>
                     <td>{{ $data->nik }}</td>
-                    <td>{{ date("d/m/Y",strtotime($data->tgl_lahir)) }}</td>
+                    <td>{{ tgl_indo($data->tgl_lahir) }}</td>
                     <td>
-
                       <a class="btn btn-info" href="{{ base_url('admin/santri/show/').$data->id_santri }}"><i class="fa fa-eye"></i>&nbsp;Detail</a>
-                      <a class="btn btn-success" href="{{ base_url('admin/santri/verify/').$data->id_santri }}"><i class="fa fa-check-square-o" aria-hidden="true"></i> Verify</a>
-
                     </td>
                   </tr>
                   @endforeach
