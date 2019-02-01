@@ -37,6 +37,11 @@
         <!-- END main-content -->
       </div>
     </div>
+    <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link">{!! $pagination !!}</a>
+        </li>
+      </ul>
   </section>
   <!-- END section -->
 </div>

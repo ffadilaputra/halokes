@@ -24,7 +24,7 @@
    <label for="">Kategori</label>
    <select name="id_news_category" class="form-control">
       <option value="">-- Pilih --</option>
-      <option value="maulidoh">Maulidoh</option>
+      <option value="mauidhoh">Maulidoh</option>
       <option value="berita">Berita</option>
    </select>
 </div>
