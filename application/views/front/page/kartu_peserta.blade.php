@@ -43,8 +43,8 @@
                         <td style="text-align: left; padding-left:20px;">
                            <br>
                            <h4>
-                              YAYASAN MA'HAD DARUN NAJAH<br><br>
-                              PONDOK PESANTREN PPAI DARUN NAJAH<br><br>
+                              YAYASAN MA'HAD DARUN NAJAH<br>
+                              PONDOK PESANTREN PPAI DARUN NAJAH<br>
                               Jl. Pesantren, No. 51, Ngijo, Karangploso, Malang, (0341)5034501<br>
                            </h4>
                         </td>
@@ -84,20 +84,8 @@
                               <tr>
                                  <th>
                                     <h4>Nomor Virtual Account</h4>
-                                 </th>
-                              </tr>
-                              <tr>
-                                 <th>
                                     <h3>{{ $nomor }}</h3>
-                                 </th>
-                              </tr>
-                              <tr>
-                                 <th>
                                     <h4>Nomor Induk</h4>
-                                 </th>
-                              </tr>
-                              <tr>
-                                 <th>
                                     <h3>{{ $no_induk }}</h3>
                                  </th>
                               </tr>
