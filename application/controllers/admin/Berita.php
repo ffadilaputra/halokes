@@ -66,6 +66,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
 
           public function delete($id){
+            $berita = BeritaModel::find($id);
+            unlink('assets/uploads/' . $berita->thumb);
             BeritaModel::destroy($id);
             redirect('admin/berita');
         }
