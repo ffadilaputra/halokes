@@ -74,6 +74,7 @@
       <ul id="master" class="collapse">
         <li><a href="{{ base_url('admin/TahunAkademik') }}">Tahun Akademik</a></li>
         <li><a href="{{ base_url('admin/KategoriKeuangan') }}">Kategori Keuangan</a></li>
+        <li><a href="{{ base_url('admin/User') }}">Admin/ Operator</a></li>
       </ul>
     </a>
   </li>

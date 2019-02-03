@@ -54,6 +54,7 @@
                         <a class="btn btn-sm btn-primary" href="{{ base_url('admin/berkas/parents/'.$data->id_santri) }}"><i class="fa fa-users"></i></a>
                         <a class="btn btn-sm btn-info" href="{{ base_url('admin/berkas/education/'.$data->id_santri) }} "><i class="fa fa-university"></i></a>
                         <a class="btn btn-sm btn-success" href="{{ base_url('admin/berkas/archive/'.$data->id_santri) }}"><i class="fa fa-upload"></i></a>
+                        <a class="btn btn-sm btn-danger" href="{{ base_url('admin/berkas/archive/'.$data->id_santri) }}"><i class="fa fa-trash"></i></a>
                      </td>
                   </tr>
                   @endforeach

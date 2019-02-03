@@ -42,7 +42,7 @@
                                     <img src="{{ base_url('assets/wordify/') }}images/logo.jpg" alt="" align="center" width="128" height="120">
                                     </td>
                                     <td style="text-align: left; padding-left:20px;">
-                                    <br>
+                                    <br><br>
                                     <h4>
                                         YAYASAN MA'HAD DARUN NAJAH<br>
                                         PONDOK PESANTREN PPAI DARUN NAJAH<br>
@@ -63,57 +63,59 @@
                                 <!-- row start -->
                                 <div class="row">
                                     <!-- tabel utama -->
-                                    <table>
-                                    <tr>
-                                        <td >
-                                        <!-- img santri -->
-                                        @if(isset($santri->berkasSantri->foto_santri))
-                                          <img src="{{ base_url('assets/uploads/'.$santri->berkasSantri->foto_santri) }}" alt=""  style="width:200px;float:left;margin-left:10px; height:250px;">
-                                        @else
-                                          <h3>Santri belum melengkapi berkas</h3>
-                                        @endif
-                                      </td>
-                                        <td>
+                                    <div class="table-responsive">
+                                        <table>
+                                            <tr>
+                                                <td >
+                                                <!-- img santri -->
+                                                @if(isset($santri->berkasSantri->foto_santri))
+                                                <img src="{{ base_url('assets/uploads/'.$santri->berkasSantri->foto_santri) }}" alt=""  style="width:200px;float:left;margin-left:10px; height:250px;">
+                                                @else
+                                                <h3>Santri belum melengkapi berkas</h3>
+                                                @endif
+                                            </td>
+                                                <td>
 
-                                            <!-- tabel isi -->
-                                            <table style="border:3px solid black">
-                                                <tr>
-                                                <th style="text-align:left;padding-left:10px;">Nama</th>
-                                                <td style="padding-left:20px;">: {{ $santri['nama_lengkap'] }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th style="text-align:left;padding-left:10px;">TTL</th>
-                                                    <td style="padding-left:20px;">: {{ $santri['tempat_lahir'] }}, {{ $santri['tgl_lahir'] }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th style="text-align:left;padding-left:10px;">Jenjang</th>
-                                                    @if($santri['tingkat_pendidikan'] == 'ma')
-                                                        <td style="padding-left:20px;">: {{ 'Madarasah Aliyah' }}</td>
-                                                        @elseif($santri['tingkat_pendidikan'] == 'mt')
-                                                        <td style="padding-left:20px;">: {{ 'Madarasah Tsanawiyah' }}</td>
-                                                        @elseif($santri['tingkat_pendidikan'] == 'md')
-                                                        <td style="padding-left:20px;">: {{ 'Madarasah Diniyah' }}</td>
-                                                    @endif
-                                                </tr>
+                                                    <!-- tabel isi -->
+                                                    <table style="border:3px solid black">
+                                                        <tr>
+                                                        <th style="text-align:left;padding-left:10px;">Nama</th>
+                                                        <td style="padding-left:20px;">: {{ $santri['nama_lengkap'] }}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th style="text-align:left;padding-left:10px;">TTL</th>
+                                                            <td style="padding-left:20px;">: {{ $santri['tempat_lahir'] }}, {{ $santri['tgl_lahir'] }}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th style="text-align:left;padding-left:10px;">Jenjang</th>
+                                                            @if($santri['tingkat_pendidikan'] == 'ma')
+                                                                <td style="padding-left:20px;">: {{ 'Madarasah Aliyah' }}</td>
+                                                                @elseif($santri['tingkat_pendidikan'] == 'mt')
+                                                                <td style="padding-left:20px;">: {{ 'Madarasah Tsanawiyah' }}</td>
+                                                                @elseif($santri['tingkat_pendidikan'] == 'md')
+                                                                <td style="padding-left:20px;">: {{ 'Madarasah Diniyah' }}</td>
+                                                            @endif
+                                                        </tr>
 
-                                                <tr>
-                                                    <th colspan="2">
-                                                        <h4>Nomor Virtual Account</h4>
-                                                        @if(isset($santri->virtualAkun->no_virtual_account))
-                                                            <h3>{{ $santri->virtualAkun->no_virtual_account }}</h3>
-                                                        @else
-                                                            <h3>Akun belum diverifikasi gan..</h3>
-                                                        @endif
-                                                        <h4>Nomor Induk</h4>
-                                                        <h3>{{ $santri->virtualAkun->nomor_induk }}</h3>
-                                                    </th>
-                                                </tr>
-                                                
-                                            </table>
-                                            <!-- tabel isi end-->
-                                        </td>
-                                    </tr>
-                                    </table>
+                                                        <tr>
+                                                            <th colspan="2">
+                                                                <h4>Nomor Virtual Account</h4>
+                                                                @if(isset($santri->virtualAkun->no_virtual_account))
+                                                                    <h3>{{ $santri->virtualAkun->no_virtual_account }}</h3>
+                                                                @else
+                                                                    <h3>Akun belum diverifikasi gan..</h3>
+                                                                @endif
+                                                                <h4>Nomor Induk</h4>
+                                                                <h3>{{ $santri->virtualAkun->nomor_induk }}</h3>
+                                                            </th>
+                                                        </tr>
+                                                        
+                                                    </table>
+                                                    <!-- tabel isi end-->
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                     <!-- tabel utama end -->
                                 </div><!-- row end -->
 
