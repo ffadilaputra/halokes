@@ -5,7 +5,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   class Berkas extends MY_Controller {
 
     public function index(){
-        $data['santri'] = SantriModel::all();
+        $data['santri'] = SantriModel::where([
+          'status_verifikasi'=> 'belum_verifikasi'
+        ])->get();
         $this->autenthicateAdmin();
         $data['admin'] = $this->session->userdata('admin_logged_in');
         $this->view('admin.pages.kelengkapan.index',$data);
