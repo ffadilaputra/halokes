@@ -27,54 +27,6 @@
   <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav side-nav">
-      <!-- ppdb -->
-      <li>
-        <a href="javascript:;" data-toggle="collapse" data-target="#ppdb"><i class="fa fa-fw fa-arrows-v"></i> PPDB <i class="fa fa-fw fa-caret-down"></i></a>
-        <ul id="ppdb" class="collapse">
-          <li>
-            <a href="{{ base_url('admin/santri') }}">Verifikasi Santri</a>
-          </li>
-          <li>
-            <a href="{{ base_url('admin/berkas') }}">Cek berkas Santri</a>
-          </li>
-          <li>
-            <a href="{{ base_url('admin/tanggungan') }}">Pembayaran Tanggungan</a>
-          </li>
-          {{-- <li>
-            <a href="{{ base_url('admin/pembayaran/lunas') }}">Lunas</a>
-          </li> --}}
-        </ul>
-      </li>
-      
-      <!-- santri -->
-      <li>
-        <a href="javascript:;" data-toggle="collapse" data-target="#santri"><i class="fa fa-fw fa-user"></i>Santri <i class="fa fa-fw fa-caret-down"></i></a>
-        <ul id="santri" class="collapse">
-          <li>
-            <a href="{{ base_url('admin/santri/all') }}">Semua</a>
-          </li>
-          <li>
-            <a href="{{ base_url('admin/santri/ma') }}">Madarasah Aliyah</a>
-          </li>
-          <li>
-            <a href="{{ base_url('admin/santri/mts') }}">Madarasah Tsanawiyah</a>
-          </li>
-          <li>
-            <a href="{{ base_url('admin/santri/md') }}">Madarasah Diniyah</a>
-          </li>
-        </ul>
-      </li>
-
-      <!-- artikel -->
-      <li>
-        <a href="javascript:;" data-toggle="collapse" data-target="#pengumuman"><i class="fa fa-fw fa-book"></i>Artikel <i class="fa fa-fw fa-caret-down"></i></a>
-        <ul id="pengumuman" class="collapse">
-          <li><a href="{{ base_url('admin/berita/create') }}">Buat Berita</a></li>
-          <li><a href="{{ base_url('admin/berita') }}">Semua</a></li>
-        </ul>
-        </a>
-      </li>
-
       <!-- master -->
       <li>
         <a href="javascript:;" data-toggle="collapse" data-target="#master"><i class="fa fa-fw fa-archive"></i>Master <i class="fa fa-fw fa-caret-down"></i></a>
@@ -85,7 +37,7 @@
         </ul>
         </a>
       </li>
-</ul>
+    </ul>
 </div>
 
 <!-- /.navbar-collapse -->

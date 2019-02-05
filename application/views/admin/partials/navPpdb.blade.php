@@ -64,28 +64,7 @@
           </li>
         </ul>
       </li>
-
-      <!-- artikel -->
-      <li>
-        <a href="javascript:;" data-toggle="collapse" data-target="#pengumuman"><i class="fa fa-fw fa-book"></i>Artikel <i class="fa fa-fw fa-caret-down"></i></a>
-        <ul id="pengumuman" class="collapse">
-          <li><a href="{{ base_url('admin/berita/create') }}">Buat Berita</a></li>
-          <li><a href="{{ base_url('admin/berita') }}">Semua</a></li>
-        </ul>
-        </a>
-      </li>
-
-      <!-- master -->
-      <li>
-        <a href="javascript:;" data-toggle="collapse" data-target="#master"><i class="fa fa-fw fa-archive"></i>Master <i class="fa fa-fw fa-caret-down"></i></a>
-        <ul id="master" class="collapse">
-            <li><a href="{{ base_url('admin/TahunAkademik') }}">Tahun Akademik</a></li>
-            <li><a href="{{ base_url('admin/KategoriKeuangan') }}">Kategori Keuangan</a></li>
-            <li><a href="{{ base_url('admin/User') }}">Admin/ Operator</a></li>
-        </ul>
-        </a>
-      </li>
-</ul>
+    </ul>
 </div>
 
 <!-- /.navbar-collapse -->
