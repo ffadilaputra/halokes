@@ -125,8 +125,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $tahun_masuk = substr($get_date, -2);
       $urut = str_pad($count+1,4,'0',STR_PAD_LEFT);
       $virtual_acc_code = $kode_yayasan.$jenjang.$jk.$tahun_masuk.$urut;
-      $induk = $jenjang.$jk.$tahun_masuk.$urut;
-
+      $induk = $tahun_masuk.$urut;
+        //var_dump($induk);
       VirtualAkunModel::where(['id_santri' => $id])->update(['no_virtual_account'=> $virtual_acc_code , 'nomor_induk' => $induk]);
       SantriModel::find($id)->update(['status_verifikasi'=> 'terverifikasi']);
       redirect('admin/santri/all');

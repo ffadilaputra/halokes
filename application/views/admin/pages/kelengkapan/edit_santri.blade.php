@@ -106,6 +106,21 @@
               </select>
           </div>
           <div class="form-group">
+            <label>Berkebutuhan khusus</label>
+            <select name="kebutuhan_khusus" class="form-control">
+                <option @if($santri->kebutuhan_khusus == 'tidak' ) selected @endif value="tidak">Tidak </option>
+                <option @if($santri->kebutuhan_khusus == 'tunaRungu' ) selected @endif value="tunaRungu">Tuna Rungu</option>
+                <option @if($santri->kebutuhan_khusus == 'tunaGrahita' ) selected @endif value="tunaGrahita">Tuna Grahita</option>
+                <option @if($santri->kebutuhan_khusus == 'tunaNetra' ) selected @endif value="tunaNetra">Tuna Netra</option>
+                <option @if($santri->kebutuhan_khusus == 'tunaLaras' ) selected @endif value="tunaLaras">Tuna Laras</option>
+                <option @if($santri->kebutuhan_khusus == 'tunaDaksa' ) selected @endif value="tunaDaksa">Tuna Daksa</option>
+                <option @if($santri->kebutuhan_khusus == 'sulitBelajar' ) selected @endif value="sulitBelajar">sulitBelajar</option>
+                <option @if($santri->kebutuhan_khusus == 'gangguanKomunikasi' ) selected @endif value="gangguanKomunikasi">Gangguan Komunikasi</option>
+                <option @if($santri->kebutuhan_khusus == 'lambanBelajar' ) selected @endif value="lambanBelajar">Lamban Belajar</option>
+                <option @if($santri->kebutuhan_khusus == 'bakatLuarBiasa' ) selected @endif value="bakatLuarBiasa">Bakat Luar Biasa</option>
+            </select>
+        </div>
+          <div class="form-group">
               <label>Jumlah saudara</label>
               <input type="text" name="jml_saudara" class="form-control" value="{{ $santri->jml_saudara }}">
           </div>

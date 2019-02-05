@@ -40,10 +40,6 @@
           <hr>
           <table class="table table-bordered table-hover">
               <tbody>
-                  <tr>
-                      <th>Kota</th>
-                      <td>{{ $santri->kota }}</td>
-                  </tr>
               </tbody>
           </table>
 
@@ -90,6 +86,10 @@
                       <th>Cita - Cita</th>
                       <td>{{ $santri->cita_cita }}</td>
                   </tr>
+                  <tr>
+                    <th>Berkebutuhan Khusus</th>
+                    <td>{{ $santri->kebutuhan_khusus }}</td>
+                </tr>
               </tbody>
           </table>
 

@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function index(){
       $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
-      $data['list'] = TanggunganPembayaranModel::all();
+      $data['list'] = TanggunganPembayaranModel::orderBy('created_at','desc')->get();
       $this->view('admin.pages.tanggungan.index',$data);
     }
 
@@ -39,9 +39,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     public function update($id){
-      // $this->validate($this->input->post(),[
-      //   'tanggungan' => 'required',
-      // ]);
       TanggunganPembayaranModel::find($id)->update($this->input->post());
       redirect('admin/tanggungan');
     }

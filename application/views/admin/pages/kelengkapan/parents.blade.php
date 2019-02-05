@@ -46,10 +46,6 @@
                   </tr>
                   <tr>
                       <th>Alamat Lengkap</th>
-                      <td>{{ $parents->nik }}</td>
-                  </tr>
-                  <tr>
-                      <th>Tanggal Lahir</th>
                       <td>{{ $parents->alamat }}</td>
                   </tr>
               </tbody>
@@ -120,7 +116,7 @@
                   </tr>
                   <tr>
                       <th>Tanggal Lahir</th>
-                      <td>{{ $ayah->tgl_lahir }}</td>
+                      <td>{{ tgl_indo($ayah->tgl_lahir) }}</td>
                   </tr>
               </tbody>
           </table>
@@ -139,12 +135,9 @@
                   </tr>
                   <tr>
                       <th>Alamat Lengkap</th>
-                      <td>{{ $ayah->nik }}</td>
-                  </tr>
-                  <tr>
-                      <th>Tanggal Lahir</th>
                       <td>{{ $ayah->alamat }}</td>
                   </tr>
+
               </tbody>
           </table>
 
@@ -213,7 +206,7 @@
                   </tr>
                   <tr>
                       <th>Tanggal Lahir</th>
-                      <td>{{ $wali->tgl_lahir }}</td>
+                      <td>{{ tgl_indo($wali->tgl_lahir) }}</td>
                   </tr>
               </tbody>
           </table>
@@ -232,12 +225,9 @@
                   </tr>
                   <tr>
                       <th>Alamat Lengkap</th>
-                      <td>{{ $wali->nik }}</td>
-                  </tr>
-                  <tr>
-                      <th>Tanggal Lahir</th>
                       <td>{{ $wali->alamat }}</td>
                   </tr>
+
               </tbody>
           </table>
 
