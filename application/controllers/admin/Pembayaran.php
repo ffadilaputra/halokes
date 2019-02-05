@@ -78,6 +78,11 @@ class Pembayaran extends MY_Controller {
         $data['keuangan'] = KategoriKeuanganModel::all();
         $this->view('admin.pages.pembayaran.preview_nota',$data);
     }
+    public function nota2(){
+        $this->autenthicateAdmin();
+        // $data['admin'] = $this->session->userdata('admin_logged_in');
+        $this->view('admin.pages.pembayaran.preview_nota');
+    }
 
     public function preview(){
         $this->view('admin.pages.pembayaran.preview_va');

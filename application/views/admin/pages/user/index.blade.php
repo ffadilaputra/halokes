@@ -4,20 +4,17 @@
   <div class="row">
       <div class="col-lg-12">
         <h1 class="page-header">
-          Dashboard
+          Admin / Operator
         </h1>
-        <ol class="breadcrumb">
-          <li class="active">
-            <i class="fa fa-dashboard"></i>Dashboard
-          </li>
-        </ol>
+        
+        
       </div>
+      <br>
     </div>
     <div class="col-lg-12">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">
-              <i class="fa fa-money fa-fw"></i>Transactions Panel</h3>
+            <a href="{{ base_url('admin/User/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Create</a>
           </div>
           <div class="panel-body">
             <div class="table-responsive">

@@ -853,7 +853,7 @@
                                     <!-- foto santri -->
                                     <div class="col-sm-3 col-xs-12">
                                        <div class="form-group">
-                                          <label for="">Foto Santri</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                          <label for="">Foto Santri</label>&nbsp;<label style="color:red">*</label>
                                           <div class="container2">
                                              <!-- <label class="labell" for="input">Please upload a picture !</label> -->
                                              <img id="santri" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
@@ -871,7 +871,7 @@
                                     <!-- foto wali santri -->
                                     <div class="col-sm-3 col-xs-12">
                                        <div class="form-group">
-                                          <label for="">Foto Wali Santri</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                          <label for="">Foto Wali Santri</label>&nbsp;<label style="color:red">*</label>
                                           <div class="container2">
                                              <!-- <label class="labell" for="input">Please upload a picture !</label> -->
                                              <img id="wali" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
@@ -889,7 +889,7 @@
                                     <!-- foto ayah santri -->
                                     <div class="col-sm-3 col-xs-12">
                                        <div class="form-group">
-                                          <label for="">Foto Ayah Santri</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                          <label for="">Foto Ayah Santri</label>&nbsp;<label style="color:red">*</label>
                                           <div class="container2">
                                              <!-- <label class="labell" for="input">Please upload a picture !</label> -->
                                              <img id="ayah" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
@@ -907,7 +907,7 @@
                                     <!-- foto ibu santri -->
                                     <div class="col-sm-3 col-xs-12">
                                        <div class="form-group">
-                                          <label for="">Foto Ibu Santri</label>&nbsp;<label style="color:red">(wajib di isi)</label>
+                                          <label for="">Foto Ibu Santri</label>&nbsp;<label style="color:red">*</label>
                                           <div class="container2">
                                              <!-- <label class="labell" for="input">Please upload a picture !</label> -->
                                              <img id="ibu" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
@@ -923,6 +923,7 @@
                                        </div>
                                     </div>
                                  </div>
+                                 <p style="color:red; font-style:italic; font-weight:bold;">* Wajib di isi</p>
                               </div>
                               <!-- end foto -->
                            </div>
