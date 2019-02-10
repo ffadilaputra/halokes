@@ -272,5 +272,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         // $this->view('front.page.cetak_kartu');
         var_dump($_POST);
       }
+
+      public function informasi(){
+        $this->view('front.page.informasi');
+      }
   }
 ?>
