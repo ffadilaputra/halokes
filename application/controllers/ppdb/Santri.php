@@ -1,70 +1,74 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-  class Santri extends MY_Controller {
-
-      public function index(){
+class Santri extends MY_Controller
+{
+    public function index()
+    {
         $data['footer'] = BeritaModel::where([
-          'id_news_category' => 'berita'
-        ])->limit(3)->get();
-          $this->view('front.page.ppdb_register_new', $data);
-      }
+            'id_news_category' => 'berita'
+        ])
+            ->limit(3)
+            ->get();
+        $this->view('front.page.ppdb_register_new', $data);
+    }
 
-      public function store(){
+    public function store()
+    {
         // $this->validate($this->input->post(), [
 
         //   ]);
 
-          $id_santri = 'STR'.random_string('alnum', 5).date('my');
-          $tgl_siswa = $this->input->post('tgl_siswa');
-          $bln_santri = $this->input->post('bulan_siswa');
-          $thn_santri = $this->input->post('tahun_siswa');
-          $tgl_santri = $thn_santri.':'.$bln_santri.':'.$tgl_siswa;
-          $tgl_santry = $thn_santri.'-'.$bln_santri.'-'.$tgl_siswa;
+        $id_santri = 'STR' . random_string('alnum', 5) . date('my');
+        $tgl_siswa = $this->input->post('tgl_siswa');
+        $bln_santri = $this->input->post('bulan_siswa');
+        $thn_santri = $this->input->post('tahun_siswa');
+        $tgl_santri = $thn_santri . ':' . $bln_santri . ':' . $tgl_siswa;
+        $tgl_santry = $thn_santri . '-' . $bln_santri . '-' . $tgl_siswa;
 
-          $tgl_ayah = $this->input->post('tgl_ayah');
-          $bln_ayah = $this->input->post('bulan_ayah');
-          $thn_ayah = $this->input->post('tahun_ayah');
-          $tgl_lahir_ayah = $thn_ayah.':'.$bln_ayah.':'.$tgl_ayah;
+        $tgl_ayah = $this->input->post('tgl_ayah');
+        $bln_ayah = $this->input->post('bulan_ayah');
+        $thn_ayah = $this->input->post('tahun_ayah');
+        $tgl_lahir_ayah = $thn_ayah . ':' . $bln_ayah . ':' . $tgl_ayah;
 
-          $tgl_ibu = $this->input->post('tgl_ibu');
-          $bln_ibu = $this->input->post('bulan_ibu');
-          $thn_ibu = $this->input->post('tahun_ibu');
-          $tgl_lahir_ibu = $thn_ibu.':'.$bln_ibu.':'.$tgl_ibu;
+        $tgl_ibu = $this->input->post('tgl_ibu');
+        $bln_ibu = $this->input->post('bulan_ibu');
+        $thn_ibu = $this->input->post('tahun_ibu');
+        $tgl_lahir_ibu = $thn_ibu . ':' . $bln_ibu . ':' . $tgl_ibu;
 
-          $tgl_wali = $this->input->post('tgl_wali');
-          $bln_wali = $this->input->post('bulan_wali');
-          $thn_wali = $this->input->post('tahun_wali');
-          $tgl_lahir_wali = $thn_wali.':'.$bln_wali.':'.$tgl_wali;
+        $tgl_wali = $this->input->post('tgl_wali');
+        $bln_wali = $this->input->post('bulan_wali');
+        $thn_wali = $this->input->post('tahun_wali');
+        $tgl_lahir_wali = $thn_wali . ':' . $bln_wali . ':' . $tgl_wali;
 
-          $data['santri'] = array(
-           'id_santri' => $id_santri,
-           'tingkat_pendidikan' => $this->input->post('tingkat_pendidikan'),
-           'jenis_siswa'=> $this->input->post('jenis_siswa'),
-           'nisn' => $this->input->post('nisn'),
-           'nama_lengkap' => $this->input->post('nama_lengkap'),
-           'panggilan' => $this->input->post('nama_panggilan'),
-           'nik' => $this->input->post('nik'),
-           'no_induk' => $this->input->post('no_induk'),
-           'no_kk' => $this->input->post('no_kk'),
-           'tempat_lahir' => $this->input->post('tempat_lahir_siswa'),
-           'tgl_lahir' => $tgl_santri,
-           'kota' => $this->input->post('kota'),
-           'jenis_kelamin' => $this->input->post('jenis_kelamin'),
-           'status_keluarga' => $this->input->post('status_keluarga'),
-           'anak_ke' => $this->input->post('anak_ke'),
-           'jml_saudara' => $this->input->post('jml_sdr'),
-           'no_kip' => $this->input->post('no_kip'),
-           'no_bpjs' => $this->input->post('no_bpjs'),
-           'no_jamkes' => $this->input->post('no_jamkes'),
-           'hobi' => $this->input->post('hobi'),
-           'cita_cita' => $this->input->post('cita_cita'),
-           'kebutuhan_khusus' => $this->input->post('keb_khusus'),
-           'status_verifikasi' => 'belum_verifikasi',
-          );
+        $data['santri'] = array(
+            'id_santri' => $id_santri,
+            'tingkat_pendidikan' => $this->input->post('tingkat_pendidikan'),
+            'jenis_siswa' => $this->input->post('jenis_siswa'),
+            'nisn' => $this->input->post('nisn'),
+            'nama_lengkap' => $this->input->post('nama_lengkap'),
+            'panggilan' => $this->input->post('nama_panggilan'),
+            'nik' => $this->input->post('nik'),
+            'no_induk' => $this->input->post('no_induk'),
+            'no_kk' => $this->input->post('no_kk'),
+            'tempat_lahir' => $this->input->post('tempat_lahir_siswa'),
+            'tgl_lahir' => $tgl_santri,
+            'kota' => $this->input->post('kota'),
+            'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+            'status_keluarga' => $this->input->post('status_keluarga'),
+            'anak_ke' => $this->input->post('anak_ke'),
+            'jml_saudara' => $this->input->post('jml_sdr'),
+            'no_kip' => $this->input->post('no_kip'),
+            'no_bpjs' => $this->input->post('no_bpjs'),
+            'no_jamkes' => $this->input->post('no_jamkes'),
+            'hobi' => $this->input->post('hobi'),
+            'cita_cita' => $this->input->post('cita_cita'),
+            'kebutuhan_khusus' => $this->input->post('keb_khusus'),
+            'status_verifikasi' => 'belum_verifikasi'
+        );
 
-          $data['ayah'] = array(
+        $data['ayah'] = array(
             'nama_lengkap' => $this->input->post('nama_ayah_siswa'),
             'panggilan' => $this->input->post('napang_ayah_siswa'),
             'nik' => $this->input->post('nik_ayah_siswa'),
@@ -80,10 +84,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             'pendidikan' => $this->input->post('pendidikan_terakhir_ayah'),
             'pekerjaan' => $this->input->post('pekerjaan_ayah'),
             'penghasilan' => $this->input->post('penghasilan_ayah'),
-            'id_santri' => $id_santri,
-           );
+            'id_santri' => $id_santri
+        );
 
-           $data['ibu'] = array(
+        $data['ibu'] = array(
             'nama_lengkap' => $this->input->post('nama_ibu_siswa'),
             'panggilan' => $this->input->post('napang_ibu_siswa'),
             'nik' => $this->input->post('nik_ibu_siswa'),
@@ -99,10 +103,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             'pendidikan' => $this->input->post('pendidikan_terakhir_ibu'),
             'pekerjaan' => $this->input->post('pekerjaan_ibu'),
             'penghasilan' => $this->input->post('penghasilan_ibu'),
-            'id_santri' => $id_santri,
-           );
+            'id_santri' => $id_santri
+        );
 
-           $data['wali'] = array(
+        $data['wali'] = array(
             'nama_lengkap' => $this->input->post('nama_wali_siswa'),
             'panggilan' => $this->input->post('napang_wali_siswa'),
             'nik' => $this->input->post('nik_wali_siswa'),
@@ -118,80 +122,149 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             'pendidikan' => $this->input->post('pendidikan_terakhir_wali'),
             'pekerjaan' => $this->input->post('pekerjaan_wali'),
             'penghasilan' => $this->input->post('penghasilan_wali'),
-            'id_santri' => $id_santri,
-           );
+            'id_santri' => $id_santri
+        );
 
-           $data['pendidikan'] = array(
-             'nama_sekolah_siswa' => $this->input->post('nama_sekolah_siswa'),
-             'jenis_sekolah_siswa' => $this->input->post('jenis_sekolah_siswa'),
-             'status_sekolah_siswa' => $this->input->post('status_sekolah_siswa'),
-             'alamat_sekolah_siswa' => $this->input->post('alamat_sekolah_siswa'),
-             'kota' => $this->input->post('provinsi_siswa'),
-             'provinsi_siswa' => $this->input->post('provinsi_siswa'),
-             'nss' => $this->input->post('nss_siswa'),
-             'npsn' => $this->input->post('npsn_siswa'),
-             'no_seri_ijazah' => $this->input->post('no_ijazah_siswa'),
-             'no_seri_skhun' => $this->input->post('skhun_siswa'),
-             'no_peserta_ujian' => $this->input->post('no_un_siswa'),
-             'id_siswa' => $id_santri,
-           );
+        $data['pendidikan'] = array(
+            'nama_sekolah_siswa' => $this->input->post('nama_sekolah_siswa'),
+            'jenis_sekolah_siswa' => $this->input->post('jenis_sekolah_siswa'),
+            'status_sekolah_siswa' => $this->input->post(
+                'status_sekolah_siswa'
+            ),
+            'alamat_sekolah_siswa' => $this->input->post(
+                'alamat_sekolah_siswa'
+            ),
+            'kota' => $this->input->post('provinsi_siswa'),
+            'provinsi_siswa' => $this->input->post('provinsi_siswa'),
+            'nss' => $this->input->post('nss_siswa'),
+            'npsn' => $this->input->post('npsn_siswa'),
+            'no_seri_ijazah' => $this->input->post('no_ijazah_siswa'),
+            'no_seri_skhun' => $this->input->post('skhun_siswa'),
+            'no_peserta_ujian' => $this->input->post('no_un_siswa'),
+            'id_siswa' => $id_santri
+        );
 
-          if(!empty($_FILES['foto_santri']['name'])){
-            $_POST['foto_santri'] = $this->do_upload('foto_santri', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['foto_santri']['name'])) {
+            $_POST['foto_santri'] = $this->do_upload(
+                'foto_santri',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          if(!empty($_FILES['foto_wali_santri']['name'])){
-            $_POST['foto_wali_santri'] = $this->do_upload('foto_wali_santri', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['foto_wali_santri']['name'])) {
+            $_POST['foto_wali_santri'] = $this->do_upload(
+                'foto_wali_santri',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          if(!empty($_FILES['foto_ayah_santri']['name'])){
-            $_POST['foto_ayah_santri'] = $this->do_upload('foto_ayah_santri', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['foto_ayah_santri']['name'])) {
+            $_POST['foto_ayah_santri'] = $this->do_upload(
+                'foto_ayah_santri',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          if(!empty($_FILES['foto_ibu_santri']['name'])){
-            $_POST['foto_ibu_santri'] = $this->do_upload('foto_ibu_santri', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['foto_ibu_santri']['name'])) {
+            $_POST['foto_ibu_santri'] = $this->do_upload(
+                'foto_ibu_santri',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          if(!empty($_FILES['akta_santri']['name'])){
-            $_POST['akta_santri'] = $this->do_upload('akta_santri', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['akta_santri']['name'])) {
+            $_POST['akta_santri'] = $this->do_upload(
+                'akta_santri',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          if(!empty($_FILES['kk_santri']['name'])){
-            $_POST['kk_santri'] = $this->do_upload('kk_santri', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['kk_santri']['name'])) {
+            $_POST['kk_santri'] = $this->do_upload(
+                'kk_santri',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          if(!empty($_FILES['bpjs_santri']['name'])){
-            $_POST['bpjs_santri'] = $this->do_upload('bpjs_santri', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['bpjs_santri']['name'])) {
+            $_POST['bpjs_santri'] = $this->do_upload(
+                'bpjs_santri',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          if(!empty($_FILES['ktp_santri']['name'])){
-            $_POST['ktp_santri'] = $this->do_upload('ktp_santri', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['ktp_santri']['name'])) {
+            $_POST['ktp_santri'] = $this->do_upload(
+                'ktp_santri',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          if(!empty($_FILES['ktp_wali']['name'])){
-            $_POST['ktp_wali'] = $this->do_upload('ktp_wali', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['ktp_wali']['name'])) {
+            $_POST['ktp_wali'] = $this->do_upload(
+                'ktp_wali',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          if(!empty($_FILES['ktp_ayah']['name'])){
-            $_POST['ktp_ayah'] = $this->do_upload('ktp_ayah', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['ktp_ayah']['name'])) {
+            $_POST['ktp_ayah'] = $this->do_upload(
+                'ktp_ayah',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          if(!empty($_FILES['ktp_ibu']['name'])){
-            $_POST['ktp_ibu'] = $this->do_upload('ktp_ibu', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['ktp_ibu']['name'])) {
+            $_POST['ktp_ibu'] = $this->do_upload(
+                'ktp_ibu',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          if(!empty($_FILES['ijazah_santri']['name'])){
-            $_POST['ijazah_santri'] = $this->do_upload('ijazah_santri', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['ijazah_santri']['name'])) {
+            $_POST['ijazah_santri'] = $this->do_upload(
+                'ijazah_santri',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          if(!empty($_FILES['skhun_santri']['name'])){
-            $_POST['skhun_santri'] = $this->do_upload('skhun_santri', 'assets/uploads', 'image', TRUE);
-          }
+        if (!empty($_FILES['skhun_santri']['name'])) {
+            $_POST['skhun_santri'] = $this->do_upload(
+                'skhun_santri',
+                'assets/uploads',
+                'image',
+                true
+            );
+        }
 
-          $data['berkas'] = array(
+        $data['berkas'] = array(
             'foto_santri' => $this->input->post('foto_santri'),
             'foto_wali_santri' => $this->input->post('foto_wali_santri'),
-            'foto_ayah_santri' => $this->input->post('foto_ayah_santri') ,
+            'foto_ayah_santri' => $this->input->post('foto_ayah_santri'),
             'foto_ibu_santri' => $this->input->post('foto_ibu_santri'),
             'akta_santri' => $this->input->post('akta_santri'),
             'kk_santri' => $this->input->post('kk_santri'),
@@ -203,74 +276,82 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             'ijazah_santri' => $this->input->post('ijazah_santri'),
             'skhun_santri' => $this->input->post('skhun_santri'),
             'id_santri' => $id_santri
-          );
+        );
 
-          $jenjang = $this->generateJenjang($data['santri']['tingkat_pendidikan']);
-          $now = date("d/m/Y");
-          $dat = str_replace("/", "", $now);
-          $jk = $this->generateJK($data['santri']['jenis_kelamin']);
-          $count = SantriModel::count();
-          $urut = str_pad($count+1,4,'0',STR_PAD_LEFT);
-          $data['nomor'] = $dat.$jk.$jenjang.$urut;
-          $data['no_induk'] = $jenjang.$jk.$urut;
+        $jenjang = $this->generateJenjang(
+            $data['santri']['tingkat_pendidikan']
+        );
+        $now = date('d/m/Y');
+        $dat = str_replace('/', '', $now);
+        $jk = $this->generateJK($data['santri']['jenis_kelamin']);
+        $count = SantriModel::count();
+        $urut = str_pad($count + 1, 4, '0', STR_PAD_LEFT);
+        $data['nomor'] = $dat . $jk . $jenjang . $urut;
+        $data['no_induk'] = $jenjang . $jk . $urut;
 
-          SantriModel::create($data['santri']);
-          AyahModel::create($data['ayah']);
-          IbuModel::create($data['ibu']);
-          WaliModel::create($data['wali']);
-          PendidikanTerakhirModel::create($data['pendidikan']);
-          BerkasSantriModel::create($data['berkas']);
+        SantriModel::create($data['santri']);
+        AyahModel::create($data['ayah']);
+        IbuModel::create($data['ibu']);
+        WaliModel::create($data['wali']);
+        PendidikanTerakhirModel::create($data['pendidikan']);
+        BerkasSantriModel::create($data['berkas']);
 
-          $data['virtual_acc'] = array(
-            'id_santri'=> $id_santri,
-            'no_pendaftaran' => $data['nomor'],
-            'nomor_induk' => $data['no_induk'],
-          );
-
-          VirtualAkunModel::create($data['virtual_acc']);
-          $data['gambar'] = BerkasSantriModel::where([
+        $data['virtual_acc'] = array(
             'id_santri' => $id_santri,
-          ])->first();
+            'no_pendaftaran' => $data['nomor'],
+            'nomor_induk' => $data['no_induk']
+        );
 
-          $data['lahir'] = tgl_indo($tgl_santry);
-          $this->view('front.page.cetak_kartu',$data);
-          // var_dump($_POST);
-      }
+        VirtualAkunModel::create($data['virtual_acc']);
+        $data['gambar'] = BerkasSantriModel::where([
+            'id_santri' => $id_santri
+        ])->first();
 
-      public function sukses(){
+        $data['lahir'] = tgl_indo($tgl_santry);
+        $this->view('front.page.cetak_kartu', $data);
+        // var_dump($_POST);
+    }
+
+    public function sukses()
+    {
         $this->view('front.wpage.success');
-      }
+    }
 
-      public function edit(){
+    public function edit()
+    {
         $this->view('front.page.ppdb_edit');
-      }
+    }
 
-      public function generateJenjang($jenjang){
-          if($jenjang == 'mts'){
+    public function generateJenjang($jenjang)
+    {
+        if ($jenjang == 'mts') {
             return 1;
-          }elseif($jenjang == 'ma'){
+        } elseif ($jenjang == 'ma') {
             return 2;
-          }elseif($jenjang == 'md'){
+        } elseif ($jenjang == 'md') {
             return 3;
-          }
-      }
-
-      public function generateJK($jk){
-          if($jk == 'laki-laki'){
-            return 1;
-          }elseif($jk == 'perempuan'){
-            return 2;
-          }
         }
+    }
 
-      public function kartu($id){
+    public function generateJK($jk)
+    {
+        if ($jk == 'laki-laki') {
+            return 1;
+        } elseif ($jk == 'perempuan') {
+            return 2;
+        }
+    }
+
+    public function kartu($id)
+    {
         $data['santri'] = SantriModel::find($id);
-        $data['date_now'] = longdate_indo(date("Y-m-d"));
-        $this->view('front.page.kartu_peserta',$data);
-      }
-      public function cetak(){
+        $data['date_now'] = longdate_indo(date('Y-m-d'));
+        $this->view('front.page.kartu_peserta', $data);
+    }
+    public function cetak()
+    {
         // $this->view('front.page.cetak_kartu');
         var_dump($_POST);
-      }
-  }
+    }
+}
 ?>

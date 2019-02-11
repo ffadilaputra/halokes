@@ -134,15 +134,16 @@ class ComposerStaticInit0b383b5c09644bac37d71b40397cfa67
     );
 
     public static $classMap = array (
+        'AksesModel' => __DIR__ . '/../..' . '/application/models/AksesModel.php',
         'AyahModel' => __DIR__ . '/../..' . '/application/models/AyahModel.php',
         'BeritaModel' => __DIR__ . '/../..' . '/application/models/BeritaModel.php',
         'BerkasSantriModel' => __DIR__ . '/../..' . '/application/models/BerkasSantriModel.php',
-        'CetakModel' => __DIR__ . '/../..' . '/application/models/CetakModel.php',
         'IbuModel' => __DIR__ . '/../..' . '/application/models/IbuModel.php',
         'KategoriBeritaModel' => __DIR__ . '/../..' . '/application/models/KategoriBeritaModel.php',
         'KategoriKeuanganModel' => __DIR__ . '/../..' . '/application/models/KategoriKeuanganModel.php',
         'LevelModel' => __DIR__ . '/../..' . '/application/models/LevelModel.php',
         'MauidhohModel' => __DIR__ . '/../..' . '/application/models/MauidhohModel.php',
+        'ModulModel' => __DIR__ . '/../..' . '/application/models/ModulModel.php',
         'PembayaranModel' => __DIR__ . '/../..' . '/application/models/PembayaranModel.php',
         'PendidikanModel' => __DIR__ . '/../..' . '/application/models/PendidikanModel.php',
         'PendidikanTerakhirModel' => __DIR__ . '/../..' . '/application/models/PendidikanTerakhirModel.php',

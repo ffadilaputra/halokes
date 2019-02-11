@@ -4,6 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   class TahunAkademik extends MY_Controller {
 
+    public function __construct() {
+      parent::__construct();
+      $this->authenticate();
+    }
+
     public function index(){
         $data['list'] = TahunAkademikModel::all();
         $this->autenthicateAdmin();
@@ -13,9 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     public function create(){
-      $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
-
       $this->view('admin.pages.tahun_akademik.create',$data);
     }
 
@@ -29,7 +32,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     public function edit($id){
       $data['edit'] = TahunAkademikModel::find($id);
-      $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
       $this->view('admin.pages.tahun_akademik.edit',$data);
     }

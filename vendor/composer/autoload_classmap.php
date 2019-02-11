@@ -6,15 +6,16 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AksesModel' => $baseDir . '/application/models/AksesModel.php',
     'AyahModel' => $baseDir . '/application/models/AyahModel.php',
     'BeritaModel' => $baseDir . '/application/models/BeritaModel.php',
     'BerkasSantriModel' => $baseDir . '/application/models/BerkasSantriModel.php',
-    'CetakModel' => $baseDir . '/application/models/CetakModel.php',
     'IbuModel' => $baseDir . '/application/models/IbuModel.php',
     'KategoriBeritaModel' => $baseDir . '/application/models/KategoriBeritaModel.php',
     'KategoriKeuanganModel' => $baseDir . '/application/models/KategoriKeuanganModel.php',
     'LevelModel' => $baseDir . '/application/models/LevelModel.php',
     'MauidhohModel' => $baseDir . '/application/models/MauidhohModel.php',
+    'ModulModel' => $baseDir . '/application/models/ModulModel.php',
     'PembayaranModel' => $baseDir . '/application/models/PembayaranModel.php',
     'PendidikanModel' => $baseDir . '/application/models/PendidikanModel.php',
     'PendidikanTerakhirModel' => $baseDir . '/application/models/PendidikanTerakhirModel.php',

@@ -75,6 +75,7 @@
         <li><a href="{{ base_url('admin/TahunAkademik') }}">Tahun Akademik</a></li>
         <li><a href="{{ base_url('admin/KategoriKeuangan') }}">Kategori Keuangan</a></li>
         <li><a href="{{ base_url('admin/User') }}">Admin/ Operator</a></li>
+        <li><a href="{{ base_url('admin/level') }}">Pengelola Level</a></li>
       </ul>
     </a>
   </li>
