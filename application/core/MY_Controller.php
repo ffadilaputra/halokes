@@ -136,4 +136,20 @@ class MY_Controller extends CI_Controller {
       return $this->pagination->create_links();
     }
 
+    protected function authenticate() {
+      if(is_null($this->session->userdata('admin_logged_in'))) {
+          redirect(base_url('admin/login'));
+      } else if (get_class($this) != 'Dashboard' && get_class($this) != 'Login') {
+          $found = false;
+          foreach ($this->session->userdata('admin_logged_in')->level->akses as $row) {
+              if ($row->modul->nama == get_class($this)) {
+                  $found = true;
+              }
+          }
+          if (!$found) {
+              redirect(base_url('admin/dashboard/denied'));
+          }
+      }
+  }
+
 }

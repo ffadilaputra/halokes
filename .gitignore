@@ -57,3 +57,5 @@ Thumbs.db
 
 # Upload Folder
 /assets/uploads/
+
+.php_cs.cache

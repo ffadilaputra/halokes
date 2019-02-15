@@ -68,10 +68,21 @@
                             <textarea class="form-control" name="alamat" id="" rows="6">{{ $user->alamat }}</textarea>
                           </td>
                       </tr>
+                      <tr>
+                          <td class="col-sm-2 col-xs-2"><b>Level</b></td>
+                          <td class="col-sm-4 col-xs-6">
+                              <select name="id_level" class="form-control">
+                                  <option value="">-- Pilih --</option>
+                                  @foreach($level as $data)
+                              <option @if($user->id_level == $data->id_level ) selected @endif value="{{ $data->id_level }}"> {{ $data->nama_level }}</option>
+                                  @endforeach
+                              </select>
+                          </td>
+                     </tr>
                        <tr>
                             <td class="col-sm-2 col-xs-2"><b>New Password</b></td>
                             <td class="col-sm-4 col-xs-6">
-                                <input type="password" class="form-control" name="password" id="" value="">
+                                <input type="password" class="form-control" name="password">
                                 <small class="text-danger">*kosongi apabila tidak memperbarui kata sandi</small>
                             </td>
                        </tr>

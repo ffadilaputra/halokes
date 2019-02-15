@@ -9,7 +9,7 @@
 
                         </div>
                         <div class="login-form">
-                        <?= form_open('admin/login/loginProcess') ?>
+                        <?= form_open('admin/login/login_process') ?>
                             <!-- <form action="" method="post"> -->
                                 <div class="form-group">
                                     <label>Email Address</label>

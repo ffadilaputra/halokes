@@ -4,25 +4,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   class User extends MY_Controller {
 
+    public function __construct() {
+      parent::__construct();
+      $this->authenticate();
+    }
+
     public function index(){
-        $this->autenthicateAdmin();
         $data['admin'] = $this->session->userdata('admin_logged_in');
         $data['list'] = UsersModel::all();
         $this->view('admin.pages.user.index',$data);
     }
 
     public function create(){
-      $this->autenthicateAdmin();
         $data['admin'] = $this->session->userdata('admin_logged_in');
-      $data['level'] = LevelModel::all();
-      $this->view('admin.pages.user.create',$data);
+        $data['level'] = LevelModel::all();
+        $this->view('admin.pages.user.create',$data);
     }
 
     public function store(){
       $this->validate($this->input->post(),[
         'nama_lengkap' => 'required',
         'tempat_lahir' => 'required',
-        'tgl_lahir' => 'required',
         'telepon' => 'required',
         'email' => 'required',
         'password'=> 'required',
@@ -37,21 +39,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     public function show($id){
-      $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
       $data['user'] = UsersModel::find($id);
       $this->view('admin.pages.user.show',$data);
     }
 
     public function edit($id){
-      $this->autenthicateAdmin();
       $data['admin'] = $this->session->userdata('admin_logged_in');
+      $data['level'] = LevelModel::all();
       $data['user'] = UsersModel::find($id);
       $this->view('admin.pages.user.edit',$data);
     }
 
     public function update($id){
-      $_POST['password'] = md5($_POST['password']);
+        $_POST['password'] = md5($_POST['password']);
         UsersModel::find($id)->update($this->input->post());
         redirect('admin/user');
     }

@@ -1,4 +1,3 @@
-<!-- <h1>{{ $user->nama_lengkap }}</h1> -->
 @extends('admin.template')
 
 @section('content')
@@ -19,18 +18,11 @@
             <?= form_open('admin/user/store') ?>
                <table class="table table-bordered">
                    <tbody>
-                       <!-- <tr>
-                           <td colspan="2">
-                                <center>
-                                <img id="santri" src="" alt="your image" style="width:200px; height:250px; background-color:#eeeeee;">
-                                </center>
-                           </td>
-                       </tr> -->
                        <tr>
                             <td class="col-sm-2 col-xs-2"><b>Foto Profile</b></td>
                             <td class="col-sm-6 col-xs-6">
                                 <input type="file" class="form-control" name="nama_lengkap">
-                               
+
                             </td>
                        </tr>
                        <tr>
@@ -82,7 +74,7 @@
                           <td class="col-sm-2 col-xs-2"><b>Alamat</b></td>
                           <td class="col-sm-6 col-xs-6">
                             <textarea class="form-control" name="alamat" id="" rows="6"></textarea>
-                            
+
                           </td>
                       </tr>
                        <tr>
@@ -98,10 +90,10 @@
                        <tr>
                             <td class="col-sm-2 col-xs-2"><b>Level</b></td>
                             <td>
-                            <select name="id_level" id="">
+                            <select class="form-control" name="id_level" id="">
                                     <option value="0">-- Pilih --</option>
                                 @foreach ($level as $item)
-                                    <option value="{{ $item->id_level }}">{{ $item->level }}</option>
+                                    <option value="{{ $item->id_level }}">{{ $item->nama_level }}</option>
                                 @endforeach
                             </select>
                             @if($errors->has('id_level'))
@@ -124,13 +116,5 @@
 </div> <!-- identitas siswa end -->
 
 
-@stop
-
-{{-- INI HARUS ADA DISEMUA LAYOUT SUPAYA BIAR BISA DI KLIK DROPDOWNNYA --}}
-@section('scripts')
-<!-- jQuery -->
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
 @stop
 

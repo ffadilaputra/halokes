@@ -11,6 +11,9 @@
       "email": "i.fadilaputra@gmail.com"
     }
   ],
+  "scripts": {
+    "fix-cs": ["npx prettier application/controllers/**/* --write", "php-cs-fixer fix"]
+  },
   "require": {
     "philo/laravel-blade": "3.*",
     "illuminate/database": "5.*",
