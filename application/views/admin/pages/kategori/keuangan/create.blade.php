@@ -21,3 +21,4 @@
    <input type="submit" class="btn btn-success" style="float:right">
    <?= form_close() ?>
 </div>
+@stop
