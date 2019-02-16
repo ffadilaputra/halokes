@@ -25,7 +25,8 @@ class Dashboard extends MY_Controller
             ->count();
         $data['tanggungan'] = TanggunganPembayaranModel::count();
 
-        $this->view('admin.pages.dashboard', $data);
+        // $this->view('admin.pages.dashboard', $data);
+        $this->view('admin.pages.kategori.keuangan.dashboard');
     }
 
     public function denied()
