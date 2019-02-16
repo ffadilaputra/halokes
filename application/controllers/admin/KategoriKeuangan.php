@@ -19,7 +19,7 @@ class KategoriKeuangan extends MY_Controller
         // $this->view('admin.pages.kategori.keuangan.index', $data);
 
         // ini buat nampilin chart nyobak dulu
-        $this->view('admin.pages.kategori.keuangan.dashboard');
+        $this->view('admin.pages.kategori.keuangan.dashboard',$data);
     }
 
     public function create()

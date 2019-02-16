@@ -26,7 +26,10 @@ class Dashboard extends MY_Controller
         $data['tanggungan'] = TanggunganPembayaranModel::count();
 
         // $this->view('admin.pages.dashboard', $data);
-        $this->view('admin.pages.kategori.keuangan.dashboard');
+
+        $this->autenthicateAdmin();
+        // $data['admin'] = $this->session->userdata('admin_logged_in');
+        $this->view('admin.pages.kategori.keuangan.dashboard',$data);
     }
 
     public function denied()
