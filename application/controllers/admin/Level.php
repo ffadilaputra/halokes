@@ -13,7 +13,6 @@ class Level extends MY_Controller
     public function index()
     {
         $data['list'] = LevelModel::all();
-        $this->autenthicateAdmin();
         $data['admin'] = $this->session->userdata('admin_logged_in');
 
         $this->view('admin.pages.level.index', $data);

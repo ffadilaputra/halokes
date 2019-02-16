@@ -15,7 +15,11 @@ class KategoriKeuangan extends MY_Controller
         $data['list'] = KategoriKeuanganModel::all();
         $data['admin'] = $this->session->userdata('admin_logged_in');
 
-        $this->view('admin.pages.kategori.keuangan.index', $data);
+        // ini dipake kok
+        // $this->view('admin.pages.kategori.keuangan.index', $data);
+
+        // ini buat nampilin chart nyobak dulu
+        $this->view('admin.pages.kategori.keuangan.dashboard');
     }
 
     public function create()
