@@ -48,10 +48,10 @@
                      <td><span class="label label-success">{{ $item->status_verifikasi }}</span></td>
                      <td>{{ $item->virtualAkun->no_virtual_account }}</td>
                      <td>
-                           <a class="btn btn-sm btn-info" href="{{ base_url('admin/santri/show/').$item->id_santri }}"><i class="fa fa-eye"></i>&nbsp;Detail</a>
+                           <a class="btn btn-sm btn-info" href="{{ base_url('admin/santri/show/').$item->id_santri }}"><i class="fa fa-eye"></i>&nbsp;</a>
                          @if($item->status_verifikasi == 'terverifikasi')
                          @elseif($item->status_verifikasi == 'belum_terverifikasi')
-                           <a class="btn btn-sm btn-success" href="{{ base_url('admin/santri/verify/').$item->id_santri }}"><i class="fa fa-check"></i>&nbsp;Detail</a>
+                           <a class="btn btn-sm btn-success" href="{{ base_url('admin/santri/verify/').$item->id_santri }}"><i class="fa fa-check"></i>&nbsp;</a>
                          @endif
                          <a href="{{ base_url('admin/santri/destroy/').$item->id_santri }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                      </td>

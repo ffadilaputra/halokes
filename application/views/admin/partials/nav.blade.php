@@ -19,7 +19,8 @@
         </li>
         <li class="divider"></li>
         <li>
-          <a href="{{ base_url('admin/login/logoutProcess')}}"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+          <a data-toggle="modal" data-target="#modalLogout" href=""><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+          <!-- Modal -->
         </li>
       </ul>
     </li>
@@ -84,3 +85,22 @@
 
 <!-- /.navbar-collapse -->
 </nav>
+
+<div id="modalLogout" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Pemberitahuan</h4>
+      </div>
+      <div class="modal-body">
+        <p>Anda yakin ingin keluar dari laman ini ?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <a class="btn btn-danger" href="{{ base_url('admin/login/logoutProcess')}}">Keluar</a>
+      </div>
+    </div>
+  </div>
+</div>

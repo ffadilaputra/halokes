@@ -20,7 +20,7 @@ class Santri extends MY_Controller
 
         //   ]);
 
-        $id_santri = 'STR' . random_string('alnum', 5) . date('my');
+        $id_santri = 'STR' . random_string('alnum', 5).date('my');
         $tgl_siswa = $this->input->post('tgl_siswa');
         $bln_santri = $this->input->post('bulan_siswa');
         $thn_santri = $this->input->post('tahun_siswa');

@@ -10,8 +10,7 @@ class Level extends MY_Controller
         $this->authenticate();
     }
 
-    public function index()
-    {
+    public function index(){
         $data['list'] = LevelModel::all();
         $data['admin'] = $this->session->userdata('admin_logged_in');
 
