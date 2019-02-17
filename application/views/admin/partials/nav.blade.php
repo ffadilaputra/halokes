@@ -134,11 +134,6 @@
             </a>
          </li>
       </ul>
-<<<<<<< HEAD
-   </div>
-   <!-- /.navbar-collapse -->
-</nav>
-=======
     </a>
   </li>
 </ul>
@@ -165,4 +160,3 @@
     </div>
   </div>
 </div>
->>>>>>> origin/develop

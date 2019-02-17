@@ -10,76 +10,75 @@
 <div class="row">
    <div class="col-lg-12">
       <div class="row">
-         <!-- <div class="col-lg-8">
-            <div class="card mb-3">
-               <div class="card-header">
-                  <i class="fas fa-chart-bar"></i>
-                  Bar Chart Example
-               </div>
-               <div class="card-body">
-                  <canvas id="myBarChart" width="100%" height="50"></canvas>
-               </div>
-               <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-            </div>
-         </div> -->
 
-         <!-- MA -->
-         <div class="col-lg-4">
-            <div class="card mb-3">
-               <div class="card-header">
-                  <i class="fas fa-chart-pie"></i>
-                  MA
-               </div>
-               <div class="card-body">
-                  <canvas id="myPieChart" width="100%" height="100"></canvas>
-               </div>
-               <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-            </div>
-         </div>
-
-         <!-- MTS -->
-         <div class="col-lg-4">
-            <div class="card mb-3">
-               <div class="card-header">
-                  <i class="fas fa-chart-pie"></i>
-                  MTS
-               </div>
-               <div class="card-body">
-                  <canvas id="myPieChart2" width="100%" height="100"></canvas>
-               </div>
-               <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-            </div>
-         </div>
-
-         <!-- MADIN -->
-         <div class="col-lg-4">
-            <div class="card mb-3">
-               <div class="card-header">
-                  <i class="fas fa-chart-pie"></i>
-                  MADIN
-               </div>
-               <div class="card-body">
-                  <canvas id="myPieChart" width="100%" height="100"></canvas>
-               </div>
-               <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-            </div>
-         </div>
+        <center>
+        <div id="barchart_material" style="width: 80%; height: 500px;"></div>
+        </center>
+         <!-- ini bisa -->
+         <div id="chartMa" style="height: 370px; width: 100%;"></div>
+         
       </div>
    </div>
 </div>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-<!-- Bootstrap core JavaScript-->
-<script src="{{ base_url('assets/sb-admin/jquery')}}/jquery.min.js"></script>
-<script src="{{ base_url('assets/sb-admin/bootstrap')}}/js/bootstrap.bundle.min.js"></script>
-<!-- Core plugin JavaScript-->
-<script src="{{ base_url('assets/sb-admin/jquery-easing')}}/jquery.easing.min.js"></script>
-<!-- Page level plugin JavaScript-->
-<script src="{{ base_url('assets/sb-admin/chart.js')}}/Chart.min.js"></script>
-<!-- Custom scripts for all pages-->
-<!-- <script src="js/sb-admin.min.js"></script> -->
-<!-- Demo scripts for this page-->
-<script src="{{ base_url('assets/sb-admin/')}}/js/demo/chart-area-demo.js"></script>
-<script src="{{ base_url('assets/sb-admin/')}}/js/demo/chart-bar-demo.js"></script>
-<script src="{{ base_url('assets/sb-admin/')}}/js/demo/chart-pie-demo.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Sekolah', 'Sudah', 'Belum'],
+          ['MA', 1000, 400],
+          ['MTS', 1170, 460],
+          ['Madin', 660, 1120],
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Status Pembayaran',
+            subtitle: 'Status Pembayaran Ponpes periode 2018-2019',
+          },
+          bars: 'vertical' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+</script>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+<script>
+
+window.onload = function () {
+
+var chart1 = new CanvasJS.Chart("chartMa", {
+	theme: "light1", // "light2", "dark1", "dark2"
+	animationEnabled: false, // change to true		
+	title:{
+		text: "Pembayaran"
+	},
+	data: [
+	{
+		// Change type to "bar", "area", "spline", "pie",etc.
+		type: "column",
+		dataPoints: [
+			{ label: "MA Belum",  y: 10  },
+			{ label: "MA Sudah", y: 15  },
+            { label: "MTS Belum",  y: 10  },
+			{ label: "MTS Sudah", y: 15  },
+            { label: "Madin Belum",  y: 10  },
+			{ label: "Madin Sudah", y: 15  },
+		]
+	}
+	]
+});
+chart1.render();
+
+}
+
+</script>
+
+
 @stop
