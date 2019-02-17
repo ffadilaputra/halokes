@@ -11,13 +11,27 @@
    <div class="col-lg-12">
       <div class="row">
 
+        <div class="col-lg-4">
         <center>
-        <div id="barchart_material" style="width: 80%; height: 500px;"></div>
-        </center>
+        <div id="chart_ppdb" style="width: 80%; height: 500px;"></div>
+        </center></div>
+
+        <div class="col-lg-4">
+        <center>
+        <div id="chart_her" style="width: 80%; height: 500px;"></div>
+        </center></div>
+
+        <div class="col-lg-4">
+        <center>
+        <div id="chart_spp" style="width: 80%; height: 500px;"></div>
+        </center></div>
          <!-- ini bisa -->
-         <div id="chartMa" style="height: 370px; width: 100%;"></div>
+         <!-- <div id="chartMa" style="height: 370px; width: 100%;"></div> -->
          
       </div>
+      <hr>
+      <h1>
+      hhahah</h1>
    </div>
 </div>
 
@@ -28,7 +42,7 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Sekolah', 'Sudah', 'Belum'],
+          ['Pondok Pesantren', 'Lunas', 'Belum'],
           ['MA', 1000, 400],
           ['MTS', 1170, 460],
           ['Madin', 660, 1120],
@@ -36,13 +50,63 @@
 
         var options = {
           chart: {
-            title: 'Status Pembayaran',
-            subtitle: 'Status Pembayaran Ponpes periode 2018-2019',
+            title: 'Status Pembayaran PPDB',
+            subtitle: 'Status Pembayaran PPDB periode 2018-2019',
           },
           bars: 'vertical' // Required for Material Bar Charts.
         };
 
-        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+        var chart = new google.charts.Bar(document.getElementById('chart_ppdb'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+</script>
+
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Pondok Pesantren', 'Lunas', 'Belum'],
+          ['MA', 100, 400],
+          ['MTS', 170, 160],
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Status Pembayaran SPP',
+            subtitle: 'Status Pembayaran SPP periode 2018-2019',
+          },
+          bars: 'vertical' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_spp'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+</script>
+
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Pondok Pesantren', 'Lunas', 'Belum'],
+          ['MA', 300, 480],
+          ['MTS', 170, 360],
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Status Pembayaran Heregristasi',
+            subtitle: 'Status Pembayaran Heregristasi periode 2018-2019',
+          },
+          bars: 'vertical' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_her'));
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }
