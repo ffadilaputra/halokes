@@ -11,6 +11,7 @@ class Login extends MY_Controller
 
     public function index()
     {
+
         $this->view('front.page.login');
     }
 
