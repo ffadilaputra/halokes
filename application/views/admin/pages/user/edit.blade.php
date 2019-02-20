@@ -74,7 +74,7 @@
                               <select name="id_level" class="form-control">
                                   <option value="">-- Pilih --</option>
                                   @foreach($level as $data)
-                              <option @if($user->id_level == $data->id_level ) selected @endif value="{{ $data->id_level }}"> {{ $data->nama_level }}</option>
+                                    <option @if($user->id_level == $data->id_level ) selected @endif value="{{ $data->id_level }}"> {{ $data->nama_level }}</option>
                                   @endforeach
                               </select>
                           </td>

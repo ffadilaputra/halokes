@@ -21,6 +21,7 @@ class KategoriKeuangan extends MY_Controller
     public function create()
     {
         $data['admin'] = $this->session->userdata('admin_logged_in');
+        $data['thn_akademik'] = TahunAkademikModel::all();
         $this->view('admin.pages.kategori.keuangan.create', $data);
     }
 
@@ -36,6 +37,7 @@ class KategoriKeuangan extends MY_Controller
     public function edit($id)
     {
         $data['edit'] = KategoriKeuanganModel::find($id);
+        $data['thn_akademik'] = TahunAkademikModel::all();
         $data['admin'] = $this->session->userdata('admin_logged_in');
         $this->view('admin.pages.kategori.keuangan.edit', $data);
     }

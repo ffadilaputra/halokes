@@ -7,8 +7,12 @@ class KategoriKeuanganModel extends Eloquent {
 
   protected $table      = 'kategori_keuangan';
   protected $primaryKey = 'id_kategori_keuangan';
-  protected $fillable   = ['nama','biaya'];
+  protected $fillable   = ['nama','biaya','id_tahun_akademik'];
   public $timestamps = true;
+
+  protected function tahun(){
+      return $this->belongsTo('TahunAkademikModel','id_tahun_akademik','id_tahun_akademik');
+  }
 
 }
 ?>
