@@ -301,14 +301,14 @@
                               </div>
                               <div class="form-group">
                                  <label for="skhun">No Seri SKHUN</label>
-                                 <input name="skhun_siswa" type="text" class="form-control" id="skhun">
+                                 <input name="skhun_siswa" type="text" class="form-control" id="skhun" >
                                  @if($errors->has('skhun_siswa'))
                                  <small class="text-danger">{{ $errors->first('skhun_siswa') }}</small>
                                  @endif
                               </div>
                               <div class="form-group">
                                  <label for="noUn">No Peserta Ujian UN</label>
-                                 <input name="no_un_siswa" type="text" class="form-control" id="noUn">
+                                 <input name="no_un_siswa" type="text" class="form-control" id="noUn" >
                                  @if($errors->has('no_un_siswa'))
                                  <small class="text-danger">{{ $errors->first('no_un_siswa') }}</small>
                                  @endif

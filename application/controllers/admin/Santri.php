@@ -86,7 +86,7 @@ class Santri extends MY_Controller
         PendidikanTerakhirModel::where(['id_siswa' => $id])->delete();
         VirtualAkunModel::where(['id_santri' => $id])->delete();
         SantriModel::where(['id_santri' => $id])->delete();
-        redirect('admin/santri/all');
+        redirect('admin/santri');
     }
 
     public function ma()

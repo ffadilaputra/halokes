@@ -33,7 +33,6 @@
                      <td>Status Akun</td>
                      <td>Nomor Virtual Akun</td>
                      <td>Opsi</td>
-                     <td>Cetak</td>
                    </tr>
                 </thead>
                 <tbody>
@@ -54,19 +53,13 @@
                            <a class="btn btn-sm btn-success" href="{{ base_url('admin/santri/verify/').$item->id_santri }}"><i class="fa fa-check"></i>&nbsp;</a>
                          @endif
                          <a href="{{ base_url('admin/santri/destroy/').$item->id_santri }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
-                     </td>
+                         <a href="{{ base_url('admin/santri/print/').$item->id_santri }}" class="btn btn-sm btn-info"><i class="fa fa-print"></i>&nbsp;</a>
+                        </td>
                      <td>
-                     <a href="{{ base_url('admin/santri/print/').$item->id_santri }}" class="btn btn-sm btn-info"><i class="fa fa-print"></i>&nbsp;Cetak</a>
-                   </td>
                    </tr>
                    @endforeach
                 </tbody>
              </table>
-          </div>
-          <div class="text-right">
-             <a href="#">View All Transactions
-             <i class="fa fa-arrow-circle-right"></i>
-             </a>
           </div>
        </div>
     </div>
