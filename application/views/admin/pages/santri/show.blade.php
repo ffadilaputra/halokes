@@ -498,7 +498,7 @@
          <div class="col-lg-12">
             <h2>Berkas Berkas</h2>
             <div class="form-group">
-               <a style="float:right" class="btn btn-success" href="{{ base_url('admin/berkas/archive/'.$santri->id_santri) }}">Ubah data Pendidikan</a>
+               <a style="float:right" class="btn btn-success" href="{{ base_url('admin/berkas/archive/'.$santri->id_santri) }}">Ubah Berkas</a>
                   <br>
              </div>
             <hr>
