@@ -528,10 +528,11 @@
       <section >
          <div class="contrainer">
             <div class="post-content-body">
+                <center>
                <div class="comment-form-wrap pt-5">
-                  <button type="button" class="btn btn-large btn-success">DAFTAR</button>
+                  <button type="button" class="btn btn-lg btn-success">DAFTAR</button>
                   <br>
-               </div>
+               </div></center>
             </div>
          </div>
       </section>
