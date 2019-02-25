@@ -8,9 +8,7 @@
             <h1 class="mb-1" style="text-align:center">DETAIL PENDAFTARAN</h1>
             <div class="post-content-body">
                <div class="comment-form-wrap pt-5">
-            
                   <form action="#" class="p-5 bg-light">
-                     
                      <?= form_open_multipart('ppdb/santri/store') ?>
                      <!-- identitas siswa -->
                      <div>
@@ -220,9 +218,9 @@
                                     </div>
                                 </div>
                               </div>
-                              
+
                            </div>
-                           
+
                         </div>
                      </div>
 
@@ -876,7 +874,7 @@
                                           <div class="container2">
                                              <!-- <label class="labell" for="input">Please upload a picture !</label> -->
                                              <img id="wali" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
-                                             
+
                                           </div>
                                        </div>
                                     </div>
@@ -887,7 +885,7 @@
                                           <div class="container2">
                                              <!-- <label class="labell" for="input">Please upload a picture !</label> -->
                                              <img id="ayah" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
-                                             
+
                                           </div>
                                        </div>
                                     </div>
@@ -898,7 +896,7 @@
                                           <div class="container2">
                                              <!-- <label class="labell" for="input">Please upload a picture !</label> -->
                                              <img id="ibu" src="#" alt="your image" style="width:150px; height:200px; background-color:#eeeeee" />
-                                             
+
                                           </div>
                                        </div>
                                     </div>
@@ -907,7 +905,7 @@
                               <!-- end foto -->
                            </div>
                            <!-- foto end -->
-                           
+
                            <!-- berkas -->
                            <div class="row">
                               <!-- foto -->
@@ -994,12 +992,12 @@
                                     <input type="submit" style="margin:0 auto; display:block;" value="EDIT" class="btn btn-warning btn-lg">
                                 </div>
                                 <div class="col">
-                                    <input type="submit" onclick="ara()" style="margin:0 auto; display:block;" value="DAFTAR" class="btn btn-info btn-lg">     
+                                    <input type="submit" onclick="ara()" style="margin:0 auto; display:block;" value="DAFTAR" class="btn btn-info btn-lg">
                                 </div>
                             </div>
-                           
-                           
-                           
+
+
+
                         </div>
 
                   </form>

@@ -530,14 +530,14 @@
             <div class="post-content-body">
                 <center>
                <div class="comment-form-wrap pt-5">
-                  <button type="button" class="btn btn-lg btn-success">DAFTAR</button>
+                  <a class="btn btn-lg btn-success" href="{{ base_url('ppdb/santri') }}">DAFTAR</a>
                   <br>
                </div></center>
             </div>
          </div>
       </section>
       <!-- daftar end -->
-      
+
    </section>
 </div>
 @endsection

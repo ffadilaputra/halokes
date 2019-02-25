@@ -357,5 +357,6 @@ class Santri extends MY_Controller
       public function informasi(){
         $this->view('front.page.informasi');
       }
+
   }
 ?>
