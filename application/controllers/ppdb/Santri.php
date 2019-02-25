@@ -11,7 +11,8 @@ class Santri extends MY_Controller
         ])
             ->limit(3)
             ->get();
-        $this->view('front.page.ppdb_register_new', $data);
+        // $this->view('front.page.ppdb_register_new', $data);
+        $this->view('front.page.informasi',$data);
     }
 
     public function store()
@@ -357,5 +358,10 @@ class Santri extends MY_Controller
       public function informasi(){
         $this->view('front.page.informasi');
       }
+
+      public function pendaftaran(){
+        $this->view('front.page.ppdb_register_new');
+      }
+
   }
 ?>
