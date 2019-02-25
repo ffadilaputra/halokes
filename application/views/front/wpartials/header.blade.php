@@ -25,7 +25,7 @@
           <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
           <h2 class="site-logo">
           <a href=" {{ base_url() }}">
-              <img src="{{base_url('assets/images/header-min.jpg')}}" alt="">
+              <img src="{{base_url('assets/images/header-min.jpg')}}" style="max-width:100%;" alt="">
             </a>
           </h2>
         </div>
