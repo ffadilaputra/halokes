@@ -16,9 +16,12 @@
       <div class="row">
          <div class="col-lg-12">
             <h2>Identitas Siswa</h2>
+               <div class="form-group">
+                 <a style="float:right" class="btn btn-success" href="{{ base_url('admin/parents/santri/'.$santri->id_santri) }}">Ubah Santri</a>
+                    <br>
+               </div>
             <hr>
             <div class="col-lg-6">
-
                <table class="table table-bordered table-hover">
                    <tbody>
                        <tr>
@@ -132,8 +135,11 @@
          <div class="col-lg-12">
             <h2>Pendidikan Sebelumnya</h2>
             <hr>
+            <div class="form-group">
+               <a style="float:right" class="btn btn-success" href="{{ base_url('admin/pendidikan/pendidikan_edit/'.$santri->id_santri) }}">Ubah data Pendidikan</a>
+                  <br>
+             </div>
             <div class="col-lg-6">
-
                <table class="table table-bordered table-hover">
                    <tbody>
                        <tr>
@@ -207,9 +213,12 @@
             <div class="col-lg-6">
                 <div>
                     <h3>Identitas Ayah</h3>
+                    <div class="form-group">
+                         <a style="float:right" class="btn btn-success" href="{{ base_url('admin/parents/ayah/'.$santri->id_santri) }}">Ubah data Ayah</a>
+                            <br>
+                       </div>
                     <hr>
                 </div>
-
                <table class="table table-bordered table-hover">
                    <tbody>
                        <tr>
@@ -295,9 +304,12 @@
             <div class="col-lg-6">
                 <div>
                     <h3>Identitas Ibu</h3>
+                    <div class="form-group">
+                         <a style="float:right" class="btn btn-success" href="{{ base_url('admin/parents/ibu/'.$santri->id_santri) }}">Ubah data Ibu</a>
+                            <br>
+                       </div>
                     <hr>
                 </div>
-
                 <table class="table table-bordered table-hover">
                    <tbody>
                        <tr>
@@ -387,6 +399,10 @@
             <div class="col-lg-6">
                 <div>
                     <h3>Identitas Wali</h3>
+                    <div class="form-group">
+                         <a style="float:right" class="btn btn-success" href="{{ base_url('admin/parents/wali/'.$santri->id_santri) }}">Ubah data Wali</a>
+                            <br>
+                       </div>
                     <hr>
                 </div>
                 <table class="table table-bordered table-hover">
@@ -481,6 +497,10 @@
       <div class="row">
          <div class="col-lg-12">
             <h2>Berkas Berkas</h2>
+            <div class="form-group">
+               <a style="float:right" class="btn btn-success" href="{{ base_url('admin/berkas/archive/'.$santri->id_santri) }}">Ubah Berkas</a>
+                  <br>
+             </div>
             <hr>
             <!-- foto -->
             <div class="col-lg-12">

@@ -13,7 +13,7 @@
    </div>
 </div>
 <div class="col-lg-4">
-   <?= form_open('admin/KategoriKeuangan/update/'.$edit->id_kategori_keuangan); ?>
+   <?= form_open('admin/TahunAkademik/update/'.$edit->id_tahun_akademik); ?>
    <div class="form-group">
       <label>Tahun Akademik</label>
       <input class="form-control"  type="text" name="nama" value="{{ $edit->nama }}">

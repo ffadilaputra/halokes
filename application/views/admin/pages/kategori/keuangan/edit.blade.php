@@ -22,7 +22,15 @@
     <label>Biaya</label>
     <input class="form-control"  type="text" name="biaya" value="{{ $edit->biaya }}">
     </div>
-   <input type="submit" class="btn btn-success" style="float:right">
+    <div class="form-group">
+       <label for="">Tahun Akademik</label>
+       <select class="form-control" name="id_tahun_akademik" id="">
+         @foreach ($thn_akademik as $item)
+            <option value="{{ $item->id_tahun_akademik }}" {{ $item->id_tahun_akademik == old('id_tahun_akademik', $edit->id_tahun_akademik) ? 'selected':'' }}>{{ $item->nama }}</option>
+         @endforeach
+       </select>
+    </div>
+   <input type="submit" class="btn btn-success" style="float:left">
    <?= form_close() ?>
 </div>
 @stop

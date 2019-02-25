@@ -13,6 +13,7 @@
          <th>No</th>
          <th>Kategori Keuangan</th>
          <th>Nominal</th>
+         <th>Tahun Akademik</th>
          <th>Option</th>
       </tr>
    </thead>
@@ -23,6 +24,7 @@
          <td>{{ $no++ }}</td>
          <td>{{ $data->nama }}</td>
          <td>{{ convertRupiah($data->biaya) }}</td>
+         <td>{{ $data->tahun->nama }}</td>
          <td>
             <a class="btn btn-primary" href="{{ base_url('admin/KategoriKeuangan/edit/').$data->id_kategori_keuangan }}"><i class="fa fa-pencil"></i></a>
             <a class="btn btn-danger" href="{{ base_url('admin/KategoriKeuangan/delete/').$data->id_kategori_keuangan }}"><i class="fa fa-trash"></i></a>

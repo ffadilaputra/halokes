@@ -7,6 +7,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 <script src="{{ base_url('assets/ckeditor/')}}ckeditor.js"></script>
+<script src="{{ base_url('assets/js/rupiah.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
 <script>
   CKEDITOR.replace('editor' ,{
         filebrowserImageBrowseUrl : '<?php echo base_url('assets/kcfinder');?>',
@@ -22,4 +25,13 @@
       language: "id",
       calendarWeeks: true
     });
+ </script>
+ <script>
+   Morris.Area({
+    element: 'graph',
+    data: <?= $santri_statisic;?>,
+    xkey: 'tingkat_pendidikan',
+    ykeys: ['ma','mt','md'],
+    labels: ['Aliyah', 'Tsanawiyah','Diniyah'],
+  });
  </script>

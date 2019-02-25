@@ -7,9 +7,8 @@ class TanggunganPembayaranModel extends Eloquent {
 
   protected $table      = 'tanggungan_pembayaran';
   protected $primaryKey = 'id_tanggugan_pembayaran';
-  protected $fillable   = ['nominal','id_tahun_akademik','id_kategori_keuangan','id_santri'];
+  protected $fillable   = ['nominal','biaya_harusdibayar','id_tahun_akademik','id_kategori_keuangan','id_santri'];
   public $timestamps = true;
-
 
   public function detailSantri(){
     return $this->belongsTo('SantriModel','id_santri','id_santri');

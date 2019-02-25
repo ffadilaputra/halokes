@@ -18,6 +18,18 @@
       <label>Kategori Keuangan</label>
       <input class="form-control" type="text" name="nama">
    </div>
+   <div class="form-group">
+      <label>Biaya</label>
+      <input class="form-control" type="text" name="biaya">
+      </div>
+   <div class="form-group">
+      <label for="">Tahun Akademik</label>
+         <select class="form-control" name="id_tahun_akademik">
+            @foreach($thn_akademik as $item)
+               <option value="{{ $item->id_tahun_akademik }}">{{ $item->nama }}</option>
+            @endforeach
+         </select>
+   </div>
    <input type="submit" class="btn btn-success" style="float:right">
    <?= form_close() ?>
 </div>
