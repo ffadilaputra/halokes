@@ -34,7 +34,7 @@
                         Waktu Pendaftaran dan daftar ulang
                         <!-- tabel -->
                         <div  style="padding-right:5%;padding-left:5%;">
-                           <table class="table table-bordered table-hover" style="background-color:white;">
+                           <table class="table table-responsive table-bordered table-hover" style="background-color:white;">
                               <thead>
                                  <tr style="text-align:center">
                                     <th>JADWAL</th>
@@ -127,7 +127,7 @@
                         GELOMBANG I
                         <!-- tabel -->
                         <div  style="padding-right:5%;padding-left:5%;">
-                           <table class="table table-bordered table-hover" style="background-color:white;">
+                           <table class="table table-responsive table-bordered table-hover" style="background-color:white;">
                               <thead>
                                  <tr style="text-align:center">
                                     <th>KETERANGAN</th>
@@ -182,7 +182,7 @@
                         GELOMBANG II
                         <!-- tabel -->
                         <div  style="padding-right:5%;padding-left:5%;">
-                           <table class="table table-bordered table-hover" style="background-color:white;">
+                           <table class="table table-responsive table-bordered table-hover" style="background-color:white;">
                               <thead>
                                  <tr style="text-align:center">
                                     <th>KETERANGAN</th>
@@ -316,7 +316,7 @@
                         Waktu Pendaftaran dan daftar ulang
                         <!-- tabel -->
                         <div  style="padding-right:5%;padding-left:5%;">
-                           <table class="table table-bordered table-hover" style="background-color:white;">
+                           <table class="table table-responsive table-bordered table-hover" style="background-color:white;">
                               <thead>
                                  <tr style="text-align:center">
                                     <th>NO</th>
@@ -366,7 +366,7 @@
                      <li>
                         Persyaratan Pendaftaran <br>
                         <div style="padding-right:5%;padding-left:5%;">
-                           <table class="table">
+                           <table class="table table-responsive">
                               <tr>
                                  <td>FC Akta Kelahiran </td>
                                  <td>: 3 lbr ukuran f4</td>
@@ -410,7 +410,7 @@
                      <li>
                         Hal-hal yang perlu dibawa
                         <div  style="padding-right:5%;padding-left:5%;">
-                           <table class="table table-bordered" style="background-color:white;">
+                           <table class="table table-responsive table-bordered" style="background-color:white;">
                               <thead>
                                  <tr style="text-align:center">
                                     <th>NO</th>
@@ -532,7 +532,8 @@
                <div class="comment-form-wrap pt-5">
                   <a class="btn btn-lg btn-success" href="{{ base_url('ppdb/santri') }}">DAFTAR</a>
                   <br>
-               </div></center>
+               </div>
+               </center>
             </div>
          </div>
       </section>
