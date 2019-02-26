@@ -10,16 +10,20 @@ class KategoriKeuangan extends MY_Controller
         $this->authenticate();
     }
 
+    public function dashboard(){
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        $data['list'] = KategoriKeuanganModel::all();
+        $this->view('admin.pages.kategori.keuangan.dashboard',$data);
+    }
+
     public function index()
     {
         $data['list'] = KategoriKeuanganModel::all();
         $data['admin'] = $this->session->userdata('admin_logged_in');
-
         // ini dipake kok
-        // $this->view('admin.pages.kategori.keuangan.index', $data);
-
+        $this->view('admin.pages.kategori.keuangan.index', $data);
         // ini buat nampilin chart nyobak dulu
-        $this->view('admin.pages.kategori.keuangan.dashboard',$data);
+        //$this->view('admin.pages.kategori.keuangan.dashboard',$data);
     }
 
     public function create()

@@ -27,11 +27,9 @@
         </center></div>
          <!-- ini bisa -->
          <!-- <div id="chartMa" style="height: 370px; width: 100%;"></div> -->
-         
+
       </div>
       <hr>
-      <h1>
-      hhahah</h1>
    </div>
 </div>
 
@@ -119,7 +117,7 @@ window.onload = function () {
 
 var chart1 = new CanvasJS.Chart("chartMa", {
 	theme: "light1", // "light2", "dark1", "dark2"
-	animationEnabled: false, // change to true		
+	animationEnabled: false, // change to true
 	title:{
 		text: "Pembayaran"
 	},

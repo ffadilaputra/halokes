@@ -126,7 +126,7 @@
                      <li>
                         GELOMBANG I
                         <!-- tabel -->
-                        <div  style="padding-right:5%;padding-left:5%;">
+                        <div style="padding-right:5%;padding-left:5%;">
                            <table class="table table-responsive table-bordered table-hover" style="background-color:white;">
                               <thead>
                                  <tr style="text-align:center">

@@ -68,18 +68,15 @@
       <ul class="nav navbar-nav side-nav">
          <!-- ppdb -->
          <li>
-            <a href="javascript:;" data-toggle="collapse" data-target="#ppdb"><i class="fa fa-fw fa-arrows-v"></i> PPDB <i class="fa fa-fw fa-caret-down"></i></a>
-            <ul id="ppdb" class="collapse">
+            <a href="javascript:;" data-toggle="collapse" data-target="#ppdbs"><i class="fa fa-fw fa-arrows-v"></i> PPDB <i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="ppdbs" class="collapse">
                <li>
                   <a href="{{ base_url('admin/santri') }}">Verifikasi Santri</a>
                </li>
                <li>
                   <a href="{{ base_url('admin/berkas') }}">Cek berkas Santri</a>
                </li>
-               <li>
-                  <a href="{{ base_url('admin/tanggungan') }}">Pembayaran Tanggungan</a>
-               </li>
-               {{-- 
+               {{--
                <li>
                   <a href="{{ base_url('admin/pembayaran/lunas') }}">Lunas</a>
                </li>
@@ -88,8 +85,8 @@
          </li>
          <!-- santri -->
          <li>
-            <a href="javascript:;" data-toggle="collapse" data-target="#santri"><i class="fa fa-fw fa-user"></i>Santri <i class="fa fa-fw fa-caret-down"></i></a>
-            <ul id="santri" class="collapse">
+            <a href="javascript:;" data-toggle="collapse" data-target="#sc"><i class="fa fa-fw fa-user"></i>Santri <i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="sc" class="collapse">
                <li>
                   <a href="{{ base_url('admin/santri/all') }}">Semua</a>
                </li>
@@ -117,8 +114,13 @@
          <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#keuangan"><i class="fa fa-fw fa-money"></i>Keuangan <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="keuangan" class="collapse">
-               <li><a href="{{ base_url('admin/KategoriKeuangan') }}">Dashboard</a></li>
-               <!-- <li><a href="{{ base_url('admin/berita') }}">Semua</a></li> -->
+               <li><a href="{{ base_url('admin/KategoriKeuangan/dashboard') }}">Dashboard</a></li>
+               <li>
+                <a href="{{ base_url('admin/tanggungan') }}">Pembayaran Tanggungan</a>
+               </li>
+               <li>
+                <a href="{{ base_url('admin/KategoriKeuangan/index') }}">Kategori Keuangan</a>
+               </li>
             </ul>
             </a>
          </li>
@@ -127,7 +129,6 @@
             <a href="javascript:;" data-toggle="collapse" data-target="#master"><i class="fa fa-fw fa-archive"></i>Master <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="master" class="collapse">
                <li><a href="{{ base_url('admin/TahunAkademik') }}">Tahun Akademik</a></li>
-               <li><a href="{{ base_url('admin/KategoriKeuangan') }}">Kategori Keuangan</a></li>
                <li><a href="{{ base_url('admin/User') }}">Admin/ Operator</a></li>
                <li><a href="{{ base_url('admin/level') }}">Pengelola Level</a></li>
             </ul>

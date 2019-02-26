@@ -42,6 +42,10 @@
          <small class="text-danger">{{ $errors->first('nominal') }}</small>
         @endif
    </div>
+   <div class="form-group">
+      <label for="">Biaya yang harus dibayar</label>
+      <input class="form-control" type="text" name="biaya_harusdibayar" value="{{ $edit->biaya_harusdibayar }}">
+   </div>
    <input type="submit" class="btn btn-success" style="float:right">
    <?= form_close() ?>
 </div>
