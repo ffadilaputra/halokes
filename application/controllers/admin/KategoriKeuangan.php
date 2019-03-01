@@ -12,7 +12,11 @@ class KategoriKeuangan extends MY_Controller
 
     public function dashboard(){
         $data['admin'] = $this->session->userdata('admin_logged_in');
-        $data['list'] = KategoriKeuanganModel::all();
+        $data['year'] = date("Y");
+        $data['hitung_santri_lama'] = SantriModel::whereYear('created_at', '=', $data['year'])->where(['jenis_siswa'=> 'lama'] )->get()->count();
+        $data['hitung_santri_baru'] = SantriModel::whereYear('created_at', '=', $data['year'])->where(['jenis_siswa'=> 'baru'] )->get()->count();
+        $data['santri_statistic'] = json_encode($data['hitung_santri_lama']);
+        $data['santri_statistic_new'] = json_encode($data['hitung_santri_baru']);
         $this->view('admin.pages.kategori.keuangan.dashboard',$data);
     }
 

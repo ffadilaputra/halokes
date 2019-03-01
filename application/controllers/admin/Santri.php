@@ -133,8 +133,7 @@ class Santri extends MY_Controller
         $get_date = $date->format('Y');
         $tahun_masuk = substr($get_date, -2);
         $urut = str_pad($count + 1, 4, '0', STR_PAD_LEFT);
-        $virtual_acc_code =
-            $kode_yayasan . $jenjang . $jk . $tahun_masuk . $urut;
+        $virtual_acc_code = $kode_yayasan . $jenjang . $jk . $tahun_masuk . $urut;
         $induk = $tahun_masuk . $urut;
         //var_dump($induk);
         VirtualAkunModel::where(['id_santri' => $id])->update([
