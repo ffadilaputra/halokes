@@ -34,6 +34,10 @@
                   </span>
               </div>
             </div>
+            <div class="form-group">
+              <label>Telepon/Whatsapp</label>
+              <input type="text" name="telepon" class="form-control" id="" value="{{ $parents->telepon }}">
+          </div>
           <h4><b>Alamat Lengkap</b></h4>
           <hr>
           <div class="form-group">

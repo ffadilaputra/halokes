@@ -31,8 +31,8 @@
             <i class="fa fa-users fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge">{!! $santri !!}</div>
-            <div>Total data santri terverivikasi</div>
+            <div class="huge">{!! $belum_lunas !!}</div>
+            <div>Data santri belum lunas</div>
           </div>
         </div>
       </div>
@@ -81,6 +81,30 @@
           <div class="col-xs-9 text-right">
             <div class="huge">{{ $tanggungan }}</div>
             <div>Tanggungan Santri</div>
+          </div>
+        </div>
+      </div>
+    <a href="{{ base_url('admin/tanggungan')}}">
+        <div class="panel-footer">
+          <span class="pull-left">View Details</span>
+          <span class="pull-right">
+            <i class="fa fa-arrow-circle-right"></i>
+          </span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-yellow">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-money fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge">{{ $lunas }}</div>
+            <div>Total santri Lunas</div>
           </div>
         </div>
       </div>
@@ -306,6 +330,10 @@
     </a>
   </div>
 </div>
+
+</div>
+
+
 
 <!-- /.row -->
 @stop

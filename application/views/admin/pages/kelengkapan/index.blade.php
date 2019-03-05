@@ -28,8 +28,9 @@
                       <th style="width:5%">No.</th>
                       <th style="width:25%">Nama Santri</th>
                       <th>Jenis Kelamin</th>
-                      <th>Tempat tgl lahir</th>
+                      <th>Tempat lahir</th>
                       <th>Jenjang Madarasah</th>
+                      <th>Verifikasi</th>
                       <th style="width:20%">Opsi</th>
                    </tr>
                 </thead>
@@ -50,6 +51,7 @@
                            Madarasah Diniyah
                         @endif
                       </td>
+                      <td><a class="btn btn-sm btn-success" href="{{ base_url('admin/santri/verify/').$data->id_santri }}"><i class="fa fa-check-square-o" aria-hidden="true"></i></a></td>
                       <td>
                          <a class="btn btn-sm btn-warning" href="{{ base_url('admin/berkas/santri/'.$data->id_santri) }}"><i class="fa fa-user"></i></a>
                          <a class="btn btn-sm btn-primary" href="{{ base_url('admin/berkas/parents/'.$data->id_santri) }}"><i class="fa fa-users"></i></a>
