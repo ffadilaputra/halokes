@@ -29,6 +29,10 @@
                       <th>Tanggal Lahir</th>
                       <td>{{ tgl_indo($parents->tgl_lahir) }}</td>
                   </tr>
+                  <tr>
+                    <th>Telepon / Whatsapp</th>
+                    <td>{{ $parents->telepon }}</td>
+                  </tr>
               </tbody>
           </table>
 
@@ -117,6 +121,10 @@
                   <tr>
                       <th>Tanggal Lahir</th>
                       <td>{{ tgl_indo($ayah->tgl_lahir) }}</td>
+                  </tr>
+                  <tr>
+                    <th>Telepon / Whatsapp</th>
+                    <td>{{ $ayah->telepon }}</td>
                   </tr>
               </tbody>
           </table>
@@ -207,6 +215,10 @@
                   <tr>
                       <th>Tanggal Lahir</th>
                       <td>{{ tgl_indo($wali->tgl_lahir) }}</td>
+                  </tr>
+                  <tr>
+                    <th>Telepon / Whatsapp</th>
+                    <td>{{ $wali->telepon }}</td>
                   </tr>
               </tbody>
           </table>
