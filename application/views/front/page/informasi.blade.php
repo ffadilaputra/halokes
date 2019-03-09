@@ -156,7 +156,7 @@
                                     <td>Rp.1.370.000,00</td>
                                  </tr>
                                  <tr>
-                                    <td>FORMULIR</td>
+                                    <td>SERAGAM</td>
                                     <td>Rp.1.000.000,00</td>
                                     <td>Rp.1.000.000,00</td>
                                     <td>Rp.1.000.000,00</td>

@@ -60,6 +60,10 @@ class Dashboard extends MY_Controller
             'status_verifikasi' => 'terverifikasi'
         ])->get()->count();
 
+        $data['lunas'] = TanggunganPembayaranModel::whereRaw('tanggungan_pembayaran.nominal >= tanggungan_pembayaran.biaya_harusdibayar')->get()->count();
+        $data['belum_lunas'] = TanggunganPembayaranModel::whereRaw('tanggungan_pembayaran.nominal < tanggungan_pembayaran.biaya_harusdibayar')->get()->count();
+
+
         $data['belum_aktif'] = SantriModel::where([
             'status_verifikasi' => 'belum_verifikasi'
         ])->get()->count();

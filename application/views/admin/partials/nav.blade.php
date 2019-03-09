@@ -105,8 +105,8 @@
          <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#pengumuman"><i class="fa fa-fw fa-book"></i>Artikel <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="pengumuman" class="collapse">
-               <li><a href="{{ base_url('admin/berita/create') }}">Buat Berita</a></li>
-               <li><a href="{{ base_url('admin/berita') }}">Semua</a></li>
+               <li><a href="{{ base_url('admin/berita') }}">Berita</a></li>
+               <li><a href="{{ base_url('admin/pengumuman') }}">Pengumuman</a></li>
             </ul>
             </a>
          </li>
