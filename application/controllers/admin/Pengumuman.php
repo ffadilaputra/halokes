@@ -34,7 +34,7 @@ class Pengumuman extends MY_Controller {
   }
 
   public function delete($id){
-    TukMPengumumanModelodel::destroy($id);
+    PengumumanModel::destroy($id);
     redirect('admin/pengumuman');
   }
 

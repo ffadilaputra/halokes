@@ -35,7 +35,7 @@
               <td>{{ $data->pengumuman }}</td>
               <td>{{ $data->keterangan }}</td>
               <td>
-                 <a class="btn btn-primary" href="{{ base_url('admin/pengumuman/edit/').$data->id_pengumuman }}"><i class="fa fa-pencil"></i></a>
+                 <a class="btn btn-primary" href="{{ base_url('admin/pengumuman/create/').$data->id_pengumuman }}"><i class="fa fa-pencil"></i></a>
                  <a class="btn btn-danger" href="{{ base_url('admin/pengumuman/delete/').$data->id_pengumuman }}"><i class="fa fa-trash"></i></a>
               </td>
            </tr>

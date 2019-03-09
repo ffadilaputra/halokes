@@ -13,7 +13,7 @@
    </div>
 </div>
 <div class="col-lg-4">
-   <?= form_open('admin/pengumuman/store'); ?>
+   <?= form_open('admin/pengumuman/update/'.$peng->id_pengumuman); ?>
    <div class="form-group">
       <label>Pengumuman</label>
    <input class="form-control" type="text" name="pengumuman" value="{{ $peng->pengumuman }}">
