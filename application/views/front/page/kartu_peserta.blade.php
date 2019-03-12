@@ -105,14 +105,12 @@
                            <tr>
                               <td>Pengumuman</td>
                            </tr>
+                           @foreach($pengumuman as $data)
                            <tr>
-                              <td>Pembayaran PPDB</td>
-                              <td>: 1-31 Mei 2019</td>
+                               <td> {{ $data->pengumuman }}</td>
+                               <td> {{ $data->keterangan }}</td>
                            </tr>
-                           <tr>
-                              <td>Checkin Pesantren</td>
-                              <td>: 21 Juli 2019</td>
-                           </tr>
+                           @endforeach
                         </table>
                      </div>
                      <div class="col-md-6 col-lg-6">
