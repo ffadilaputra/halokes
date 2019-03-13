@@ -8,6 +8,10 @@
 
 .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
 
+svg{
+    width: 100% !important
+}
+
 small {
 display: block;
 line-height: 1.428571429;

@@ -8,8 +8,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="<?= base_url('assets/sb-admin/') ?>css/sb-admin.css" rel="stylesheet">
-    <!-- Morris Charts CSS -->
-    <link href="<?= base_url('assets/sb-admin/') ?>css/plugins/morris.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Datatable -->

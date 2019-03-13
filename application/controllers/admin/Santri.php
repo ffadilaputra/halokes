@@ -93,7 +93,8 @@ class Santri extends MY_Controller
     {
         $data['admin'] = $this->session->userdata('admin_logged_in');
         $data['santri'] = SantriModel::where([
-            'tingkat_pendidikan' => 'ma'
+            'tingkat_pendidikan' => 'ma',
+            'status_verifikasi' => 'terverifikasi'
         ])->get();
         $this->view('admin.pages.santri.ma', $data);
     }
@@ -102,7 +103,8 @@ class Santri extends MY_Controller
     {
         $data['admin'] = $this->session->userdata('admin_logged_in');
         $data['santri'] = SantriModel::where([
-            'tingkat_pendidikan' => 'mts'
+            'tingkat_pendidikan' => 'mts',
+            'status_verifikasi' => 'terverifikasi'
         ])->get();
         $this->view('admin.pages.santri.mts', $data);
     }
@@ -111,7 +113,8 @@ class Santri extends MY_Controller
     {
         $data['admin'] = $this->session->userdata('admin_logged_in');
         $data['santri'] = SantriModel::where([
-            'tingkat_pendidikan' => 'md'
+            'tingkat_pendidikan' => 'md',
+            'status_verifikasi' => 'terverifikasi'
         ])->get();
         $this->view('admin.pages.santri.md', $data);
     }
@@ -133,8 +136,7 @@ class Santri extends MY_Controller
         $get_date = $date->format('Y');
         $tahun_masuk = substr($get_date, -2);
         $urut = str_pad($count + 1, 4, '0', STR_PAD_LEFT);
-        $virtual_acc_code =
-            $kode_yayasan . $jenjang . $jk . $tahun_masuk . $urut;
+        $virtual_acc_code = $kode_yayasan . $jenjang . $jk . $tahun_masuk . $urut;
         $induk = $tahun_masuk . $urut;
         //var_dump($induk);
         VirtualAkunModel::where(['id_santri' => $id])->update([
@@ -152,6 +154,7 @@ class Santri extends MY_Controller
         $data['admin'] = $this->session->userdata('admin_logged_in');
         $data['santri'] = SantriModel::find($id);
         $data['date_now'] = longdate_indo(date('Y-m-d'));
+        $data['pengumuman'] = PengumumanModel::all();
         $this->view('admin.pages.santri.cetak_va', $data);
     }
 

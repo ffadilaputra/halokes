@@ -71,7 +71,7 @@
               <a class="nav-link" href="{{ base_url('galeri') }}">Galeri</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ base_url('ppdb/santri') }}">Pendaftaran</a>
+              <a class="nav-link" href="{{ base_url('ppdb/santri/informasi') }}">Pendaftaran</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ base_url('contact') }}">Tentang Kami</a>

@@ -6,7 +6,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
   <!-- top-area Start -->
-    @include('front.wpartials.header')
+  @include('front.wpartials.header')
   <!-- /.top-area-->
   <!-- top-area End -->
   @yield('content')

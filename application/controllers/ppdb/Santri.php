@@ -346,22 +346,12 @@ class Santri extends MY_Controller
     public function kartu($id)
     {
         $data['santri'] = SantriModel::find($id);
+        $data['pengumuman'] = PengumumanModel::all();
         $data['date_now'] = longdate_indo(date('Y-m-d'));
         $this->view('front.page.kartu_peserta', $data);
     }
-    public function cetak()
-    {
-        // $this->view('front.page.cetak_kartu');
-        var_dump($_POST);
-      }
-
-      public function informasi(){
+    public function informasi(){
         $this->view('front.page.informasi');
-      }
-
-      public function pendaftaran(){
-        $this->view('front.page.ppdb_register_new');
-      }
-
+    }
   }
 ?>

@@ -41,7 +41,7 @@
             <td>{{ $data->category->nama }}</td>
             <td>{{ convertRupiah($data->nominal) }}</td>
             <td>{{ convertRupiah($data->biaya_harusdibayar) }}</td>
-            @if($data->nominal == $data->biaya_harusdibayar)
+            @if($data->nominal >= $data->biaya_harusdibayar)
             <td><span class="label label-success">Lunas</span></td>
             @else
             <td><span class="label label-danger">Belum Lunas</span></td>

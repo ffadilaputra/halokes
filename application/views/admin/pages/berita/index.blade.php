@@ -10,6 +10,9 @@
             <i class="fa fa-dashboard"></i>Dashboard
          </li>
       </ol>
+      <div class="form-group">
+         <a class="btn btn-success" href="{{ base_url('admin/berita/create') }}"><i class="fa fa-plus"></i> Buat Berita</a>
+      </div>
    </div>
 </div>
 <div class="row">

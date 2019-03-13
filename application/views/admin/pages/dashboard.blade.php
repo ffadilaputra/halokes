@@ -31,8 +31,8 @@
             <i class="fa fa-users fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge">{!! $santri !!}</div>
-            <div>Total data santri terverivikasi</div>
+            <div class="huge">{!! $belum_lunas !!}</div>
+            <div>Data santri belum lunas</div>
           </div>
         </div>
       </div>
@@ -95,6 +95,245 @@
       </a>
     </div>
   </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-yellow">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-money fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge">{{ $lunas }}</div>
+            <div>Total santri Lunas</div>
+          </div>
+        </div>
+      </div>
+    <a href="{{ base_url('admin/tanggungan')}}">
+        <div class="panel-footer">
+          <span class="pull-left">View Details</span>
+          <span class="pull-right">
+            <i class="fa fa-arrow-circle-right"></i>
+          </span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
 </div>
+<ol class="breadcrumb">
+  <li class="active">
+    <i class="fa fa-user"></i> Rekap jumlah santri baru
+  </li>
+</ol>
+<div class="row">
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-green">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-users fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge">{!! $mt !!}</div>
+            <div>Santri baru Madarasah Tsanawiyah</div>
+          </div>
+        </div>
+      </div>
+    <a href="{{ base_url('') }}">
+        <div class="panel-footer">
+          <span class="pull-left">Selengkapnya</span>
+          <span class="pull-right">
+            <i class="fa fa-arrow-circle-right"></i>
+          </span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-green">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-users fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge">{!! $ma !!}</div>
+            <div>Santri baru Madarasah Aliyah</div>
+          </div>
+        </div>
+      </div>
+    <a href="{{ base_url('') }}">
+        <div class="panel-footer">
+          <span class="pull-left">Selengkapnya</span>
+          <span class="pull-right">
+            <i class="fa fa-arrow-circle-right"></i>
+          </span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-green">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-users fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge">{!! $md !!}</div>
+            <div>Santri baru Madarasah Diniyah</div>
+          </div>
+        </div>
+      </div>
+    <a href="{{ base_url('') }}">
+        <div class="panel-footer">
+          <span class="pull-left">Selengkapnya</span>
+          <span class="pull-right">
+            <i class="fa fa-arrow-circle-right"></i>
+          </span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<ol class="breadcrumb">
+  <li class="active">
+    <i class="fa fa-user"></i> Rekap jumlah Aktif
+  </li>
+</ol>
+
+<div class="col-lg-3 col-md-6">
+  <div class="panel panel-green">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-xs-3">
+          <i class="fa fa-users fa-5x"></i>
+        </div>
+        <div class="col-xs-9 text-right">
+          <div class="huge">{!! $ma_putra !!}</div>
+          <div>Jumlah santri MA putra aktif</div>
+        </div>
+      </div>
+    </div>
+  <a href="{{ base_url('') }}">
+      <div class="panel-footer">
+        <span class="pull-left">Selengkapnya</span>
+        <span class="pull-right">
+          <i class="fa fa-arrow-circle-right"></i>
+        </span>
+        <div class="clearfix"></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="col-lg-3 col-md-6">
+  <div class="panel panel-yellow">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-xs-3">
+          <i class="fa fa-users fa-5x"></i>
+        </div>
+        <div class="col-xs-9 text-right">
+          <div class="huge">{!! $ma_putri !!}</div>
+          <div>Jumlah santri MA putri aktif</div>
+        </div>
+      </div>
+    </div>
+  <a href="{{ base_url('') }}">
+      <div class="panel-footer">
+        <span class="pull-left">Selengkapnya</span>
+        <span class="pull-right">
+          <i class="fa fa-arrow-circle-right"></i>
+        </span>
+        <div class="clearfix"></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="col-lg-3 col-md-6">
+  <div class="panel panel-green">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-xs-3">
+          <i class="fa fa-users fa-5x"></i>
+        </div>
+        <div class="col-xs-9 text-right">
+          <div class="huge">{!! $mt_putra !!}</div>
+          <div>Jumlah santri MT putra aktif</div>
+        </div>
+      </div>
+    </div>
+  <a href="{{ base_url('') }}">
+      <div class="panel-footer">
+        <span class="pull-left">Selengkapnya</span>
+        <span class="pull-right">
+          <i class="fa fa-arrow-circle-right"></i>
+        </span>
+        <div class="clearfix"></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="col-lg-3 col-md-6">
+  <div class="panel panel-yellow">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-xs-3">
+          <i class="fa fa-users fa-5x"></i>
+        </div>
+        <div class="col-xs-9 text-right">
+          <div class="huge">{!! $mt_putri !!}</div>
+          <div>Jumlah santri MT putri aktif</div>
+        </div>
+      </div>
+    </div>
+  <a href="{{ base_url('') }}">
+      <div class="panel-footer">
+        <span class="pull-left">Selengkapnya</span>
+        <span class="pull-right">
+          <i class="fa fa-arrow-circle-right"></i>
+        </span>
+        <div class="clearfix"></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="col-lg-3 col-md-6">
+  <div class="panel panel-green">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-xs-3">
+          <i class="fa fa-users fa-5x"></i>
+        </div>
+        <div class="col-xs-9 text-right">
+          <div class="huge">{!! $belum_aktif !!}</div>
+          <div>Jumlah santri belum aktif</div>
+        </div>
+      </div>
+    </div>
+  <a href="{{ base_url('') }}">
+      <div class="panel-footer">
+        <span class="pull-left">Selengkapnya</span>
+        <span class="pull-right">
+          <i class="fa fa-arrow-circle-right"></i>
+        </span>
+        <div class="clearfix"></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+</div>
+
+
+
 <!-- /.row -->
 @stop
