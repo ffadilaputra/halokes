@@ -26,10 +26,14 @@
                <table class="table table-bordered table-hover">
                    <tbody>
                        <tr>
-                           <td colspan="2">
-                                <center>
-                                {{-- <img id="santri" src="" style="width:200px; height:250px; background-color:#eeeeee;" /> --}}
-                                </center>
+                           <td rowspan="7">
+                                 <center>
+                                       @if(isset($user->foto))
+                                           <img style="width:200px; height:250px;" src="{{ base_url('assets/uploads/'.$user->foto) }}">
+                                       @else
+                                           <img alt="your image" style="width:200px; height:250px; background-color:#eeeeee;" />
+                                       @endif
+                                 </center>
                            </td>
                        </tr>
                        <tr>

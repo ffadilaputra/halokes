@@ -9,7 +9,7 @@ class GuruModel extends Eloquent {
     protected $fillable = ["tgl_masuk", "jabatan","matpel","id_users"];
 
     public function detailGuru(){
-
+        return $this->belongsTo('UsersModel','id_users','id_users');
     }
 
 }

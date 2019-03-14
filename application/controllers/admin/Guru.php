@@ -22,6 +22,7 @@ class Guru extends MY_Controller
     {
         $data['admin'] = $this->session->userdata('admin_logged_in');
         if($id){
+            $data['user'] = UsersModel::all();
             $data['edit'] = GuruModel::find($id);
             $this->view('admin.pages.guru.edit',$data);
         }else{
@@ -30,15 +31,15 @@ class Guru extends MY_Controller
         }
     }
 
-    public function show($id)
-    {
-
-    }
-
     public function store()
     {
-        GuruModel::create($this->input->post());
-        redirect('admin/guru');
+        $data['cek'] = GuruModel::where(['id_users' => $_POST['id_users']])->first();
+        if(isset($data['cek'])){
+            echo 'Guru sudah terdaftar dalam sistem';
+        }else{
+            GuruModel::create($this->input->post());
+            redirect('admin/guru');
+        }
     }
 
     public function update($id)

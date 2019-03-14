@@ -25,7 +25,7 @@
     <div class="form-group">
        <label for="">Tahun Akademik</label>
        <select class="form-control" name="id_tahun_akademik" id="">
-         @foreach ($thn_akademik as $item)
+         @foreach ($user as $item)
             <option value="{{ $item->id_tahun_akademik }}" {{ $item->id_tahun_akademik == old('id_tahun_akademik', $edit->id_tahun_akademik) ? 'selected':'' }}>{{ $item->nama }}</option>
          @endforeach
        </select>

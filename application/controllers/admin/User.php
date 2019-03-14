@@ -53,6 +53,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     public function update($id){
         $_POST['password'] = md5($_POST['password']);
+        if (!empty($_FILES['foto']['name'])) {
+          $_POST['foto'] = $this->do_upload(
+              'foto',
+              'assets/uploads/',
+              'image',
+              true
+          );
+        }
         UsersModel::find($id)->update($this->input->post());
         redirect('admin/user');
     }

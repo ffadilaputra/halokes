@@ -124,6 +124,17 @@
             </ul>
             </a>
          </li>
+         <li>
+          <a href="javascript:;" data-toggle="collapse" data-target="#akademik"><i class="fa fa-fw fa-archive"></i>Akademik <i class="fa fa-fw fa-caret-down"></i></a>
+          <ul id="akademik" class="collapse">
+             <li><a href="{{ base_url('admin/guru') }}">Kelola Guru</a></li>
+             <li><a href="{{ base_url('admin/GuruMatpel') }}">Guru Mata Pelajaran</a></li>
+             <li><a href="{{ base_url('admin/matpel') }}">Mate Pelajaran</a></li>
+             <li><a href="{{ base_url('admin/kelas') }}">Kelola Kelas</a></li>
+             <li><a href="{{ base_url('admin/jurusan') }}">Kelola Jurusan</a></li>
+          </ul>
+          </a>
+       </li>
          <!-- master -->
          <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#master"><i class="fa fa-fw fa-archive"></i>Master <i class="fa fa-fw fa-caret-down"></i></a>

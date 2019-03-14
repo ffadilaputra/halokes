@@ -1,31 +1,31 @@
-<h1>{{ $user->nama_lengkap }}</h1>
 @extends('admin.template')
-
 @section('content')
-
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-          User
+          Ubah Data Pengguna
         </h1>
     </div>
 </div>
-
 <!-- identitas siswa -->
 <div class="panel panel-default">
    <div class="panel-body">
       <div class="row">
          <div class="col-lg-12">
-               <?= form_open('admin/user/update/'.$user->id_users) ?>
+               <?= form_open_multipart('admin/user/update/'.$user->id_users) ?>
                <table class="table table-bordered">
                    <tbody>
-                       <tr>
-                           <td colspan="2">
-                                <center>
-                                {{-- <img id="santri" src="" alt="your image" style="width:200px; height:250px; background-color:#eeeeee;" /> --}}
-                                </center>
-                           </td>
-                       </tr>
+                        <tr>
+                                <td rowspan="10">
+                                      <center>
+                                            @if(isset($user->foto))
+                                                <img style="width:200px; height:250px;" src="{{ base_url('assets/uploads/'.$user->foto) }}">
+                                            @else
+                                                <img alt="your image" style="width:200px; height:250px; background-color:#eeeeee;" />
+                                            @endif
+                                      </center>
+                                </td>
+                            </tr>
                        <tr>
                             <td class="col-sm-2 col-xs-2"><b>Nama Lengkap</b></td>
                             <td class="col-sm-6 col-xs-6">
@@ -47,7 +47,7 @@
                        <tr>
                             <td class="col-sm-2 col-xs-2"><b>Tanggal Lahir</b></td>
                             <td class="col-sm-6 col-xs-6">
-                                <input type="text" class="form-control" name="tgl_lahir" value="{{ $user->tgl_lahir }}">
+                                <input type="date" class="form-control" name="tgl_lahir" value="{{ $user->tgl_lahir }}">
                             </td>
                        </tr>
                        <tr>
@@ -80,10 +80,17 @@
                           </td>
                      </tr>
                        <tr>
-                            <td class="col-sm-2 col-xs-2"><b>New Password</b></td>
+                            <td class="col-sm-2 col-xs-2"><b>Foto</b></td>
+                            <td class="col-sm-4 col-xs-6">
+                                <input type="file" class="form-control" name="foto">
+                                <small class="text-danger">*kosongi apabila tidak memperbarui Foto</small>
+                            </td>
+                       </tr>
+                       <tr>
+                            <td class="col-sm-2 col-xs-2"><b>Sandi Baru</b></td>
                             <td class="col-sm-4 col-xs-6">
                                 <input type="password" class="form-control" name="password">
-                                <small class="text-danger">*kosongi apabila tidak memperbarui kata sandi</small>
+                                <small class="text-danger">*kosongi apabila tidak memperbarui kata Sandi</small>
                             </td>
                        </tr>
                    </tbody>
