@@ -6,6 +6,7 @@
            Master Kelas
         </h1>
         <a href="{{ base_url('admin/kelas/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Masukkan Data</a>
+        <a href="{{ base_url('admin/kelompok') }}" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Kelola Kelompok</a>
         <br><br>
      </div>
 </div>

@@ -129,9 +129,11 @@
           <ul id="akademik" class="collapse">
              <li><a href="{{ base_url('admin/guru') }}">Kelola Guru</a></li>
              <li><a href="{{ base_url('admin/GuruMatpel') }}">Guru Mata Pelajaran</a></li>
-             <li><a href="{{ base_url('admin/matpel') }}">Mate Pelajaran</a></li>
+             <li><a href="{{ base_url('admin/matpel') }}">Mata Pelajaran</a></li>
+             <li><a href="{{ base_url('admin/matpel') }}">Mata Pelajaran Kelas</a></li>
              <li><a href="{{ base_url('admin/kelas') }}">Kelola Kelas</a></li>
              <li><a href="{{ base_url('admin/jurusan') }}">Kelola Jurusan</a></li>
+             <li><a href="{{ base_url('admin/PenempatanSiswa') }}">Penempatan Siswa</a></li>
           </ul>
           </a>
        </li>
