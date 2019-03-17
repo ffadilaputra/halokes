@@ -17,21 +17,20 @@
       <div class="row">
          <div class="col-lg-12">
             <h2>Identitas User</h2>
-
-         <a class="btn btn-primary btn-lg" href="{{ base_url('admin/user/edit/').$user->id_users }}" style="float:right"><i class="fa fa-pencil"></i> Ubah</a>
+         <a class="btn btn-primary btn-md" href="{{ base_url('admin/user/edit/').$user->id_users }}" style="float:right"><i class="fa fa-pencil"></i> Ubah</a>
             <br>
             <hr>
             <div class="col-lg-12">
-
                <table class="table table-bordered table-hover">
                    <tbody>
                        <tr>
                            <td rowspan="7">
                                  <center>
-                                       @if(isset($user->foto))
+                                       @if($user->foto)
                                            <img style="width:200px; height:250px;" src="{{ base_url('assets/uploads/'.$user->foto) }}">
-                                       @else
-                                           <img alt="your image" style="width:200px; height:250px; background-color:#eeeeee;" />
+                                        @elseif(isset($user->foto))
+                                            <span class="label label-danger">Foto belum di unggah</span>
+                                        @else
                                        @endif
                                  </center>
                            </td>

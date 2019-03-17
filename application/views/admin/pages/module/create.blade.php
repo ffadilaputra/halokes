@@ -15,10 +15,6 @@
 <div class="col-lg-4">
    <?= form_open('admin/module/store'); ?>
    <div class="form-group">
-        <label>id</label>
-        <input class="form-control" type="text" name="id_modul">
-    </div>
-   <div class="form-group">
       <label>Nama <i>Class</i></label>
       <input class="form-control" type="text" name="nama">
    </div>
