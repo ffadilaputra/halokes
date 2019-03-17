@@ -132,7 +132,7 @@
                               <div class="form-group">
                                  <label for="">Status dalam Keluarga</label>&nbsp;<label style="color:red">(wajib di isi)</label>
                                  <select class="form-control" name="status_keluarga" value="{{ old('status_keluarga') }}" required>
-                                 <option @if(old('status_keluarga') == 'kandunh') selected @endif value="kandung">Kandung</option>
+                                 <option @if(old('status_keluarga') == 'kandung') selected @endif value="kandung">Kandung</option>
                                  <option @if(old('status_keluarga') == 'tiri') selected @endif value="tiri">Tiri</option>
                                  <option @if(old('status_keluarga') == 'asuh') selected @endif value="asuh">Asuh</option>
                                  </select>
@@ -452,7 +452,7 @@
                               </div>
                               <div class="form-group">
                                  <label for="telp">Nomor HP / Whatsapp</label>&nbsp;<label style="color:red">(wajib di isi)</label>
-                                 <input name="telepon_ayah" type="number" class="form-control" id="telp" required>
+                                 <input name="telepon_ayah" type="number" class="form-control" id="telp" value="{{ old('telepon_ayah') }}" required>
                                  @if($errors->has('telepon_ayah'))
                                  <small class="text-danger">{{ $errors->first('telepon_ayah') }}</small>
                                  @endif
@@ -618,7 +618,7 @@
                               </div>
                               <div class="form-group">
                                  <label for="telp">Nomor HP / Whatsapp</label>&nbsp;<label style="color:red">(wajib di isi)</label>
-                                 <input name="telepon_ibu" type="number" class="form-control" id="telp" required>
+                                 <input name="telepon_ibu" type="number" class="form-control" id="telp" value="{{ old('telepon_ibu') }}" required>
                                  @if($errors->has('telepon_ibu'))
                                  <small class="text-danger">{{ $errors->first('telepon_ibu') }}</small>
                                  @endif
@@ -785,14 +785,14 @@
                               </div>
                               <div class="form-group">
                                     <label for="kodepos">Kode Pos</label>
-                                    <input name="kodepos_wali" type="number" class="form-control" id="kodepos" value="{{ old('kodepos_wali') }}">
+                                    <input maxlength="5" name="kodepos_wali" type="number" class="form-control" id="kodepos" value="{{ old('kodepos_wali') }}">
                                     @if($errors->has('kodepos_wali'))
                                     <small class="text-danger">{{ $errors->first('kodepos_wali') }}</small>
                                     @endif
                               </div>
                               <div class="form-group">
                                     <label for="telp">Nomor HP / Whatsapp</label>
-                                    <input name="telepon_wali" type="number" class="form-control" id="telp">
+                                    <input name="telepon_wali" type="number" class="form-control" id="telp" value="{{ old('telepon_wali') }}">
                                     @if($errors->has('telepon_wali'))
                                     <small class="text-danger">{{ $errors->first('telepon_wali') }}</small>
                                     @endif

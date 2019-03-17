@@ -7,5 +7,5 @@ class ModulModel extends Eloquent {
     protected $table = "modul";
     protected $primaryKey = 'id_modul';
     public $timestamps = false;
-    protected $fillable = ["nama", "label"];
+    protected $fillable = ["id_modul","nama", "label"];
 }

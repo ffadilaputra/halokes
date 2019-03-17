@@ -8,9 +8,7 @@ class Santri extends MY_Controller
     {
         $data['footer'] = BeritaModel::where([
             'id_news_category' => 'berita'
-        ])
-            ->limit(3)
-            ->get();
+        ])->limit(3)->get();
         $this->view('front.page.ppdb_register_new', $data);
     }
 
@@ -134,7 +132,7 @@ class Santri extends MY_Controller
             'alamat_sekolah_siswa' => $this->input->post(
                 'alamat_sekolah_siswa'
             ),
-            'kota' => $this->input->post('provinsi_siswa'),
+            'kota' => $this->input->post('kota'),
             'provinsi_siswa' => $this->input->post('provinsi_siswa'),
             'nss' => $this->input->post('nss_siswa'),
             'npsn' => $this->input->post('npsn_siswa'),
@@ -278,9 +276,7 @@ class Santri extends MY_Controller
             'id_santri' => $id_santri
         );
 
-        $jenjang = $this->generateJenjang(
-            $data['santri']['tingkat_pendidikan']
-        );
+        $jenjang = $this->generateJenjang($data['santri']['tingkat_pendidikan']);
         $now = date('d/m/Y');
         $dat = str_replace('/', '', $now);
         $jk = $this->generateJK($data['santri']['jenis_kelamin']);

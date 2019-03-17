@@ -10,6 +10,20 @@ class Parents extends MY_Controller
         $this->authenticate();
     }
 
+    public function virtualAkun($santri){
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        $data['edit'] = VirtualAkunModel::where(['id_santri' => $santri])->first();
+        $this->view('admin.pages.kelengkapan.edit_va', $data);
+    }
+
+    public function update_va($santri)
+    {
+        VirtualAkunModel::where(['id_santri' => $santri])->update(
+            $this->input->post()
+        );
+        redirect('admin/santri/all');
+    }
+
     public function santri($santri)
     {
         $data['admin'] = $this->session->userdata('admin_logged_in');

@@ -75,6 +75,7 @@ class Level extends MY_Controller
     {
         LevelModel::destroy($id);
         AksesModel::where(['id_level' => $id])->delete();
+        redirect('admin/level');
     }
 }
 ?>

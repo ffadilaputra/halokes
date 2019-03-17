@@ -6,6 +6,7 @@
            Master Level
         </h1>
         <a href="{{ base_url('admin/level/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Create</a>
+        <a href="{{ base_url('admin/module') }}" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Konfigurasi Module</a>
         <br><br>
      </div>
 </div>

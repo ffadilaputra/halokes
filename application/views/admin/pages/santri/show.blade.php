@@ -70,7 +70,7 @@
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Tanggal Lahir</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->tgl_lahir }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ tgl_indo($santri->tgl_lahir) }}</td>
                        </tr>
                    </tbody>
                </table>
@@ -127,6 +127,41 @@
       </div>
    </div>
 </div> <!-- identitas siswa end -->
+
+<!-- identitas siswa -->
+<div class="panel panel-default">
+     <div class="panel-heading">
+        <div class="row">
+           <div class="col-lg-12">
+              <h2>Virtual Akun </h2>
+                 <div class="form-group">
+                   <a style="float:right" class="btn btn-success" href="{{ base_url('admin/parents/virtualAkun/'.$santri->id_santri) }}">Ubah Virtual Akun</a>
+                      <br>
+                 </div>
+              <hr>
+              <div class="col-lg-8">
+                 <table class="table table-bordered table-hover">
+                     <tbody>
+                         <tr>
+                              <td class="col-sm-6 col-xs-6"><b>Nomor Pendaftaran</b></td>
+                              <td class="col-sm-6 col-xs-6">{{ $santri->virtualAkun->no_pendaftaran }}</td>
+                         </tr>
+                         <tr>
+                              <td class="col-sm-6 col-xs-6"><b>Nomor Induk</b></td>
+                              <td class="col-sm-6 col-xs-6">{{ $santri->virtualAkun->nomor_induk }}</td>
+                         </tr>
+                         <tr>
+                              <td class="col-sm-6 col-xs-6"><b>Nomor Virtual Akun</b></td>
+                              <td class="col-sm-6 col-xs-6">{{ $santri->virtualAkun->no_virtual_account }}</td>
+                         </tr>
+                     </tbody>
+                 </table>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div> <!-- identitas siswa end -->
+
 
 <!-- pendidikan sebelumnya -->
 <div class="panel panel-default">
@@ -239,7 +274,7 @@
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Tanggal Lahir</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->ayahSantri->tgl_lahir }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ tgl_indo($santri->ayahSantri->tgl_lahir) }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Hubungan Ayah dengan Santri</b></td>
@@ -330,7 +365,7 @@
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Tanggal Lahir</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->ibuSantri->tgl_lahir }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ tgl_indo($santri->ibuSantri->tgl_lahir) }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Hubungan Ayah dengan Santri</b></td>
@@ -425,7 +460,7 @@
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Tanggal Lahir</b></td>
-                            <td class="col-sm-6 col-xs-6">{{ $santri->waliSantri->tgl_lahir }}</td>
+                            <td class="col-sm-6 col-xs-6">{{ tgl_indo($santri->waliSantri->tgl_lahir) }}</td>
                        </tr>
                        <tr>
                             <td class="col-sm-6 col-xs-6"><b>Hubungan Ayah dengan Santri</b></td>
@@ -467,7 +502,7 @@
                             <td class="col-sm-6 col-xs-6"><b>Penghasilan Perbulan</b></td>
                             <td class="col-sm-6 col-xs-6">
                               @if($santri->waliSantri->penghasilan == '<1jt')
-                                <label class="text-warning">Kurang dari Rp 1000.000,-</label>
+                                <label class="text-warning">Kurang dari Rp 1.000.000,-</label>
                               @elseif($santri->ayahSantri->penghasilan == '1jt-2jt')
                                 <label class="text-primary">Rp 1.000.000,- - Rp 2.0000.000,-</label>
                               @elseif($santri->ayahSantri->penghasilan == '2jt-3jt')
