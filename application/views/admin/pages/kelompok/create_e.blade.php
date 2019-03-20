@@ -3,7 +3,7 @@
 <div class="row">
    <div class="col-lg-12">
       <h1 class="page-header">
-         Kelompok A
+         Kelompok E
       </h1>
       <ol class="breadcrumb">
          <li class="active">
@@ -13,7 +13,7 @@
    </div>
 </div>
 <div class="col-lg-4">
-   <?= form_open('admin/kelompok/store_kelompok_a'); ?>
+   <?= form_open('admin/kelompok/store_kelompok_e'); ?>
    <div class="form-group">
       <label>Nama Mata Pelajaran</label>
       <input class="form-control" type="text" name="nama_matpel">

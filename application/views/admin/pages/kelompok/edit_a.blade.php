@@ -13,17 +13,17 @@
    </div>
 </div>
 <div class="col-lg-4">
-   <?= form_open('admin/kelompok/store_kelompok_a'); ?>
+   <?= form_open('admin/kelompok/update_kelompok_a/'.$edit->id_kelompok_a); ?>
    <div class="form-group">
       <label>Nama Mata Pelajaran</label>
-      <input class="form-control" type="text" name="nama_matpel">
+   <input class="form-control" type="text" name="nama_matpel" value="{{ $edit->nama_matpel }}">
    </div>
     <div class="form-group">
         <label>Jenjang</label>
         <select name="id_matpelkelas" class="selectpicker form-control" data-show-subtext="true" data-live-search="true" required>
           <option value="0">-- Pilih --</option>
           @foreach ($matpel as $item)
-            <option value="{{ $item->id_matpelkelas }}">{{ $item->jenjang }}</option>
+            <option {{ $item->id_matpelkelas == old('id_matpelkelas', $edit->id_matpelkelas) ? 'selected':'' }} value="{{ $item->id_matpelkelas }}">{{ $item->jenjang }}</option>
           @endforeach
         </select>
     </div>
