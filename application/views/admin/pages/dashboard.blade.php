@@ -36,7 +36,7 @@
           </div>
         </div>
       </div>
-    <a href="{{ base_url('admin/santri/all') }}">
+    <a href="{{ site_url('admin/santri/all') }}">
         <div class="panel-footer">
           <span class="pull-left">Selengkapnya</span>
           <span class="pull-right">
@@ -60,7 +60,7 @@
           </div>
         </div>
       </div>
-    <a href="{{ base_url('admin/berita') }}">
+    <a href="{{ site_url('admin/berita') }}">
         <div class="panel-footer">
           <span class="pull-left">Selengkapnya</span>
           <span class="pull-right">
@@ -84,7 +84,7 @@
           </div>
         </div>
       </div>
-    <a href="{{ base_url('admin/tanggungan')}}">
+    <a href="{{ site_url('admin/tanggungan')}}">
         <div class="panel-footer">
           <span class="pull-left">View Details</span>
           <span class="pull-right">
@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-    <a href="{{ base_url('admin/tanggungan')}}">
+    <a href="{{ site_url('admin/tanggungan')}}">
         <div class="panel-footer">
           <span class="pull-left">View Details</span>
           <span class="pull-right">
@@ -122,7 +122,7 @@
 </div>
 <ol class="breadcrumb">
   <li class="active">
-    <i class="fa fa-user"></i> Rekap jumlah santri baru
+    <i class="fa fa-user"></i> Rekap jumlah santri baru terverifikasi
   </li>
 </ol>
 <div class="row">
@@ -139,7 +139,7 @@
           </div>
         </div>
       </div>
-    <a href="{{ base_url('') }}">
+    <a href="{{ site_url('admin/santri/mts') }}">
         <div class="panel-footer">
           <span class="pull-left">Selengkapnya</span>
           <span class="pull-right">
@@ -163,7 +163,7 @@
           </div>
         </div>
       </div>
-    <a href="{{ base_url('') }}">
+    <a href="{{ site_url('admin/santri/ma') }}">
         <div class="panel-footer">
           <span class="pull-left">Selengkapnya</span>
           <span class="pull-right">
@@ -187,7 +187,7 @@
           </div>
         </div>
       </div>
-    <a href="{{ base_url('') }}">
+    <a href="{{ site_url('admin/santri/md') }}">
         <div class="panel-footer">
           <span class="pull-left">Selengkapnya</span>
           <span class="pull-right">
@@ -219,7 +219,7 @@
         </div>
       </div>
     </div>
-  <a href="{{ base_url('') }}">
+  <a href="{{ site_url('admin/santri/ma') }}">
       <div class="panel-footer">
         <span class="pull-left">Selengkapnya</span>
         <span class="pull-right">
@@ -244,7 +244,7 @@
         </div>
       </div>
     </div>
-  <a href="{{ base_url('') }}">
+  <a href="{{ site_url('admin/santri') }}">
       <div class="panel-footer">
         <span class="pull-left">Selengkapnya</span>
         <span class="pull-right">
@@ -269,7 +269,7 @@
         </div>
       </div>
     </div>
-  <a href="{{ base_url('') }}">
+  <a href="{{ site_url('admin/santri') }}">
       <div class="panel-footer">
         <span class="pull-left">Selengkapnya</span>
         <span class="pull-right">
@@ -294,7 +294,7 @@
         </div>
       </div>
     </div>
-  <a href="{{ base_url('') }}">
+  <a href="{{ site_url('admin/santri') }}">
       <div class="panel-footer">
         <span class="pull-left">Selengkapnya</span>
         <span class="pull-right">
@@ -319,7 +319,7 @@
         </div>
       </div>
     </div>
-  <a href="{{ base_url('') }}">
+  <a href="{{ site_url('admin/santri') }}">
       <div class="panel-footer">
         <span class="pull-left">Selengkapnya</span>
         <span class="pull-right">
@@ -330,10 +330,6 @@
     </a>
   </div>
 </div>
-
 </div>
-
-
-
 <!-- /.row -->
 @stop

@@ -25,4 +25,13 @@
       calendarWeeks: true
     });
  </script>
+ <script>
+     function showField(name){
+      if(name == 'Lainnya' ){
+        document.getElementById('other').innerHTML = '<br><input class="form-control" type="text" name="pekerjaan">'
+      }else{
+        document.getElementById('other').innerHTML = ''
+      }
+    }
+ </script>
 

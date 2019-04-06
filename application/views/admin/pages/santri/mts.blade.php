@@ -43,8 +43,10 @@
                      <td>{{ $data->nik }}</td>
                      <td>{{ tgl_indo($data->tgl_lahir) }}</td>
                      <td>
-                       <a class="btn btn-info" href="{{ base_url('admin/santri/show/').$data->id_santri }}"><i class="fa fa-eye"></i>&nbsp;Detail</a>
-                     </td>
+                        <a class="btn btn-sm btn-info" href="{{ base_url('admin/santri/show/').$data->id_santri }}"><i class="fa fa-eye"></i>&nbsp;Detail</a>
+                        <a href="{{ base_url('admin/santri/print/').$data->id_santri }}" class="btn btn-sm btn-info"><i class="fa fa-print"></i>&nbsp;</a>
+                        <a href="{{ base_url('admin/santri/destroy/').$data->id_santri }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                      </td>
                    </tr>
                    @endforeach
                 </tbody>

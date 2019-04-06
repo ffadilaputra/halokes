@@ -23,17 +23,20 @@ class Dashboard extends MY_Controller
 
         $data['mt'] = SantriModel::where([
             'jenis_siswa' => 'baru',
-            'tingkat_pendidikan' => 'mt'
+            'tingkat_pendidikan' => 'mt',
+            'status_verifikasi' => 'terverifikasi'
         ])->get()->count();
 
         $data['ma'] = SantriModel::where([
             'jenis_siswa' => 'baru',
-            'tingkat_pendidikan' => 'ma'
+            'tingkat_pendidikan' => 'ma',
+            'status_verifikasi' => 'terverifikasi'
         ])->get()->count();
 
         $data['md'] = SantriModel::where([
             'jenis_siswa' => 'baru',
-            'tingkat_pendidikan' => 'md'
+            'tingkat_pendidikan' => 'md',
+            'status_verifikasi' => 'terverifikasi'
         ])->get()->count();
 
         $data['ma_putra'] = SantriModel::where([

@@ -22,7 +22,7 @@
        </div>
        <div class="panel-body">
           <div class="table-responsive">
-             <table id="main" class="table table-bordered table-hover table-striped">
+             <table id="main" class="table table-bordered table-striped">
                 <thead>
                    <tr>
                      <th>No</th>
@@ -54,8 +54,7 @@
                          @endif
                          <a href="{{ base_url('admin/santri/destroy/').$item->id_santri }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                          <a href="{{ base_url('admin/santri/print/').$item->id_santri }}" class="btn btn-sm btn-info"><i class="fa fa-print"></i>&nbsp;</a>
-                        </td>
-                     <td>
+                     </td>
                    </tr>
                    @endforeach
                 </tbody>

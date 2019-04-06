@@ -70,13 +70,16 @@
           </div>
           <div class="form-group">
               <label>Pekerjaan saat ini</label>
-              <select class="form-control" name="pekerjaan" id="">
+              <select class="form-control" name="pekerjaan" onChange="showField(this.options[this.selectedIndex].value)">
+                  <option selected>-- Pilih Pekerjaan --</option>
                   <option @if($parents->pekerjaan == 'Swasta') selected @endif value="Swasta">Swasta</option>
                   <option @if($parents->pekerjaan == 'PNS') selected @endif value="PNS">PNS</option>
                   <option @if($parents->pekerjaan == 'Wiraswasta') selected @endif value="Wiraswasta">Wiraswasta</option>
                   <option @if($parents->pekerjaan == 'Petani') selected @endif value="Petani">Petani</option>
                   <option @if($parents->pekerjaan == 'Buruh') selected @endif value="Buruh">Buruh</option>
+                  <option value="Lainnya">Lainnya</option>
               </select>
+              <div id="other"></div>
           </div>
           <div class="form-group">
               <label>Penghasilan perbulan</label>

@@ -64,7 +64,8 @@ class Parents extends MY_Controller
         AyahModel::where(['id_santri' => $santri])->update(
             $this->input->post()
         );
-        redirect('admin/berkas/parents/' . $santri);
+        var_dump($_POST);
+        //redirect('admin/berkas/parents/' . $santri);
     }
 
     public function wali($santri)
