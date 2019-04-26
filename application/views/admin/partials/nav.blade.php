@@ -121,6 +121,9 @@
                <li>
                 <a href="{{ base_url('admin/KategoriKeuangan/index') }}">Kategori Keuangan</a>
                </li>
+               <li>
+                <a href="{{ base_url('admin/Pembayaran/spp') }}">Kelola SPP</a>
+               </li>
             </ul>
             </a>
          </li>

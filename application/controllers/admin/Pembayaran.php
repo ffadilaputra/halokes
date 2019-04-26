@@ -99,4 +99,40 @@ class Pembayaran extends MY_Controller
         $data['keuangan'] = KategoriKeuanganModel::all();
         $this->view('admin.pages.pembayaran.preview_nota', $data);
     }
+
+    public function spp(){
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        $data['spp'] = SppModel::all();
+        $this->view('admin.pages.spp.index',$data);
+    }
+
+    public function spp_create($id = NULL){
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        if($id){
+            $data['edit'] = SppModel::find($id);
+            $data['santri'] = SantriModel::all();
+            $data['kelas'] = KelasModel::all();
+            $this->view('admin.pages.spp.edit',$data);
+        }else{
+            $data['santri'] = SantriModel::all();
+            $data['kelas'] = KelasModel::all();
+            $this->view('admin.pages.spp.create',$data);
+        }
+    }
+
+    public function spp_store(){
+        SppModel::create($this->input->post());
+        redirect('admin/pembayaran/spp');
+    }
+
+    public function spp_update($id){
+        SppModel::find($id)->update($this->input->post());
+        redirect('admin/pembayaran/spp');
+    }
+
+    public function spp_delete($id){
+        SppModel::destroy($id);
+        redirect('admin/pembayaran/spp');
+    }
+
 }
