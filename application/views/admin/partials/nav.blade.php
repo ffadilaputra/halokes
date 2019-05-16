@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-   <!-- Brand and toggle get grouped for better mobile display -->
-   <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
@@ -62,97 +62,120 @@
           </li>
         </ul>
       </li>
-   </ul>
-   <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-   <div class="collapse navbar-collapse navbar-ex1-collapse">
+    </ul>
+    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav side-nav">
-         <!-- ppdb -->
-         <li>
-            <a href="javascript:;" data-toggle="collapse" data-target="#ppdbs"><i class="fa fa-fw fa-arrows-v"></i> PPDB <i class="fa fa-fw fa-caret-down"></i></a>
-            <ul id="ppdbs" class="collapse">
-               <li>
-                  <a href="{{ base_url('admin/santri') }}">Verifikasi Santri</a>
-               </li>
-               <li>
-                  <a href="{{ base_url('admin/berkas') }}">Cek berkas Santri</a>
-               </li>
-               {{--
-               <li>
-                  <a href="{{ base_url('admin/pembayaran/lunas') }}">Lunas</a>
-               </li>
-               --}}
+        <!-- ppdb -->
+        @if($admin->id_level == 10)
+        <li>
+          <a href="javascript:;" data-toggle="collapse" data-target="#ppdbs"><i class="fa fa-fw fa-arrows-v"></i> PPDB <i class="fa fa-fw fa-caret-down"></i></a>
+          <ul id="ppdbs" class="collapse">
+            <li>
+              <a href="{{ base_url('admin/santri') }}">Verifikasi Santri</a>
+            </li>
+            <li>
+              <a href="{{ base_url('admin/berkas') }}">Cek berkas Santri</a>
+            </li>
+            {{--
+              <li>
+                <a href="{{ base_url('admin/pembayaran/lunas') }}">Lunas</a>
+              </li>
+              --}}
             </ul>
-         </li>
-         <!-- santri -->
-         <li>
+          </li>
+          @endif
+          <!-- santri -->
+          @if($admin->id_level == 10)
+          <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#sc"><i class="fa fa-fw fa-user"></i>Santri <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="sc" class="collapse">
-               <li>
-                  <a href="{{ base_url('admin/santri/all') }}">Semua</a>
-               </li>
-               <li>
-                  <a href="{{ base_url('admin/santri/ma') }}">Madarasah Aliyah</a>
-               </li>
-               <li>
-                  <a href="{{ base_url('admin/santri/mts') }}">Madarasah Tsanawiyah</a>
-               </li>
-               <li>
-                  <a href="{{ base_url('admin/santri/md') }}">Madarasah Diniyah</a>
-               </li>
+              <li>
+                <a href="{{ base_url('admin/santri/all') }}">Semua</a>
+              </li>
+              <li>
+                <a href="{{ base_url('admin/santri/ma') }}">Madarasah Aliyah</a>
+              </li>
+              <li>
+                <a href="{{ base_url('admin/santri/mts') }}">Madarasah Tsanawiyah</a>
+              </li>
+              <li>
+                <a href="{{ base_url('admin/santri/md') }}">Madarasah Diniyah</a>
+              </li>
             </ul>
-         </li>
-         <!-- artikel -->
-         <li>
+          </li>
+          @endif
+          <!-- artikel -->
+          @if($admin->id_level == 10 || $admin->id_level == 11)
+          <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#pengumuman"><i class="fa fa-fw fa-book"></i>Artikel <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="pengumuman" class="collapse">
-               <li><a href="{{ base_url('admin/berita') }}">Berita</a></li>
-               <li><a href="{{ base_url('admin/pengumuman') }}">Pengumuman</a></li>
+              <li><a href="{{ base_url('admin/berita') }}">Berita</a></li>
+              <li><a href="{{ base_url('admin/pengumuman') }}">Pengumuman</a></li>
             </ul>
-            </a>
-         </li>
-         <!-- keuangan -->
-         <li>
-            <a href="javascript:;" data-toggle="collapse" data-target="#keuangan"><i class="fa fa-fw fa-money"></i>Keuangan <i class="fa fa-fw fa-caret-down"></i></a>
-            <ul id="keuangan" class="collapse">
-               <li><a href="{{ base_url('admin/KategoriKeuangan/dashboard') }}">Dashboard</a></li>
-               <li>
-                <a href="{{ base_url('admin/tanggungan') }}">Pembayaran Tanggungan</a>
-               </li>
-               <li>
-                <a href="{{ base_url('admin/KategoriKeuangan/index') }}">Kategori Keuangan</a>
-               </li>
-               <li>
-                <a href="{{ base_url('admin/Pembayaran/spp') }}">Kelola SPP</a>
-               </li>
-            </ul>
-            </a>
-         </li>
-         <li>
-          <a href="javascript:;" data-toggle="collapse" data-target="#akademik"><i class="fa fa-fw fa-archive"></i>Akademik <i class="fa fa-fw fa-caret-down"></i></a>
-          <ul id="akademik" class="collapse">
-             <li><a href="{{ base_url('admin/guru') }}">Kelola Guru</a></li>
-             <li><a href="{{ base_url('admin/GuruMatpel') }}">Guru Mata Pelajaran</a></li>
-             <li><a href="{{ base_url('admin/matpel') }}">Mata Pelajaran</a></li>
-             <li><a href="{{ base_url('admin/MatpelKelas') }}">Mata Pelajaran Kelas</a></li>
-             <li><a href="{{ base_url('admin/kelas') }}">Kelola Kelas</a></li>
-             <li><a href="{{ base_url('admin/jurusan') }}">Kelola Jurusan</a></li>
-             <li><a href="{{ base_url('admin/PenempatanSiswa') }}">Penempatan Siswa</a></li>
-          </ul>
           </a>
-       </li>
-         <!-- master -->
-         <li>
-            <a href="javascript:;" data-toggle="collapse" data-target="#master"><i class="fa fa-fw fa-archive"></i>Master <i class="fa fa-fw fa-caret-down"></i></a>
-            <ul id="master" class="collapse">
-               <li><a href="{{ base_url('admin/TahunAkademik') }}">Tahun Akademik</a></li>
-               <li><a href="{{ base_url('admin/User') }}">Admin/ Operator</a></li>
-               <li><a href="{{ base_url('admin/level') }}">Pengelola Level</a></li>
-            </ul>
-            </a>
-         </li>
+        </li>
+        @endif
+        <!-- keuangan -->
+        @if($admin->id_level == 10)
+        <li>
+          <a href="javascript:;" data-toggle="collapse" data-target="#keuangan"><i class="fa fa-fw fa-money"></i>Keuangan <i class="fa fa-fw fa-caret-down"></i></a>
+          <ul id="keuangan" class="collapse">
+            <li><a href="{{ base_url('admin/KategoriKeuangan/dashboard') }}">Dashboard</a></li>
+            <li>
+              <a href="{{ base_url('admin/tanggungan') }}">Pembayaran Tanggungan</a>
+            </li>
+            <li>
+              <a href="{{ base_url('admin/KategoriKeuangan/index') }}">Kategori Keuangan</a>
+            </li>
+            <li>
+              <a href="{{ base_url('admin/Pembayaran/spp') }}">Kelola SPP</a>
+            </li>
+          </ul>
+        </a>
+      </li>
+      @endif
+      <!-- akademik -->
+      @if($admin->id_level == 10 || $admin->id_level == 12)
+      <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#akademik"><i class="fa fa-fw fa-archive"></i>Akademik <i class="fa fa-fw fa-caret-down"></i></a>
+        <ul id="akademik" class="collapse">
+          <li><a href="{{ base_url('admin/guru') }}">Kelola Guru</a></li>
+          <li><a href="{{ base_url('admin/GuruMatpel') }}">Guru Mata Pelajaran</a></li>
+          <li><a href="{{ base_url('admin/matpel') }}">Mata Pelajaran</a></li>
+          <li><a href="{{ base_url('admin/MatpelKelas') }}">Mata Pelajaran Kelas</a></li>
+          <li><a href="{{ base_url('admin/kelas') }}">Kelola Kelas</a></li>
+          <li><a href="{{ base_url('admin/jurusan') }}">Kelola Jurusan</a></li>
+          <li><a href="{{ base_url('admin/PenempatanSiswa') }}">Penempatan Siswa</a></li>
+        </ul>
+      </a>
+    </li>
+    @endif
+      <!-- akademik -->
+      @if($admin->id_level == 10 || $admin->id_level == 14)
+      <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#akademikinput"><i class="fa fa-fw fa-archive"></i>Akademik Input <i class="fa fa-fw fa-caret-down"></i></a>
+        <ul id="akademikinput" class="collapse">
+          <li><a href="{{ base_url('admin/AbsensiSiswa') }}">Absensi Siswa</a></li>
+        </ul>
+      </a>
+    </li>
+    @endif
+    <!-- master -->
+    @if($admin->id_level == 10)
+    <li>
+      <a href="javascript:;" data-toggle="collapse" data-target="#master"><i class="fa fa-fw fa-archive"></i>Master <i class="fa fa-fw fa-caret-down"></i></a>
+      <ul id="master" class="collapse">
+        <li><a href="{{ base_url('admin/TahunAkademik') }}">Tahun Akademik</a></li>
+        <li><a href="{{ base_url('admin/User') }}">Admin/ Operator</a></li>
+        <li><a href="{{ base_url('admin/level') }}">Pengelola Level</a></li>
       </ul>
     </a>
   </li>
+  @endif
+</ul>
+</a>
+</li>
 </ul>
 </div>
 

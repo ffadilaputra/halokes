@@ -35,7 +35,6 @@
                 <td>{{ $data->nama_level }}</td>
                 <td>
                    <a class="btn btn-primary" href="{{ base_url('admin/level/edit/').$data->id_level }}"><i class="fa fa-pencil"></i></a>
-                   <a class="btn btn-danger" href="{{ base_url('admin/level/delete/').$data->id_level }}"><i class="fa fa-trash"></i></a>
                 </td>
              </tr>
              @endforeach
