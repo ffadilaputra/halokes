@@ -22,13 +22,13 @@ class AbsensiSiswa extends MY_Controller
   {
     $data['admin'] = $this->session->userdata('admin_logged_in');
     if($id){
-      $data['create'] = PenempatanSiswaModel::with('masterkelas')->findOrFail([
-        'id_masterkelas' => $id
-        ]);
-        var_dump($data['create']);
+      // $data['create'] = PenempatanSiswaModel::where('id_masterkelas', $id)->get();
+      $data['create'] = PenempatanSiswaModel::with('ids_santri', function($join){
+        $join->on('penempatan_siswa_dikelas.id_santri', '=', 'ids_santri.id_santri')
+        ->where('id_masterkelas', $id);
+      })->get();
+      var_dump($data['create']);
         $this->view('admin.pages.absensisiswa.create',$data);
-      }else{
-        $this->view('admin.pages.jurusan.create',$data);
       }
     }
 
