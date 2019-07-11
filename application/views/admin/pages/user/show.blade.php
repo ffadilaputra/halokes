@@ -40,7 +40,7 @@
                             <td class="col-sm-6 col-xs-6">{{ $user->nama_lengkap }}</td>
                        </tr>
                        <tr>
-                            <td class="col-sm-6 col-xs-6"><b>Tempat Lahir</b></td>
+                            <td class="col-sm-6 col-xs-6"><b>Alamat</b></td>
                             <td class="col-sm-6 col-xs-6">{{ $user->tempat_lahir }}</td>
                        </tr>
                        <tr>

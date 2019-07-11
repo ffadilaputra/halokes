@@ -102,37 +102,37 @@ class Pembayaran extends MY_Controller
 
     public function spp(){
         $data['admin'] = $this->session->userdata('admin_logged_in');
-        $data['spp'] = SppModel::all();
+        $data['tahun_akademik'] = TahunAkademikModel::first();
+        $data['alltahunakademik'] = TahunAkademikModel::all();
+        $data['laporanspp'] = KategoriKeuanganModel::where(['nama' => 'Syahriyah'] , ['tahun_akademik' => $data['tahun_akademik']->nama])->get();
+        $data['spp'] = SppModel::where(['tahun_akademik' => $data['tahun_akademik']->nama])->get();
         $this->view('admin.pages.spp.index',$data);
     }
 
-    public function spp_create($id = NULL){
+    public function sppPerTanggal(){
         $data['admin'] = $this->session->userdata('admin_logged_in');
-        if($id){
-            $data['edit'] = SppModel::find($id);
-            $data['santri'] = SantriModel::all();
-            $data['kelas'] = KelasModel::all();
-            $this->view('admin.pages.spp.edit',$data);
-        }else{
-            $data['santri'] = SantriModel::all();
-            $data['kelas'] = KelasModel::all();
-            $this->view('admin.pages.spp.create',$data);
-        }
+        $data['alltahunakademik'] = TahunAkademikModel::all();
+        $data['tahunakademik'] = $this->input->post('tahun_akademik');
+        $data['laporanspp'] = KategoriKeuanganModel::where(['nama' => 'Syahriyah'] , ['tahun_akademik' => $data['tahunakademik']])->get();
+        $data['spp'] = SppModel::where(['tahun_akademik' => $data['tahunakademik']])->whereBetween('created_at', [$this->input->post('tanggal').' 00:00:00', $this->input->post('tanggal').' 23:59:00'])->get();
+        $this->view('admin.pages.spp.index',$data);
     }
 
-    public function spp_store(){
-        SppModel::create($this->input->post());
-        redirect('admin/pembayaran/spp');
+    public function angsuran(){
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+      $data['tahun_akademik'] = TahunAkademikModel::first();
+      $data['alltahunakademik'] = TahunAkademikModel::all();
+      $data['laporanangsuran'] = KategoriKeuanganModel::where(['nama' => 'Pangkal'] , ['tahun_akademik' => $data['tahun_akademik']->nama])->get();
+      $data['angsuran'] = AngsuranModel::where(['tahun_akademik' => $data['tahun_akademik']->nama])->get();
+      $this->view('admin.pages.angsuran.index',$data);
     }
 
-    public function spp_update($id){
-        SppModel::find($id)->update($this->input->post());
-        redirect('admin/pembayaran/spp');
+    public function angsuranPerTanggal(){
+      $data['admin'] = $this->session->userdata('admin_logged_in');
+      $data['alltahunakademik'] = TahunAkademikModel::all();
+      $data['tahunakademik'] = $this->input->post('tahun_akademik');
+      $data['laporanangsuran'] = KategoriKeuanganModel::where(['nama' => 'Pangkal'] , ['tahun_akademik' => $data['tahunakademik']])->get();
+      $data['angsuran'] = AngsuranModel::where(['tahun_akademik' => $data['tahunakademik']])->whereBetween('created_at', [$this->input->post('tanggal').' 00:00:00', $this->input->post('tanggal').' 23:59:00'])->get();
+      $this->view('admin.pages.angsuran.index',$data);
     }
-
-    public function spp_delete($id){
-        SppModel::destroy($id);
-        redirect('admin/pembayaran/spp');
-    }
-
 }

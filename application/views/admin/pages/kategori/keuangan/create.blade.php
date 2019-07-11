@@ -21,12 +21,13 @@
    <div class="form-group">
       <label>Biaya</label>
       <input class="form-control" type="text" name="biaya">
+      <p class="help-block" style="color:red">* Huruf depan harus Kapital.</p>
       </div>
    <div class="form-group">
       <label for="">Tahun Akademik</label>
-         <select class="form-control" name="id_tahun_akademik">
+         <select class="form-control" name="tahun_akademik">
             @foreach($thn_akademik as $item)
-               <option value="{{ $item->id_tahun_akademik }}">{{ $item->nama }}</option>
+               <option value="{{ $item->nama }}">{{ $item->nama }}</option>
             @endforeach
          </select>
    </div>

@@ -35,7 +35,7 @@
                             </td>
                        </tr>
                        <tr>
-                            <td class="col-sm-2 col-xs-2"><b>Tempat Lahir</b></td>
+                            <td class="col-sm-2 col-xs-2"><b>Alamat</b></td>
                             <td class="col-sm-6 col-xs-6">
                                 <input type="text" class="form-control" name="tempat_lahir" >
                                 @if($errors->has('tempat_lahir'))
@@ -117,4 +117,3 @@
 
 
 @stop
-

@@ -7,7 +7,7 @@ class SppModel extends Eloquent {
 
   protected $table      = 'spp';
   protected $primaryKey = 'id_spp';
-  protected $fillable   = ['id_santri','id_kelas','tgl'];
+  protected $fillable   = ['id_santri','bulan','kelas','tahun_akademik'];
   public $timestamps = true;
 
   public function detailSantri(){

@@ -26,12 +26,13 @@
                 <thead>
                    <tr>
                      <th>No</th>
+                     <td>Nomor Virtual Akun</td>
                      <td>Nama Lengkap</td>
                      <td>Tempat Lahir</td>
                      <td>Tanggal Lahir</td>
                      <td>Jenis Kelamin</td>
                      <td>Status Akun</td>
-                     <td>Nomor Virtual Akun</td>
+                     <td>Pembayaran</td>
                      <td>Opsi</td>
                    </tr>
                 </thead>
@@ -40,12 +41,13 @@
                    @foreach($santri as $item)
                    <tr>
                      <td>{{ $n++ }}</td>
+                     <td>{{ $item->virtualAkun->no_virtual_account }}</td>
                      <td>{{ $item->nama_lengkap }} </td>
                      <td>{{ $item->tempat_lahir }}</td>
                      <td>{{ tgl_indo($item->tgl_lahir) }}</td>
                      <td>{{ $item->jenis_kelamin }}</td>
                      <td><span class="label label-success">{{ $item->status_verifikasi }}</span></td>
-                     <td>{{ $item->virtualAkun->no_virtual_account }}</td>
+                     <td><a class="btn btn-xs btn-warning btn-block" href="{{ base_url('admin/santri/pembayaran/').$item->id_santri }}"><i class="fa fa-money" aria-hidden="true"></i></a></td>
                      <td>
                            <a class="btn btn-sm btn-warning" href="{{ base_url('admin/santri/show/').$item->id_santri }}"><i class="fa fa-eye"></i>&nbsp;</a>
                          @if($item->status_verifikasi == 'terverifikasi')

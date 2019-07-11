@@ -2,12 +2,12 @@
 @section('content')
 <div class="col-lg-12">
   <h1 class="page-header">
-    Laporan Keuangan Syahriyah
+    Laporan Keuangan Angsuran
   </h1>
   <div class="panel panel-default">
     <div class="panel-body">
         <h4><b>Cari Berdasarkan Tanggal</b></h4> <hr>
-      <form action="{{ base_url('admin/Pembayaran/sppPerTanggal') }}" method="post">
+      <form action="{{ base_url('admin/Pembayaran/angsuranPerTanggal') }}" method="post">
         <div class="form-group col-md-1">
           <label for="">Tanggal</label>
         </div>
@@ -34,17 +34,19 @@
       <th>No.</th>
       <th>Nomor VA Santri</th>
       <th>Nama Santri</th>
+      <th>Tahap</th>
       <th>Tanggal</th>
       <th>Option</th>
     </tr>
   </thead>
   <tbody>
     <?php $no=1; ?>
-    @foreach($spp as $data)
+    @foreach($angsuran as $data)
     <tr>
       <td>{{ $no++ }}</td>
       <td>{{ $data->detailSantri->virtualAkun->no_virtual_account }}</td>
       <td>{{ $data->detailSantri->nama_lengkap }}</td>
+      <td>{{ $data->tahap }}</td>
       <td>{{ $data->created_at->format('d-m-Y h:i:s') }}</td>
       <td>
         <a class="btn btn-warning" href="{{ base_url('admin/santri/pembayaran/').$data->id_santri }}"><i class="fa fa-eye"></i></a>
@@ -57,7 +59,7 @@
 <hr>
 <div class="row" style="margin-bottom: 40px;">
   <div class="col-md-4">
-    <h3>Syahriyah tahun <?php (empty($laporanspp[0]['tahun_akademik'])) ? print $tahunakademik : print $laporanspp[0]['tahun_akademik'] ?></h3>
+    <h3>Syahriyah tahun <?php (empty($laporanangsuran[0]['tahun_akademik'])) ? print $tahunakademik : print $laporanangsuran[0]['tahun_akademik'] ?></h3>
   </div>
   <div class="col-md-4">
     <ul>
@@ -65,7 +67,8 @@
     </ul>
   </div>
   <div class="col-md-4">
-    <?php $totaltransaksi = $laporanspp[0]['biaya'] * count($spp);  ?>
+    <?php $pangkalPerahap = $laporanangsuran[0]['biaya'] / 3;
+     $totaltransaksi = $pangkalPerahap * count($angsuran);  ?>
     <h3>{{ convertRupiah($totaltransaksi) }}</h3>
   </div>
 </div>

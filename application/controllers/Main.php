@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       $data['article'] = BeritaModel::where([
         'id_news_category' => 'berita'
-      ])->offset($offset)->limit(9)->get();
+      ])->offset($offset)->limit(9)->orderBy('created_at', 'DESC')->get();
       $this->view('front.wpage.main',$data);
     }
 }

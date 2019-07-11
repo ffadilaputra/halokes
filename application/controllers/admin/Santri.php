@@ -23,6 +23,10 @@ class Santri extends MY_Controller
     {
         $data['admin'] = $this->session->userdata('admin_logged_in');
         $data['santri'] = SantriModel::find($id);
+        $data['tahun_akademik'] = TahunAkademikModel::first();
+        $data['laporanangsuran'] = KategoriKeuanganModel::where(['nama' => 'Pangkal'] , ['tahun_akademik' => $data['tahun_akademik']->nama])->get();
+        $data['angsuran'] = AngsuranModel::where(['id_santri' => $id])->get();
+        $data['spp'] = SppModel::where(['id_santri' => $id])->get();
         $this->view('admin.pages.santri.show', $data);
     }
 
@@ -175,6 +179,100 @@ class Santri extends MY_Controller
             return 2;
         } elseif ($jenjang == 'md') {
             return 3;
+        }
+    }
+
+    public function pembayaran($id){
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        $data['santri'] = SantriModel::find($id);
+        $data['tahun_akademik'] = TahunAkademikModel::first();
+        $data['angsuran'] = AngsuranModel::where(['id_santri' => $id , 'tahap' => 1])->first();
+        $data['angsuran_2'] = AngsuranModel::where(['id_santri' => $id , 'tahap' => 2])->first();
+        $data['angsuran_3'] = AngsuranModel::where(['id_santri' => $id , 'tahap' => 3])->first();
+        $data['januari'] = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => 'januari'])->first();
+        $data['februari'] = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => 'februari'])->first();
+        $data['maret'] = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => 'maret'])->first();
+        $data['april'] = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => 'april'])->first();
+        $data['mei'] = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => 'mei'])->first();
+        $data['juni'] = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => 'juni'])->first();
+        $data['juli'] = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => 'juli'])->first();
+        $data['agustus'] = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => 'agustus'])->first();
+        $data['september'] = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => 'september'])->first();
+        $data['oktober'] = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => 'oktober'])->first();
+        $data['november'] = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => 'november'])->first();
+        $data['desember'] = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => 'desember'])->first();
+        $this->view('admin.pages.santri.pembayaran',$data);
+    }
+
+    //menggunakan 2 parameter karna tahun akademik memiliki format 2019/2010, jadi dibaca beda parameter
+    public function angsuran($id, $tahun_akademik_start, $tahun_akademik_end){
+        $cek = AngsuranModel::where(['id_santri' => $id, 'tahap' => 1])->first();
+        if($cek){
+            echo 'Gagal masukan data, data duplikat';
+        }else{
+            $data = array(
+                'id_santri' => $id,
+                'tahap' => 1,
+                'tahun_akademik' => $tahun_akademik_start.'/'.$tahun_akademik_end,
+            );
+            AngsuranModel::create($data);
+            redirect('admin/santri/pembayaran/'.$id);
+        }
+    }
+    public function angsuran_2($id, $tahun_akademik_start, $tahun_akademik_end){
+        $cek = AngsuranModel::where(['id_santri' => $id , 'tahap' => 2])->first();
+        if($cek){
+            echo 'Gagal masukan data, data duplikat';
+        }else{
+            $data = array(
+                'id_santri' => $id,
+                'tahap' => 2,
+                'tahun_akademik' => $tahun_akademik_start.'/'.$tahun_akademik_end,
+            );
+            AngsuranModel::create($data);
+            redirect('admin/santri/pembayaran/'.$id);
+        }
+    }
+    public function angsuran_3($id, $tahun_akademik_start, $tahun_akademik_end){
+        $cek = AngsuranModel::where(['id_santri' => $id , 'tahap' => 3])->first();
+        if($cek){
+            echo 'Gagal masukan data, data duplikat';
+        }else{
+            $data = array(
+                'id_santri' => $id,
+                'tahap' => 3,
+                'tahun_akademik' => $tahun_akademik_start.'/'.$tahun_akademik_end,
+            );
+            AngsuranModel::create($data);
+            redirect('admin/santri/pembayaran/'.$id);
+        }
+    }
+
+    public function deleteAngsuran($id, $tahap)
+    {
+      if ($id) {
+        AngsuranModel::where('id_santri', $id)
+                      ->where('tahap', $tahap)
+                      ->delete();
+        redirect('admin/santri/pembayaran/'.$id);
+      }else {
+        redirect('admin/santri/pembayaran/'.$id);
+      }
+    }
+
+    public function bayarSpp($id, $bulan, $tahun_akademik_start, $tahun_akademik_end){
+      $data['tahun_akademik'] = TahunAkademikModel::first();
+      $cek = SppModel::where(['id_santri' => $id , 'tahun_akademik' => $data['tahun_akademik']->nama, 'bulan' => $bulan])->first();
+        if($cek){
+            echo 'Gagal masukan data, data duplikat';
+        }else{
+            $data = array(
+                'id_santri' => $id,
+                'bulan' => $bulan,
+                'tahun_akademik' => $tahun_akademik_start.'/'.$tahun_akademik_end,
+            );
+            SppModel::create($data);
+            redirect('admin/santri/pembayaran/'.$id);
         }
     }
 }

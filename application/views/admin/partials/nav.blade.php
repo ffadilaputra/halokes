@@ -25,49 +25,11 @@
       </ul>
     </li>
   </ul>
-  <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav side-nav">
-      <li>
-        <a href="javascript:;" data-toggle="collapse" data-target="#ppdb"><i class="fa fa-fw fa-arrows-v"></i> PPDB <i class="fa fa-fw fa-caret-down"></i></a>
-        <ul id="ppdb" class="collapse">
-          <li>
-            <a href="{{ base_url('admin/santri') }}">Verifikasi Santri</a>
-          </li>
-          <li>
-            <a href="{{ base_url('admin/berkas') }}">Cek berkas Santri</a>
-          </li>
-          <li>
-            <a href="{{ base_url('admin/tanggungan') }}">Pembayaran Tanggungan</a>
-          </li>
-          {{-- <li>
-            <a href="{{ base_url('admin/pembayaran/lunas') }}">Lunas</a>
-          </li> --}}
-        </ul>
-      </li>
-      <li>
-        <a href="javascript:;" data-toggle="collapse" data-target="#santri"><i class="fa fa-fw fa-user"></i>Santri <i class="fa fa-fw fa-caret-down"></i></a>
-        <ul id="santri" class="collapse">
-          <li>
-            <a href="{{ base_url('admin/santri/all') }}">Semua</a>
-          </li>
-          <li>
-            <a href="{{ base_url('admin/santri/ma') }}">Madarasah Aliyah</a>
-          </li>
-          <li>
-            <a href="{{ base_url('admin/santri/mts') }}">Madarasah Tsanawiyah</a>
-          </li>
-          <li>
-            <a href="{{ base_url('admin/santri/md') }}">Madarasah Diniyah</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav side-nav">
         <!-- ppdb -->
-        @if($admin->id_level == 10)
+        @if($admin->id_level == 10 || $admin->id_level == 16)
         <li>
           <a href="javascript:;" data-toggle="collapse" data-target="#ppdbs"><i class="fa fa-fw fa-arrows-v"></i> PPDB <i class="fa fa-fw fa-caret-down"></i></a>
           <ul id="ppdbs" class="collapse">
@@ -86,7 +48,7 @@
           </li>
           @endif
           <!-- santri -->
-          @if($admin->id_level == 10)
+          @if($admin->id_level == 10 || $admin->id_level == 12 || $admin->id_level == 16)
           <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#sc"><i class="fa fa-fw fa-user"></i>Santri <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="sc" class="collapse">
@@ -117,19 +79,19 @@
         </li>
         @endif
         <!-- keuangan -->
-        @if($admin->id_level == 10)
+        @if($admin->id_level == 10 || $admin->id_level == 17 || $admin->id_level == 18 || $admin->id_level == 16)
         <li>
           <a href="javascript:;" data-toggle="collapse" data-target="#keuangan"><i class="fa fa-fw fa-money"></i>Keuangan <i class="fa fa-fw fa-caret-down"></i></a>
           <ul id="keuangan" class="collapse">
-            <li><a href="{{ base_url('admin/KategoriKeuangan/dashboard') }}">Dashboard</a></li>
+            <!-- <li><a href="{{ base_url('admin/KategoriKeuangan/dashboard') }}">Dashboard</a></li> -->
             <li>
-              <a href="{{ base_url('admin/tanggungan') }}">Pembayaran Tanggungan</a>
+              <a href="{{ base_url('admin/Pembayaran/angsuran') }}">Laporan Angsuran</a>
+            </li>
+            <li>
+              <a href="{{ base_url('admin/Pembayaran/spp') }}">Laporan Syahriyah</a>
             </li>
             <li>
               <a href="{{ base_url('admin/KategoriKeuangan/index') }}">Kategori Keuangan</a>
-            </li>
-            <li>
-              <a href="{{ base_url('admin/Pembayaran/spp') }}">Kelola SPP</a>
             </li>
           </ul>
         </a>
@@ -152,7 +114,7 @@
     </li>
     @endif
       <!-- akademik -->
-      @if($admin->id_level == 10 || $admin->id_level == 14)
+      @if($admin->id_level == 10 || $admin->id_level == 12 || $admin->id_level == 14)
       <li>
         <a href="javascript:;" data-toggle="collapse" data-target="#akademikinput"><i class="fa fa-fw fa-archive"></i>Akademik Input <i class="fa fa-fw fa-caret-down"></i></a>
         <ul id="akademikinput" class="collapse">

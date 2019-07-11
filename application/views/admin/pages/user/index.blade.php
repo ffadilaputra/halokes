@@ -6,8 +6,8 @@
         <h1 class="page-header">
           Admin / Operator
         </h1>
-        
-        
+
+
       </div>
       <br>
     </div>
@@ -24,7 +24,7 @@
                     <th>#</th>
                     <th>Email</th>
                     <th>Nama Lengkap</th>
-                    <th>Tempat Lahir</th>
+                    <th>Level</th>
                     <th>Telepon</th>
                     <th>Opsi</th>
                   </tr>
@@ -36,7 +36,7 @@
                     <td>{{ $n++ }}</td>
                     <td>{{ $data->email }}</td>
                     <td>{{ $data->nama_lengkap }}</td>
-                    <td>{{ $data->tempat_lahir }}</td>
+                    <td>{{ $data->level->nama_level }}</td>
                     <td>{{ $data->telepon }}</td>
                     <td>
                       <a class="btn btn-warning" href="{{ base_url('admin/user/show/').$data->id_users }}"><i class="fa fa-eye"></i></a>

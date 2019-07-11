@@ -30,6 +30,7 @@
                       <th>Wali</th>
                       <th>NIK</th>
                       <th>Tanggal lahir</th>
+                      <td>Pembayaran</td>
                       <th>Opsi</th>
                    </tr>
                 </thead>
@@ -42,6 +43,7 @@
                      <td>{{ $data->waliSantri->nama_lengkap }}</td>
                      <td>{{ $data->nik }}</td>
                      <td>{{ tgl_indo($data->tgl_lahir) }}</td>
+                     <td><a class="btn btn-xs btn-warning btn-block" href="{{ base_url('admin/santri/pembayaran/').$data->id_santri }}"><i class="fa fa-money" aria-hidden="true"></i></a></td>
                      <td>
                        <a class="btn btn-sm btn-info" href="{{ base_url('admin/santri/show/').$data->id_santri }}"><i class="fa fa-eye"></i>&nbsp;Detail</a>
                        <a href="{{ base_url('admin/santri/print/').$data->id_santri }}" class="btn btn-sm btn-info"><i class="fa fa-print"></i>&nbsp;</a>
