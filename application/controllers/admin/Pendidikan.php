@@ -19,7 +19,7 @@ class Pendidikan extends MY_Controller
         $this->view('admin.pages.kelengkapan.edit_pendidikan', $data);
     }
 
-    public function pendidikan_update($id)
+    public function pendidikanUpdate($id)
     {
         PendidikanTerakhirModel::where(['id_siswa' => $id])->update(
             $this->input->post()

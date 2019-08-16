@@ -320,7 +320,7 @@ class Santri extends MY_Controller
 
     public function generateJenjang($jenjang)
     {
-        if ($jenjang == 'mts') {
+        if ($jenjang == 'mt') {
             return 1;
         } elseif ($jenjang == 'ma') {
             return 2;

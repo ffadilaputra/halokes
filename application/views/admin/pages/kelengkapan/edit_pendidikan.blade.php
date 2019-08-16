@@ -13,7 +13,7 @@
   <div class="panel-body">
     <h4><b>Data Sekolah</b></h4>
     <hr>
-   <?= form_open('admin/pendidikan/pendidikan_update/'.$edit->id_siswa) ?>
+   <?= form_open('admin/pendidikan/pendidikanUpdate/'.$edit->id_siswa) ?>
     <div class="form-group">
         <label>Nama sekolah santri</label>
         <input type="text" name="nama_sekolah_siswa" class="form-control" value="{{ $edit->nama_sekolah_siswa }}">

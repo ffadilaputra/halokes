@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            Data Santri
+            Data Pembayaran Akademik
         </h1>
     </div>
 </div>
@@ -15,8 +15,6 @@
     <div class="panel-heading">
         <div class="row">
             <div class="col-lg-6">
-                <h2>Identitas Siswa</h2>
-                <hr>
                 <div class="col-lg-12">
                     <table class="table table-bordered table-hover">
                         <tbody>
@@ -76,7 +74,7 @@
                                             @if($angsuran_2)
                                                 <a href="#"  class="btn btn-success" disabled>Lunas</a>
                                             @else
-                                                <a href="{{ base_url('admin/santri/angsuran_2/'.$santri->id_santri.'/'.$tahun_akademik->nama) }}" class="btn btn-danger">Belum Lunas</a>
+                                                <a href="{{ base_url('admin/santri/angsuran2/'.$santri->id_santri.'/'.$tahun_akademik->nama) }}" class="btn btn-danger">Belum Lunas</a>
                                             @endif
                                         </td>
                                     </tr>
@@ -86,7 +84,7 @@
                                             @if($angsuran_3)
                                                 <a href="#"  class="btn btn-success" disabled>Lunas</a>
                                             @else
-                                                <a href="{{ base_url('admin/santri/angsuran_3/'.$santri->id_santri.'/'.$tahun_akademik->nama) }}" class="btn btn-danger">Belum Lunas</a>
+                                                <a href="{{ base_url('admin/santri/angsuran3/'.$santri->id_santri.'/'.$tahun_akademik->nama) }}" class="btn btn-danger">Belum Lunas</a>
                                             @endif
                                         </td>
                                     </tr>
@@ -101,7 +99,7 @@
             <div class="col-md-8">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h4><b>Data Mauidhoh</b></h4>
+                        <h4><b>Data Syahriyah</b></h4>
                         <hr>
                         <div class="form-group">
                             <div class="col-md-3">
@@ -192,6 +190,10 @@
                     </div>
                 </div>
                 <!-- Split button -->
+            </div>
+
+            <div class="col-md-12 text-center">
+              <a href="{{ base_url('admin/report/pembayaran/'.$santri->id_santri) }}" target="_blank" class="btn-spp btn btn-warning" style="padding-left: 30px; padding-right: 30px;">Print Kwitansi</a>
             </div>
 
         </div>

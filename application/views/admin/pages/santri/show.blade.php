@@ -211,11 +211,13 @@
           </div>
         </div>
       </div>
+      @if($admin->id_level == 10 || $admin->id_level == 17)
       <div class="row">
         <div class="col-md-6">
           <a href="{{ base_url('admin/santri/pembayaran/'.$santri->id_santri) }}" class="btn btn-primary" style="float:right">Bayar Sekarang</a>
         </div>
       </div>
+      @endif
     </div>
   </div> <!-- Catatan keuangan siswa end -->
 

@@ -219,7 +219,7 @@ class Santri extends MY_Controller
             redirect('admin/santri/pembayaran/'.$id);
         }
     }
-    public function angsuran_2($id, $tahun_akademik_start, $tahun_akademik_end){
+    public function angsuran2($id, $tahun_akademik_start, $tahun_akademik_end){
         $cek = AngsuranModel::where(['id_santri' => $id , 'tahap' => 2])->first();
         if($cek){
             echo 'Gagal masukan data, data duplikat';
@@ -233,7 +233,7 @@ class Santri extends MY_Controller
             redirect('admin/santri/pembayaran/'.$id);
         }
     }
-    public function angsuran_3($id, $tahun_akademik_start, $tahun_akademik_end){
+    public function angsuran3($id, $tahun_akademik_start, $tahun_akademik_end){
         $cek = AngsuranModel::where(['id_santri' => $id , 'tahap' => 3])->first();
         if($cek){
             echo 'Gagal masukan data, data duplikat';

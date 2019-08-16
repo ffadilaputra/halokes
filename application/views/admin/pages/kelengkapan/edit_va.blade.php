@@ -13,7 +13,7 @@
   <div class="panel-body">
     <h4><b>Virtual Akun</b></h4>
     <hr>
-   <?= form_open('admin/parents/update_va/'.$edit->id_santri) ?>
+   <?= form_open('admin/parents/updateVA/'.$edit->id_santri) ?>
     <div class="form-group">
         <label>Nomor Pendaftaran</label>
         <input type="text" name="no_pendaftaran" class="form-control" value="{{ $edit->no_pendaftaran }}">

@@ -12,7 +12,7 @@
         <div class="panel-body">
           <h4><b>Data Pribadi</b></h4>
           <hr>
-          <?= form_open('admin/parents/update_santri/'.$santri->id_santri) ?>
+          <?= form_open('admin/parents/updateSantri/'.$santri->id_santri) ?>
           <div class="form-group">
               <label>Nama Lengkap</label>
               <input type="text" name="nama_lengkap" class="form-control" value="{{ $santri->nama_lengkap }}">

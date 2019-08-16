@@ -16,7 +16,7 @@ class Parents extends MY_Controller
         $this->view('admin.pages.kelengkapan.edit_va', $data);
     }
 
-    public function update_va($santri)
+    public function updateVA($santri)
     {
         VirtualAkunModel::where(['id_santri' => $santri])->update(
             $this->input->post()
@@ -31,7 +31,7 @@ class Parents extends MY_Controller
         $this->view('admin.pages.kelengkapan.edit_santri', $data);
     }
 
-    public function update_santri($santri)
+    public function updateSantri($santri)
     {
         SantriModel::where(['id_santri' => $santri])->update(
             $this->input->post()
@@ -46,7 +46,7 @@ class Parents extends MY_Controller
         $this->view('admin.pages.kelengkapan.edit_ibu', $data);
     }
 
-    public function update_ibu($santri)
+    public function updateIbu($santri)
     {
         IbuModel::where(['id_santri' => $santri])->update($this->input->post());
         redirect('admin/berkas/parents/' . $santri);
@@ -59,7 +59,7 @@ class Parents extends MY_Controller
         $this->view('admin.pages.kelengkapan.edit_ayah', $data);
     }
 
-    public function update_ayah($santri)
+    public function updateAyah($santri)
     {
         AyahModel::where(['id_santri' => $santri])->update(
             $this->input->post()
@@ -75,7 +75,7 @@ class Parents extends MY_Controller
         $this->view('admin.pages.kelengkapan.edit_wali', $data);
     }
 
-    public function update_wali($santri)
+    public function updateWali($santri)
     {
         WaliModel::where(['id_santri' => $santri])->update(
             $this->input->post()
