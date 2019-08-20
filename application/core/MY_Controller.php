@@ -128,4 +128,33 @@ class MY_Controller extends CI_Controller {
             }
     }
 
+    protected function paginate($data = [], $per_page, $base_url) {
+      $config['base_url'] = $base_url;
+      $config['total_rows'] = count($data);
+      $config['per_page'] = $per_page;
+      $this->pagination->initialize($config);
+      return $this->pagination->create_links();
+    }
+
+    protected function authenticate() {
+      if(is_null($this->session->userdata('admin_logged_in'))) {
+          redirect(base_url('admin/login'));
+      } else if (get_class($this) != 'Dashboard' && get_class($this) != 'Login') {
+          $found = false;
+          foreach ($this->session->userdata('admin_logged_in')->level->akses as $row) {
+              if ($row->modul->nama == get_class($this)) {
+                  $found = true;
+              }
+          }
+          if (!$found) {
+              redirect(base_url('admin/dashboard/denied'));
+          }
+      }
+  }
+    protected function authenticateGuest() {
+      if(is_null($this->session->userdata('admin_wali_logged_in'))) {
+          redirect(base_url('guest/login'));
+      } 
+  }
+
 }

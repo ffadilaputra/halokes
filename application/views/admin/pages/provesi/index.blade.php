@@ -43,25 +43,7 @@
                </tbody>
             </table>
          </div>
-         <div class="text-right">
-            <a href="#">View All Transactions
-            <i class="fa fa-arrow-circle-right"></i>
-            </a>
-         </div>
       </div>
    </div>
 </div>
-@stop
-@section('scripts')
-<!-- jQuery -->
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.dataTables.min.js"></script>
-<script src="{{ base_url('assets/sb-admin/') }}js/dataTables.bootstrap.min.js"></script>
-<script>
-   $(document).ready(()=> {
-     $('#main').DataTable();
-   })
-</script>
 @stop

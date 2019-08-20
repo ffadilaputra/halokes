@@ -1,51 +1,49 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login extends MY_Controller {
-
-    public function __construct(){
+class Login extends MY_Controller
+{
+    public function __construct()
+    {
         parent::__construct();
-      }
+    }
 
-    public function index(){
-    //    $this->view('admin.pages.auth.login');
+    public function index()
+    {
+
         $this->view('front.page.login');
     }
 
-    public function loginProcess() {
+    public function loginProcess()
+    {
+        //$this->redirectIfAuthenticated('admin', 'admin/beranda');
+
         $this->validate($this->input->post(), [
-            'email' => 'required|email|exists:users',
-            'password' => 'required|string|min:6'
+            'email' => 'required',
+            'password' => 'required|string'
         ]);
-        $user = $this->getUser();
-        $this->authenticateUser($user);
-    }
 
-    public function getUser() {
-        $this->load->model('UsersModel');
-        return UsersModel::where([
-            'email' => $this->input->post('email'),
-            'password' => md5($this->input->post('password'))
-        ])->first();
-    }
+        $admin = UsersModel::with('level.akses.modul')
+            ->where([
+                'email' => $this->input->post('email')
+            ])
+            ->first();
 
-    public function logoutProcess() {
-        unset($_SESSION['admin_logged_in']);
-        redirect(base_url('admin/login'));
-    }
-
-    public function authenticateUser($user) {
-        if (!is_null($user)) {
-            $this->session->set_userdata('admin_logged_in', $user);
-            redirect(base_url('admin/dashboard'));
+        if ($admin->password == md5($this->input->post('password'))) {
+            $this->session->set_userdata('admin_logged_in', $admin);
+            redirect(base_url('admin'));
         } else {
             $validation = $this->validator->make([], []);
             $validation->errors()->add('password', 'the password is invalid');
             $this->session->set_flashdata('errors', $validation->errors());
             $this->session->set_flashdata('old', $this->input->post());
-            redirect('admin/Login');
+            redirect(base_url('admin/login'));
         }
     }
-
+    public function logoutProcess()
+    {
+        unset($_SESSION['admin_logged_in']);
+        redirect(base_url('admin/login'));
+    }
 }

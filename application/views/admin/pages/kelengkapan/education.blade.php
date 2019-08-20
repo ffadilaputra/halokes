@@ -5,7 +5,7 @@
 
   <div class="col-md-8">
     <div class="panel panel-default">
-        <div class="panel-heading">Pendidikan Terakhir</div>
+    <div class="panel-heading">Pendidikan Terakhir <a class="btn btn-info" href="{{ base_url('admin/pendidikan/pendidikan_edit/').$edu->id_siswa }}">Ubah</a></div>
         <div class="panel-body">
           <h3>Data Sekolah siswa</h3>
           <hr>
@@ -60,9 +60,4 @@
 </div>
 </div>
 @stop
-@section('scripts')
-<!-- jQuery -->
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
-@stop
+

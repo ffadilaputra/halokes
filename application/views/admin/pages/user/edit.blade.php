@@ -1,50 +1,114 @@
-<?= form_open('admin/user/update/'.$user->id_users) ?>
+@extends('admin.template')
+@section('content')
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+          Ubah Data Pengguna
+        </h1>
+    </div>
+</div>
+<!-- identitas siswa -->
+<div class="panel panel-default">
+   <div class="panel-body">
+      <div class="row">
+         <div class="col-lg-12">
+               <?= form_open_multipart('admin/user/update/'.$user->id_users) ?>
+               <table class="table table-bordered">
+                   <tbody>
+                        <tr>
+                                <td rowspan="10">
+                                      <center>
+                                            @if(isset($user->foto))
+                                                <img style="width:200px; height:250px;" src="{{ base_url('assets/uploads/'.$user->foto) }}">
+                                            @else
+                                                <img alt="your image" style="width:200px; height:250px; background-color:#eeeeee;" />
+                                            @endif
+                                      </center>
+                                </td>
+                            </tr>
+                       <tr>
+                            <td class="col-sm-2 col-xs-2"><b>Nama Lengkap</b></td>
+                            <td class="col-sm-6 col-xs-6">
+                                <input type="text" class="form-control" name="nama_lengkap" value="{{ $user->nama_lengkap }}">
+                                @if($errors->has('nama_lengkap'))
+                                    <small class="text-danger">{{ $errors->first('nama_lengkap') }}</small>
+                                @endif
+                            </td>
+                       </tr>
+                       <tr>
+                            <td class="col-sm-2 col-xs-2"><b>Alamat</b></td>
+                            <td class="col-sm-6 col-xs-6">
+                                <input type="text" class="form-control" name="tempat_lahir" value="{{ $user->tempat_lahir }}">
+                                @if($errors->has('tempat_lahir'))
+                                    <small class="text-danger">{{ $errors->first('tempat_lahir') }}</small>
+                                @endif
+                            </td>
+                       </tr>
+                       <tr>
+                            <td class="col-sm-2 col-xs-2"><b>Tanggal Lahir</b></td>
+                            <td class="col-sm-6 col-xs-6">
+                                <input type="date" class="form-control" name="tgl_lahir" value="{{ $user->tgl_lahir }}">
+                            </td>
+                       </tr>
+                       <tr>
+                            <td class="col-sm-2 col-xs-2"><b>No Telepon</b></td>
+                            <td class="col-sm-6 col-xs-6">
+                                <input type="text" class="form-control" name="telepon" value="{{ $user->telepon }}">
+                            </td>
+                       </tr>
+                       <tr>
+                            <td class="col-sm-2 col-xs-2"><b>Email</b></td>
+                            <td class="col-sm-6 col-xs-6">
+                                <input type="email" class="form-control" name="email" value="{{ $user->email }}">
+                            </td>
+                       </tr>
+                       <tr>
+                          <td class="col-sm-2 col-xs-2"><b>Alamat</b></td>
+                          <td class="col-sm-6 col-xs-6">
+                            <textarea class="form-control" name="alamat" id="" rows="6">{{ $user->alamat }}</textarea>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="col-sm-2 col-xs-2"><b>Level</b></td>
+                          <td class="col-sm-4 col-xs-6">
+                              <select name="id_level" class="form-control">
+                                  <option value="">-- Pilih --</option>
+                                  @foreach($level as $data)
+                                    <option @if($user->id_level == $data->id_level ) selected @endif value="{{ $data->id_level }}"> {{ $data->nama_level }}</option>
+                                  @endforeach
+                              </select>
+                          </td>
+                     </tr>
+                       <tr>
+                            <td class="col-sm-2 col-xs-2"><b>Foto</b></td>
+                            <td class="col-sm-4 col-xs-6">
+                                <input type="file" class="form-control" name="foto">
+                                <small class="text-danger">*kosongi apabila tidak memperbarui Foto</small>
+                            </td>
+                       </tr>
+                       <tr>
+                            <td class="col-sm-2 col-xs-2"><b>Sandi Baru</b></td>
+                            <td class="col-sm-4 col-xs-6">
+                                <input type="password" class="form-control" name="password">
+                                <small class="text-danger">*kosongi apabila tidak memperbarui kata Sandi</small>
+                            </td>
+                       </tr>
+                   </tbody>
+               </table>
+               <center>
+                  <input type="submit" class="btn btn-primary btn-lg">
+               </center>
+               <?= form_close() ?>
+         </div>
+      </div>
+   </div>
 
-<label for="nama_lengkap">Nama Lengkap</label>
-<input type="text" name="nama_lengkap" value="{{ $user->nama_lengkap }}">
-@if($errors->has('nama_lengkap'))
-    <small class="text-danger">{{ $errors->first('nama_lengkap') }}</small>
-@endif
-<label for="tempat_lahir">Tempat Lahir</label>
-<input type="text" name="tempat_lahir" value="{{ $user->tempat_lahir }}">
-@if($errors->has('tempat_lahir'))
-    <small class="text-danger">{{ $errors->first('tempat_lahir') }}</small>
-@endif
-<label for="tgl_lahir">Tanggal Lahir</label>
-<input type="date" name="tgl_lahir" value="{{ $user->tgl_lahir }}">
-@if($errors->has('tgl_lahir'))
-    <small class="text-danger">{{ $errors->first('tgl_lahir') }}</small>
-@endif
-<label for="telepon">Telepon</label>
-<input type="text" name="telepon" value="{{ $user->telepon }}">
-@if($errors->has('telepon'))
-    <small class="text-danger">{{ $errors->first('telepon') }}</small>
-@endif
-<label for="email">Email</label>
-<input type="email" name="email" value="{{ $user->email }}">
-@if($errors->has('email'))
-    <small class="text-danger">{{ $errors->first('email') }}</small>
-@endif
-<label for="password">Password</label>
-<input type="password" name="password">
-@if($errors->has('password'))
-    <small class="text-danger">{{ $errors->first('password') }}</small>
-@endif
-<label for="level">Level</label>
-<select name="id_level" id="">
-        <option value="0">-- Pilih --</option>
-    @foreach ($level as $item)
-        <option value="{{ $item->id_level }}">{{ $item->level }}</option>
-    @endforeach
-</select>
-@if($errors->has('id_level'))
-    <small class="text-danger">{{ $errors->first('id_level') }}</small>
-@endif
+   <br>
 
-<button type="submit">Tambah</button>
+</div> <!-- identitas siswa end -->
 
 
-<?= form_close() ?>
+@stop
 
 {{-- INI HARUS ADA DISEMUA LAYOUT SUPAYA BIAR BISA DI KLIK DROPDOWNNYA --}}
 @section('scripts')

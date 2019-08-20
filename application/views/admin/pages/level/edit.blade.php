@@ -16,16 +16,18 @@
    <?= form_open('admin/level/update/'.$edit->id_level); ?>
    <div class="form-group">
       <label>Level</label>
-      <input class="form-control"  type="text" name="level" value="{{ $edit->level }}">
+      <input class="form-control"  type="text" name="nama_level" value="{{ $edit->nama_level }}">
    </div>
+   <div class="form-group">
+      <p>Dapat Mengakses Halaman : </p>
+      @foreach($modul as $row)
+          <div class="custom-control custom-checkbox">
+              <input type="checkbox" name="id_modul[]" value="{{ $row->id_modul }}" class="custom-control-input" id="{{ $row->id_modul }}" {{ in_array($row->id_modul, $level_akses) ? 'checked' : '' }}>
+              <label class="custom-control-label" for="{{ $row->id_modul }}">{{ $row->label }}</label>
+          </div>
+      @endforeach
+  </div>
    <input type="submit" class="btn btn-success" style="float:right">
    <?= form_close() ?>
 </div>
-@stop
-{{-- INI HARUS ADA DISEMUA LAYOUT SUPAYA BIAR BISA DI KLIK DROPDOWNNYA --}}
-@section('scripts')
-<!-- jQuery -->
-<script src="{{ base_url('assets/sb-admin/') }}js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ base_url('assets/sb-admin/') }}js/bootstrap.min.js"></script>
 @stop

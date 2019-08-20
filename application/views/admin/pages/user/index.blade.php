@@ -4,20 +4,17 @@
   <div class="row">
       <div class="col-lg-12">
         <h1 class="page-header">
-          Dashboard
+          Admin / Operator
         </h1>
-        <ol class="breadcrumb">
-          <li class="active">
-            <i class="fa fa-dashboard"></i>Dashboard
-          </li>
-        </ol>
+
+
       </div>
+      <br>
     </div>
     <div class="col-lg-12">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">
-              <i class="fa fa-money fa-fw"></i>Transactions Panel</h3>
+            <a href="{{ base_url('admin/User/create') }}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Create</a>
           </div>
           <div class="panel-body">
             <div class="table-responsive">
@@ -27,7 +24,7 @@
                     <th>#</th>
                     <th>Email</th>
                     <th>Nama Lengkap</th>
-                    <th>Tempat Lahir</th>
+                    <th>Level</th>
                     <th>Telepon</th>
                     <th>Opsi</th>
                   </tr>
@@ -39,11 +36,12 @@
                     <td>{{ $n++ }}</td>
                     <td>{{ $data->email }}</td>
                     <td>{{ $data->nama_lengkap }}</td>
-                    <td>{{ $data->tempat_lahir }}</td>
+                    <td>{{ $data->level->nama_level }}</td>
                     <td>{{ $data->telepon }}</td>
                     <td>
-                      <a class="btn btn-default" href="{{ base_url('admin/user/show/').$data->id_users }}"><i class="fa fa-eye"></i></a>
-                      <a class="btn btn-default" href="{{ base_url('admin/user/edit/').$data->id_users }}"><i class="fa fa-pencil"></i></a>
+                      <a class="btn btn-warning" href="{{ base_url('admin/user/show/').$data->id_users }}"><i class="fa fa-eye"></i></a>
+                      <a class="btn btn-primary" href="{{ base_url('admin/user/edit/').$data->id_users }}"><i class="fa fa-pencil"></i></a>
+                      <a class="btn btn-danger" href="{{ base_url('admin/user/delete/').$data->id_users }}"><i class="fa fa-trash"></i></a>
                     </td>
                   </tr>
                   @endforeach

@@ -1,0 +1,24 @@
+{
+  "name": "halokes",
+  "version": "1.0.0",
+  "description": "### Prerequriments   - PHP 7 or greater   - [Composer](https://getcomposer.org/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretty": "npx prettier"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ffadilaputra/halokes.git"
+  },
+  "author": "Ivan Fadila Putra",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/ffadilaputra/halokes/issues"
+  },
+  "homepage": "https://github.com/ffadilaputra/halokes#readme",
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.10.1",
+    "prettier": "^1.16.4"
+  }
+}
