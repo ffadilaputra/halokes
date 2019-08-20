@@ -40,7 +40,7 @@
               <a class="nav-link active" href="{{ base_url('main') }}">Home</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profil</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
                 <a class="dropdown-item" href="{{ base_url('profile') }}">Sejarah</a>
                 <a class="dropdown-item" href="{{ base_url('profile/fasilitas') }}">Fasilitas</a>
@@ -75,6 +75,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ base_url('contact') }}">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="background-color: #28a745; color: #fff; padding-bottom: 5px; padding-top: 5px; margin-top: 22px;" href="{{ base_url('guest/login') }}">Masuk</a>
             </li>
           </ul>
         </div>

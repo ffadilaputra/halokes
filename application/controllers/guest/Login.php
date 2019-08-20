@@ -12,7 +12,7 @@ class Login extends MY_Controller
     public function index()
     {
 
-        $this->view('front.page.login');
+        $this->view('guest.pages.login');
     }
 
     public function loginProcess()
@@ -20,30 +20,29 @@ class Login extends MY_Controller
         //$this->redirectIfAuthenticated('admin', 'admin/beranda');
 
         $this->validate($this->input->post(), [
-            'email' => 'required',
+            'no_virtual_account' => 'required',
             'password' => 'required|string'
         ]);
 
-        $admin = UsersModel::with('level.akses.modul')
-            ->where([
-                'email' => $this->input->post('email')
+        $admin = GuestModel::where([
+                'no_virtual_account' => $this->input->post('no_virtual_account')
             ])
             ->first();
 
         if ($admin->password == md5($this->input->post('password'))) {
-            $this->session->set_userdata('admin_logged_in', $admin);
-            redirect(base_url('admin'));
+            $this->session->set_userdata('admin_wali_logged_in', $admin);
+            redirect(base_url('guest'));
         } else {
             $validation = $this->validator->make([], []);
             $validation->errors()->add('password', 'the password is invalid');
             $this->session->set_flashdata('errors', $validation->errors());
             $this->session->set_flashdata('old', $this->input->post());
-            redirect(base_url('admin/login'));
+            // redirect(base_url('guest/login'));
         }
     }
     public function logoutProcess()
     {
-        unset($_SESSION['admin_logged_in']);
-        redirect(base_url('admin/login'));
+        unset($_SESSION['admin_wali_logged_in']);
+        redirect(base_url('guest/login'));
     }
 }

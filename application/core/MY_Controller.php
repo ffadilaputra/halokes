@@ -151,5 +151,10 @@ class MY_Controller extends CI_Controller {
           }
       }
   }
+    protected function authenticateGuest() {
+      if(is_null($this->session->userdata('admin_wali_logged_in'))) {
+          redirect(base_url('guest/login'));
+      } 
+  }
 
 }

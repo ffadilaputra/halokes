@@ -24,6 +24,15 @@
       language: "id",
       calendarWeeks: true
     });
+
+    // if input checkbox all clicked
+    $('#checkAll').click(function(){
+      if($(this).prop("checked") ==  true){
+        $('.checkbox-name').attr('checked',true)
+      } else {
+        $('.checkbox-name').attr('checked',false)
+      }
+    })
  </script>
  <script>
      function showField(name){
@@ -34,4 +43,3 @@
       }
     }
  </script>
-

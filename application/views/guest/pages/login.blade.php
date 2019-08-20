@@ -9,13 +9,13 @@
 
                         </div>
                         <div class="login-form">
-                        <?= form_open('admin/login/loginProcess') ?>
+                        <?= form_open('guest/login/loginProcess') ?>
                             <!-- <form action="" method="post"> -->
                                 <div class="form-group">
-                                    <label>Email Address</label>
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
-                                    @if($errors->has('email'))
-                                        <small class="text-danger">{{ $errors->first('email') }}</small>
+                                    <label>Virtual Akun</label>
+                                    <input class="au-input au-input--full" type="number" name="no_virtual_account" placeholder="Virtual Akun">
+                                    @if($errors->has('virtual_akun'))
+                                        <small class="text-danger">{{ $errors->first('virtual_akun') }}</small>
                                     @endif
                                 </div>
                                 <div class="form-group">
