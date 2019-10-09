@@ -132,8 +132,6 @@
         document.getElementById('telepon').value = data[i].telepon
         document.getElementById('email').value = data[i].email
         document.getElementById('alamat').innerHTML = data[i].alamat
-        data[i]
-        console.log(data[i]);
       }
     }
   }

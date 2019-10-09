@@ -54,73 +54,93 @@
             <h4><b>Data Angsuran</b></h4>
             <hr>
             <div class="form-group">
-              <label>Tahap / Angsuran</label>
+              <label for="">Pilih Heregistrasi</label>
+              <select class="form-control" id="selectTahap1" name="id_kategori_keuangan" onchange="onSelectKategoriKeuangan()">
+                <option value="0">-- Pilih --</option>
+                @foreach($kategorikeuangan as $value)
+                <option value="{{$value->id_kategori_keuangan}}">{{$value->nama}}</option>
+                @endforeach
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="yangharusdibayar">Biaya yang harus dibayar</label>
+              <input type="text" id="yangharusdibayar" value="" class="form-control" readonly>
+            </div>
+            <div class="form-group">
               <table class="table table-bordered table-hover">
                 <tbody>
                   <tr>
-                    <td class="col-sm-6 col-xs-6"><b>Tahap 1</b></td>
+                    <td class="col-sm-3"><b>Tahap 1</b></td>
                     @if($angsuran)
-                    <td class="col-sm-6 col-xs-6">
+                    <td class="col-sm-7">
                       <!-- untuk pembatalan <a href="{{ base_url('admin/santri/deleteAngsuran'.$santri->id_santri.'/'.'1')}}"  class="btn btn-success" disabled>Lunas</a> -->
-                      <a href="#"  class="btn btn-success" disabled>Lunas</a>
+                      <input type="text" name="" value="{{convertRupiah($angsuran->bayar)}}" class="form-control" readonly>
                     </td>
-                    <td></td>
+                    <td class="col-sm-2">
+                      <a href="#"  class="btn btn-sm btn-success" disabled>Lunas</a>
+                    </td>
                     @else
                     <form action="{{ base_url('admin/santri/angsuran/1/'.$santri->id_santri.'/'.$tahun_akademik->nama) }}" method="post" onsubmit="return confirm('Anda yakin dengan aksi ini!');">
-                      <td class="col-sm-6 col-xs-6">
+                      <td class="col-sm-7">
                         <div class="form-group">
+                          <input type="hidden" id="harusdibayar" name="yangharusdibayar" value="" class="form-control" readonly>
+
                           <input type="number" name="nominal" class="form-control" placeholder="Nominal">
                         </div>
                       </td>
-                      <td>
-                        <div class="form-group">
-                          <input type="submit" class="btn btn-primary" value="Bayar">
-                        </div>
+                      <td class="col-sm-2">
+                        <input type="submit" class="btn btn-primary" value="Bayar">
                       </td>
                     </form>
                     @endif
                   </tr>
                   <tr>
-                    <td class="col-sm-6 col-xs-6"><b>Tahap 2</b></td>
+                    <td class="col-sm-3"><b>Tahap 2</b></td>
                     @if($angsuran_2)
-                    <td class="col-sm-6 col-xs-6">
+                    <td class="col-sm-7">
                       <!-- untuk pembatalan <a href="{{ base_url('admin/santri/deleteAngsuran'.$santri->id_santri.'/'.'1')}}"  class="btn btn-success" disabled>Lunas</a> -->
-                      <a href="#"  class="btn btn-success" disabled>Lunas</a>
+                      <input type="text" name="" value="{{convertRupiah($angsuran_2->bayar)}}" class="form-control" readonly>
                     </td>
-                    <td></td>
+                    <td class="col-sm-2">
+                      <a href="#"  class="btn btn-sm btn-success" disabled>Lunas</a>
+                    </td>
                     @else
                     <form action="{{ base_url('admin/santri/angsuran/2/'.$santri->id_santri.'/'.$tahun_akademik->nama) }}" method="post" onsubmit="return confirm('Anda yakin dengan aksi ini!');">
-                      <td class="col-sm-6 col-xs-6">
+                      <td class="col-sm-7">
                         <div class="form-group">
+                          <input type="hidden" id="harusdibayar" name="yangharusdibayar" value="" class="form-control" readonly>
                           <input type="number" name="nominal" class="form-control" placeholder="Nominal">
                         </div>
                       </td>
-                      <td>
+                      <td class="col-sm-2">
                         <div class="form-group">
-                          <input type="submit" class="btn btn-primary" value="Bayar">
+                          <input type="submit" class="btn btn-sm btn-primary" value="Bayar">
                         </div>
                       </td>
                     </form>
                     @endif
                   </tr>
                   <tr>
-                    <td class="col-sm-6 col-xs-6"><b>Tahap 3</b></td>
+                    <td class="col-sm-3"><b>Tahap 3</b></td>
                     @if($angsuran_3)
-                    <td class="col-sm-6 col-xs-6">
+                    <td class="col-sm-7">
                       <!-- untuk pembatalan <a href="{{ base_url('admin/santri/deleteAngsuran'.$santri->id_santri.'/'.'1')}}"  class="btn btn-success" disabled>Lunas</a> -->
-                      <a href="#"  class="btn btn-success" disabled>Lunas</a>
+                      <input type="text" name="" value="{{convertRupiah($angsuran_3->bayar)}}" class="form-control" readonly>
                     </td>
-                    <td></td>
+                    <td class="col-sm-2">
+                      <a href="#"  class="btn btn-sm btn-success" disabled>Lunas</a>
+                    </td>
                     @else
                     <form action="{{ base_url('admin/santri/angsuran/3/'.$santri->id_santri.'/'.$tahun_akademik->nama) }}" method="post" onsubmit="return confirm('Anda yakin dengan aksi ini!');">
-                      <td class="col-sm-6 col-xs-6">
+                      <td class="col-sm-7">
                         <div class="form-group">
+                          <input type="hidden" id="harusdibayar" name="yangharusdibayar" value="" class="form-control" readonly>
                           <input type="number" name="nominal" class="form-control" placeholder="Nominal">
                         </div>
                       </td>
-                      <td>
+                      <td class="col-sm-2">
                         <div class="form-group">
-                          <input type="submit" class="btn btn-primary" value="Bayar">
+                          <input type="submit" class="btn btn-sm btn-primary" value="Bayar">
                         </div>
                       </td>
                     </form>
@@ -237,4 +257,20 @@
     </div>
   </div>
 </div> <!-- identitas siswa end -->
-@stop
+@endsection
+@section('javascript')
+<script type="text/javascript">
+  function onSelectKategoriKeuangan() {
+    var data = <?= json_encode($kategorikeuangan); ?>;
+    var selectName = document.getElementById('selectTahap1')
+    var value_id = selectName.options[selectName.selectedIndex].value
+
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].id_kategori_keuangan == value_id) {
+        document.getElementById('yangharusdibayar').value = data[i].biaya
+        document.getElementById('harusdibayar').value = data[i].biaya
+      }
+    }
+  }
+</script>
+@endsection

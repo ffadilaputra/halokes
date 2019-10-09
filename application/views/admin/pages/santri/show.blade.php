@@ -197,18 +197,6 @@
             </tr>
             @endforeach
           </table>
-          <div class="form-group">
-            <table border="0" class="table table-hover">
-              <tr>
-                <td>Tanggungan Yang belum Lunas</td>
-                <td>
-                  <?php
-                  $hasilAngsuran = $laporanangsuran[0]['biaya'] - $bayar;
-                  ?>
-                  <label class="btn btn-warning" disabled>{{ convertRupiah($hasilAngsuran) }}</label></td>
-                </tr>
-              </table>
-            </div>
           </div>
           <div class="col-lg-6">
             <div class="form-group">

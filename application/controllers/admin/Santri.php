@@ -215,6 +215,7 @@ class Santri extends MY_Controller
         $data['admin'] = $this->session->userdata('admin_logged_in');
         $data['santri'] = SantriModel::find($id);
         $data['tahun_akademik'] = TahunAkademikModel::first();
+        $data['kategorikeuangan'] = KategoriKeuanganModel::all();
         $data['angsuran'] = AngsuranModel::where(['id_santri' => $id , 'tahap' => 1])->first();
         $data['angsuran_2'] = AngsuranModel::where(['id_santri' => $id , 'tahap' => 2])->first();
         $data['angsuran_3'] = AngsuranModel::where(['id_santri' => $id , 'tahap' => 3])->first();
@@ -239,13 +240,16 @@ class Santri extends MY_Controller
         if($cek){
             echo 'Gagal masukan data, data duplikat';
         }else{
-          $this->validate($this->input->post(),['nominal' => 'required']);
+          $this->validate($this->input->post(),[
+            'nominal' => 'required',
+            'yangharusdibayar' => 'required'
+          ]);
 
             $data = array(
                 'id_santri' => $id,
                 'tahap' => $tahap,
                 'tahun_akademik' => $tahun_akademik_start.'/'.$tahun_akademik_end,
-                'bayar' => $this->input->post('nominal'),
+                'bayar' => $this->input->post('nominal')
             );
             AngsuranModel::create($data);
             redirect('admin/santri/pembayaran/'.$id);
