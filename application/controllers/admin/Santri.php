@@ -39,6 +39,17 @@ class Santri extends MY_Controller
         $this->view('admin.pages.santri.verifed', $data);
     }
 
+    public function cariSantri()
+    {
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        $data['santri'] = SantriModel::where([
+            'status_verifikasi' => 'terverifikasi',
+            'tingkat_pendidikan' => $this->input->post('jenjang'),
+            'jenis_kelamin' => $this->input->post('jenis_kelamin')
+        ])->get();
+        $this->view('admin.pages.santri.verifed', $data);
+    }
+
     public function destroy($id)
     {
         $data['admin'] = $this->session->userdata('admin_logged_in');
@@ -162,6 +173,24 @@ class Santri extends MY_Controller
         $this->view('admin.pages.santri.cetak_va', $data);
     }
 
+    public function statusAlumni($id)
+    {
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        SantriModel::find($id)->update([
+          'jenis_siswa' => 'alumni'
+        ]);
+        redirect('admin/santri/show/'.$id);
+    }
+
+    public function alumni()
+    {
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        $data['santri'] = SantriModel::where([
+            'jenis_siswa' => 'alumni'
+        ])->get();
+        $this->view('admin.pages.santri.alumni', $data);
+    }
+
     public function generateJK($jk)
     {
         if ($jk == 'laki-laki') {
@@ -205,43 +234,18 @@ class Santri extends MY_Controller
     }
 
     //menggunakan 2 parameter karna tahun akademik memiliki format 2019/2010, jadi dibaca beda parameter
-    public function angsuran($id, $tahun_akademik_start, $tahun_akademik_end){
-        $cek = AngsuranModel::where(['id_santri' => $id, 'tahap' => 1])->first();
+    public function angsuran($tahap, $id, $tahun_akademik_start, $tahun_akademik_end){
+        $cek = AngsuranModel::where(['id_santri' => $id, 'tahap' => $tahap])->first();
         if($cek){
             echo 'Gagal masukan data, data duplikat';
         }else{
+          $this->validate($this->input->post(),['nominal' => 'required']);
+
             $data = array(
                 'id_santri' => $id,
-                'tahap' => 1,
+                'tahap' => $tahap,
                 'tahun_akademik' => $tahun_akademik_start.'/'.$tahun_akademik_end,
-            );
-            AngsuranModel::create($data);
-            redirect('admin/santri/pembayaran/'.$id);
-        }
-    }
-    public function angsuran2($id, $tahun_akademik_start, $tahun_akademik_end){
-        $cek = AngsuranModel::where(['id_santri' => $id , 'tahap' => 2])->first();
-        if($cek){
-            echo 'Gagal masukan data, data duplikat';
-        }else{
-            $data = array(
-                'id_santri' => $id,
-                'tahap' => 2,
-                'tahun_akademik' => $tahun_akademik_start.'/'.$tahun_akademik_end,
-            );
-            AngsuranModel::create($data);
-            redirect('admin/santri/pembayaran/'.$id);
-        }
-    }
-    public function angsuran3($id, $tahun_akademik_start, $tahun_akademik_end){
-        $cek = AngsuranModel::where(['id_santri' => $id , 'tahap' => 3])->first();
-        if($cek){
-            echo 'Gagal masukan data, data duplikat';
-        }else{
-            $data = array(
-                'id_santri' => $id,
-                'tahap' => 3,
-                'tahun_akademik' => $tahun_akademik_start.'/'.$tahun_akademik_end,
+                'bayar' => $this->input->post('nominal'),
             );
             AngsuranModel::create($data);
             redirect('admin/santri/pembayaran/'.$id);

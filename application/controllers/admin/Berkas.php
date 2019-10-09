@@ -77,6 +77,7 @@ class Berkas extends MY_Controller
     public function santri($id)
     {
         $data['admin'] = $this->session->userdata('admin_logged_in');
+        $data['archive'] = BerkasSantriModel::where(['id_santri' => $id])->first();
         $data['santri'] = SantriModel::where(['id_santri' => $id])->first();
         $this->view('admin.pages.kelengkapan.show_santri', $data);
     }

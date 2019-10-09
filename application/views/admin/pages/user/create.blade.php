@@ -1,5 +1,7 @@
 @extends('admin.template')
-
+@section('css')
+  <link href="<?= base_url('assets/sb-admin/') ?>css/bootstrap-datepicker.min.css" rel="stylesheet">
+@endsection
 @section('content')
 
 <div class="row">
@@ -16,12 +18,12 @@
       <div class="row">
          <div class="col-lg-12">
             <?= form_open('admin/user/store') ?>
-               <table class="table table-bordered">
+               <table border="0" class="table">
                    <tbody>
                        <tr>
                             <td class="col-sm-2 col-xs-2"><b>Foto Profile</b></td>
                             <td class="col-sm-6 col-xs-6">
-                                <input type="file" class="form-control" name="nama_lengkap">
+                                <input type="file" class="form-control" name="foto">
 
                             </td>
                        </tr>
@@ -35,7 +37,7 @@
                             </td>
                        </tr>
                        <tr>
-                            <td class="col-sm-2 col-xs-2"><b>Alamat</b></td>
+                            <td class="col-sm-2 col-xs-2"><b>Temlat Lahir</b></td>
                             <td class="col-sm-6 col-xs-6">
                                 <input type="text" class="form-control" name="tempat_lahir" >
                                 @if($errors->has('tempat_lahir'))
@@ -46,7 +48,7 @@
                        <tr>
                             <td class="col-sm-2 col-xs-2"><b>Tanggal Lahir</b></td>
                             <td class="col-sm-6 col-xs-6">
-                                <input type="text" class="form-control" name="tgl_lahir" >
+                                <input type="text" class="form-control datepicker" data-format="dd-mm-yyyy" name="tgl_lahir" >
                                 @if($errors->has('tgl_lahir'))
                                     <small class="text-danger">{{ $errors->first('tgl_lahir') }}</small>
                                 @endif
@@ -77,30 +79,6 @@
 
                           </td>
                       </tr>
-                       <tr>
-                            <td class="col-sm-2 col-xs-2"><b>New Password</b></td>
-                            <td class="col-sm-4 col-xs-6">
-                                <input type="password" class="form-control" name="password" id="" value="">
-                                @if($errors->has('password'))
-                                    <small class="text-danger">{{ $errors->first('password') }}</small>
-                                @endif
-                                <!-- <small class="text-danger">*kosongi apabila tidak memperbarui kata sandi</small> -->
-                            </td>
-                       </tr>
-                       <tr>
-                            <td class="col-sm-2 col-xs-2"><b>Level</b></td>
-                            <td>
-                            <select class="form-control" name="id_level" id="">
-                                    <option value="0">-- Pilih --</option>
-                                @foreach ($level as $item)
-                                    <option value="{{ $item->id_level }}">{{ $item->nama_level }}</option>
-                                @endforeach
-                            </select>
-                            @if($errors->has('id_level'))
-                                <small class="text-danger">{{ $errors->first('id_level') }}</small>
-                            @endif
-                            </td>
-                       </tr>
                    </tbody>
                </table>
                <center>
@@ -114,6 +92,12 @@
    <br>
 
 </div> <!-- identitas siswa end -->
-
-
-@stop
+@endsection
+@section('javascript')
+<script src="{{ base_url('assets/sb-admin/js/bootstrap-datepicker.min.js') }}"></script>
+<script type="text/javascript">
+  $('.datepicker').datepicker({
+    format: 'yyyy-mm-dd'
+  });
+</script>
+@endsection

@@ -83,6 +83,43 @@ class Parents extends MY_Controller
         redirect('admin/berkas/parents/' . $santri);
     }
 
+    public function updateProfile($santri, $field)
+    {
+        if (!empty($_FILES[$field]['name'])) {
+            $_POST[$field] = $this->do_upload(
+                $field,
+                'assets/uploads/',
+                'image',
+                true
+            );
+            $berkas = BerkasSantriModel::where([
+                'id_santri' => $santri
+            ])->first();
+            unlink('assets/uploads/' . $berkas->$field);
+        }
+
+        // $nama_file = ;
+        // $direktori = ;
+        // $target = $direktori.$nama_file;
+        //
+        // move_uploaded_file($_FILES['webcam']['tmp_name'], $target);
+        // Get image file
+        $image = $_FILES['webcam']['tmp_name'];
+        // Make a image name based on user name and current timestamp
+        $name = time().'-'.$santri.'.jpg';
+        // Define folder path
+        $folder = 'assets/uploads/';
+        // Make a file path where image will be stored [ folder path + file name + file extension]
+        // $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
+        // Upload image
+        $this->uploadOne($image, $folder, 'assets', $name);
+
+        BerkasSantriModel::where(['id_santri' => $santri])->update(
+            $this->input->post()
+        );
+        redirect('admin/berkas/archive/' . $santri);
+    }
+
     public function file($santri)
     {
         if (!empty($_FILES['foto_santri']['name'])) {

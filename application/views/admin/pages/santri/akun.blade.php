@@ -9,14 +9,15 @@
 </div>
 <div class="row">
   <div class="col-lg-12">
+    <a class="btn btn-primary" href="{{ base_url('admin/GenerateLogin') }}" style="margin-bottom:5px;">Buat Akun Santri</a>
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
           <i class="fa fa-book" aria-hidden="true"></i>Keterangan Akun Santri
         </h3>
         <br>
-        <p>Password akun santri berformat <b>Tahun Bulan Tanggal dan inisial nama depan 2 huruf</b>
-          <br>Contoh : <b>20190820AD</b>
+        <p>Password akun santri berformat <b>Tahun Bulan Tanggal</b>
+          <br>Contoh : <b>20190820</b>
         </p>
       </div>
       <div class="panel-body">

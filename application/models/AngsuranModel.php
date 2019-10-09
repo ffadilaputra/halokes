@@ -7,7 +7,7 @@ class AngsuranModel extends Eloquent {
     protected $table = "angsuran";
     protected $primaryKey = 'id_angsuran';
     public $timestamps = true;
-    protected $fillable = ["id_santri", "tahap","kelas","tahun_akademik"];
+    protected $fillable = ["id_santri", "tahap","kelas","tahun_akademik","bayar"];
 
     public function detailSantri(){
       return $this->belongsTo('SantriModel','id_santri','id_santri');

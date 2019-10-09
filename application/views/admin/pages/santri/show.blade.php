@@ -25,6 +25,18 @@
           <table class="table table-bordered table-hover">
             <tbody>
               <tr>
+                <td class="col-sm-6 col-xs-6">Foto</td>
+                <td class="col-sm-6 col-xs-6">
+                  <center>
+                    @if($santri->berkasSantri->foto_santri)
+                    <img id="santri" src="{{ base_url('assets/uploads/').$santri->berkasSantri->foto_santri }}" alt="your image" style="width:150px; height:200px; background-color:#eeeeee;" />
+                    @else
+                    <p>Gambar belum di unggah</p>
+                    @endif
+                  </center>
+                </td>
+              </tr>
+              <tr>
                 <td class="col-sm-6 col-xs-6"><b>Tingkat Pendidikan</b></td>
                 <td class="col-sm-6 col-xs-6">
                   @if($santri->tingkat_pendidikan == 'mt')
@@ -174,11 +186,14 @@
             <label>Tahap / Angsuran</label>
           </div>
           <table border="0" class="table table-hover">
-            <?php $no = 1; ?>
+            <?php $no = 1;
+            $bayar = 0;
+            ?>
             @foreach($angsuran as $value)
             <tr>
               <td>Tahap {{ $no++ }}</td>
-              <td><label class="btn btn-info" disabled>Lunas</label></td>
+              <td><label class="btn btn-info" disabled>{{ convertRupiah($value->bayar) }}</label></td>
+              <?php $bayar += $value->bayar; ?>
             </tr>
             @endforeach
           </table>
@@ -188,9 +203,7 @@
                 <td>Tanggungan Yang belum Lunas</td>
                 <td>
                   <?php
-                  $lapAngsuran = $laporanangsuran[0]['biaya'] / 3;
-                  $sisaBagi3 = $lapAngsuran * count($angsuran);
-                  $hasilAngsuran = $laporanangsuran[0]['biaya'] - $sisaBagi3;
+                  $hasilAngsuran = $laporanangsuran[0]['biaya'] - $bayar;
                   ?>
                   <label class="btn btn-warning" disabled>{{ convertRupiah($hasilAngsuran) }}</label></td>
                 </tr>
@@ -766,4 +779,19 @@
     </div>
   </div>
   <!-- berkas-berkas end -->
+
+  <!-- setting -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-lg-12">
+          <a href="{{ base_url('admin/santri/print/').$santri->id_santri }}" class="btn btn-lg btn-info">Cetak Virtual Akun</a>
+          @if($santri->jenis_siswa !== 'alumni')
+          <a href="{{ base_url('admin/santri/statusAlumni/').$santri->id_santri }}" class="btn btn-lg btn-warning" onclick="return confirm('Apakah anda yakin dengan aksi ini?')">Ubah Status jadi Alumni</a>
+          @endif
+          <a href="{{ base_url('admin/santri/destroy/').$santri->id_santri }}" class="btn btn-lg btn-danger" onclick="return confirm('Apakah anda yakin Ingin Menghapus Ini?')">Hapus</a>
+        </div>
+      </div>
+    </div>
+  </div> <!-- setting end -->
   @stop

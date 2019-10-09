@@ -16,6 +16,7 @@ class GenerateLogin extends MY_Controller
         $data['santri'] = SantriModel::where([
           'status_verifikasi' => 'terverifikasi'
           ])->get();
+          $data['guest'] = GuestModel::all();
 
         $this->view('admin.pages.santri.generate', $data);
     }
@@ -28,7 +29,7 @@ class GenerateLogin extends MY_Controller
           ])->first();
 
           $date = new DateTime($santri->tgl_lahir);
-          $password = $date->format('Ymd').strtoupper(substr($santri->nama_lengkap, 0, 2));
+          $password = $date->format('Ymd');
 
             GuestModel::create([
                 'no_virtual_account' => $santri->virtualAkun->no_virtual_account,

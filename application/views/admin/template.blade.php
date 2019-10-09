@@ -3,6 +3,7 @@
 <head>
     @include('admin.partials.head')
     <meta charset="UTF-8">
+    @yield('css')
 </head>
 
   <body>
@@ -17,6 +18,7 @@
       </div>
     </div>
     @include('admin.partials.scripts')
+    @yield('javascript')
   </body>
 
 </html>

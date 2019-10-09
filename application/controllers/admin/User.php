@@ -14,11 +14,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $data['list'] = UsersModel::all();
         $this->view('admin.pages.user.index',$data);
     }
+    public function operator(){
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        $data['list'] = UsersModel::all();
+        $this->view('admin.pages.user.operator',$data);
+    }
 
     public function create(){
         $data['admin'] = $this->session->userdata('admin_logged_in');
-        $data['level'] = LevelModel::all();
         $this->view('admin.pages.user.create',$data);
+    }
+
+    public function createOperator(){
+        $data['admin'] = $this->session->userdata('admin_logged_in');
+        $data['list'] = UsersModel::all();
+        $data['level'] = LevelModel::all();
+        $this->view('admin.pages.user.create_operator',$data);
     }
 
     public function store(){
@@ -27,14 +38,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         'tempat_lahir' => 'required',
         'telepon' => 'required',
         'email' => 'required',
+      ]);
+      $_POST['id_users'] = random_string('alnum', 8) . date('my');
+
+      if (!empty($_FILES['foto']['name'])) {
+          $_POST['foto'] = $this->do_upload(
+              'foto',
+              'assets/uploads/pegawai/',
+              'image',
+              true
+          );
+      }
+
+      UsersModel::create($this->input->post());
+      redirect('admin/user');
+    }
+
+    public function storeOperator(){
+      $this->validate($this->input->post(),[
         'password'=> 'required',
         'id_level' => 'required',
       ]);
-      $id_user = 'USR' . random_string('alnum', 5) . date('my');
-      $_POST['id_users'] = $id_user;
+      $id = $this->input->post('id_users');
       $_POST['password'] = md5($_POST['password']);
-      $_POST['id_alamat'] = 0;
-      UsersModel::create($this->input->post());
+      UsersModel::find($id)->update($this->input->post());
       redirect('admin/user');
     }
 

@@ -105,9 +105,9 @@ ol {
   .skema {
 	width: 70%;
 	margin: auto;
-	
+
   }
-  
+
   .po {
 	border-top: 2px dashed;
 	border-color: #28a745 !important;
@@ -115,12 +115,12 @@ ol {
 	counter-increment: section;
 	position: relative;
   }
-  
-  
-  
+
+
+
   .po:nth-child(even):before {
 	content: counter(section);
-	right: 100%; 
+	right: 100%;
 	margin-right: -20px;
 	position: absolute;
 	border-radius: 50%;
@@ -132,10 +132,10 @@ ol {
 	color: red;
 	font-size: 20pt;
   }
-  
+
   .po:nth-child(odd):before {
 	content: counter(section);
-	left: 100%; 
+	left: 100%;
 	margin-left: -20px;
 	position: absolute;
 	border-radius: 50%;
@@ -147,34 +147,32 @@ ol {
 	color: red;
 	font-size: 20pt;
   }
-  
-  
-  
+
+
+
   .po:nth-child(even) {
 	border-left: 2px dashed;
 	border-top-left-radius: 30px;
 	border-bottom-left-radius: 30px;
-	margin-right: 30px; 
+	margin-right: 30px;
 	padding-right: 0;
   }
-  
+
   .po:nth-child(odd) {
 	border-right: 2px dashed;
 	border-top-right-radius: 30px;
 	border-bottom-right-radius: 30px;
-	margin-left: 30px; 
+	margin-left: 30px;
 	padding-left: 0;
   }
-  
+
   .po:first-child {
 	border-top: 0;
 	border-top-right-radius:0;
 	border-top-left-radius:0;
   }
-  
+
   .po:last-child {
 	border-bottom-right-radius:0;
 	border-bottom-left-radius:0;
   }
-
-  

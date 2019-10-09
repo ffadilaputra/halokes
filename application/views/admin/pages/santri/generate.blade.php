@@ -31,15 +31,19 @@
             </thead>
             <tbody>
               @foreach($santri as $data)
-              <tr>
-                <td>
-                  <input type="checkbox" class='form-control checkbox-name' name="id_santri[]"
-                  value="{{ $data->id_santri }}">
-                </td>
-                <td>{{ $data->virtualAkun->no_virtual_account }}</td>
-                <td>{{ $data->nama_lengkap }}</td>
-                <td>{{ tgl_indo($data->tgl_lahir) }}</td>
-              </tr>
+                @foreach($guest as $val)
+                  @if($data->id_santri !== $val->id_santri)
+                  <tr>
+                    <td>
+                      <input type="checkbox" class='form-control checkbox-name' name="id_santri[]"
+                      value="{{ $data->id_santri }}">
+                    </td>
+                    <td>{{ $data->virtualAkun->no_virtual_account }}</td>
+                    <td>{{ $data->nama_lengkap }}</td>
+                    <td>{{ tgl_indo($data->tgl_lahir) }}</td>
+                  </tr>
+                  @endif
+                @endforeach
               @endforeach
             </tbody>
           </table>

@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-md-12">
 
-          <div class="owl-carousel owl-theme home-slider">
+          <div class="owl-carousel owl-theme home-slider" style="margin-top: 35px;">
             <div>
               <a href="#" class="a-block d-flex align-items-center height-lg" style="background-image: url('{{'assets/images/img1-min.jpg'}}'); ">
               </a>

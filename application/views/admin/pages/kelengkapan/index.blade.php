@@ -30,7 +30,6 @@
                       <th>Jenis Kelamin</th>
                       <th>Tempat lahir</th>
                       <th>Jenjang Madarasah</th>
-                      <th>Verifikasi</th>
                       <th style="width:20%">Opsi</th>
                    </tr>
                 </thead>
@@ -51,27 +50,16 @@
                            Madarasah Diniyah
                         @endif
                       </td>
-                      <td><a class="btn btn-sm btn-success" href="{{ base_url('admin/santri/verify/').$data->id_santri }}"><i class="fa fa-check-square-o" aria-hidden="true"></i></a></td>
                       <td>
-                         <a class="btn btn-sm btn-warning" href="{{ base_url('admin/berkas/santri/'.$data->id_santri) }}"><i class="fa fa-user"></i></a>
-                         <a class="btn btn-sm btn-primary" href="{{ base_url('admin/berkas/parents/'.$data->id_santri) }}"><i class="fa fa-users"></i></a>
-                         <a class="btn btn-sm btn-info" href="{{ base_url('admin/berkas/education/'.$data->id_santri) }} "><i class="fa fa-university"></i></a>
-                         <a class="btn btn-sm btn-success" href="{{ base_url('admin/berkas/archive/'.$data->id_santri) }}"><i class="fa fa-upload"></i></a>
-                         <a class="btn btn-sm btn-danger" href="{{ base_url('admin/santri/destroy/'.$data->id_santri) }}"><i class="fa fa-trash"></i></a>
+                         <a class="btn btn-sm btn-warning" href="{{ base_url('admin/berkas/santri/'.$data->id_santri) }}">Edit Santri</a>
                       </td>
                    </tr>
                    @endforeach
                 </tbody>
              </table>
           </div>
-          <div class="text-right">
-             <a href="#">View All Transactions
-             <i class="fa fa-arrow-circle-right"></i>
-             </a>
-          </div>
        </div>
     </div>
  </div>
 </div>
 @stop
-

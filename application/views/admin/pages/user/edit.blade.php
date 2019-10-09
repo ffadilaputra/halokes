@@ -19,7 +19,7 @@
                                 <td rowspan="10">
                                       <center>
                                             @if(isset($user->foto))
-                                                <img style="width:200px; height:250px;" src="{{ base_url('assets/uploads/'.$user->foto) }}">
+                                                <img style="width:200px; height:250px;" src="{{ base_url('assets/uploads/pegawai/'.$user->foto) }}">
                                             @else
                                                 <img alt="your image" style="width:200px; height:250px; background-color:#eeeeee;" />
                                             @endif
@@ -36,7 +36,7 @@
                             </td>
                        </tr>
                        <tr>
-                            <td class="col-sm-2 col-xs-2"><b>Alamat</b></td>
+                            <td class="col-sm-2 col-xs-2"><b>Tempat Lahir</b></td>
                             <td class="col-sm-6 col-xs-6">
                                 <input type="text" class="form-control" name="tempat_lahir" value="{{ $user->tempat_lahir }}">
                                 @if($errors->has('tempat_lahir'))

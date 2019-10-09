@@ -115,6 +115,7 @@ class Pembayaran extends MY_Controller
         $data['tahunakademik'] = $this->input->post('tahun_akademik');
         $data['laporanspp'] = KategoriKeuanganModel::where(['nama' => 'Syahriyah'] , ['tahun_akademik' => $data['tahunakademik']])->get();
         $data['spp'] = SppModel::where(['tahun_akademik' => $data['tahunakademik']])->whereBetween('created_at', [$this->input->post('tanggal').' 00:00:00', $this->input->post('tanggal').' 23:59:00'])->get();
+        $data['jenjang'] = $this->input->post('jenjang');
         $this->view('admin.pages.spp.index',$data);
     }
 
@@ -133,6 +134,7 @@ class Pembayaran extends MY_Controller
       $data['tahunakademik'] = $this->input->post('tahun_akademik');
       $data['laporanangsuran'] = KategoriKeuanganModel::where(['nama' => 'Pangkal'] , ['tahun_akademik' => $data['tahunakademik']])->get();
       $data['angsuran'] = AngsuranModel::where(['tahun_akademik' => $data['tahunakademik']])->whereBetween('created_at', [$this->input->post('tanggal').' 00:00:00', $this->input->post('tanggal').' 23:59:00'])->get();
+      $data['jenjang'] = $this->input->post('jenjang');
       $this->view('admin.pages.angsuran.index',$data);
     }
 }

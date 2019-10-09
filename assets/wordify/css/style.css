@@ -25,6 +25,26 @@ h1, h2, h3, h4, h5 {
   -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1); }
 
+  .sub-nav{
+		display: flex;
+    left: 50%;
+	}
+  .nav-box{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+	.sub-nav a{
+		background-color: #28a745;
+		color: #fff;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		margin-top: 22px;
+    text-align: center;
+    width: 170px;
+    border: 1px solid #ccc;
+	}
+
 header {
   position: relative;
   top: 0;
@@ -55,11 +75,14 @@ header {
           position: relative;
           right: inherit; } }
     header .navbar .nav-link {
-      padding: 1.7rem 1rem;
+      padding: 1.7rem 2rem !important; 
       font-size: 16px;
       outline: none !important;
       text-transform: uppercase;
-      letter-spacing: .05em; }
+      letter-spacing: .05em;
+      -webkit-box-shadow: 10px 0px 0px -9px #d3d3d3;
+       -moz-box-shadow: 10px 0px 0px -9px #d3d3d3;
+            box-shadow: 10px 0px 0px -9px #d3d3d3;}
       @media (max-width: 991.98px) {
         header .navbar .nav-link {
           padding: 1.7rem 1rem; } }
@@ -1248,7 +1271,7 @@ blockquote {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 5em 0;
+  padding: 1em 0;
   background: #262626; }
   .site-footer .post-entry-sidebar ul li a h4 {
     color: #fff; }

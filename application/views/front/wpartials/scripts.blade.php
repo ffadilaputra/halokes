@@ -10,4 +10,3 @@
 <script src="{{ base_url('assets/js/instagram_api.js') }}" ></script>
 <script src="{{ base_url('assets/js/register_validation.js') }}" ></script>
 <script src='https://www.google.com/recaptcha/api.js' ></script>
-

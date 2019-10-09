@@ -11,7 +11,7 @@ class Report extends MY_Controller{
 
   function pembayaran($id)
   {
-    $this->load->library('fpdf');
+    $this->load->library('pdf');
 
     $data['admin'] = $this->session->userdata('admin_logged_in');
     $data['santri'] = SantriModel::find($id);
@@ -21,7 +21,7 @@ class Report extends MY_Controller{
     $data['laporanspp'] = KategoriKeuanganModel::where(['nama' => 'Syahriyah'] , ['tahun_akademik' => $data['tahun_akademik']->nama])->get();
     $data['laporanpangkal'] = KategoriKeuanganModel::where(['nama' => 'Pangkal'] , ['tahun_akademik' => $data['tahun_akademik']->nama])->get();
 
-    $pdf = new FPDF('P','mm','A4', true, 'UTF-8');
+    $pdf = new fpdf('P','mm','A4', true, 'UTF-8');
 
     $pdf->AliasNbPages();
     $pdf->AddPage();
@@ -77,14 +77,13 @@ class Report extends MY_Controller{
     $pdf->Ln();
     $pdf->SetFont('Times','',12);
     // Column headings
-    $pisah = $data['laporanpangkal'][0]->biaya / 3;
     // Data
     foreach($data['angsuran'] as $row)
     {
         $pdf->Cell(46,6,'Tahap :   '.$row->tahap,0,0,'C');
-        $pdf->Cell(106,6,convertRupiah(round($pisah, 0)),0,0,'C');
+        $pdf->Cell(106,6,convertRupiah(round($row->bayar, 0)),0,0,'C');
         $pdf->Ln();
-        $totaltransaksi += round($pisah, 0);
+        $totaltransaksi += round($row->bayar, 0);
     }
     $pdf->Ln();
     foreach($data['spp'] as $row)

@@ -4,9 +4,6 @@
       <div class="row mb-5">
          <div class="col-md-4">
             <h3>Tentang</h3>
-            <p class="mb-4">
-               <img src="{{ base_url('assets/images/') }}img4-min.jpg" alt="Image placeholder" class="img-fluid">
-            </p>
             <p><a href="{{base_url('profile') }}">Pondok Pesantren Ma'had Darun Najah</a></p>
          </div>
          <div class="col-md-6 ml-auto">
@@ -16,7 +13,7 @@
                </div>
                <div class="col-md-1"></div>
                <div class="col-md-4">
-                  <div class="mb-5">
+                  <div>
                      <h3>Sosial Media</h3>
                      <ul class="list-unstyled footer-social">
                         <li><a href="https://web.facebook.com/DarunNajahMalang/" target="_blank"><span class="fa fa-facebook"></span> Facebook</a></li>
