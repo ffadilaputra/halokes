@@ -16,20 +16,23 @@
           <input type="date" name="tanggal" class="form-control" placeholder="Pilih Tanggal">
         </div>
         <div class="form-group col-md-3">
+          <input type="date" name="tanggal2" class="form-control" placeholder="Pilih Tanggal">
+        </div>
+        <div class="form-group col-md-2">
           <select class="form-control" name="tahun_akademik">
             @foreach($alltahunakademik as $data)
             <option value="{{ $data['nama'] }}">{{ $data['nama'] }}</option>
             @endforeach
           </select>
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
           <select class="form-control" name="jenjang">
             <option value="mt">Madarasah Tsanawiyah</option>
             <option value="ma">Madarasah Aliyah</option>
             <option value="md">Madarasah Diniyah</option>
           </select>
         </div>
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-1">
           <input type="submit" class="btn btn-primary" value="Submit">
         </div>
       </form>
@@ -87,15 +90,15 @@
 <hr>
 <div class="row" style="margin-bottom: 40px;">
   <div class="col-md-4">
-    <h3>Pangkal tahun <?php (empty($laporanangsuran[0]['tahun_akademik'])) ? print $tahunakademik : print $laporanangsuran[0]['tahun_akademik'] ?></h3>
-  </div>
-  <div class="col-md-4">
     <ul>
       <h3>Total pembayaran</h3>
     </ul>
   </div>
   <div class="col-md-4">
     <h3>{{ convertRupiah($totaltransaksi) }}</h3>
+  </div>
+  <div class="col-md-4">
+    <!-- <a class="btn btn-info" href="{{ base_url('admin/export/angsuran/').$angsuran }}" target="_blank">Export Ke Ms. Excel</a> -->
   </div>
 </div>
 @stop

@@ -12,7 +12,7 @@
 <div class="col-lg-12">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <a href="{{ base_url('admin/User/create') }}" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Operator</a>
+      <a href="{{ base_url('admin/User/createoperator') }}" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Operator</a>
     </div>
     <div class="panel-body">
       <div class="table-responsive">

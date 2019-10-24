@@ -79,7 +79,7 @@
   </nav>
 </header>
 <div class="container">
-  <div class="nav-box">
+  <div class="row">
     <div class="sub-nav mx-auto">
 
       <a class="nav-link" href="{{ base_url('ppdb/santri/informasi') }}">Pendaftaran</a>

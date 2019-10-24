@@ -63,13 +63,13 @@ class Report extends MY_Controller{
     $pdf->Cell(60,10,'Virtual Akun',0,0,'C');
     $pdf->Cell(0,10,': '.$data['santri']->virtualAkun->no_virtual_account,0,0,'L');
     $pdf->Ln(1);
-    $pdf->Cell(60,25,'Nama        ',0,0,'C');
-    $pdf->Cell(0,25,': '.$data['santri']->nama_lengkap,0,0,'L');
+    $pdf->Cell(60,20,'Nama        ',0,0,'C');
+    $pdf->Cell(0,20,': '.$data['santri']->nama_lengkap,0,0,'L');
     $pdf->Ln(1);
-    $pdf->Cell(60,39,'Jenjang       ',0,0,'C');
-    $pdf->Cell(40,39,': '.$jenjang,0,0,'L');
+    $pdf->Cell(60,30,'Jenjang       ',0,0,'C');
+    $pdf->Cell(40,30,': '.$jenjang,0,0,'L');
 
-    $pdf->Ln(30);
+    $pdf->Ln(18);
     $pdf->SetFont('Times','B',12);
     $pdf->Cell(47,10,'Pembayaran',0,0,'C');
     $pdf->Cell(100,10,'Nominal',0,0,'C');
@@ -80,33 +80,31 @@ class Report extends MY_Controller{
     // Data
     foreach($data['angsuran'] as $row)
     {
-        $pdf->Cell(46,6,'Tahap :   '.$row->tahap,0,0,'C');
-        $pdf->Cell(106,6,convertRupiah(round($row->bayar, 0)),0,0,'C');
+        $pdf->Cell(46,5,'Tahap :   '.$row->tahap,0,0,'C');
+        $pdf->Cell(106,5,convertRupiah(round($row->bayar, 0)),0,0,'C');
         $pdf->Ln();
         $totaltransaksi += round($row->bayar, 0);
     }
     $pdf->Ln();
     foreach($data['spp'] as $row)
     {
-        $pdf->Cell(50,6,'Bulan :   '.$row->bulan,0,0,'C');
-        $pdf->Cell(100,6,convertRupiah($data['laporanspp'][0]->biaya),0,0,'C');
+        $pdf->Cell(50,5,'Bulan :   '.$row->bulan,0,0,'C');
+        $pdf->Cell(100,5,convertRupiah($data['laporanspp'][0]->biaya),0,0,'C');
         $pdf->Ln();
         $totaltransaksi += $data['laporanspp'][0]->biaya;
     }
 
     $pdf->Ln();
-    $pdf->Line(20, 90, 145-20, 90);
     $pdf->SetFont('Times','B',12);
-    $pdf->Cell(35,10,'Total',0,0,'C');
-    $pdf->Cell(125,10,': '.convertRupiah($totaltransaksi),0,0,'C');
+    $pdf->Cell(95,5,'Total',0,0,'C');
+    $pdf->Cell(5,5,': '.convertRupiah($totaltransaksi),0,0,'C');
 
-    $pdf->Ln();
     $pdf->Ln();
     $pdf->SetFont('Times','',12);
     $pdf->Cell(285,10,'Malang, '.tgl_indo(date('Y-m-d')),0,0,'C');
     $pdf->Ln(2);
     $pdf->Cell(285,20,'yang bertanda tangan',0,0,'C');
-    $pdf->Ln(20);
+    $pdf->Ln(15);
     $pdf->Cell(285,20,'.................................',0,0,'C');
 
     // content

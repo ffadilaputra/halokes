@@ -11,24 +11,27 @@
         <div class="form-group col-md-1">
           <label for="">Tanggal</label>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-3">
           <input type="date" name="tanggal" class="form-control" placeholder="Pilih Tanggal">
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-3">
+          <input type="date" name="tanggal2" class="form-control" placeholder="Pilih Tanggal">
+        </div>
+        <div class="form-group col-md-2">
           <select class="form-control" name="tahun_akademik">
             @foreach($alltahunakademik as $data)
             <option value="{{ $data['nama'] }}">{{ $data['nama'] }}</option>
             @endforeach
           </select>
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
           <select class="form-control" name="jenjang">
             <option value="mt">Madarasah Tsanawiyah</option>
             <option value="ma">Madarasah Aliyah</option>
             <option value="md">Madarasah Diniyah</option>
           </select>
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-1">
           <input type="submit" class="btn btn-primary" value="Submit">
         </div>
       </form>
